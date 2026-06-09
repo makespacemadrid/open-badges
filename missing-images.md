@@ -31,6 +31,26 @@ Sugerencia: iconografía de asamblea / democracia participativa con niveles de a
 | `badge-marathon-member` | Marathon Member | 30 | `badge-marathon-member.png` |
 | `badge-eternal-council` | Eternal Council | 35 | `badge-eternal-council.png` |
 
+## Eventos — Track de eventos externos (4 niveles)
+
+Badges de participación en eventos externos de la comunidad tech. Slug base sin prefijo `badge-`.
+Sugerencia: iconografía de networking / ponente con progresión de nivel.
+
+| Slug | Nombre | Descripción | Quests del track | Archivo sugerido |
+|------|--------|-------------|-----------------|-----------------|
+| `eventos-primer-paso` | Primer Paso | Primer evento de la comunidad | 1 | `eventos-primer-paso.png` |
+| `eventos-embajador` | Embajador | Representa a Makespace en eventos tech | 3 | `eventos-embajador.png` |
+| `eventos-evangelista` | Evangelista | Referente en la difusión del Makespace | 5 | `eventos-evangelista.png` |
+| `eventos-networker` | Networker Pro | Red de contactos sin límites | 10 | `eventos-networker.png` |
+
+## Comunidad — Show & Tell
+
+Sugerencia: iconografía de presentación / demostración (micrófono, pizarra, proyector).
+
+| Slug | Nombre | Descripción | Archivo sugerido |
+|------|--------|-------------|-----------------|
+| `badge-show-and-tell` | Show & Tell | Impartir un taller o demostración en el Makespace | `badge-show-and-tell.png` |
+
 ## Membresía — Aniversarios (`track: membresia-anios`, 13 niveles)
 
 Makespace Madrid abrió en abril de 2013. El máximo actual de antigüedad es 13 años.
@@ -67,4 +87,4 @@ Podría incluir el año "2013" o la fecha de apertura. Paleta dorada/especial di
 
 ---
 
-**Total pendientes:** 19 imágenes
+**Total pendientes:** 25 imágenes

@@ -40,9 +40,11 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 |------|--------|--------|--------|
 | `badge-embajador-maker` | Space Ambassador | `badge-maker-ambassador.png` | ✅ |
 | `badge-garbage-collector` | Garbage Collector | `badge-garbage-collector.png` | ✅ |
-| `badge-por-el-bien-comun` | For the Greater Good | `badge-common-good.png` | ✅ |
-| `badge-creador-plataformas` | Platform Builder | `badge-platform-maker.png` | ✅ |
+| `badge-for-greater-good` | For the Greater Good | `badge-common-good.png` | ✅ |
+| `badge-liquid-cooling` | Liquid Cooling Specialist | `badge-liquid-cooling.png` | ✅ |
+| `badge-platform-maker` | Platform Builder | `badge-platform-maker.png` | ✅ |
 | `badge-hacked-the-space` | Hacked the Space | `badge-hack-the-space.png` | ✅ |
+| `badge-show-and-tell` | Show & Tell | — | ❌ pendiente |
 
 > `badge-hackthespace.png` es un duplicado alternativo de `badge-hack-the-space.png` — sin uso activo en el catálogo.
 
@@ -113,12 +115,21 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 | `badge-marathon-member` | Marathon Member | 30 | — | ❌ pendiente |
 | `badge-eternal-council` | Eternal Council | 35 | — | ❌ pendiente |
 
+#### Track de eventos externos (4 niveles)
+
+| Slug | Nombre | Quests | Imagen | Estado |
+|------|--------|--------|--------|--------|
+| `eventos-primer-paso` | Primer Paso | 1 | — | ❌ pendiente |
+| `eventos-embajador` | Embajador | 3 | — | ❌ pendiente |
+| `eventos-evangelista` | Evangelista | 5 | — | ❌ pendiente |
+| `eventos-networker` | Networker Pro | 10 | — | ❌ pendiente |
+
 ### Membresía
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
 | `badge-miembro-makespace` | Makespace Member | `badge-member.png` | ✅ |
-| `makespace-key` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
+| `keys-of-kingdom` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
 | `badge-first-year` | First Year (1 año) | — | ❌ pendiente |
 | `badge-second-year` | Second Year (2 años) | — | ❌ pendiente |
 | `badge-third-year` | Third Year (3 años) | — | ❌ pendiente |
@@ -144,7 +155,7 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 |---------|-------------|
 | `badge-data-scrubber.png` | Badge futuro (limpieza de datos / GDPR) |
 | `badge-hackthespace.png` | Duplicado alternativo de `badge-hack-the-space.png` |
-| `badge-liquid-cooling.png` | Sin badge asignado — uso indeterminado |
+| `badge-liquid-cooling.png` | Imagen local en DB — el portal usa `imagePath` (subida vía admin UI) |
 | `badge-template.png` | Plantilla base para crear nuevos badges |
 
 ---
