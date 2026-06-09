@@ -11,32 +11,6 @@ npx prisma db seed
 
 ---
 
-## Plataformas — GLaDOS (`track: glados-messages`)
-
-Sugerencia de estética: iconografía Portal 2 (cubo compañero, pasteles, cámaras de pruebas).
-Track completo: 5 niveles continuos (1→2→3→4→5).
-
-| Slug | Nombre | Track nivel | Umbral | Archivo sugerido |
-|------|--------|-------------|--------|-----------------|
-| `badge-hello-glados` | Hello, GLaDOS! | 1 | 1 msg | `badge-hello-glados.png` |
-| `badge-still-alive` | Still Alive | 2 | 10 msg | `badge-still-alive.png` |
-| `badge-test-subject` | Test Subject | 3 | 50 msg | `badge-test-subject.png` |
-| `badge-property-of-aperture` | Property of Aperture | 4 | 100 msg | `badge-property-of-aperture.png` |
-| `badge-cake-is-a-lie` | The Cake Is a Lie | 5 | 500 msg | `badge-cake-is-a-lie.png` |
-
-## Plataformas — Docmost / wiki (`track: docmost-pages`)
-
-Sugerencia de estética: libros, plumas, pergaminos, rollos de conocimiento.
-
-| Slug | Nombre | Track nivel | Umbral | Archivo sugerido |
-|------|--------|-------------|--------|-----------------|
-| `badge-first-draft` | First Draft | 1 | 1 página | `badge-first-draft.png` |
-| `badge-wiki-contributor` | Wiki Contributor | 2 | 10 páginas | `badge-wiki-contributor.png` |
-| `badge-archivist` | Archivist | 3 | 25 páginas | `badge-archivist.png` |
-| `badge-space-chronicler` | Space Chronicler | 4 | 50 páginas | `badge-space-chronicler.png` |
-
-> `badge-guardian-of-knowledge` (nivel 5, 100 páginas) ya tiene imagen: `badge-knowledge-keeper.png`.
-
 ## Plataformas — Ocabra / tokens IA (`track: ocabra-tokens`)
 
 Sugerencia de estética: chips, GPUs, fuego/calor, tokens crypto-like.
@@ -118,4 +92,4 @@ Podría incluir el año "2013" o la fecha de apertura. Paleta dorada/especial di
 
 ---
 
-**Total pendientes:** 42 imágenes
+**Total pendientes:** 37 imágenes

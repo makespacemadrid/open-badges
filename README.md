@@ -50,20 +50,20 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 
 | Slug | Nombre | Track nivel | Umbral | Imagen | Estado |
 |------|--------|-------------|--------|--------|--------|
-| `badge-hello-glados` | Hello, GLaDOS! | 1 | 1 msg | — | ❌ pendiente |
-| `badge-still-alive` | Still Alive | 2 | 10 msg | — | ❌ pendiente |
-| `badge-test-subject` | Test Subject | 3 | 50 msg | — | ❌ pendiente |
-| `badge-property-of-aperture` | Property of Aperture | 4 | 100 msg | — | ❌ pendiente |
-| `badge-cake-is-a-lie` | The Cake Is a Lie | 5 | 500 msg | — | ❌ pendiente |
+| `badge-hello-glados` | Hello, GLaDOS! | 1 | 1 msg | `badge-hello-glados.png` | ✅ |
+| `badge-still-alive` | Still Alive | 2 | 10 msg | `badge-still-alive.png` | ✅ |
+| `badge-test-subject` | Test Subject | 3 | 50 msg | `badge-test-subject.png` | ✅ |
+| `badge-property-of-aperture` | Property of Aperture | 4 | 100 msg | `badge-property-of-aperture.png` | ✅ |
+| `badge-cake-is-a-lie` | The Cake Is a Lie | 5 | 500 msg | `badge-cake-is-a-lie.png` | ✅ |
 
 ### Plataformas — Docmost / wiki (`track: docmost-pages`)
 
 | Slug | Nombre | Track nivel | Umbral | Imagen | Estado |
 |------|--------|-------------|--------|--------|--------|
-| `badge-first-draft` | First Draft | 1 | 1 página | — | ❌ pendiente |
-| `badge-wiki-contributor` | Wiki Contributor | 2 | 10 páginas | — | ❌ pendiente |
-| `badge-archivist` | Archivist | 3 | 25 páginas | — | ❌ pendiente |
-| `badge-space-chronicler` | Space Chronicler | 4 | 50 páginas | — | ❌ pendiente |
+| `badge-first-draft` | First Draft | 1 | 1 página | `badge-first-draft.png` | ✅ |
+| `badge-wiki-contributor` | Wiki Contributor | 2 | 10 páginas | `badge-wiki-contributor.png` | ✅ |
+| `badge-archivist` | Archivist | 3 | 25 páginas | `badge-archivist.png` | ✅ |
+| `badge-space-chronicler` | Space Chronicler | 4 | 50 páginas | `badge-space-chronicler.png` | ✅ |
 | `badge-guardian-of-knowledge` | Guardian of Knowledge | 5 | 100 páginas | `badge-knowledge-keeper.png` | ✅ |
 
 ### Plataformas — Ocabra / tokens IA (`track: ocabra-tokens`)
