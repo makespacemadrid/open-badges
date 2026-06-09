@@ -82,9 +82,8 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 | `badge-ctf-v1` | Capture the Flag v1 | `badge-ctf-v1.png` | ✅ |
 | `badge-been-there` | Been there, done that | `badge-been-there.png` | ✅ |
 | `badge-evento-nerdearla2025` | Nerdearla 2025 | `badge-nerdearla-2025.png` | ✅ |
-| `badge-evento-codemotion2025` | Codemotion 2025 | — | ⚠️ ver nota |
 
-> `badge-codemotion-2026.png` ya está en el repo (para el evento de 2026). El badge `badge-evento-codemotion2025` no tiene imagen asignada — si se quiere usar la de 2026 para el de 2025 habrá que añadirla manualmente desde el admin.
+> `badge-codemotion-2026.png` ya está en el repo para el evento de 2026.
 
 #### Hack the Space (colección)
 

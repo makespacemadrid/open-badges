@@ -1,7 +1,7 @@
 # Badges sin imagen — pendientes de generar
 
-Lista de badges del catálogo del portal que todavía no tienen imagen en este repositorio.
-El nombre de archivo sugerido sigue la convención `badge-<slug>.png`.
+Lista de badges del cat?logo del portal que todav?a no tienen imagen en este repositorio.
+El nombre de archivo sugerido sigue la convenci?n `badge-<slug>.png`.
 
 Para actualizar la imagen en el portal una vez subida al repo, ejecutar desde el servidor:
 ```
@@ -99,12 +99,6 @@ Sugerencia: escudo/anillo con el número de años. Paleta progresiva bronce→pl
 | `badge-eighth-year` | Eighth Year | `membresia-anios` | 8 años | `badge-eighth-year.png` |
 | `badge-ninth-year` | Ninth Year | `membresia-anios` | 9 años | `badge-ninth-year.png` |
 | `badge-10-years` | A Decade at Makespace | `membresia-anios` | 10 años | `badge-10-years.png` |
-
-## Eventos especiales pendientes
-
-| Slug | Nombre | Nota | Archivo sugerido |
-|------|--------|------|-----------------|
-| `badge-evento-codemotion2025` | Codemotion 2025 | Ya existe `badge-codemotion-2026.png` para 2026; para 2025 falta imagen propia o reusar la de 2026 manualmente | `badge-codemotion-2025.png` |
 
 ## Máquinas sin badge en catálogo (imágenes ya disponibles)
 
