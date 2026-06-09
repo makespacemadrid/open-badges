@@ -1,7 +1,7 @@
 # Badges sin imagen — pendientes de generar
 
-Lista de badges del cat?logo del portal que todav?a no tienen imagen en este repositorio.
-El nombre de archivo sugerido sigue la convenci?n `badge-<slug>.png`.
+Lista de badges del catálogo del portal que todavía no tienen imagen en este repositorio.
+El nombre de archivo sugerido sigue la convención `badge-<slug>.png`.
 
 Para actualizar la imagen en el portal una vez subida al repo, ejecutar desde el servidor:
 ```
@@ -14,27 +14,26 @@ npx prisma db seed
 ## Plataformas — GLaDOS (`track: glados-messages`)
 
 Sugerencia de estética: iconografía Portal 2 (cubo compañero, pasteles, cámaras de pruebas).
+Track completo: 5 niveles continuos (1→2→3→4→5).
 
-| Slug | Nombre | Track | Nivel | Umbral | Archivo sugerido |
-|------|--------|-------|-------|--------|-----------------|
-| `badge-hello-glados` | Hello, GLaDOS! | `glados-messages` | 1 | 1 msg | `badge-hello-glados.png` |
-| `badge-still-alive` | Still Alive | `glados-messages` | 2 | 10 msg | `badge-still-alive.png` |
-| `badge-test-subject` | Test Subject | `glados-messages` | 3 | 50 msg | `badge-test-subject.png` |
-| `badge-property-of-aperture` | Property of Aperture | — | — | 100 msg ⚠️ | `badge-property-of-aperture.png` |
-| `badge-cake-is-a-lie` | The Cake Is a Lie | `glados-messages` | 5 | 500 msg | `badge-cake-is-a-lie.png` |
-
-> ⚠️ `badge-property-of-aperture` no tiene quest asociado en el catálogo (falta nivel 4 / 100 msg en el track `glados-messages`). Es badge de otorgamiento manual hasta que se añada el quest.
+| Slug | Nombre | Track nivel | Umbral | Archivo sugerido |
+|------|--------|-------------|--------|-----------------|
+| `badge-hello-glados` | Hello, GLaDOS! | 1 | 1 msg | `badge-hello-glados.png` |
+| `badge-still-alive` | Still Alive | 2 | 10 msg | `badge-still-alive.png` |
+| `badge-test-subject` | Test Subject | 3 | 50 msg | `badge-test-subject.png` |
+| `badge-property-of-aperture` | Property of Aperture | 4 | 100 msg | `badge-property-of-aperture.png` |
+| `badge-cake-is-a-lie` | The Cake Is a Lie | 5 | 500 msg | `badge-cake-is-a-lie.png` |
 
 ## Plataformas — Docmost / wiki (`track: docmost-pages`)
 
 Sugerencia de estética: libros, plumas, pergaminos, rollos de conocimiento.
 
-| Slug | Nombre | Track | Nivel | Umbral | Archivo sugerido |
-|------|--------|-------|-------|--------|-----------------|
-| `badge-first-draft` | First Draft | `docmost-pages` | 1 | 1 página | `badge-first-draft.png` |
-| `badge-wiki-contributor` | Wiki Contributor | `docmost-pages` | 2 | 10 páginas | `badge-wiki-contributor.png` |
-| `badge-archivist` | Archivist | `docmost-pages` | 3 | 25 páginas | `badge-archivist.png` |
-| `badge-space-chronicler` | Space Chronicler | `docmost-pages` | 4 | 50 páginas | `badge-space-chronicler.png` |
+| Slug | Nombre | Track nivel | Umbral | Archivo sugerido |
+|------|--------|-------------|--------|-----------------|
+| `badge-first-draft` | First Draft | 1 | 1 página | `badge-first-draft.png` |
+| `badge-wiki-contributor` | Wiki Contributor | 2 | 10 páginas | `badge-wiki-contributor.png` |
+| `badge-archivist` | Archivist | 3 | 25 páginas | `badge-archivist.png` |
+| `badge-space-chronicler` | Space Chronicler | 4 | 50 páginas | `badge-space-chronicler.png` |
 
 > `badge-guardian-of-knowledge` (nivel 5, 100 páginas) ya tiene imagen: `badge-knowledge-keeper.png`.
 
@@ -42,75 +41,81 @@ Sugerencia de estética: libros, plumas, pergaminos, rollos de conocimiento.
 
 Sugerencia de estética: chips, GPUs, fuego/calor, tokens crypto-like.
 
-| Slug | Nombre | Track | Nivel | Umbral | Archivo sugerido |
-|------|--------|-------|-------|--------|-----------------|
-| `badge-first-queries` | First Queries | `ocabra-tokens` | 1 | 10 K tokens | `badge-first-queries.png` |
-| `badge-token-collector` | Token Collector | `ocabra-tokens` | 2 | 100 K tokens | `badge-token-collector.png` |
-| `badge-burning-tokens` | Burning Tokens | `ocabra-tokens` | 3 | 1 M tokens | `badge-burning-tokens.png` |
-| `badge-gpu-melter` | GPU Melter | `ocabra-tokens` | 4 | 5 M tokens | `badge-gpu-melter.png` |
-| `badge-infinite-loop` | Infinite Loop | `ocabra-tokens` | 5 | 10 M tokens | `badge-infinite-loop.png` |
+| Slug | Nombre | Track nivel | Umbral | Archivo sugerido |
+|------|--------|-------------|--------|-----------------|
+| `badge-first-queries` | First Queries | 1 | 10 K tokens | `badge-first-queries.png` |
+| `badge-token-collector` | Token Collector | 2 | 100 K tokens | `badge-token-collector.png` |
+| `badge-burning-tokens` | Burning Tokens | 3 | 1 M tokens | `badge-burning-tokens.png` |
+| `badge-gpu-melter` | GPU Melter | 4 | 5 M tokens | `badge-gpu-melter.png` |
+| `badge-infinite-loop` | Infinite Loop | 5 | 10 M tokens | `badge-infinite-loop.png` |
 
 ## Eventos — Hack the Space (`track: hack-the-space`, 9 niveles)
 
 Sugerencia: iconografía de herramientas / taller con niveles de desgaste creciente.
 Se pueden usar variantes del mismo diseño (bronce → plata → oro → …).
 
-| Slug | Nombre | Track | Nivel (trackCountThreshold) | Archivo sugerido |
-|------|--------|-------|-----------------------------|-----------------|
-| `badge-first-hack` | First Hack | `hack-the-space` | 1 sesión | `badge-first-hack.png` |
-| `badge-hammer-time` | Hammer Time | `hack-the-space` | 3 sesiones | `badge-hammer-time.png` |
-| `badge-space-regular` | Space Regular | `hack-the-space` | 5 sesiones | `badge-space-regular.png` |
-| `badge-hackspace-veteran` | Hackspace Veteran | `hack-the-space` | 10 sesiones | `badge-hackspace-veteran.png` |
-| `badge-master-hacker` | Master Hacker | `hack-the-space` | 15 sesiones | `badge-master-hacker.png` |
-| `badge-hackspace-elder` | Hackspace Elder | `hack-the-space` | 20 sesiones | `badge-hackspace-elder.png` |
-| `badge-hackspace-legend` | Hackspace Legend | `hack-the-space` | 25 sesiones | `badge-hackspace-legend.png` |
-| `badge-hackspace-hero` | Hackspace Hero | `hack-the-space` | 30 sesiones | `badge-hackspace-hero.png` |
-| `badge-hackspace-immortal` | Hackspace Immortal | `hack-the-space` | 35 sesiones | `badge-hackspace-immortal.png` |
+| Slug | Nombre | Sesiones (trackCountThreshold) | Archivo sugerido |
+|------|--------|--------------------------------|-----------------|
+| `badge-first-hack` | First Hack | 1 | `badge-first-hack.png` |
+| `badge-hammer-time` | Hammer Time | 3 | `badge-hammer-time.png` |
+| `badge-space-regular` | Space Regular | 5 | `badge-space-regular.png` |
+| `badge-hackspace-veteran` | Hackspace Veteran | 10 | `badge-hackspace-veteran.png` |
+| `badge-master-hacker` | Master Hacker | 15 | `badge-master-hacker.png` |
+| `badge-hackspace-elder` | Hackspace Elder | 20 | `badge-hackspace-elder.png` |
+| `badge-hackspace-legend` | Hackspace Legend | 25 | `badge-hackspace-legend.png` |
+| `badge-hackspace-hero` | Hackspace Hero | 30 | `badge-hackspace-hero.png` |
+| `badge-hackspace-immortal` | Hackspace Immortal | 35 | `badge-hackspace-immortal.png` |
 
 ## Eventos — Reunión mensual (`track: reunion-mensual`, 9 niveles)
 
 Sugerencia: iconografía de asamblea / democracia participativa con niveles de antigüedad.
 
-| Slug | Nombre | Track | Nivel (trackCountThreshold) | Archivo sugerido |
-|------|--------|-------|-----------------------------|-----------------|
-| `badge-first-assembly` | First Assembly | `reunion-mensual` | 1 reunión | `badge-first-assembly.png` |
-| `badge-assembly-regular` | Assembly Regular | `reunion-mensual` | 3 reuniones | `badge-assembly-regular.png` |
-| `badge-council-member` | Council Member | `reunion-mensual` | 5 reuniones | `badge-council-member.png` |
-| `badge-community-veteran` | Community Veteran | `reunion-mensual` | 10 reuniones | `badge-community-veteran.png` |
-| `badge-community-pillar` | Community Pillar | `reunion-mensual` | 15 reuniones | `badge-community-pillar.png` |
-| `badge-assembly-elder` | Assembly Elder | `reunion-mensual` | 20 reuniones | `badge-assembly-elder.png` |
-| `badge-assembly-legend` | Assembly Legend | `reunion-mensual` | 25 reuniones | `badge-assembly-legend.png` |
-| `badge-marathon-member` | Marathon Member | `reunion-mensual` | 30 reuniones | `badge-marathon-member.png` |
-| `badge-eternal-council` | Eternal Council | `reunion-mensual` | 35 reuniones | `badge-eternal-council.png` |
+| Slug | Nombre | Reuniones (trackCountThreshold) | Archivo sugerido |
+|------|--------|--------------------------------|-----------------|
+| `badge-first-assembly` | First Assembly | 1 | `badge-first-assembly.png` |
+| `badge-assembly-regular` | Assembly Regular | 3 | `badge-assembly-regular.png` |
+| `badge-council-member` | Council Member | 5 | `badge-council-member.png` |
+| `badge-community-veteran` | Community Veteran | 10 | `badge-community-veteran.png` |
+| `badge-community-pillar` | Community Pillar | 15 | `badge-community-pillar.png` |
+| `badge-assembly-elder` | Assembly Elder | 20 | `badge-assembly-elder.png` |
+| `badge-assembly-legend` | Assembly Legend | 25 | `badge-assembly-legend.png` |
+| `badge-marathon-member` | Marathon Member | 30 | `badge-marathon-member.png` |
+| `badge-eternal-council` | Eternal Council | 35 | `badge-eternal-council.png` |
 
-## Membresía — Aniversarios (`track: membresia-anios`, 10 niveles)
+## Membresía — Aniversarios (`track: membresia-anios`, 13 niveles)
 
-Sugerencia: escudo/anillo con el número de años. Paleta progresiva bronce→plata→oro→platino.
+Makespace Madrid abrió en abril de 2013. El máximo actual de antigüedad es 13 años.
 
-| Slug | Nombre | Track | Nivel (metricThreshold) | Archivo sugerido |
-|------|--------|-------|-------------------------|-----------------|
-| `badge-first-year` | First Year | `membresia-anios` | 1 año | `badge-first-year.png` |
-| `badge-second-year` | Second Year | `membresia-anios` | 2 años | `badge-second-year.png` |
-| `badge-third-year` | Third Year | `membresia-anios` | 3 años | `badge-third-year.png` |
-| `badge-fourth-year` | Fourth Year | `membresia-anios` | 4 años | `badge-fourth-year.png` |
-| `badge-fifth-year` | Fifth Year | `membresia-anios` | 5 años | `badge-fifth-year.png` |
-| `badge-sixth-year` | Sixth Year | `membresia-anios` | 6 años | `badge-sixth-year.png` |
-| `badge-seventh-year` | Seventh Year | `membresia-anios` | 7 años | `badge-seventh-year.png` |
-| `badge-eighth-year` | Eighth Year | `membresia-anios` | 8 años | `badge-eighth-year.png` |
-| `badge-ninth-year` | Ninth Year | `membresia-anios` | 9 años | `badge-ninth-year.png` |
-| `badge-10-years` | A Decade at Makespace | `membresia-anios` | 10 años | `badge-10-years.png` |
+Sugerencia: escudo/anillo con el número de años. Paleta progresiva bronce→plata→oro→platino→diamante.
 
-## Máquinas sin badge en catálogo (imágenes ya disponibles)
+| Slug | Nombre | Años (metricThreshold) | Archivo sugerido |
+|------|--------|------------------------|-----------------|
+| `badge-first-year` | First Year | 1 | `badge-first-year.png` |
+| `badge-second-year` | Second Year | 2 | `badge-second-year.png` |
+| `badge-third-year` | Third Year | 3 | `badge-third-year.png` |
+| `badge-fourth-year` | Fourth Year | 4 | `badge-fourth-year.png` |
+| `badge-fifth-year` | Fifth Year | 5 | `badge-fifth-year.png` |
+| `badge-sixth-year` | Sixth Year | 6 | `badge-sixth-year.png` |
+| `badge-seventh-year` | Seventh Year | 7 | `badge-seventh-year.png` |
+| `badge-eighth-year` | Eighth Year | 8 | `badge-eighth-year.png` |
+| `badge-ninth-year` | Ninth Year | 9 | `badge-ninth-year.png` |
+| `badge-10-years` | A Decade at Makespace | 10 | `badge-10-years.png` |
+| `badge-11-years` | Eleven Years | 11 | `badge-11-years.png` |
+| `badge-12-years` | Twelve Years | 12 | `badge-12-years.png` |
+| `badge-13-years` | Thirteen Years | 13 | `badge-13-years.png` |
 
-Estas imágenes ya están en el repo pero no tienen badge en el catálogo del portal todavía.
-Hay que crear el badge primero en el admin, luego referenciar la imagen.
+## Membresía — Founding Member ⭐ (máximo nivel)
 
-| Imagen disponible | Badge sugerido |
-|------------------|----------------|
-| `badge-i-can-pcb.png` | `badge-i-can-pcb` — I Can PCB (fresadora de circuitos) |
-| `badge-i-can-sew.png` | `badge-i-can-sew` — I Can Sew (máquina de coser) |
-| `badge-i-can-sublimate.png` | `badge-i-can-sublimate` — I Can Sublimate (sublimación) |
+Badge especial para los mecenas del crowdfunding fundacional de Makespace Madrid (2012-2013).
+**Concesión manual por admin** — no se desbloquea automáticamente.
+
+Sugerencia de estética: diseño único y distinguible del resto, que evoque los orígenes del espacio.
+Podría incluir el año "2013" o la fecha de apertura. Paleta dorada/especial diferente a los aniversarios.
+
+| Slug | Nombre | Archivo sugerido |
+|------|--------|-----------------|
+| `badge-founding-member` | **Founding Member** | `badge-founding-member.png` |
 
 ---
 
-**Total pendientes:** 42 imágenes (sin contar las máquinas sin badge en catálogo)
+**Total pendientes:** 42 imágenes

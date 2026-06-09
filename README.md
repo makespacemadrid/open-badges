@@ -29,9 +29,10 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 | `badge-i-can-vinyl` | I Can Vinyl | `badge-i-can-vinyl.png` | ✅ |
 | `badge-can-cnc` | I Can CNC | `badge-i-can-cnc.png` | ✅ |
 | `badge-i-can-solder` | I Can Solder | `badge-i-can-solder.png` | ✅ |
+| `badge-i-can-pcb` | I Can PCB | `badge-i-can-pcb.png` | ✅ |
+| `badge-i-can-sew` | I Can Sew | `badge-i-can-sew.png` | ✅ |
+| `badge-i-can-sublimate` | I Can Sublimate | `badge-i-can-sublimate.png` | ✅ |
 | `badge-jack-of-all-trades` | Jack of all trades | `badge-jack-all-trades.png` | ✅ |
-
-> Imágenes disponibles sin badge asignado aún: `badge-i-can-pcb.png` (falta badge para PCB), `badge-i-can-sew.png` (falta badge costura), `badge-i-can-sublimate.png` (falta badge sublimación).
 
 ### Comunidad
 
@@ -45,35 +46,35 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 
 > `badge-hackthespace.png` es un duplicado alternativo de `badge-hack-the-space.png` — sin uso activo en el catálogo.
 
-### Plataformas (GLaDOS)
+### Plataformas — GLaDOS (`track: glados-messages`)
 
-| Slug | Nombre | Imagen | Estado |
-|------|--------|--------|--------|
-| `badge-hello-glados` | Hello, GLaDOS! | — | ❌ pendiente |
-| `badge-still-alive` | Still Alive | — | ❌ pendiente |
-| `badge-test-subject` | Test Subject | — | ❌ pendiente |
-| `badge-property-of-aperture` | Property of Aperture | — | ❌ pendiente |
-| `badge-cake-is-a-lie` | The Cake Is a Lie | — | ❌ pendiente |
+| Slug | Nombre | Track nivel | Umbral | Imagen | Estado |
+|------|--------|-------------|--------|--------|--------|
+| `badge-hello-glados` | Hello, GLaDOS! | 1 | 1 msg | — | ❌ pendiente |
+| `badge-still-alive` | Still Alive | 2 | 10 msg | — | ❌ pendiente |
+| `badge-test-subject` | Test Subject | 3 | 50 msg | — | ❌ pendiente |
+| `badge-property-of-aperture` | Property of Aperture | 4 | 100 msg | — | ❌ pendiente |
+| `badge-cake-is-a-lie` | The Cake Is a Lie | 5 | 500 msg | — | ❌ pendiente |
 
-### Plataformas (Docmost / wiki)
+### Plataformas — Docmost / wiki (`track: docmost-pages`)
 
-| Slug | Nombre | Imagen | Estado |
-|------|--------|--------|--------|
-| `badge-first-draft` | First Draft | — | ❌ pendiente |
-| `badge-wiki-contributor` | Wiki Contributor | — | ❌ pendiente |
-| `badge-archivist` | Archivist | — | ❌ pendiente |
-| `badge-space-chronicler` | Space Chronicler | — | ❌ pendiente |
-| `badge-guardian-of-knowledge` | Guardian of Knowledge | `badge-knowledge-keeper.png` | ✅ |
+| Slug | Nombre | Track nivel | Umbral | Imagen | Estado |
+|------|--------|-------------|--------|--------|--------|
+| `badge-first-draft` | First Draft | 1 | 1 página | — | ❌ pendiente |
+| `badge-wiki-contributor` | Wiki Contributor | 2 | 10 páginas | — | ❌ pendiente |
+| `badge-archivist` | Archivist | 3 | 25 páginas | — | ❌ pendiente |
+| `badge-space-chronicler` | Space Chronicler | 4 | 50 páginas | — | ❌ pendiente |
+| `badge-guardian-of-knowledge` | Guardian of Knowledge | 5 | 100 páginas | `badge-knowledge-keeper.png` | ✅ |
 
-### Plataformas (Ocabra / tokens IA)
+### Plataformas — Ocabra / tokens IA (`track: ocabra-tokens`)
 
-| Slug | Nombre | Imagen | Estado |
-|------|--------|--------|--------|
-| `badge-first-queries` | First Queries | — | ❌ pendiente |
-| `badge-token-collector` | Token Collector | — | ❌ pendiente |
-| `badge-burning-tokens` | Burning Tokens | — | ❌ pendiente |
-| `badge-gpu-melter` | GPU Melter | — | ❌ pendiente |
-| `badge-infinite-loop` | Infinite Loop | — | ❌ pendiente |
+| Slug | Nombre | Track nivel | Umbral | Imagen | Estado |
+|------|--------|-------------|--------|--------|--------|
+| `badge-first-queries` | First Queries | 1 | 10 K tokens | — | ❌ pendiente |
+| `badge-token-collector` | Token Collector | 2 | 100 K tokens | — | ❌ pendiente |
+| `badge-burning-tokens` | Burning Tokens | 3 | 1 M tokens | — | ❌ pendiente |
+| `badge-gpu-melter` | GPU Melter | 4 | 5 M tokens | — | ❌ pendiente |
+| `badge-infinite-loop` | Infinite Loop | 5 | 10 M tokens | — | ❌ pendiente |
 
 ### Eventos
 
@@ -82,36 +83,35 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 | `badge-ctf-v1` | Capture the Flag v1 | `badge-ctf-v1.png` | ✅ |
 | `badge-been-there` | Been there, done that | `badge-been-there.png` | ✅ |
 | `badge-evento-nerdearla2025` | Nerdearla 2025 | `badge-nerdearla-2025.png` | ✅ |
+| `badge-evento-codemotion2026` | Codemotion 2026 | `badge-codemotion-2026.png` | ✅ |
 
-> `badge-codemotion-2026.png` ya está en el repo para el evento de 2026.
+#### Hack the Space (`track: hack-the-space`, 9 niveles)
 
-#### Hack the Space (colección)
+| Slug | Nombre | Sesiones | Imagen | Estado |
+|------|--------|----------|--------|--------|
+| `badge-first-hack` | First Hack | 1 | — | ❌ pendiente |
+| `badge-hammer-time` | Hammer Time | 3 | — | ❌ pendiente |
+| `badge-space-regular` | Space Regular | 5 | — | ❌ pendiente |
+| `badge-hackspace-veteran` | Hackspace Veteran | 10 | — | ❌ pendiente |
+| `badge-master-hacker` | Master Hacker | 15 | — | ❌ pendiente |
+| `badge-hackspace-elder` | Hackspace Elder | 20 | — | ❌ pendiente |
+| `badge-hackspace-legend` | Hackspace Legend | 25 | — | ❌ pendiente |
+| `badge-hackspace-hero` | Hackspace Hero | 30 | — | ❌ pendiente |
+| `badge-hackspace-immortal` | Hackspace Immortal | 35 | — | ❌ pendiente |
 
-| Slug | Nombre | Imagen | Estado |
-|------|--------|--------|--------|
-| `badge-first-hack` | First Hack | — | ❌ pendiente |
-| `badge-hammer-time` | Hammer Time | — | ❌ pendiente |
-| `badge-space-regular` | Space Regular | — | ❌ pendiente |
-| `badge-hackspace-veteran` | Hackspace Veteran | — | ❌ pendiente |
-| `badge-master-hacker` | Master Hacker | — | ❌ pendiente |
-| `badge-hackspace-elder` | Hackspace Elder | — | ❌ pendiente |
-| `badge-hackspace-legend` | Hackspace Legend | — | ❌ pendiente |
-| `badge-hackspace-hero` | Hackspace Hero | — | ❌ pendiente |
-| `badge-hackspace-immortal` | Hackspace Immortal | — | ❌ pendiente |
+#### Reunión mensual (`track: reunion-mensual`, 9 niveles)
 
-#### Reunión mensual (colección)
-
-| Slug | Nombre | Imagen | Estado |
-|------|--------|--------|--------|
-| `badge-first-assembly` | First Assembly | — | ❌ pendiente |
-| `badge-assembly-regular` | Assembly Regular | — | ❌ pendiente |
-| `badge-council-member` | Council Member | — | ❌ pendiente |
-| `badge-community-veteran` | Community Veteran | — | ❌ pendiente |
-| `badge-community-pillar` | Community Pillar | — | ❌ pendiente |
-| `badge-assembly-elder` | Assembly Elder | — | ❌ pendiente |
-| `badge-assembly-legend` | Assembly Legend | — | ❌ pendiente |
-| `badge-marathon-member` | Marathon Member | — | ❌ pendiente |
-| `badge-eternal-council` | Eternal Council | — | ❌ pendiente |
+| Slug | Nombre | Reuniones | Imagen | Estado |
+|------|--------|-----------|--------|--------|
+| `badge-first-assembly` | First Assembly | 1 | — | ❌ pendiente |
+| `badge-assembly-regular` | Assembly Regular | 3 | — | ❌ pendiente |
+| `badge-council-member` | Council Member | 5 | — | ❌ pendiente |
+| `badge-community-veteran` | Community Veteran | 10 | — | ❌ pendiente |
+| `badge-community-pillar` | Community Pillar | 15 | — | ❌ pendiente |
+| `badge-assembly-elder` | Assembly Elder | 20 | — | ❌ pendiente |
+| `badge-assembly-legend` | Assembly Legend | 25 | — | ❌ pendiente |
+| `badge-marathon-member` | Marathon Member | 30 | — | ❌ pendiente |
+| `badge-eternal-council` | Eternal Council | 35 | — | ❌ pendiente |
 
 ### Membresía
 
@@ -119,16 +119,22 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 |------|--------|--------|--------|
 | `badge-miembro-makespace` | Makespace Member | `badge-member.png` | ✅ |
 | `makespace-key` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
-| `badge-first-year` | First Year | — | ❌ pendiente |
-| `badge-second-year` | Second Year | — | ❌ pendiente |
-| `badge-third-year` | Third Year | — | ❌ pendiente |
-| `badge-fourth-year` | Fourth Year | — | ❌ pendiente |
-| `badge-fifth-year` | Fifth Year | — | ❌ pendiente |
-| `badge-sixth-year` | Sixth Year | — | ❌ pendiente |
-| `badge-seventh-year` | Seventh Year | — | ❌ pendiente |
-| `badge-eighth-year` | Eighth Year | — | ❌ pendiente |
-| `badge-ninth-year` | Ninth Year | — | ❌ pendiente |
-| `badge-10-years` | A Decade at Makespace | — | ❌ pendiente |
+| `badge-first-year` | First Year (1 año) | — | ❌ pendiente |
+| `badge-second-year` | Second Year (2 años) | — | ❌ pendiente |
+| `badge-third-year` | Third Year (3 años) | — | ❌ pendiente |
+| `badge-fourth-year` | Fourth Year (4 años) | — | ❌ pendiente |
+| `badge-fifth-year` | Fifth Year (5 años) | — | ❌ pendiente |
+| `badge-sixth-year` | Sixth Year (6 años) | — | ❌ pendiente |
+| `badge-seventh-year` | Seventh Year (7 años) | — | ❌ pendiente |
+| `badge-eighth-year` | Eighth Year (8 años) | — | ❌ pendiente |
+| `badge-ninth-year` | Ninth Year (9 años) | — | ❌ pendiente |
+| `badge-10-years` | A Decade at Makespace (10 años) | — | ❌ pendiente |
+| `badge-11-years` | Eleven Years (11 años) | — | ❌ pendiente |
+| `badge-12-years` | Twelve Years (12 años) | — | ❌ pendiente |
+| `badge-13-years` | Thirteen Years (13 años) | — | ❌ pendiente |
+| `badge-founding-member` | **Founding Member** | — | ❌ pendiente |
+
+> `badge-founding-member` es el badge de mayor rango: para mecenas del crowdfunding fundacional de Makespace Madrid (2012-2013). Concesión manual por admin.
 
 ---
 
@@ -136,12 +142,8 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 
 | Archivo | Posible uso |
 |---------|-------------|
-| `badge-codemotion-2026.png` | Badge Codemotion 2026 (evento futuro) |
 | `badge-data-scrubber.png` | Badge futuro (limpieza de datos / GDPR) |
 | `badge-hackthespace.png` | Duplicado alternativo de `badge-hack-the-space.png` |
-| `badge-i-can-pcb.png` | Badge para certificación de fresadora PCB (falta en catálogo) |
-| `badge-i-can-sew.png` | Badge para certificación de máquina de coser (falta en catálogo) |
-| `badge-i-can-sublimate.png` | Badge para certificación de sublimación (falta en catálogo) |
 | `badge-liquid-cooling.png` | Sin badge asignado — uso indeterminado |
 | `badge-template.png` | Plantilla base para crear nuevos badges |
 
