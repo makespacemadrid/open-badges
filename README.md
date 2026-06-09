@@ -70,11 +70,11 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 
 | Slug | Nombre | Track nivel | Umbral | Imagen | Estado |
 |------|--------|-------------|--------|--------|--------|
-| `badge-first-queries` | First Queries | 1 | 10 K tokens | — | ❌ pendiente |
-| `badge-token-collector` | Token Collector | 2 | 100 K tokens | — | ❌ pendiente |
-| `badge-burning-tokens` | Burning Tokens | 3 | 1 M tokens | — | ❌ pendiente |
-| `badge-gpu-melter` | GPU Melter | 4 | 5 M tokens | — | ❌ pendiente |
-| `badge-infinite-loop` | Infinite Loop | 5 | 10 M tokens | — | ❌ pendiente |
+| `badge-first-queries` | First Queries | 1 | 10 K tokens | `badge-first-queries.png` | ✅ |
+| `badge-token-collector` | Token Collector | 2 | 100 K tokens | `badge-token-collector.png` | ✅ |
+| `badge-burning-tokens` | Burning Tokens | 3 | 1 M tokens | `badge-burning-tokens.png` | ✅ |
+| `badge-gpu-melter` | GPU Melter | 4 | 5 M tokens | `badge-gpu-melter.png` | ✅ |
+| `badge-infinite-loop` | Infinite Loop | 5 | 10 M tokens | `badge-infinite-loop.png` | ✅ |
 
 ### Eventos
 
@@ -89,25 +89,25 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 
 | Slug | Nombre | Sesiones | Imagen | Estado |
 |------|--------|----------|--------|--------|
-| `badge-first-hack` | First Hack | 1 | — | ❌ pendiente |
-| `badge-hammer-time` | Hammer Time | 3 | — | ❌ pendiente |
-| `badge-space-regular` | Space Regular | 5 | — | ❌ pendiente |
-| `badge-hackspace-veteran` | Hackspace Veteran | 10 | — | ❌ pendiente |
-| `badge-master-hacker` | Master Hacker | 15 | — | ❌ pendiente |
-| `badge-hackspace-elder` | Hackspace Elder | 20 | — | ❌ pendiente |
-| `badge-hackspace-legend` | Hackspace Legend | 25 | — | ❌ pendiente |
-| `badge-hackspace-hero` | Hackspace Hero | 30 | — | ❌ pendiente |
+| `badge-first-hack` | First Hack | 1 | `badge-first-hack.png` | ✅ |
+| `badge-hammer-time` | Hammer Time | 3 | `badge-hammer-time.png` | ✅ |
+| `badge-space-regular` | Space Regular | 5 | `badge-space-regular.png` | ✅ |
+| `badge-hackspace-veteran` | Hackspace Veteran | 10 | `badge-hackspace-veteran.png` | ✅ |
+| `badge-master-hacker` | Master Hacker | 15 | `badge-master-hacker.png` | ✅ |
+| `badge-hackspace-elder` | Hackspace Elder | 20 | `badge-hackspace-elder.png` | ✅ |
+| `badge-hackspace-legend` | Hackspace Legend | 25 | `badge-hackspace-legend.png` | ✅ |
+| `badge-hackspace-hero` | Hackspace Hero | 30 | `badge-hackspace-hero.png` | ✅ |
 | `badge-hackspace-immortal` | Hackspace Immortal | 35 | — | ❌ pendiente |
 
 #### Reunión mensual (`track: reunion-mensual`, 9 niveles)
 
 | Slug | Nombre | Reuniones | Imagen | Estado |
 |------|--------|-----------|--------|--------|
-| `badge-first-assembly` | First Assembly | 1 | — | ❌ pendiente |
-| `badge-assembly-regular` | Assembly Regular | 3 | — | ❌ pendiente |
-| `badge-council-member` | Council Member | 5 | — | ❌ pendiente |
-| `badge-community-veteran` | Community Veteran | 10 | — | ❌ pendiente |
-| `badge-community-pillar` | Community Pillar | 15 | — | ❌ pendiente |
+| `badge-first-assembly` | First Assembly | 1 | `badge-first-assembly.png` | ✅ |
+| `badge-assembly-regular` | Assembly Regular | 3 | `badge-assembly-regular.png` | ✅ |
+| `badge-council-member` | Council Member | 5 | `badge-council-member.png` | ✅ |
+| `badge-community-veteran` | Community Veteran | 10 | `badge-community-veteran.png` | ✅ |
+| `badge-community-pillar` | Community Pillar | 15 | `badge-community-pillar.png` | ✅ |
 | `badge-assembly-elder` | Assembly Elder | 20 | — | ❌ pendiente |
 | `badge-assembly-legend` | Assembly Legend | 25 | — | ❌ pendiente |
 | `badge-marathon-member` | Marathon Member | 30 | — | ❌ pendiente |

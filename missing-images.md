@@ -11,18 +11,6 @@ npx prisma db seed
 
 ---
 
-## Plataformas — Ocabra / tokens IA (`track: ocabra-tokens`)
-
-Sugerencia de estética: chips, GPUs, fuego/calor, tokens crypto-like.
-
-| Slug | Nombre | Track nivel | Umbral | Archivo sugerido |
-|------|--------|-------------|--------|-----------------|
-| `badge-first-queries` | First Queries | 1 | 10 K tokens | `badge-first-queries.png` |
-| `badge-token-collector` | Token Collector | 2 | 100 K tokens | `badge-token-collector.png` |
-| `badge-burning-tokens` | Burning Tokens | 3 | 1 M tokens | `badge-burning-tokens.png` |
-| `badge-gpu-melter` | GPU Melter | 4 | 5 M tokens | `badge-gpu-melter.png` |
-| `badge-infinite-loop` | Infinite Loop | 5 | 10 M tokens | `badge-infinite-loop.png` |
-
 ## Eventos — Hack the Space (`track: hack-the-space`, 9 niveles)
 
 Sugerencia: iconografía de herramientas / taller con niveles de desgaste creciente.
@@ -30,14 +18,6 @@ Se pueden usar variantes del mismo diseño (bronce → plata → oro → …).
 
 | Slug | Nombre | Sesiones (trackCountThreshold) | Archivo sugerido |
 |------|--------|--------------------------------|-----------------|
-| `badge-first-hack` | First Hack | 1 | `badge-first-hack.png` |
-| `badge-hammer-time` | Hammer Time | 3 | `badge-hammer-time.png` |
-| `badge-space-regular` | Space Regular | 5 | `badge-space-regular.png` |
-| `badge-hackspace-veteran` | Hackspace Veteran | 10 | `badge-hackspace-veteran.png` |
-| `badge-master-hacker` | Master Hacker | 15 | `badge-master-hacker.png` |
-| `badge-hackspace-elder` | Hackspace Elder | 20 | `badge-hackspace-elder.png` |
-| `badge-hackspace-legend` | Hackspace Legend | 25 | `badge-hackspace-legend.png` |
-| `badge-hackspace-hero` | Hackspace Hero | 30 | `badge-hackspace-hero.png` |
 | `badge-hackspace-immortal` | Hackspace Immortal | 35 | `badge-hackspace-immortal.png` |
 
 ## Eventos — Reunión mensual (`track: reunion-mensual`, 9 niveles)
@@ -46,11 +26,6 @@ Sugerencia: iconografía de asamblea / democracia participativa con niveles de a
 
 | Slug | Nombre | Reuniones (trackCountThreshold) | Archivo sugerido |
 |------|--------|--------------------------------|-----------------|
-| `badge-first-assembly` | First Assembly | 1 | `badge-first-assembly.png` |
-| `badge-assembly-regular` | Assembly Regular | 3 | `badge-assembly-regular.png` |
-| `badge-council-member` | Council Member | 5 | `badge-council-member.png` |
-| `badge-community-veteran` | Community Veteran | 10 | `badge-community-veteran.png` |
-| `badge-community-pillar` | Community Pillar | 15 | `badge-community-pillar.png` |
 | `badge-assembly-elder` | Assembly Elder | 20 | `badge-assembly-elder.png` |
 | `badge-assembly-legend` | Assembly Legend | 25 | `badge-assembly-legend.png` |
 | `badge-marathon-member` | Marathon Member | 30 | `badge-marathon-member.png` |
@@ -92,4 +67,4 @@ Podría incluir el año "2013" o la fecha de apertura. Paleta dorada/especial di
 
 ---
 
-**Total pendientes:** 37 imágenes
+**Total pendientes:** 19 imágenes
