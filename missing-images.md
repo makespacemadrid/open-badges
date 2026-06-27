@@ -1,6 +1,6 @@
 # Badges sin imagen — pendientes de generar
 
-Badges del catálogo del portal (31) que todavía no tienen imagen en este repositorio. Convención: `badge-<slug>.png`.
+Badges del catálogo del portal (30) que todavía no tienen imagen en este repositorio. Convención: `badge-<slug>.png`.
 
 Tras subir una imagen, el portal la recoge en el próximo `applyBadgeCatalog`/seed. Purga la caché de jsDelivr: `https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<filename>`.
 
@@ -25,7 +25,6 @@ Tras subir una imagen, el portal la recoge en el próximo `applyBadgeCatalog`/se
 
 | Slug | Nombre | Archivo sugerido |
 |------|--------|------------------|
-| `badge-evento-aniversario2026` | Aniversario 2026 (6+7 años) | `badge-aniversario-2026.png` |
 | `eventos-primer-paso` | Primer Paso | `badge-eventos-primer-paso.png` |
 | `eventos-embajador` | Embajador | `badge-eventos-embajador.png` |
 | `eventos-evangelista` | Evangelista | `badge-eventos-evangelista.png` |

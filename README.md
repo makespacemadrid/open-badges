@@ -77,7 +77,7 @@ _Generado desde el catálogo del portal (80 badges activos). ✅ = imagen en el 
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-evento-aniversario2026` | Aniversario 2026 (6+7 años) | `badge-aniversario-2026.png` | ❌ pendiente |
+| `badge-evento-aniversario2026` | Aniversario 2026 (6+7 años) | `badge-aniversario-2026.png` | ✅ |
 | `badge-been-there` | Been there, done that | `badge-been-there.png` | ✅ |
 | `badge-ctf-v1` | Capture the Flag v1 | `badge-ctf-v1.png` | ✅ |
 | `badge-evento-codemotion2026` | Codemotion 2026 | `badge-codemotion-2026.png` | ✅ |
