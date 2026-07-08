@@ -14,7 +14,7 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 
 ## Catálogo de badges
 
-_Generado desde el catálogo del portal (80 badges activos). ✅ = imagen en el repo · ❌ = pendiente de generar._
+_Generado desde el catálogo del portal (84 badges activos). ✅ = imagen en el repo · ❌ = pendiente de generar._
 
 ### Onboarding
 
@@ -28,6 +28,9 @@ _Generado desde el catálogo del portal (80 badges activos). ✅ = imagen en el 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
 | `badge-can-cnc` | I Can CNC | `badge-i-can-cnc.png` | ✅ |
+| `badge-i-can-carve` | I Can Carve | `badge-i-can-carve.png` | ❌ pendiente |
+| `badge-i-can-cast` | I Can Cast | `badge-i-can-cast.png` | ❌ pendiente |
+| `badge-i-can-laser` | I Can Laser | `badge-i-can-laser.png` | ❌ pendiente |
 | `badge-i-can-pcb` | I Can PCB | `badge-i-can-pcb.png` | ✅ |
 | `badge-i-can-print` | I Can Print (3D) | `badge-i-can-print.png` | ✅ |
 | `badge-i-can-print-resin` | I Can Print (Resin) | `badge-i-can-print-resin.png` | ❌ pendiente |
@@ -43,6 +46,7 @@ _Generado desde el catálogo del portal (80 badges activos). ✅ = imagen en el 
 |------|--------|--------|--------|
 | `badge-archivist` | Archivist | `badge-archivist.png` | ✅ |
 | `badge-burning-tokens` | Burning Tokens | `badge-burning-tokens.png` | ✅ |
+| `badge-cake-is-a-lie` | The Cake Is a Lie | `badge-cake-is-a-lie.png` | ✅ |
 | `badge-first-draft` | First Draft | `badge-first-draft.png` | ✅ |
 | `badge-first-queries` | First Queries | `badge-first-queries.png` | ✅ |
 | `badge-gpu-melter` | GPU Melter | `badge-gpu-melter.png` | ✅ |
@@ -53,7 +57,6 @@ _Generado desde el catálogo del portal (80 badges activos). ✅ = imagen en el 
 | `badge-space-chronicler` | Space Chronicler | `badge-space-chronicler.png` | ✅ |
 | `badge-still-alive` | Still Alive | `badge-still-alive.png` | ✅ |
 | `badge-test-subject` | Test Subject | `badge-test-subject.png` | ✅ |
-| `badge-cake-is-a-lie` | The Cake Is a Lie | `badge-cake-is-a-lie.png` | ✅ |
 | `badge-token-collector` | Token Collector | `badge-token-collector.png` | ✅ |
 | `badge-wiki-contributor` | Wiki Contributor | `badge-wiki-contributor.png` | ✅ |
 
@@ -63,6 +66,8 @@ _Generado desde el catálogo del portal (80 badges activos). ✅ = imagen en el 
 |------|--------|--------|--------|
 | `badge-compulsive-shopper` | Compulsive Shopper | `badge-compulsive-shopper.png` | ❌ pendiente |
 | `badge-data-scrubber` | Data Scrubber | `badge-data-scrubber.png` | ✅ |
+| `badge-demolition-man` | Demolition Man | `badge-demolition-man.png` | ❌ pendiente |
+| `badge-embajador-maker` | Space Ambassador | `badge-maker-ambassador.png` | ✅ |
 | `badge-garbage-collector` | Garbage Collector | `badge-garbage-collector.png` | ✅ |
 | `badge-liquid-cooling` | Liquid Cooling Specialist | `badge-liquid-cooling.png` | ✅ |
 | `badge-petty-cash-rookie` | Petty Cash Rookie | `badge-petty-cash-rookie.png` | ❌ pendiente |
@@ -70,61 +75,60 @@ _Generado desde el catálogo del portal (80 badges activos). ✅ = imagen en el 
 | `badge-procurer` | Procurer | `badge-procurer.png` | ❌ pendiente |
 | `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ❌ pendiente |
 | `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ❌ pendiente |
-| `badge-embajador-maker` | Space Ambassador | `badge-maker-ambassador.png` | ✅ |
 | `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` | ❌ pendiente |
 
 ### Eventos
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-evento-aniversario2026` | Aniversario 2026 (6+7 años) | `badge-aniversario-2026.png` | ✅ |
+| `badge-assembly-elder` | Assembly Elder | `badge-assembly-elder.png` | ❌ pendiente |
+| `badge-assembly-legend` | Assembly Legend | `badge-assembly-legend.png` | ❌ pendiente |
+| `badge-assembly-regular` | Assembly Regular | `badge-assembly-regular.png` | ✅ |
 | `badge-been-there` | Been there, done that | `badge-been-there.png` | ✅ |
+| `badge-community-pillar` | Community Pillar | `badge-community-pillar.png` | ✅ |
+| `badge-community-veteran` | Community Veteran | `badge-community-veteran.png` | ✅ |
+| `badge-council-member` | Council Member | `badge-council-member.png` | ✅ |
 | `badge-ctf-v1` | Capture the Flag v1 | `badge-ctf-v1.png` | ✅ |
+| `badge-eternal-council` | Eternal Council | `badge-eternal-council.png` | ❌ pendiente |
+| `badge-evento-aniversario2026` | Aniversario 2026 (6+7 años) | `badge-aniversario-2026.png` | ✅ |
 | `badge-evento-codemotion2026` | Codemotion 2026 | `badge-codemotion-2026.png` | ✅ |
 | `badge-evento-nerdearla2025` | Nerdearla 2025 | `badge-nerdearla-2025.png` | ✅ |
 | `badge-first-assembly` | First Assembly | `badge-first-assembly.png` | ✅ |
 | `badge-first-hack` | First Hack | `badge-first-hack.png` | ✅ |
-| `eventos-primer-paso` | Primer Paso | `badge-eventos-primer-paso.png` | ❌ pendiente |
-| `badge-assembly-regular` | Assembly Regular | `badge-assembly-regular.png` | ✅ |
-| `eventos-embajador` | Embajador | `badge-eventos-embajador.png` | ❌ pendiente |
-| `badge-hammer-time` | Hammer Time | `badge-hammer-time.png` | ✅ |
-| `badge-council-member` | Council Member | `badge-council-member.png` | ✅ |
-| `eventos-evangelista` | Evangelista | `badge-eventos-evangelista.png` | ❌ pendiente |
-| `badge-space-regular` | Space Regular | `badge-space-regular.png` | ✅ |
-| `badge-community-veteran` | Community Veteran | `badge-community-veteran.png` | ✅ |
-| `badge-hackspace-veteran` | Hackspace Veteran | `badge-hackspace-veteran.png` | ✅ |
-| `eventos-networker` | Networker Pro | `badge-eventos-networker.png` | ❌ pendiente |
-| `badge-community-pillar` | Community Pillar | `badge-community-pillar.png` | ✅ |
-| `badge-master-hacker` | Master Hacker | `badge-master-hacker.png` | ✅ |
-| `badge-assembly-elder` | Assembly Elder | `badge-assembly-elder.png` | ❌ pendiente |
 | `badge-hackspace-elder` | Hackspace Elder | `badge-hackspace-elder.png` | ✅ |
-| `badge-assembly-legend` | Assembly Legend | `badge-assembly-legend.png` | ❌ pendiente |
-| `badge-hackspace-legend` | Hackspace Legend | `badge-hackspace-legend.png` | ✅ |
 | `badge-hackspace-hero` | Hackspace Hero | `badge-hackspace-hero.png` | ✅ |
-| `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` | ❌ pendiente |
-| `badge-eternal-council` | Eternal Council | `badge-eternal-council.png` | ❌ pendiente |
 | `badge-hackspace-immortal` | Hackspace Immortal | `badge-hackspace-immortal.png` | ❌ pendiente |
+| `badge-hackspace-legend` | Hackspace Legend | `badge-hackspace-legend.png` | ✅ |
+| `badge-hackspace-veteran` | Hackspace Veteran | `badge-hackspace-veteran.png` | ✅ |
+| `badge-hammer-time` | Hammer Time | `badge-hammer-time.png` | ✅ |
+| `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` | ❌ pendiente |
+| `badge-master-hacker` | Master Hacker | `badge-master-hacker.png` | ✅ |
+| `badge-space-regular` | Space Regular | `badge-space-regular.png` | ✅ |
+| `eventos-embajador` | Embajador | `badge-eventos-embajador.png` | ❌ pendiente |
+| `eventos-evangelista` | Evangelista | `badge-eventos-evangelista.png` | ❌ pendiente |
+| `eventos-networker` | Networker Pro | `badge-eventos-networker.png` | ❌ pendiente |
+| `eventos-primer-paso` | Primer Paso | `badge-eventos-primer-paso.png` | ❌ pendiente |
 
 ### Membresía
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
 | `badge-10-years` | A Decade at Makespace | `badge-10-years.png` | ❌ pendiente |
-| `badge-eighth-year` | Eighth Year | `badge-eighth-year.png` | ❌ pendiente |
 | `badge-11-years` | Eleven Years | `badge-11-years.png` | ❌ pendiente |
+| `badge-12-years` | Twelve Years | `badge-12-years.png` | ❌ pendiente |
+| `badge-13-years` | Thirteen Years | `badge-13-years.png` | ❌ pendiente |
+| `badge-eighth-year` | Eighth Year | `badge-eighth-year.png` | ❌ pendiente |
 | `badge-fifth-year` | Fifth Year | `badge-fifth-year.png` | ❌ pendiente |
 | `badge-first-year` | First Year | `badge-first-year.png` | ❌ pendiente |
 | `badge-founding-member` | Founding Member | `badge-founding-member.png` | ❌ pendiente |
 | `badge-fourth-year` | Fourth Year | `badge-fourth-year.png` | ❌ pendiente |
-| `keys-of-kingdom` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
 | `badge-miembro-makespace` | Makespace Member | `badge-member.png` | ✅ |
 | `badge-ninth-year` | Ninth Year | `badge-ninth-year.png` | ❌ pendiente |
 | `badge-second-year` | Second Year | `badge-second-year.png` | ❌ pendiente |
 | `badge-seventh-year` | Seventh Year | `badge-seventh-year.png` | ❌ pendiente |
 | `badge-sixth-year` | Sixth Year | `badge-sixth-year.png` | ❌ pendiente |
 | `badge-third-year` | Third Year | `badge-third-year.png` | ❌ pendiente |
-| `badge-13-years` | Thirteen Years | `badge-13-years.png` | ❌ pendiente |
-| `badge-12-years` | Twelve Years | `badge-12-years.png` | ❌ pendiente |
+| `keys-of-kingdom` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
 
 ---
 
