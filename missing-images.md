@@ -1,6 +1,6 @@
 # Badges sin imagen — pendientes de generar
 
-Badges del catálogo del portal (34) que todavía no tienen imagen en este repositorio. Convención: `badge-<slug>.png`.
+Badges del catálogo del portal (36) que todavía no tienen imagen en este repositorio. Convención: `badge-<slug>.png`.
 
 Tras subir una imagen, el portal la recoge en el próximo `applyBadgeCatalog`/seed. Purga la caché de jsDelivr: `https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<filename>`.
 
@@ -24,6 +24,8 @@ Tras subir una imagen, el portal la recoge en el próximo `applyBadgeCatalog`/se
 | `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` |
 | `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` |
 | `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` |
+| `badge-stack-overflow` | Stack Overflow | `badge-stack-overflow.png` |
+| `badge-tetris-master` | Tetris Master | `badge-tetris-master.png` |
 
 ## Eventos
 

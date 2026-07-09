@@ -14,7 +14,7 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 
 ## Catálogo de badges
 
-_Generado desde el catálogo del portal (84 badges activos). ✅ = imagen en el repo · ❌ = pendiente de generar._
+_Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el repo · ❌ = pendiente de generar._
 
 ### Onboarding
 
@@ -76,6 +76,8 @@ _Generado desde el catálogo del portal (84 badges activos). ✅ = imagen en el 
 | `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ❌ pendiente |
 | `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ❌ pendiente |
 | `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` | ❌ pendiente |
+| `badge-stack-overflow` | Stack Overflow | `badge-stack-overflow.png` | ❌ pendiente |
+| `badge-tetris-master` | Tetris Master | `badge-tetris-master.png` | ❌ pendiente |
 
 ### Eventos
 
@@ -129,17 +131,3 @@ _Generado desde el catálogo del portal (84 badges activos). ✅ = imagen en el 
 | `badge-sixth-year` | Sixth Year | `badge-sixth-year.png` | ❌ pendiente |
 | `badge-third-year` | Third Year | `badge-third-year.png` | ❌ pendiente |
 | `keys-of-kingdom` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
-
----
-
-## Plantilla
-
-`badge-template.png` — plantilla base de diseño para nuevos badges (no es un badge del catálogo).
-
-## Deprecados
-
-Imágenes de badges retirados del catálogo, conservadas en `deprecated/`:
-
-- `badge-common-good.png` — "For the Greater Good" (retirado)
-- `badge-hack-the-space.png` — "Hacked the Space" (retirado)
-- `badge-hackthespace.png` — variante antigua sin guiones (retirado)
