@@ -36,10 +36,10 @@ Tras subir una imagen, el portal la recoge en el próximo `applyBadgeCatalog`/se
 | `badge-eternal-council` | Eternal Council | `badge-eternal-council.png` |
 | `badge-hackspace-immortal` | Hackspace Immortal | `badge-hackspace-immortal.png` |
 | `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` |
-| `eventos-embajador` | Embajador | `badge-eventos-embajador.png` |
-| `eventos-evangelista` | Evangelista | `badge-eventos-evangelista.png` |
-| `eventos-networker` | Networker Pro | `badge-eventos-networker.png` |
-| `eventos-primer-paso` | Primer Paso | `badge-eventos-primer-paso.png` |
+| `eventos-embajador` | Roadie | `badge-eventos-embajador.png` |
+| `eventos-evangelista` | Headliner | `badge-eventos-evangelista.png` |
+| `eventos-networker` | Tour Manager | `badge-eventos-networker.png` |
+| `eventos-primer-paso` | Groupie | `badge-eventos-primer-paso.png` |
 
 ## Membresía
 

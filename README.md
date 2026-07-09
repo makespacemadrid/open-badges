@@ -106,10 +106,10 @@ _Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el 
 | `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` | ❌ pendiente |
 | `badge-master-hacker` | Master Hacker | `badge-master-hacker.png` | ✅ |
 | `badge-space-regular` | Space Regular | `badge-space-regular.png` | ✅ |
-| `eventos-embajador` | Embajador | `badge-eventos-embajador.png` | ❌ pendiente |
-| `eventos-evangelista` | Evangelista | `badge-eventos-evangelista.png` | ❌ pendiente |
-| `eventos-networker` | Networker Pro | `badge-eventos-networker.png` | ❌ pendiente |
-| `eventos-primer-paso` | Primer Paso | `badge-eventos-primer-paso.png` | ❌ pendiente |
+| `eventos-embajador` | Roadie | `badge-eventos-embajador.png` | ❌ pendiente |
+| `eventos-evangelista` | Headliner | `badge-eventos-evangelista.png` | ❌ pendiente |
+| `eventos-networker` | Tour Manager | `badge-eventos-networker.png` | ❌ pendiente |
+| `eventos-primer-paso` | Groupie | `badge-eventos-primer-paso.png` | ❌ pendiente |
 
 ### Membresía
 
