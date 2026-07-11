@@ -15,7 +15,7 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 32 sin imagen)._
+_Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 22 sin imagen)._
 
 ### Onboarding
 
@@ -29,10 +29,10 @@ _Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 32 sin ima
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
 | `badge-can-cnc` | I Can CNC | `badge-i-can-cnc.png` | ✅ |
-| `badge-i-can-laser` | I Can Laser | `badge-i-can-laser.png` | ❌ pendiente |
+| `badge-i-can-laser` | I Can Laser | `badge-i-can-laser.png` | ✅ |
 | `badge-i-can-pcb` | I Can PCB | `badge-i-can-pcb.png` | ✅ |
 | `badge-i-can-print` | I Can Print (3D) | `badge-i-can-print.png` | ✅ |
-| `badge-i-can-print-resin` | I Can Print (Resin) | `badge-i-can-print-resin.png` | ❌ pendiente |
+| `badge-i-can-print-resin` | I Can Print (Resin) | `badge-i-can-print-resin.png` | ✅ |
 | `badge-i-can-sew` | I Can Sew | `badge-i-can-sew.png` | ✅ |
 | `badge-i-can-solder` | I Can Solder | `badge-i-can-solder.png` | ✅ |
 | `badge-i-can-sublimate` | I Can Sublimate | `badge-i-can-sublimate.png` | ✅ |
@@ -63,24 +63,24 @@ _Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 32 sin ima
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-compulsive-shopper` | Compulsive Shopper | `badge-compulsive-shopper.png` | ❌ pendiente |
+| `badge-compulsive-shopper` | Compulsive Shopper | `badge-compulsive-shopper.png` | ✅ |
 | `badge-data-scrubber` | Data Scrubber | `badge-data-scrubber.png` | ✅ |
 | `badge-embajador-maker` | Space Ambassador | `badge-maker-ambassador.png` | ✅ |
 | `badge-garbage-collector` | Garbage Collector | `badge-garbage-collector.png` | ✅ |
-| `badge-hacked-the-space` | Hacked the Space | `badge-hack-the-space.png` | ❌ pendiente |
+| `badge-hacked-the-space` | Hacked the Space | `badge-hack-the-space.png` | ✅ |
 | `badge-liquid-cooling` | Liquid Cooling Specialist | `badge-liquid-cooling.png` | ✅ |
-| `badge-petty-cash-rookie` | Petty Cash Rookie | `badge-petty-cash-rookie.png` | ❌ pendiente |
+| `badge-petty-cash-rookie` | Petty Cash Rookie | `badge-petty-cash-rookie.png` | ✅ |
 | `badge-platform-maker` | Platform Builder | `badge-platform-maker.png` | ✅ |
-| `badge-procurer` | Procurer | `badge-procurer.png` | ❌ pendiente |
-| `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ❌ pendiente |
+| `badge-procurer` | Procurer | `badge-procurer.png` | ✅ |
+| `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ✅ |
 | `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ❌ pendiente |
-| `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` | ❌ pendiente |
+| `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` | ✅ |
 
 ### Eventos
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-assembly-elder` | Assembly Elder | `badge-assembly-elder.png` | ❌ pendiente |
+| `badge-assembly-elder` | Assembly Elder | `badge-assembly-elder.png` | ✅ |
 | `badge-assembly-legend` | Assembly Legend | `badge-assembly-legend.png` | ❌ pendiente |
 | `badge-assembly-regular` | Assembly Regular | `badge-assembly-regular.png` | ✅ |
 | `badge-been-there` | Been there, done that | `badge-been-there.png` | ✅ |
@@ -119,7 +119,7 @@ _Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 32 sin ima
 | `badge-eighth-year` | Eighth Year | `badge-eighth-year.png` | ❌ pendiente |
 | `badge-fifth-year` | Fifth Year | `badge-fifth-year.png` | ❌ pendiente |
 | `badge-first-year` | First Year | `badge-first-year.png` | ❌ pendiente |
-| `badge-founding-member` | Founding Member | `badge-founding-member.png` | ❌ pendiente |
+| `badge-founding-member` | Founding Member | `badge-founding-member.png` | ✅ |
 | `badge-fourth-year` | Fourth Year | `badge-fourth-year.png` | ❌ pendiente |
 | `badge-miembro-makespace` | Makespace Member | `badge-member.png` | ✅ |
 | `badge-ninth-year` | Ninth Year | `badge-ninth-year.png` | ❌ pendiente |

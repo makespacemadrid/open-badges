@@ -3,7 +3,7 @@ from badgegen import catalog, manifest
 
 def _entry(**kw):
     base = dict(slug="badge-a", name="A", description="d", criteria="c",
-                track="maquinas", image_file=None, retired=False)
+                category="maquinas", image_file=None, retired=False)
     base.update(kw)
     return catalog.CatalogEntry(**base)
 
@@ -14,7 +14,7 @@ def test_new_badge_added_with_status_by_file(tmp_path):
     warnings = catalog.merge_catalog(m, [_entry(), _entry(slug="badge-b", name="B")], tmp_path)
     assert warnings == []
     a, b = m.get("badge-a"), m.get("badge-b")
-    assert a.status == "ok" and a.file == "badge-a.png" and a.track == "maquinas"
+    assert a.status == "ok" and a.file == "badge-a.png" and a.category == "maquinas"
     assert b.status == "missing" and b.file == "badge-b.png"
 
 

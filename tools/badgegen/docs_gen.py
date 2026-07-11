@@ -9,7 +9,7 @@ from badgegen.manifest import Badge, Manifest
 START = "<!-- badgegen:tables:start -->"
 END = "<!-- badgegen:tables:end -->"
 
-TRACKS = [
+CATEGORIES = [
     ("onboarding", "Onboarding"),
     ("maquinas", "Máquinas"),
     ("plataformas", "Plataformas"),
@@ -23,14 +23,14 @@ class MarkersMissing(Exception):
     pass
 
 
-def _by_track(badges: list[Badge]) -> list[tuple[str, list[Badge]]]:
-    known = {slug for slug, _ in TRACKS}
+def _by_category(badges: list[Badge]) -> list[tuple[str, list[Badge]]]:
+    known = {slug for slug, _ in CATEGORIES}
     groups = []
-    for slug, title in TRACKS:
-        items = sorted((b for b in badges if b.track == slug), key=lambda b: b.slug)
+    for slug, title in CATEGORIES:
+        items = sorted((b for b in badges if b.category == slug), key=lambda b: b.slug)
         if items:
             groups.append((title, items))
-    others = sorted((b for b in badges if b.track not in known), key=lambda b: b.slug)
+    others = sorted((b for b in badges if b.category not in known), key=lambda b: b.slug)
     if others:
         groups.append(("Otros", others))
     return groups
@@ -53,7 +53,7 @@ def render_readme_tables(m: Manifest) -> str:
         f"_Generado por `badgegen docs` desde `badges.yaml` ({total} badges activos, "
         f"{sin_imagen} sin imagen)._",
     ]
-    for title, items in _by_track(m.badges):
+    for title, items in _by_category(m.badges):
         parts += ["", f"### {title}", "", "| Slug | Nombre | Imagen | Estado |",
                   "|------|--------|--------|--------|"]
         parts += [f"| `{b.slug}` | {b.name} | `{b.file}` | {_estado(b)} |" for b in items]
@@ -69,7 +69,7 @@ def render_missing(m: Manifest) -> str:
         "Tras subir una imagen, purga la caché de jsDelivr: "
         "`https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<filename>`.",
     ]
-    for title, items in _by_track(pending):
+    for title, items in _by_category(pending):
         parts += ["", f"## {title}", "", "| Slug | Nombre | Archivo | Estado |",
                   "|------|--------|---------|--------|"]
         parts += [f"| `{b.slug}` | {b.name} | `{b.file}` | {_estado(b)} |" for b in items]

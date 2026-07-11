@@ -15,7 +15,7 @@ from urllib.parse import parse_qs, urlparse
 
 from badgegen import gallery, manifest as manifest_mod, promote as promote_mod
 from badgegen.config import Settings
-from badgegen.docs_gen import TRACKS
+from badgegen.docs_gen import CATEGORIES
 
 _SERVE_CSS = gallery._CSS + """
 .banner{background:#1c5c2e;padding:.5rem 1rem;border-radius:8px;margin-bottom:1rem}
@@ -34,7 +34,26 @@ h3{margin-bottom:.2rem}
 .badge-name{color:#aaa;font-weight:normal}
 """
 
-_TRACK_NAMES = dict(TRACKS)
+_CATEGORY_NAMES = dict(CATEGORIES)
+
+TRACK_TITLES = {
+    "eldership": "Antigüedad (años de membresía)",
+    "reunion-mensual": "Asambleas mensuales",
+    "hack-the-space": "Hack the Space",
+    "track-eventos": "Eventos externos",
+    "glados-messages": "GLaDOS",
+    "ocabra-tokens": "Tokens de oCabra",
+    "docmost-pages": "Wiki (Docmost)",
+    "purchases": "Compras",
+}
+
+
+def _group_key(badge) -> tuple[str, str]:
+    """(clave de agrupación, título): track real si lo hay, si no la categoría."""
+    if badge and badge.track:
+        return f"track:{badge.track}", TRACK_TITLES.get(badge.track, badge.track)
+    category = badge.category if badge else ""
+    return f"cat:{category}", _CATEGORY_NAMES.get(category, category or "Otros")
 
 
 def render_page(settings: Settings, m, items: list[dict], jobs: dict[str, str],
@@ -48,34 +67,20 @@ def render_page(settings: Settings, m, items: list[dict], jobs: dict[str, str],
     if not items and not refreshing:
         parts.append("<p>No quedan candidatos pendientes. 🎉</p>")
 
-    by_track: dict[str, list[dict]] = {}
+    groups: dict[str, dict] = {}
     for item in items:
         badge = m.get(item["slug"])
-        track = badge.track if badge else ""
-        by_track.setdefault(track, []).append(item)
+        key, title = _group_key(badge)
+        groups.setdefault(key, {"title": title, "items": []})["items"].append(item)
 
-    track_order = [slug for slug, _ in TRACKS] + sorted(
-        t for t in by_track if t not in _TRACK_NAMES
-    )
-    for track in track_order:
-        if track not in by_track:
-            continue
-        title = _TRACK_NAMES.get(track, track or "Otros")
-        parts.append(f"<h2 class='track'>{html.escape(title)}</h2>")
-        existing = [b for b in m.badges if b.track == track and b.status == "ok"
-                    and (settings.repo_root / b.file).is_file()]
-        if existing:
-            thumbs = "".join(
-                f"<img src='/img?p={html.escape(b.file)}' title='{html.escape(b.name)}'>"
-                for b in existing
-            )
-            parts.append(f"<div class='context'><span class='lbl'>ya en el track "
-                         f"({len(existing)}):</span>{thumbs}</div>")
-        for item in by_track[track]:
+    for key in sorted(groups, key=lambda k: (not k.startswith("track:"), groups[k]["title"])):
+        group = groups[key]
+        parts.append(f"<h2 class='track'>{html.escape(group['title'])}</h2>")
+        parts.append(_render_context(settings, m, key))
+        for item in group["items"]:
             parts.append(_render_badge(m, item, jobs))
 
-    # jobs de badges que ya no tienen candidatos listados (recién lanzados)
-    listed = {i["slug"] for i in items}
+    listed = {i["slug"] for i in items}  # jobs recién lanzados sin candidatos aún
     for slug, status in jobs.items():
         if status == "running" and slug not in listed:
             parts.append(f"<p class='jobs'>⏳ generando candidatos de "
@@ -89,12 +94,44 @@ def render_page(settings: Settings, m, items: list[dict], jobs: dict[str, str],
     )
 
 
+def _render_context(settings: Settings, m, key: str) -> str:
+    """Tira de miniaturas del grupo: la escalera en orden de nivel, o la categoría."""
+    kind, value = key.split(":", 1)
+    if kind == "track":
+        members = sorted((b for b in m.badges if b.track == value),
+                         key=lambda b: (b.track_level or 0, b.slug))
+        thumbs = []
+        for b in members:
+            level = f"lvl {b.track_level}" if b.track_level is not None else ""
+            if b.status == "ok" and (settings.repo_root / b.file).is_file():
+                thumbs.append(
+                    f"<span title='{html.escape(b.name)} ({level})'>"
+                    f"<img src='/img?p={html.escape(b.file)}'></span>"
+                )
+            else:
+                thumbs.append(f"<span class='lbl'>[{html.escape(b.name)} {level}]</span>")
+        return (f"<div class='context'><span class='lbl'>escalera completa "
+                f"({len(members)} niveles):</span>{''.join(thumbs)}</div>")
+    existing = [b for b in m.badges if b.category == value and b.status == "ok"
+                and (settings.repo_root / b.file).is_file()]
+    if not existing:
+        return ""
+    thumbs = "".join(
+        f"<img src='/img?p={html.escape(b.file)}' title='{html.escape(b.name)}'>"
+        for b in existing
+    )
+    return (f"<div class='context'><span class='lbl'>ya en la categoría "
+            f"({len(existing)}):</span>{thumbs}</div>")
+
+
 def _render_badge(m, item: dict, jobs: dict[str, str]) -> str:
     slug = item["slug"]
     badge = m.get(slug)
     name = badge.name if badge else slug
+    level = (f" · nivel {badge.track_level}"
+             if badge and badge.track_level is not None else "")
     parts = [f"<h3><code>{html.escape(slug)}</code> "
-             f"<span class='badge-name'>— {html.escape(name)}</span></h3>"]
+             f"<span class='badge-name'>— {html.escape(name)}{level}</span></h3>"]
     status = jobs.get(slug, "")
     if status == "running":
         parts.append("<p class='jobs'>⏳ generando más candidatos…</p>")

@@ -81,16 +81,16 @@ def test_promote_invalid_candidate_redirects_with_error(server):
 def test_page_groups_by_track_with_context(server, repo, make_badge):
     # añade al track un badge existente como contexto
     m = manifest.load(repo.manifest_path)
-    m.badges[0].track = "maquinas"
+    m.badges[0].category = "maquinas"
     m.badges.append(manifest.Badge(slug="badge-viejo", name="Viejo", file="badge-viejo.png",
-                                   track="maquinas", status="ok"))
+                                   category="maquinas", status="ok"))
     manifest.save(m, repo.manifest_path)
     (repo.repo_root / "badge-viejo.png").write_bytes(png_bytes(make_badge()))
     base, _ = server
     page = httpx.get(f"{base}/").text
     assert "Máquinas" in page                       # título del track
     assert "/img?p=badge-viejo.png" in page          # tira de contexto
-    assert "ya en el track" in page
+    assert "ya en la categoría" in page
     assert "＋3 sugerencias" in page                 # botón de más candidatos
 
 

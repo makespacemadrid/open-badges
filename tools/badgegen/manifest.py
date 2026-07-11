@@ -23,7 +23,9 @@ class Badge:
     slug: str
     name: str
     file: str
-    track: str = ""
+    category: str = ""            # categorySlug del portal (presentación/docs)
+    track: str | None = None      # escalera real de progresión (trackSlug)
+    track_level: int | None = None
     description: str = ""
     criteria: str = ""
     visual: str | None = None
@@ -38,13 +40,13 @@ class Badge:
             "slug": self.slug,
             "name": self.name,
             "file": self.file,
-            "track": self.track,
+            "category": self.category,
             "description": self.description,
             "criteria": self.criteria,
             "status": self.status,
             "issues": list(self.issues),
         }
-        for key in ("visual", "provider", "prompt_extra", "references"):
+        for key in ("track", "track_level", "visual", "provider", "prompt_extra", "references"):
             value = getattr(self, key)
             if value is not None:
                 d[key] = value
@@ -52,11 +54,18 @@ class Badge:
 
     @classmethod
     def from_dict(cls, d: dict) -> "Badge":
+        # compat: en manifiestos antiguos "track" contenía la categoría
+        category = d.get("category")
+        track = d.get("track")
+        if category is None and isinstance(track, str) and track:
+            category, track = track, None
         return cls(
             slug=d["slug"],
             name=d.get("name", d["slug"]),
             file=d.get("file", f"{d['slug']}.png"),
-            track=d.get("track", ""),
+            category=category or "",
+            track=track or None,
+            track_level=d.get("track_level"),
             description=d.get("description", ""),
             criteria=d.get("criteria", ""),
             visual=d.get("visual"),

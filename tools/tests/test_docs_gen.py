@@ -7,13 +7,13 @@ from badgegen.config import Settings
 def _manifest():
     return manifest.Manifest(badges=[
         manifest.Badge(slug="badge-a", name="A", file="badge-a.png",
-                       track="maquinas", status="ok"),
+                       category="maquinas", status="ok"),
         manifest.Badge(slug="badge-b", name="B", file="badge-b.png",
-                       track="maquinas", status="missing"),
+                       category="maquinas", status="missing"),
         manifest.Badge(slug="badge-c", name="C", file="badge-c.png",
-                       track="eventos", status="regen"),
+                       category="eventos", status="regen"),
         manifest.Badge(slug="badge-x", name="X", file="badge-x.png",
-                       track="", status="missing"),
+                       category="", status="missing"),
     ])
 
 
