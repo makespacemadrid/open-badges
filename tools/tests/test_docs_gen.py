@@ -50,3 +50,9 @@ def test_write_docs(tmp_path):
     docs_gen.write_docs(settings, _manifest())
     assert "badge-a" in (tmp_path / "README.md").read_text(encoding="utf-8")
     assert "badge-b" in (tmp_path / "missing-images.md").read_text(encoding="utf-8")
+
+
+def test_replace_between_content_with_backslash_is_literal():
+    doc = f"intro\n{docs_gen.START}\nviejo\n{docs_gen.END}\n"
+    out = docs_gen.replace_between(doc, r"Level \1 completado C:\badges")
+    assert r"Level \1 completado C:\badges" in out

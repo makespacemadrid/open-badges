@@ -82,7 +82,7 @@ def replace_between(text: str, content: str) -> str:
             f"faltan los marcadores {START} / {END}; añádelos alrededor de las tablas"
         )
     pattern = re.compile(re.escape(START) + ".*?" + re.escape(END), re.DOTALL)
-    return pattern.sub(f"{START}\n{content}\n{END}", text)
+    return pattern.sub(lambda _m: f"{START}\n{content}\n{END}", text)
 
 
 def write_docs(settings: Settings, m: Manifest) -> None:
