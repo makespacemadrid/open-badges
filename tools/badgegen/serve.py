@@ -86,6 +86,19 @@ def render_page(settings: Settings, m, items: list[dict], jobs: dict[str, str],
             parts.append(f"<p class='jobs'>⏳ generando candidatos de "
                          f"<code>{html.escape(slug)}</code>…</p>")
 
+    # Panorama: todos los tracks del catálogo, tengan o no candidatos pendientes.
+    all_tracks = sorted({b.track for b in m.badges if b.track},
+                        key=lambda t: TRACK_TITLES.get(t, t))
+    if all_tracks:
+        parts.append("<h2 class='track'>Panorama de tracks</h2>")
+        for track in all_tracks:
+            title = TRACK_TITLES.get(track, track)
+            done = sum(1 for b in m.badges if b.track == track and b.status == "ok")
+            total = sum(1 for b in m.badges if b.track == track)
+            parts.append(f"<h3>{html.escape(title)} "
+                         f"<span class='badge-name'>— {done}/{total} con imagen</span></h3>")
+            parts.append(_render_context(settings, m, f"track:{track}"))
+
     refresh = "<meta http-equiv='refresh' content='8'>" if refreshing else ""
     return (
         f"<!doctype html><html><head><meta charset='utf-8'>{refresh}"

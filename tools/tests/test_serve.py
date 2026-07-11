@@ -134,3 +134,23 @@ def test_generate_error_shown(server, repo, monkeypatch):
             break
         time.sleep(0.05)
     assert "ERROR" in page and "proveedor caído" in page
+
+
+def test_track_overview_shows_all_tracks(server, repo, make_badge):
+    # un track completo (sin candidatos pendientes) debe salir en el panorama
+    m = manifest.load(repo.manifest_path)
+    m.badges.append(manifest.Badge(slug="badge-n1", name="Nivel Uno", file="badge-n1.png",
+                                   category="comunidad", track="purchases", track_level=1,
+                                   status="ok"))
+    m.badges.append(manifest.Badge(slug="badge-n2", name="Nivel Dos", file="badge-n2.png",
+                                   category="comunidad", track="purchases", track_level=2,
+                                   status="missing"))
+    manifest.save(m, repo.manifest_path)
+    (repo.repo_root / "badge-n1.png").write_bytes(png_bytes(make_badge()))
+    base, _ = server
+    page = httpx.get(f"{base}/").text
+    assert "Panorama de tracks" in page
+    assert "Compras" in page                    # título del track
+    assert "1/2 con imagen" in page             # progreso
+    assert "/img?p=badge-n1.png" in page        # nivel con imagen
+    assert "[Nivel Dos lvl 2]" in page          # hueco del nivel sin imagen
