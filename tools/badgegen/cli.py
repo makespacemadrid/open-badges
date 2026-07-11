@@ -66,6 +66,12 @@ def cmd_sync(settings: Settings, args) -> int:
 
 
 def cmd_scan(settings: Settings, args) -> int:
+    api_key = None
+    if args.judge:
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key:
+            print("ERROR: falta GEMINI_API_KEY en tools/.env (necesaria para --judge)")
+            return 1
     m = _load(settings)
     badges = generate_mod.select_badges(m, args.slugs or None, None) if args.slugs \
         else [b for b in m.badges if b.status != "missing"]
@@ -77,10 +83,13 @@ def cmd_scan(settings: Settings, args) -> int:
         result = qc.check_image(Image.open(path), threshold=m.roundness_threshold)
         judge_score, judge_issues = None, []
         if args.judge:
-            verdict = qc.judge_legibility(path.read_bytes(), os.environ["GEMINI_API_KEY"])
-            judge_score, judge_issues = verdict.score, verdict.issues
-            if verdict.score <= 3:
-                result.issues.append("low-legibility")
+            try:
+                verdict = qc.judge_legibility(path.read_bytes(), api_key)
+                judge_score, judge_issues = verdict.score, verdict.issues
+                if verdict.score <= 3:
+                    result.issues.append("low-legibility")
+            except Exception as exc:
+                print(f"!! {badge.slug}: juez falló: {exc}")
         rows.append({"slug": badge.slug, "file": badge.file,
                      "roundness": result.roundness, "issues": result.issues,
                      "judge_score": judge_score, "judge_issues": judge_issues})
