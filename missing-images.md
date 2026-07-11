@@ -1,5 +1,6 @@
 # Badges sin imagen — pendientes de generar
 
+<!-- badgegen:tables:start -->
 Badges del catálogo del portal (36) que todavía no tienen imagen en este repositorio. Convención: `badge-<slug>.png`.
 
 Tras subir una imagen, el portal la recoge en el próximo `applyBadgeCatalog`/seed. Purga la caché de jsDelivr: `https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<filename>`.
@@ -59,3 +60,4 @@ Tras subir una imagen, el portal la recoge en el próximo `applyBadgeCatalog`/se
 | `badge-seventh-year` | Seventh Year | `badge-seventh-year.png` |
 | `badge-sixth-year` | Sixth Year | `badge-sixth-year.png` |
 | `badge-third-year` | Third Year | `badge-third-year.png` |
+<!-- badgegen:tables:end -->

@@ -12,6 +12,7 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 
 ---
 
+<!-- badgegen:tables:start -->
 ## Catálogo de badges
 
 _Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el repo · ❌ = pendiente de generar._
@@ -131,3 +132,4 @@ _Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el 
 | `badge-sixth-year` | Sixth Year | `badge-sixth-year.png` | ❌ pendiente |
 | `badge-third-year` | Third Year | `badge-third-year.png` | ❌ pendiente |
 | `keys-of-kingdom` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
+<!-- badgegen:tables:end -->
