@@ -16,7 +16,7 @@ HARD_RULES = (
     "Hard requirements: the badge is a PERFECT CIRCLE (never an ellipse or squashed disc), "
     "fully visible and centered with margin around it, on a plain solid black background with "
     "nothing else in the frame. Any text must be spelled EXACTLY as given, fully legible, "
-    "with clean unbroken letterforms."
+    "with clean unbroken letterforms. The title appears exactly ONCE, at the top of the badge."
 )
 
 

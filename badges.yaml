@@ -42,6 +42,7 @@ badges:
   status: missing
   issues: []
   visual: a resin 3D printer's build platform lifting a freshly cured print, resin droplets dripping
+  prompt_extra: 'The title has parentheses that MUST both be rendered, opening and closing: "I Can Print (Resin)". Alternatively render it on two lines: "I Can Print" and below it "(Resin)".'
 - slug: badge-i-can-vinyl
   name: I Can Vinyl
   file: badge-i-can-vinyl.png
