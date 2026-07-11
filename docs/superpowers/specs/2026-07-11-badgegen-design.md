@@ -7,7 +7,7 @@
 
 El repo tiene 86 badges en catálogo: 50 con imagen y 36 pendientes de generar
 (`missing-images.md`). Varios de los existentes tienen defectos: el círculo
-exterior salió achatado (elíptico) o el texto tiene mala legibilidad. Hoy no
+exterior salió achatado (elíptico) o la imagen tiene mala legibilidad. Hoy no
 hay tooling: las imágenes se generan a mano y README/missing-images.md se
 mantienen manualmente.
 
@@ -109,7 +109,7 @@ def generate(prompt: str, reference_images: list[bytes], n: int) -> list[bytes]
   con `response_format: b64_json`; modelo via `--model` o `CUSTOM_IMAGE_MODEL`
   (flux-klein u otros).
 
-Ambos vía `httpx`, sin SDKs. Credenciales en `tools/badgegen/.env`:
+Ambos vía `httpx`, sin SDKs. Credenciales en `tools/.env`:
 `GEMINI_API_KEY`, `CUSTOM_BASE_URL`, `CUSTOM_API_KEY`, `CUSTOM_IMAGE_MODEL`.
 
 ## Comandos
@@ -121,8 +121,17 @@ badgegen generate [slugs... | --status missing,regen] [-n 4]
                   [--provider gemini|custom] [--model X]
 badgegen review [slugs...]
 badgegen promote <slug> <candidato.png> [--keep-candidates]
+badgegen fix <slug>                # post-proceso in-place del PNG final existente
 badgegen docs                      # regenera README.md y missing-images.md
 ```
+
+> **Addendum (medición real):** el propio `badge-template.png` está achatado
+> (ratio ejes 0.9566, bbox 1166×1219), igual que varios badges existentes.
+> Por ello: (1) el diámetro objetivo del post-proceso es una constante
+> configurable (`target_diameter: 1180` en `badges.yaml`), no se mide del
+> template; (2) existe `badgegen fix <slug>`, que aplica el post-proceso
+> directamente al PNG final existente — arregla badges achatados sin
+> regenerarlos con IA, preservando el arte aprobado.
 
 ### scan
 
