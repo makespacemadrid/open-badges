@@ -27,6 +27,9 @@ def build_prompt(m: Manifest, b: Badge) -> str:
         f'Badge title text (must appear exactly): "{b.name}"',
         f"Main motif: {motif}",
     ]
+    track_cfg = m.track_config(b.track)
+    if track_cfg and track_cfg.prompt_extra:
+        lines.append(track_cfg.prompt_extra)
     if b.prompt_extra:
         lines.append(b.prompt_extra)
     lines.append(HARD_RULES)
@@ -63,11 +66,19 @@ def _load_files(settings: Settings, names: list[str]) -> list[bytes]:
 
 
 def badge_references(settings: Settings, m: Manifest, badge: Badge) -> list[bytes]:
-    """Referencias del badge: las suyas (series) y, si ninguna existe aún, las globales."""
-    if badge.references:
-        refs = _load_files(settings, badge.references)
-        if refs:
-            return refs
+    """Referencias efectivas del badge.
+
+    Base: las suyas (cadena de serie) o, si no tiene, las globales. A eso se
+    SUMAN los artworks del track (p.ej. el icono de Makespace en antigüedad).
+    Si nada de lo anterior existe en disco todavía, caen a las globales.
+    """
+    base = badge.references or m.reference_images
+    track_cfg = m.track_config(badge.track)
+    extra = track_cfg.references if track_cfg else []
+    names = list(dict.fromkeys(list(base) + list(extra)))
+    refs = _load_files(settings, names)
+    if refs:
+        return refs
     return _load_files(settings, m.reference_images)
 
 

@@ -7,6 +7,13 @@ reference_images:
 - badge-hello-glados.png
 target_diameter: 1180
 roundness_threshold: 0.985
+tracks:
+  eldership:
+    references:
+    - assets/makespace-icon.png
+    prompt_extra: 'The central motif of every badge in this series is the Makespace logo shown in the
+      attached icon artwork: a capital M built from linked yellow mechanical bars with pivot holes. Do
+      NOT draw a trophy or a cup.'
 badges:
 - slug: badge-hello-world
   name: Hello, World!
@@ -704,11 +711,11 @@ badges:
   issues: []
   track: eldership
   track_level: 1
-  visual: the Makespace anniversary trophy with a large number 1 on its cup, standing over one lit birthday
-    candles, two small laurel sprigs at the sides
-  prompt_extra: Level 1 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly one candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above a single lit birthday candle, with a large number 1, two small laurel
+    sprigs at the sides
+  prompt_extra: Level 1 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly one candle and ornamentation slightly richer than the previous
+    level.
 - slug: badge-second-year
   name: Second Year
   file: badge-second-year.png
@@ -719,11 +726,11 @@ badges:
   issues: []
   track: eldership
   track_level: 2
-  visual: the Makespace anniversary trophy with a large number 2 on its cup, standing over two lit birthday
-    candles, two small laurel sprigs at the sides
-  prompt_extra: Level 2 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly two candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above two lit birthday candles, with a large number 2, two small laurel
+    sprigs at the sides
+  prompt_extra: Level 2 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly two candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-first-year.png
 - slug: badge-third-year
@@ -736,11 +743,11 @@ badges:
   issues: []
   track: eldership
   track_level: 3
-  visual: the Makespace anniversary trophy with a large number 3 on its cup, standing over three lit birthday
-    candles, two small laurel sprigs at the sides
-  prompt_extra: Level 3 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly three candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above three lit birthday candles, with a large number 3, two small laurel
+    sprigs at the sides
+  prompt_extra: Level 3 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly three candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-second-year.png
   - badge-first-year.png
@@ -754,11 +761,11 @@ badges:
   issues: []
   track: eldership
   track_level: 4
-  visual: the Makespace anniversary trophy with a large number 4 on its cup, standing over four lit birthday
-    candles, growing laurel branches framing the lower half
-  prompt_extra: Level 4 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly four candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above four lit birthday candles, with a large number 4, growing laurel
+    branches framing the lower half
+  prompt_extra: Level 4 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly four candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-third-year.png
   - badge-first-year.png
@@ -772,11 +779,11 @@ badges:
   issues: []
   track: eldership
   track_level: 5
-  visual: the Makespace anniversary trophy with a large number 5 on its cup, standing over five lit birthday
-    candles, growing laurel branches framing the lower half
-  prompt_extra: Level 5 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly five candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above five lit birthday candles, with a large number 5, growing laurel
+    branches framing the lower half
+  prompt_extra: Level 5 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly five candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-fourth-year.png
   - badge-first-year.png
@@ -790,11 +797,11 @@ badges:
   issues: []
   track: eldership
   track_level: 6
-  visual: the Makespace anniversary trophy with a large number 6 on its cup, standing over six lit birthday
-    candles, growing laurel branches framing the lower half
-  prompt_extra: Level 6 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly six candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above six lit birthday candles, with a large number 6, growing laurel branches
+    framing the lower half
+  prompt_extra: Level 6 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly six candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-fifth-year.png
   - badge-first-year.png
@@ -808,11 +815,11 @@ badges:
   issues: []
   track: eldership
   track_level: 7
-  visual: the Makespace anniversary trophy with a large number 7 on its cup, standing over seven lit birthday
-    candles, a rich laurel wreath reaching halfway up the sides
-  prompt_extra: Level 7 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly seven candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above seven lit birthday candles, with a large number 7, a rich laurel
+    wreath reaching halfway up the sides
+  prompt_extra: Level 7 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly seven candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-sixth-year.png
   - badge-first-year.png
@@ -826,11 +833,11 @@ badges:
   issues: []
   track: eldership
   track_level: 8
-  visual: the Makespace anniversary trophy with a large number 8 on its cup, standing over eight lit birthday
-    candles, a rich laurel wreath reaching halfway up the sides
-  prompt_extra: Level 8 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly eight candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above eight lit birthday candles, with a large number 8, a rich laurel
+    wreath reaching halfway up the sides
+  prompt_extra: Level 8 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly eight candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-seventh-year.png
   - badge-first-year.png
@@ -844,11 +851,11 @@ badges:
   issues: []
   track: eldership
   track_level: 9
-  visual: the Makespace anniversary trophy with a large number 9 on its cup, standing over nine lit birthday
-    candles, a rich laurel wreath reaching halfway up the sides
-  prompt_extra: Level 9 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly nine candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above nine lit birthday candles, with a large number 9, a rich laurel wreath
+    reaching halfway up the sides
+  prompt_extra: Level 9 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly nine candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-eighth-year.png
   - badge-first-year.png
@@ -862,11 +869,11 @@ badges:
   issues: []
   track: eldership
   track_level: 10
-  visual: the Makespace anniversary trophy with a large number 10 on its cup, standing over ten lit birthday
-    candles, a full ornate laurel wreath with small stars along the ring
-  prompt_extra: Level 10 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly ten candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above ten lit birthday candles, with a large number 10, a full ornate laurel
+    wreath with small stars along the ring
+  prompt_extra: Level 10 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly ten candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-ninth-year.png
   - badge-first-year.png
@@ -880,11 +887,11 @@ badges:
   issues: []
   track: eldership
   track_level: 11
-  visual: the Makespace anniversary trophy with a large number 11 on its cup, standing over eleven lit
-    birthday candles, a full ornate laurel wreath with small stars along the ring
-  prompt_extra: Level 11 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly eleven candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above eleven lit birthday candles, with a large number 11, a full ornate
+    laurel wreath with small stars along the ring
+  prompt_extra: Level 11 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly eleven candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-10-years.png
   - badge-first-year.png
@@ -898,11 +905,11 @@ badges:
   issues: []
   track: eldership
   track_level: 12
-  visual: the Makespace anniversary trophy with a large number 12 on its cup, standing over twelve lit
-    birthday candles, a full ornate laurel wreath with small stars along the ring
-  prompt_extra: Level 12 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly twelve candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above twelve lit birthday candles, with a large number 12, a full ornate
+    laurel wreath with small stars along the ring
+  prompt_extra: Level 12 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly twelve candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-11-years.png
   - badge-first-year.png
@@ -916,11 +923,11 @@ badges:
   issues: []
   track: eldership
   track_level: 13
-  visual: the Makespace anniversary trophy with a large number 13 on its cup, standing over thirteen lit
-    birthday candles, a full ornate laurel wreath with small stars along the ring
-  prompt_extra: Level 13 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
-    motif and composition as the reference badge, with exactly thirteen candles and ornamentation slightly
-    richer than the previous level.
+  visual: the Makespace M logo above thirteen lit birthday candles, with a large number 13, a full ornate
+    laurel wreath with small stars along the ring
+  prompt_extra: Level 13 of 13 in the membership-years badge series. Same M-logo-over-candles composition
+    as the reference badge, with exactly thirteen candles and ornamentation slightly richer than the previous
+    level.
   references:
   - badge-12-years.png
   - badge-first-year.png

@@ -88,9 +88,9 @@ def test_page_groups_by_track_with_context(server, repo, make_badge):
     (repo.repo_root / "badge-viejo.png").write_bytes(png_bytes(make_badge()))
     base, _ = server
     page = httpx.get(f"{base}/").text
-    assert "Máquinas" in page                       # título del track
-    assert "/img?p=badge-viejo.png" in page          # tira de contexto
-    assert "ya en la categoría" in page
+    assert "Máquinas" in page                        # título de la sección
+    assert "/img?p=badge-viejo.png" in page          # el badge hecho, como fila verde
+    assert "Regenerar" in page and "Fix círculo" in page  # acciones sobre badges ok
     assert "＋3 sugerencias" in page                 # botón de más candidatos
 
 
@@ -98,7 +98,7 @@ def test_generate_more_via_ui(server, repo, monkeypatch, make_badge):
     base, settings = server
     calls = {}
 
-    def fake_generate(s, slug):
+    def fake_generate(s, slug, provider=None):
         calls["slug"] = slug
         cand = s.candidates_dir / slug / "99-gemini.png"
         cand.write_bytes(png_bytes(make_badge()))
@@ -121,7 +121,7 @@ def test_generate_more_via_ui(server, repo, monkeypatch, make_badge):
 def test_generate_error_shown(server, repo, monkeypatch):
     base, _ = server
 
-    def boom(s, slug):
+    def boom(s, slug, provider=None):
         raise RuntimeError("proveedor caído")
 
     monkeypatch.setattr(serve, "_generate_more", boom)
@@ -155,3 +155,102 @@ def test_tracks_render_as_actionable_ladders(server, repo, make_badge):
     assert "lvl 2" in page and "Nivel Dos" in page    # nivel 2 listado en orden
     assert "Generar 3 candidatos" in page             # acción para el nivel sin candidatos
     assert "su nivel anterior aún no tiene imagen" in page  # aviso de referencias
+
+
+def test_api_state_json(server, repo):
+    base, _ = server
+    r = httpx.get(f"{base}/api/state")
+    assert r.status_code == 200
+    state = r.json()
+    assert state["counts"]["missing"] == 1
+    badge = next(b for b in state["badges"] if b["slug"] == "badge-a")
+    assert len(badge["candidates"]) == 1
+    assert "style" in state and "tracks" in state
+
+
+def test_edit_badge_prompt_via_ui(server, repo):
+    base, settings = server
+    r = httpx.post(f"{base}/edit", data={
+        "slug": "badge-a", "visual": "un robot saludando",
+        "prompt_extra": "  ", "references": "assets/x.png\n\nbadge-y.png"})
+    assert r.status_code == 303 and "ok=" in r.headers["location"]
+    b = manifest.load(settings.manifest_path).get("badge-a")
+    assert b.visual == "un robot saludando"
+    assert b.prompt_extra is None
+    assert b.references == ["assets/x.png", "badge-y.png"]
+
+
+def test_edit_track_config_via_ui(server, repo):
+    base, settings = server
+    r = httpx.post(f"{base}/track", data={
+        "track": "eldership", "references": "assets/makespace-icon.png",
+        "prompt_extra": "motivo: el logo M"})
+    assert r.status_code == 303
+    m = manifest.load(settings.manifest_path)
+    assert m.tracks["eldership"].references == ["assets/makespace-icon.png"]
+    assert m.tracks["eldership"].prompt_extra == "motivo: el logo M"
+    # vaciar la config la elimina
+    httpx.post(f"{base}/track", data={"track": "eldership", "references": "", "prompt_extra": ""})
+    assert "eldership" not in manifest.load(settings.manifest_path).tracks
+
+
+def test_edit_globals_via_ui(server, repo):
+    base, settings = server
+    httpx.post(f"{base}/globals", data={"style": "nuevo estilo global",
+                                        "references": "badge-uno.png\nbadge-dos.png"})
+    m = manifest.load(settings.manifest_path)
+    assert m.style == "nuevo estilo global"
+    assert m.reference_images == ["badge-uno.png", "badge-dos.png"]
+
+
+def test_fix_via_ui(server, repo, make_badge):
+    base, settings = server
+    m = manifest.load(settings.manifest_path)
+    m.badges.append(manifest.Badge(slug="badge-oval", name="Oval", file="badge-oval.png",
+                                   status="ok"))
+    manifest.save(m, settings.manifest_path)
+    (settings.repo_root / "badge-oval.png").write_bytes(png_bytes(make_badge(rx=560, ry=540)))
+    r = httpx.post(f"{base}/fix", data={"slug": "badge-oval"})
+    assert r.status_code == 303 and "ok=" in r.headers["location"]
+    from badgegen import postprocess
+
+    assert postprocess.analyze(Image.open(settings.repo_root / "badge-oval.png")).ratio > 0.99
+
+
+def test_scan_via_ui(server, repo, make_badge):
+    base, settings = server
+    m = manifest.load(settings.manifest_path)
+    m.badges.append(manifest.Badge(slug="badge-chato", name="Chato", file="badge-chato.png",
+                                   status="ok"))
+    manifest.save(m, settings.manifest_path)
+    (settings.repo_root / "badge-chato.png").write_bytes(png_bytes(make_badge(rx=560, ry=530)))
+    assert httpx.post(f"{base}/scan", data={}).status_code == 303
+    import time
+
+    for _ in range(60):
+        b = manifest.load(settings.manifest_path).get("badge-chato")
+        if b.issues:
+            break
+        time.sleep(0.1)
+    assert "flattened-circle" in b.issues
+
+
+def test_sync_via_ui(server, repo, monkeypatch):
+    base, settings = server
+    cat = settings.repo_root / "catalog.ts"
+    cat.write_text("""
+const BADGES: BadgeSpec[] = [
+  {
+    slug: 'badge-nuevo',
+    name: 'Nuevo',
+    description: 'd',
+    criteria: 'c',
+    categorySlug: 'maquinas',
+    achievementType: 'Achievement',
+  },
+];
+""", encoding="utf-8")
+    monkeypatch.setenv("BADGEGEN_CATALOG", str(cat))
+    r = httpx.post(f"{base}/sync", data={})
+    assert r.status_code == 303 and "ok=" in r.headers["location"]
+    assert manifest.load(settings.manifest_path).get("badge-nuevo") is not None

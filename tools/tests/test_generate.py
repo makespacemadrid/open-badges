@@ -158,3 +158,54 @@ def test_manifest_roundtrip_references(tmp_path):
     assert m2.get("badge-a").references == ["ref.png"]
     assert m2.get("badge-b").references is None
     assert "references" not in p.read_text().split("badge-b")[1]
+
+
+def test_track_references_are_additive(tmp_path, make_badge):
+    settings = Settings(repo_root=tmp_path)
+    (tmp_path / "global-ref.png").write_bytes(b"GLOBAL")
+    (tmp_path / "serie-n1.png").write_bytes(b"SERIE")
+    (tmp_path / "assets").mkdir()
+    (tmp_path / "assets" / "icono.png").write_bytes(b"ICONO")
+    m = manifest.Manifest(
+        reference_images=["global-ref.png"],
+        tracks={"eldership": manifest.TrackConfig(references=["assets/icono.png"])},
+        badges=[],
+    )
+    con_cadena = manifest.Badge(slug="badge-y2", name="Y2", file="y2.png",
+                                track="eldership", references=["serie-n1.png"])
+    sin_cadena = manifest.Badge(slug="badge-y1", name="Y1", file="y1.png",
+                                track="eldership")
+    fuera = manifest.Badge(slug="badge-z", name="Z", file="z.png")
+    # cadena de serie + artwork del track
+    assert generate.badge_references(settings, m, con_cadena) == [b"SERIE", b"ICONO"]
+    # sin cadena: globales + artwork del track
+    assert generate.badge_references(settings, m, sin_cadena) == [b"GLOBAL", b"ICONO"]
+    # badge sin track: solo globales
+    assert generate.badge_references(settings, m, fuera) == [b"GLOBAL"]
+
+
+def test_build_prompt_includes_track_extra():
+    m = manifest.Manifest(
+        style="ESTILO",
+        tracks={"eldership": manifest.TrackConfig(prompt_extra="MOTIVO-DEL-TRACK")},
+        badges=[],
+    )
+    b = manifest.Badge(slug="badge-y1", name="Y1", file="y1.png", track="eldership",
+                       visual="velas", prompt_extra="EXTRA-BADGE")
+    p = generate.build_prompt(m, b)
+    assert "MOTIVO-DEL-TRACK" in p and "EXTRA-BADGE" in p
+    assert p.index("MOTIVO-DEL-TRACK") < p.index("EXTRA-BADGE")
+
+
+def test_manifest_tracks_roundtrip(tmp_path):
+    m = manifest.Manifest(tracks={
+        "eldership": manifest.TrackConfig(references=["assets/icono.png"],
+                                          prompt_extra="logo M"),
+        "vacio": manifest.TrackConfig(),
+    })
+    p = tmp_path / "badges.yaml"
+    manifest.save(m, p)
+    m2 = manifest.load(p)
+    assert m2.tracks["eldership"].references == ["assets/icono.png"]
+    assert m2.tracks["eldership"].prompt_extra == "logo M"
+    assert "vacio" not in m2.tracks  # las configs vacías no se guardan

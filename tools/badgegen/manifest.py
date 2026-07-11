@@ -78,11 +78,36 @@ class Badge:
 
 
 @dataclass
+class TrackConfig:
+    """Configuración por track: artworks/referencias adicionales y prompt común."""
+    references: list[str] = field(default_factory=list)
+    prompt_extra: str | None = None
+
+    def to_dict(self) -> dict:
+        d: dict = {}
+        if self.references:
+            d["references"] = list(self.references)
+        if self.prompt_extra:
+            d["prompt_extra"] = self.prompt_extra
+        return d
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "TrackConfig":
+        return cls(references=list(d.get("references") or []),
+                   prompt_extra=d.get("prompt_extra"))
+
+    @property
+    def empty(self) -> bool:
+        return not self.references and not self.prompt_extra
+
+
+@dataclass
 class Manifest:
     style: str = DEFAULT_STYLE
     reference_images: list[str] = field(default_factory=lambda: list(DEFAULT_REFERENCES))
     target_diameter: int = config.TARGET_DIAMETER
     roundness_threshold: float = config.ROUNDNESS_THRESHOLD
+    tracks: dict[str, TrackConfig] = field(default_factory=dict)
     badges: list[Badge] = field(default_factory=list)
 
     def get(self, slug: str) -> Badge | None:
@@ -90,6 +115,9 @@ class Manifest:
             if badge.slug == slug:
                 return badge
         return None
+
+    def track_config(self, track: str | None) -> TrackConfig | None:
+        return self.tracks.get(track) if track else None
 
 
 def load(path: Path) -> Manifest:
@@ -99,6 +127,8 @@ def load(path: Path) -> Manifest:
         reference_images=list(data.get("reference_images") or DEFAULT_REFERENCES),
         target_diameter=int(data.get("target_diameter", config.TARGET_DIAMETER)),
         roundness_threshold=float(data.get("roundness_threshold", config.ROUNDNESS_THRESHOLD)),
+        tracks={slug: TrackConfig.from_dict(cfg or {})
+                for slug, cfg in (data.get("tracks") or {}).items()},
         badges=[Badge.from_dict(b) for b in data.get("badges") or []],
     )
 
@@ -111,5 +141,13 @@ def save(m: Manifest, path: Path) -> None:
         "roundness_threshold": m.roundness_threshold,
         "badges": [b.to_dict() for b in m.badges],
     }
+    tracks = {slug: cfg.to_dict() for slug, cfg in sorted(m.tracks.items())
+              if not cfg.empty}
+    if tracks:
+        data["tracks"] = tracks
+        # tracks antes de badges para que se lea como configuración
+        data = {k: data[k] for k in
+                ("style", "reference_images", "target_diameter",
+                 "roundness_threshold", "tracks", "badges")}
     text = yaml.safe_dump(data, sort_keys=False, allow_unicode=True, width=100)
     path.write_text(text, encoding="utf-8")
