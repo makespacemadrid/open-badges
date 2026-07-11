@@ -49,6 +49,15 @@ def _split_entries(text: str) -> list[str]:
                 continue
             if ch == in_string:
                 in_string = None
+        elif ch == "/" and text[i + 1 : i + 2] == "/":
+            i = text.find("\n", i)
+            if i == -1:
+                break
+            continue
+        elif ch == "/" and text[i + 1 : i + 2] == "*":
+            end = text.find("*/", i + 2)
+            i = end + 2 if end != -1 else len(text)
+            continue
         elif ch in ("'", '"', "`"):
             in_string = ch
         elif ch == "{":

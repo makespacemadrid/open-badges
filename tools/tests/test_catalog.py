@@ -99,3 +99,33 @@ def test_parse_errors(tmp_path):
         catalog.parse_catalog(_write(tmp_path, "const OTRA = 1;"))
     with pytest.raises(catalog.CatalogParseError):
         catalog.parse_catalog(_write(tmp_path, "const BADGES: BadgeSpec[] = [];"))
+
+
+FIXTURE_TS_COMMENTS = """
+const BADGES: BadgeSpec[] = [
+  {
+    slug: 'badge-uno',
+    name: 'Uno',
+    description: 'Primera entrada.',
+    criteria: 'Criterio uno.',
+    categorySlug: 'maquinas',
+    achievementType: 'Achievement',
+  },
+  // Sofía's badge — don't count
+  {
+    slug: 'badge-dos',
+    /* isn't this fun */
+    name: 'Dos',
+    description: 'Segunda entrada.',
+    criteria: 'Criterio dos.',
+    categorySlug: 'maquinas',
+    achievementType: 'Achievement',
+  },
+];
+"""
+
+
+def test_comments_with_apostrophes_do_not_break_scanner(tmp_path):
+    entries = catalog.parse_catalog(_write(tmp_path, FIXTURE_TS_COMMENTS))
+    slugs = {e.slug for e in entries}
+    assert slugs == {"badge-uno", "badge-dos"}
