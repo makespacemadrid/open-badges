@@ -1,0 +1,7 @@
+candidates/
+review/
+tools/.venv/
+tools/.env
+__pycache__/
+*.pyc
+.pytest_cache/
