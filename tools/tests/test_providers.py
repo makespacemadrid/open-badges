@@ -40,12 +40,27 @@ def test_4xx_raises_without_retry():
         post_with_retry(_client(handler), "http://x/y", json={}, sleep=lambda s: None)
 
 
+def test_retries_exhausted_raises():
+    calls = {"n": 0}
+    sleeps = []
+
+    def handler(request):
+        calls["n"] += 1
+        return httpx.Response(500, text="boom")
+
+    with pytest.raises(ProviderError, match="3 reintentos"):
+        post_with_retry(_client(handler), "http://x/y", json={}, sleep=sleeps.append)
+    assert calls["n"] == 4
+    assert sleeps == [2, 4, 8]
+
+
 def test_gemini_generate_parses_inline_data():
     seen = {}
 
     def handler(request):
         seen["body"] = json.loads(request.content)
         seen["key"] = request.headers.get("x-goog-api-key")
+        seen["url"] = str(request.url)
         return httpx.Response(200, json={
             "candidates": [{"content": {"parts": [
                 {"text": "aquí tienes"},
@@ -60,7 +75,7 @@ def test_gemini_generate_parses_inline_data():
     parts = seen["body"]["contents"][0]["parts"]
     assert parts[0]["text"] == "un badge"
     assert parts[1]["inline_data"]["data"] == base64.b64encode(b"ref-bytes").decode()
-    assert "gemini-2.5-flash-image" in str(seen.get("url", "")) or True
+    assert "gemini-2.5-flash-image:generateContent" in seen["url"]
 
 
 def test_gemini_no_image_in_response_raises():
@@ -86,6 +101,9 @@ def test_openai_compat_generate():
     assert seen["url"] == "http://flux.local/v1/images/generations"
     assert seen["auth"] == "Bearer TOKEN"
     assert seen["body"]["model"] == "flux-klein" and seen["body"]["n"] == 1
+    assert seen["body"]["response_format"] == "b64_json"
+    assert seen["body"]["prompt"] == "un badge"
+    assert seen["body"]["size"] == "1024x1024"
 
 
 def test_get_provider_factory(monkeypatch):
