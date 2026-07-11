@@ -1,0 +1,703 @@
+style: Circular maker badge emblem, flat vector style, golden yellow (#F5C400) artwork on a black disc,
+  outer yellow ring with small screw heads, bold sans-serif lettering, high contrast, clean centered composition,
+  no gradients, no photo textures
+reference_images:
+- badge-template.png
+- badge-member.png
+- badge-hello-glados.png
+target_diameter: 1180
+roundness_threshold: 0.985
+badges:
+- slug: badge-hello-world
+  name: Hello, World!
+  file: badge-hello-world.png
+  track: onboarding
+  description: Se ha presentado en los canales del Makespace y ha asistido a su primera reunión mensual.
+  criteria: Presentarse en la lista de correo, saludar en el Telegram de socios y asistir a la primera
+    reunión mensual.
+  status: ok
+  issues: []
+- slug: badge-maker-101
+  name: Maker Padawan
+  file: badge-maker101.png
+  track: onboarding
+  description: Ha completado los primeros pasos como maker en el Makespace.
+  criteria: Completar la integración inicial en la comunidad del Makespace.
+  status: ok
+  issues: []
+- slug: badge-i-can-print
+  name: I Can Print (3D)
+  file: badge-i-can-print.png
+  track: maquinas
+  description: Ha completado su primera impresión 3D en el Makespace.
+  criteria: Completar la primera impresión 3D en el laboratorio del Makespace.
+  status: ok
+  issues: []
+- slug: badge-i-can-print-resin
+  name: I Can Print (Resin)
+  file: badge-i-can-print-resin.png
+  track: maquinas
+  description: Ha completado su primera impresión en resina en el Makespace.
+  criteria: Completar la primera impresión en resina (SLA/MSLA) en el laboratorio del Makespace.
+  status: missing
+  issues: []
+  visual: a resin 3D printer's build platform lifting a freshly cured print, resin droplets dripping
+- slug: badge-i-can-vinyl
+  name: I Can Vinyl
+  file: badge-i-can-vinyl.png
+  track: maquinas
+  description: Ha cortado su primer vinilo con la cortadora del Makespace.
+  criteria: Cortar el primer vinilo con la cortadora del Makespace.
+  status: ok
+  issues: []
+- slug: badge-i-can-laser
+  name: I Can Laser
+  file: badge-i-can-laser.png
+  track: maquinas
+  description: Ha completado la formación de seguridad de la cortadora láser y sabe usarla con autonomía.
+  criteria: Completar la formación de seguridad del láser (materiales permitidos, extracción de humos,
+    prevención de incendios) y realizar el primer corte o grabado supervisado.
+  status: missing
+  issues: []
+  visual: a laser cutter head firing a bright beam onto plywood, spark particles
+- slug: badge-can-cnc
+  name: I Can CNC
+  file: badge-i-can-cnc.png
+  track: maquinas
+  description: Ha completado la formación de la CNC y sabe usarla con autonomía.
+  criteria: Completar la formación de la CNC fresando el llavero de bautismo.
+  status: ok
+  issues: []
+- slug: badge-i-can-solder
+  name: I Can Solder
+  file: badge-i-can-solder.png
+  track: maquinas
+  description: Habilidad de soldadura básica acreditada en el banco de electrónica del Makespace.
+  criteria: Usar el banco de soldadura y completar la introducción a la electrónica.
+  status: ok
+  issues: []
+- slug: badge-i-can-pcb
+  name: I Can PCB
+  file: badge-i-can-pcb.png
+  track: maquinas
+  description: Ha fresado su primer circuito impreso en el Makespace.
+  criteria: Completar la formación de la fresadora de circuitos y producir la primera placa.
+  status: ok
+  issues: []
+- slug: badge-i-can-sew
+  name: I Can Sew
+  file: badge-i-can-sew.png
+  track: maquinas
+  description: Ha completado su primera costura en la máquina del Makespace.
+  criteria: Completar la primera costura en la máquina de coser del Makespace.
+  status: ok
+  issues: []
+- slug: badge-i-can-sublimate
+  name: I Can Sublimate
+  file: badge-i-can-sublimate.png
+  track: maquinas
+  description: Ha transferido su primer diseño con la prensa de sublimación del Makespace.
+  criteria: Completar la primera sublimación con la prensa del Makespace.
+  status: ok
+  issues: []
+- slug: badge-jack-of-all-trades
+  name: Jack of all trades
+  file: badge-jack-all-trades.png
+  track: maquinas
+  description: Ha completado el training de todas las máquinas principales del Makespace.
+  criteria: 'Obtener las 8 certificaciones de máquinas: impresora 3D, impresión en resina, cortadora de
+    vinilo, CNC, soldadura, PCB, máquina de coser y sublimación.'
+  status: ok
+  issues: []
+- slug: badge-embajador-maker
+  name: Space Ambassador
+  file: badge-maker-ambassador.png
+  track: comunidad
+  description: Ha representado al Makespace dando tours y atendiendo el stand en eventos externos.
+  criteria: Dar un tour del espacio a visitantes o asistir al stand del Makespace en un evento externo.
+  status: ok
+  issues: []
+- slug: badge-garbage-collector
+  name: Garbage Collector
+  file: badge-garbage-collector.png
+  track: comunidad
+  description: Ha sacado la basura del espacio (un servicio invisible pero esencial).
+  criteria: Sacar la basura del espacio al contenedor más cercano.
+  status: ok
+  issues: []
+- slug: badge-liquid-cooling
+  name: Liquid Cooling Specialist
+  file: badge-liquid-cooling.png
+  track: comunidad
+  description: Mantiene a los makers frescos reabasteciendo la nevera comunitaria.
+  criteria: Reabastecer la nevera comunitaria del Makespace con refrescos.
+  status: ok
+  issues: []
+- slug: badge-data-scrubber
+  name: Data Scrubber
+  file: badge-data-scrubber.png
+  track: comunidad
+  description: Ha limpiado los baños del Makespace. Gracias.
+  criteria: Limpiar los baños del Makespace.
+  status: ok
+  issues: []
+- slug: badge-show-and-tell
+  name: Show & Tell
+  file: badge-show-and-tell.png
+  track: comunidad
+  description: Enseña a los demás algo que te apasione.
+  criteria: Impartir un taller o demostración en el Makespace.
+  status: missing
+  issues: []
+  visual: a raised hand presenting a small object to an attentive semicircle of onlookers
+- slug: badge-platform-maker
+  name: Platform Builder
+  file: badge-platform-maker.png
+  track: comunidad
+  description: Ha programado o contribuido sustancialmente a una aplicación interna del Makespace.
+  criteria: Programar o contribuir sustancialmente a una herramienta interna del Makespace (portal, bots,
+    dashboards…).
+  status: ok
+  issues: []
+- slug: badge-hacked-the-space
+  name: Hacked the Space
+  file: badge-hack-the-space.png
+  track: comunidad
+  description: Ha contribuido a mejorar el espacio de forma significativa.
+  criteria: Reconocimiento manual por contribuir a mejorar el Makespace.
+  status: missing
+  issues: []
+  visual: a hand driving a screw into a wall-mounted shelf under construction, tools scattered around
+- slug: badge-hello-glados
+  name: Hello, GLaDOS!
+  file: badge-hello-glados.png
+  track: plataformas
+  description: Primera interacción con GLaDOS, el bot de Telegram del Makespace.
+  criteria: Enviar al menos un mensaje a GLaDOS.
+  status: ok
+  issues: []
+- slug: badge-still-alive
+  name: Still Alive
+  file: badge-still-alive.png
+  track: plataformas
+  description: 10 mensajes a GLaDOS y has sobrevivido para contarlo.
+  criteria: Enviar al menos 10 mensajes a GLaDOS.
+  status: ok
+  issues: []
+- slug: badge-test-subject
+  name: Test Subject
+  file: badge-test-subject.png
+  track: plataformas
+  description: Una presencia habitual en la cámara de pruebas de GLaDOS — 50 mensajes dentro.
+  criteria: Enviar al menos 50 mensajes a GLaDOS.
+  status: ok
+  issues: []
+- slug: badge-property-of-aperture
+  name: Property of Aperture
+  file: badge-property-of-aperture.png
+  track: plataformas
+  description: Con 100 mensajes, básicamente ya perteneces a la instalación.
+  criteria: Enviar al menos 100 mensajes a GLaDOS.
+  status: ok
+  issues: []
+- slug: badge-cake-is-a-lie
+  name: The Cake Is a Lie
+  file: badge-cake-is-a-lie.png
+  track: plataformas
+  description: 500 mensajes y todavía no hay tarta. GLaDOS está satisfecha.
+  criteria: Enviar al menos 500 mensajes a GLaDOS.
+  status: ok
+  issues: []
+- slug: badge-petty-cash-rookie
+  name: Petty Cash Rookie
+  file: badge-petty-cash-rookie.png
+  track: comunidad
+  description: Tu primera compra para el espacio, reconciliada. Por algo se empieza.
+  criteria: Gestionar 1 compra reconciliada.
+  status: missing
+  issues: []
+  visual: a single coin dropping into a small cash jar
+- slug: badge-serial-spender
+  name: Serial Spender
+  file: badge-serial-spender.png
+  track: comunidad
+  description: Cinco compras reconciliadas. Comprar para el espacio se te da bien.
+  criteria: Gestionar 5 compras reconciliadas.
+  status: missing
+  issues: []
+  visual: five coins stacked neatly beside a small cash jar
+- slug: badge-compulsive-shopper
+  name: Compulsive Shopper
+  file: badge-compulsive-shopper.png
+  track: comunidad
+  description: Quince compras reconciliadas. Esto empieza a ser un problema (para la tesorería).
+  criteria: Gestionar 15 compras reconciliadas.
+  status: missing
+  issues: []
+  visual: a shopping cart overflowing with tools and receipts spilling over the sides
+- slug: badge-procurer
+  name: Procurer
+  file: badge-procurer.png
+  track: comunidad
+  description: Treinta compras reconciliadas. Eres quien procura el material que le falta al espacio.
+  criteria: Gestionar 30 compras reconciliadas.
+  status: missing
+  issues: []
+  visual: a hand truck stacked high with delivery boxes rolling through a warehouse doorway
+- slug: badge-spendzilla
+  name: Spendzilla
+  file: badge-spendzilla.png
+  track: comunidad
+  description: Cincuenta compras reconciliadas. Devorador de presupuestos legendario.
+  criteria: Gestionar 50 compras reconciliadas.
+  status: missing
+  issues: []
+  visual: a giant monster claw crushing a pile of coins and receipts
+- slug: badge-first-draft
+  name: First Draft
+  file: badge-first-draft.png
+  track: plataformas
+  description: Has publicado la primera página en la wiki del Makespace.
+  criteria: Crear al menos 1 página en Docmost.
+  status: ok
+  issues: []
+- slug: badge-wiki-contributor
+  name: Wiki Contributor
+  file: badge-wiki-contributor.png
+  track: plataformas
+  description: Has construido un cuerpo de conocimiento — 10 páginas en el wiki.
+  criteria: Crear al menos 10 páginas en Docmost.
+  status: ok
+  issues: []
+- slug: badge-archivist
+  name: Archivist
+  file: badge-archivist.png
+  track: plataformas
+  description: 25 páginas documentando la vida y el saber del Makespace.
+  criteria: Crear al menos 25 páginas en Docmost.
+  status: ok
+  issues: []
+- slug: badge-space-chronicler
+  name: Space Chronicler
+  file: badge-space-chronicler.png
+  track: plataformas
+  description: 50 páginas. La wiki del Makespace sería un lugar peor sin ti.
+  criteria: Crear al menos 50 páginas en Docmost.
+  status: ok
+  issues: []
+- slug: badge-guardian-of-knowledge
+  name: Guardian of Knowledge
+  file: badge-knowledge-keeper.png
+  track: plataformas
+  description: 100 páginas. Eres la memoria viva del Makespace Madrid.
+  criteria: Crear al menos 100 páginas en Docmost.
+  status: ok
+  issues: []
+- slug: badge-first-queries
+  name: First Queries
+  file: badge-first-queries.png
+  track: plataformas
+  description: Primeros 10K tokens consumidos en Ocabra.
+  criteria: Usar al menos 10.000 tokens en Ocabra.
+  status: ok
+  issues: []
+- slug: badge-token-collector
+  name: Token Collector
+  file: badge-token-collector.png
+  track: plataformas
+  description: 100K tokens. Has desarrollado buen gusto por la IA.
+  criteria: Usar al menos 100.000 tokens en Ocabra.
+  status: ok
+  issues: []
+- slug: badge-burning-tokens
+  name: Burning Tokens
+  file: badge-burning-tokens.png
+  track: plataformas
+  description: 1 millón de tokens. Las GPUs están calientes por tu culpa.
+  criteria: Usar al menos 1.000.000 de tokens en Ocabra.
+  status: ok
+  issues: []
+- slug: badge-gpu-melter
+  name: GPU Melter
+  file: badge-gpu-melter.png
+  track: plataformas
+  description: 5 millones de tokens. A estas alturas, el hardware ya te tiene manía.
+  criteria: Usar al menos 5.000.000 de tokens en Ocabra.
+  status: ok
+  issues: []
+- slug: badge-infinite-loop
+  name: Infinite Loop
+  file: badge-infinite-loop.png
+  track: plataformas
+  description: 10 millones de tokens. No hay final a la vista y eso está bien.
+  criteria: Usar al menos 10.000.000 de tokens en Ocabra.
+  status: ok
+  issues: []
+- slug: badge-ctf-v1
+  name: Capture the Flag v1
+  file: badge-ctf-v1.png
+  track: eventos
+  description: Ha encontrado todos los QR escondidos del CTF v1 del Makespace.
+  criteria: Encontrar todos los QR escondidos del Capture the Flag v1 del Makespace.
+  status: ok
+  issues: []
+- slug: badge-been-there
+  name: Been there, done that
+  file: badge-been-there.png
+  track: eventos
+  description: Ha participado en una actividad o evento del Makespace.
+  criteria: Reconocimiento manual por asistir a una actividad del Makespace.
+  status: ok
+  issues: []
+- slug: badge-first-hack
+  name: First Hack
+  file: badge-first-hack.png
+  track: eventos
+  description: Asististe a un Hack the Space por primera vez.
+  criteria: Asistir a 1 Hack the Space.
+  status: ok
+  issues: []
+- slug: badge-hammer-time
+  name: Hammer Time
+  file: badge-hammer-time.png
+  track: eventos
+  description: Tres sesiones de Hack the Space — sigues apareciendo.
+  criteria: Asistir a 3 sesiones de Hack the Space.
+  status: ok
+  issues: []
+- slug: badge-space-regular
+  name: Space Regular
+  file: badge-space-regular.png
+  track: eventos
+  description: Cinco sesiones. Ya eres parte del mobiliario.
+  criteria: Asistir a 5 sesiones de Hack the Space.
+  status: ok
+  issues: []
+- slug: badge-hackspace-veteran
+  name: Hackspace Veteran
+  file: badge-hackspace-veteran.png
+  track: eventos
+  description: 10 sesiones de Hack the Space. Un verdadero habitual del banco de trabajo.
+  criteria: Asistir a 10 sesiones de Hack the Space.
+  status: ok
+  issues: []
+- slug: badge-master-hacker
+  name: Master Hacker
+  file: badge-master-hacker.png
+  track: eventos
+  description: 15 sesiones. El espacio conoce tu nombre — y tus herramientas.
+  criteria: Asistir a 15 sesiones de Hack the Space.
+  status: ok
+  issues: []
+- slug: badge-hackspace-elder
+  name: Hackspace Elder
+  file: badge-hackspace-elder.png
+  track: eventos
+  description: 20 sesiones. Tu presencia da forma al espacio.
+  criteria: Asistir a 20 sesiones de Hack the Space.
+  status: ok
+  issues: []
+- slug: badge-hackspace-legend
+  name: Hackspace Legend
+  file: badge-hackspace-legend.png
+  track: eventos
+  description: 25 sesiones. Se cuentan historias de makers como tú.
+  criteria: Asistir a 25 sesiones de Hack the Space.
+  status: ok
+  issues: []
+- slug: badge-hackspace-hero
+  name: Hackspace Hero
+  file: badge-hackspace-hero.png
+  track: eventos
+  description: 30 sesiones de contribución dedicada al espacio.
+  criteria: Asistir a 30 sesiones de Hack the Space.
+  status: ok
+  issues: []
+- slug: badge-hackspace-immortal
+  name: Hackspace Immortal
+  file: badge-hackspace-immortal.png
+  track: eventos
+  description: 35 sesiones. Tú eres el Makespace. El Makespace eres tú.
+  criteria: Asistir a 35 sesiones de Hack the Space.
+  status: missing
+  issues: []
+  visual: a human silhouette merging seamlessly into the outline of the workshop building
+- slug: badge-first-assembly
+  name: First Assembly
+  file: badge-first-assembly.png
+  track: eventos
+  description: Asististe a la reunión mensual de la comunidad por primera vez.
+  criteria: Asistir a 1 reunión mensual.
+  status: ok
+  issues: []
+- slug: badge-assembly-regular
+  name: Assembly Regular
+  file: badge-assembly-regular.png
+  track: eventos
+  description: Tres reuniones mensuales — tu voz forma parte de la conversación.
+  criteria: Asistir a 3 reuniones mensuales.
+  status: ok
+  issues: []
+- slug: badge-council-member
+  name: Council Member
+  file: badge-council-member.png
+  track: eventos
+  description: Cinco reuniones. Estás comprometido con cómo se gestiona el espacio.
+  criteria: Asistir a 5 reuniones mensuales.
+  status: ok
+  issues: []
+- slug: badge-community-veteran
+  name: Community Veteran
+  file: badge-community-veteran.png
+  track: eventos
+  description: 10 reuniones. Un pilar de la asamblea mensual.
+  criteria: Asistir a 10 reuniones mensuales.
+  status: ok
+  issues: []
+- slug: badge-community-pillar
+  name: Community Pillar
+  file: badge-community-pillar.png
+  track: eventos
+  description: 15 reuniones. La comunidad lo nota cuando no estás.
+  criteria: Asistir a 15 reuniones mensuales.
+  status: ok
+  issues: []
+- slug: badge-assembly-elder
+  name: Assembly Elder
+  file: badge-assembly-elder.png
+  track: eventos
+  description: 20 reuniones de participación democrática en la gobernanza del Makespace.
+  criteria: Asistir a 20 reuniones mensuales.
+  status: missing
+  issues: []
+  visual: an elder figure seated at the head of a round table holding a gavel
+- slug: badge-assembly-legend
+  name: Assembly Legend
+  file: badge-assembly-legend.png
+  track: eventos
+  description: 25 reuniones. El orden del día casi no hace falta escribirlo — te lo sabes de memoria.
+  criteria: Asistir a 25 reuniones mensuales.
+  status: missing
+  issues: []
+  visual: an open agenda notebook glowing like a legendary scroll on a meeting table
+- slug: badge-marathon-member
+  name: Marathon Member
+  file: badge-marathon-member.png
+  track: eventos
+  description: 30 reuniones mensuales. Paciencia, dedicación y un historial de asistencia impecable.
+  criteria: Asistir a 30 reuniones mensuales.
+  status: missing
+  issues: []
+  visual: a runner crossing a finish line tape strung between two meeting chairs
+- slug: badge-eternal-council
+  name: Eternal Council
+  file: badge-eternal-council.png
+  track: eventos
+  description: 35 reuniones. Has sobrevivido a tres presidentes y dos proyectores.
+  criteria: Asistir a 35 reuniones mensuales.
+  status: missing
+  issues: []
+  visual: a hooded elder seated on a throne built from stacked meeting chairs beside a broken projector
+- slug: eventos-primer-paso
+  name: Groupie
+  file: badge-eventos-primer-paso.png
+  track: eventos
+  description: 'Tu primer sarao con Makespace: ya eres parte de la gira.'
+  criteria: Completa 1 quest del track de eventos.
+  status: missing
+  issues: []
+  visual: a single footprint stepping onto a concert stage
+- slug: eventos-embajador
+  name: Roadie
+  file: badge-eventos-embajador.png
+  track: eventos
+  description: Ya curras montando el stand — la gira no funciona sin ti.
+  criteria: Completa 3 quests del track de eventos.
+  status: missing
+  issues: []
+  visual: a hand carrying a folded stage banner and a toolbox toward an empty stage
+- slug: eventos-evangelista
+  name: Headliner
+  file: badge-eventos-evangelista.png
+  track: eventos
+  description: 'Cabeza de cartel: cuando estás, Makespace se nota.'
+  criteria: Completa 5 quests del track de eventos.
+  status: missing
+  issues: []
+  visual: a spotlight beam shining down onto an empty microphone stand center stage
+- slug: eventos-networker
+  name: Tour Manager
+  file: badge-eventos-networker.png
+  track: eventos
+  description: Te pateas la gira entera de eventos — no hay stand sin ti.
+  criteria: Completa 10 quests del track de eventos.
+  status: missing
+  issues: []
+  visual: a folded road map with several stops pinned along a dotted touring route
+- slug: badge-evento-nerdearla2025
+  name: Nerdearla 2025
+  file: badge-nerdearla-2025.png
+  track: eventos
+  description: Participación en el stand del Makespace en Nerdearla 2025.
+  criteria: Asistir y atender el stand del Makespace en Nerdearla 2025.
+  status: ok
+  issues: []
+- slug: badge-evento-codemotion2026
+  name: Codemotion 2026
+  file: badge-codemotion-2026.png
+  track: eventos
+  description: Participación en el stand del Makespace en Codemotion 2026.
+  criteria: Asistir y atender el stand del Makespace en Codemotion 2026.
+  status: ok
+  issues: []
+- slug: badge-evento-aniversario2026
+  name: Aniversario 2026 (6+7 años)
+  file: badge-aniversario-2026.png
+  track: eventos
+  description: Celebró el 6º y 7º aniversario del Makespace en la fiesta de verano de 2026.
+  criteria: Asistir a la fiesta de aniversario (6+7 años) del Makespace, verano de 2026.
+  status: ok
+  issues: []
+- slug: badge-miembro-makespace
+  name: Makespace Member
+  file: badge-member.png
+  track: membresia
+  description: Concedida a los socios activos del MakeSpace Madrid.
+  criteria: Ser socio activo del Makespace Madrid.
+  status: ok
+  issues: []
+- slug: badge-first-year
+  name: First Year
+  file: badge-first-year.png
+  track: membresia
+  description: Un año completo como socio del Makespace Madrid.
+  criteria: Ser socio activo durante al menos 1 año.
+  status: missing
+  issues: []
+  visual: a number 1 trophy over a small birthday candle
+- slug: badge-second-year
+  name: Second Year
+  file: badge-second-year.png
+  track: membresia
+  description: Dos años dentro. Ya sabes dónde está el café.
+  criteria: Ser socio activo durante al menos 2 años.
+  status: missing
+  issues: []
+  visual: a steaming coffee mug beside a small number 2 medal
+- slug: badge-third-year
+  name: Third Year
+  file: badge-third-year.png
+  track: membresia
+  description: Tres años haciendo, aprendiendo y compartiendo en el Makespace.
+  criteria: Ser socio activo durante al menos 3 años.
+  status: missing
+  issues: []
+  visual: three interlocking gears turning together
+- slug: badge-fourth-year
+  name: Fourth Year
+  file: badge-fourth-year.png
+  track: membresia
+  description: Cuatro años dentro. Las herramientas ya confían en ti.
+  criteria: Ser socio activo durante al menos 4 años.
+  status: missing
+  issues: []
+  visual: a power drill held firmly in one hand, a small number 4 tag on its handle
+- slug: badge-fifth-year
+  name: Fifth Year
+  file: badge-fifth-year.png
+  track: membresia
+  description: Cinco años. Has visto entrar y salir socios y la impresora 3D romperse tres veces.
+  criteria: Ser socio activo durante al menos 5 años.
+  status: missing
+  issues: []
+  visual: a 3D printer with an open access panel and a wrench resting on top
+- slug: badge-sixth-year
+  name: Sixth Year
+  file: badge-sixth-year.png
+  track: membresia
+  description: Seis años en el Makespace. Ya eres parte de la institución.
+  criteria: Ser socio activo durante al menos 6 años.
+  status: missing
+  issues: []
+  visual: six identical tools hanging neatly in a row on a pegboard wall
+- slug: badge-seventh-year
+  name: Seventh Year
+  file: badge-seventh-year.png
+  track: membresia
+  description: Siete años. El espacio te ha moldeado tanto como tú lo has moldeado a él.
+  criteria: Ser socio activo durante al menos 7 años.
+  status: missing
+  issues: []
+  visual: a number 7 patch stitched onto a well-worn workshop apron
+- slug: badge-eighth-year
+  name: Eighth Year
+  file: badge-eighth-year.png
+  track: membresia
+  description: Ocho años. A estas alturas los bancos de trabajo ya recuerdan tu nombre.
+  criteria: Ser socio activo durante al menos 8 años.
+  status: missing
+  issues: []
+  visual: a brass nameplate engraved with a number 8 mounted on a workbench corner
+- slug: badge-ninth-year
+  name: Ninth Year
+  file: badge-ninth-year.png
+  track: membresia
+  description: Nueve años. A un año de una insignia muy especial.
+  criteria: Ser socio activo durante al menos 9 años.
+  status: missing
+  issues: []
+  visual: a number 9 trophy beside a single unlit birthday candle waiting
+- slug: badge-10-years
+  name: A Decade at Makespace
+  file: badge-10-years.png
+  track: membresia
+  description: Diez años como socio del Makespace Madrid. Una década.
+  criteria: Ser socio activo durante al menos 10 años.
+  status: missing
+  issues: []
+  visual: a laurel wreath medal with a bold number 10 at its center
+- slug: badge-11-years
+  name: Eleven Years
+  file: badge-11-years.png
+  track: membresia
+  description: Once años en el Makespace. Pocos pueden decir lo mismo.
+  criteria: Ser socio activo durante al menos 11 años.
+  status: missing
+  issues: []
+  visual: eleven small candles arranged in a circle around a birthday cake
+- slug: badge-12-years
+  name: Twelve Years
+  file: badge-12-years.png
+  track: membresia
+  description: Doce años. El espacio y tú ya sois indistinguibles.
+  criteria: Ser socio activo durante al menos 12 años.
+  status: missing
+  issues: []
+  visual: a clock face with twelve gear teeth interlocking around its rim
+- slug: badge-13-years
+  name: Thirteen Years
+  file: badge-13-years.png
+  track: membresia
+  description: Trece años. Llevas aquí casi desde el principio.
+  criteria: Ser socio activo durante al menos 13 años.
+  status: missing
+  issues: []
+  visual: a horseshoe stamped with the number 13, hanging on a workshop wall
+- slug: keys-of-kingdom
+  name: Keys of Kingdom
+  file: badge-keys-of-kingdom.png
+  track: membresia
+  description: Titular de llave del Makespace Madrid — con permiso para abrir y cerrar el espacio.
+  criteria: Recibir acceso de llave por parte de la junta del Makespace y firmar el acuerdo de llave.
+  status: ok
+  issues: []
+- slug: badge-founding-member
+  name: Founding Member
+  file: badge-founding-member.png
+  track: membresia
+  description: Apoyó el crowdfunding inicial (2012-2013) que hizo posible la creación del Makespace Madrid.
+  criteria: Haber participado como mecenas en el crowdfunding fundacional de Makespace Madrid antes de
+    su apertura en abril de 2013.
+  status: missing
+  issues: []
+  visual: a cornerstone brick being laid with a trowel over stacked foundation stones

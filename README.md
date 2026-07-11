@@ -15,22 +15,20 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el repo · ❌ = pendiente de generar._
+_Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 32 sin imagen)._
 
 ### Onboarding
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-hello-world` | Hello world! | `badge-hello-world.png` | ✅ |
-| `badge-maker-101` | Maker101 | `badge-maker101.png` | ✅ |
+| `badge-hello-world` | Hello, World! | `badge-hello-world.png` | ✅ |
+| `badge-maker-101` | Maker Padawan | `badge-maker101.png` | ✅ |
 
 ### Máquinas
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
 | `badge-can-cnc` | I Can CNC | `badge-i-can-cnc.png` | ✅ |
-| `badge-i-can-carve` | I Can Carve | `badge-i-can-carve.png` | ❌ pendiente |
-| `badge-i-can-cast` | I Can Cast | `badge-i-can-cast.png` | ❌ pendiente |
 | `badge-i-can-laser` | I Can Laser | `badge-i-can-laser.png` | ❌ pendiente |
 | `badge-i-can-pcb` | I Can PCB | `badge-i-can-pcb.png` | ✅ |
 | `badge-i-can-print` | I Can Print (3D) | `badge-i-can-print.png` | ✅ |
@@ -52,7 +50,7 @@ _Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el 
 | `badge-first-queries` | First Queries | `badge-first-queries.png` | ✅ |
 | `badge-gpu-melter` | GPU Melter | `badge-gpu-melter.png` | ✅ |
 | `badge-guardian-of-knowledge` | Guardian of Knowledge | `badge-knowledge-keeper.png` | ✅ |
-| `badge-hello-glados` | Hello GLaDOS | `badge-hello-glados.png` | ✅ |
+| `badge-hello-glados` | Hello, GLaDOS! | `badge-hello-glados.png` | ✅ |
 | `badge-infinite-loop` | Infinite Loop | `badge-infinite-loop.png` | ✅ |
 | `badge-property-of-aperture` | Property of Aperture | `badge-property-of-aperture.png` | ✅ |
 | `badge-space-chronicler` | Space Chronicler | `badge-space-chronicler.png` | ✅ |
@@ -67,18 +65,16 @@ _Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el 
 |------|--------|--------|--------|
 | `badge-compulsive-shopper` | Compulsive Shopper | `badge-compulsive-shopper.png` | ❌ pendiente |
 | `badge-data-scrubber` | Data Scrubber | `badge-data-scrubber.png` | ✅ |
-| `badge-demolition-man` | Demolition Man | `badge-demolition-man.png` | ❌ pendiente |
 | `badge-embajador-maker` | Space Ambassador | `badge-maker-ambassador.png` | ✅ |
 | `badge-garbage-collector` | Garbage Collector | `badge-garbage-collector.png` | ✅ |
+| `badge-hacked-the-space` | Hacked the Space | `badge-hack-the-space.png` | ❌ pendiente |
 | `badge-liquid-cooling` | Liquid Cooling Specialist | `badge-liquid-cooling.png` | ✅ |
 | `badge-petty-cash-rookie` | Petty Cash Rookie | `badge-petty-cash-rookie.png` | ❌ pendiente |
-| `badge-platform-maker` | Platform Maker | `badge-platform-maker.png` | ✅ |
+| `badge-platform-maker` | Platform Builder | `badge-platform-maker.png` | ✅ |
 | `badge-procurer` | Procurer | `badge-procurer.png` | ❌ pendiente |
 | `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ❌ pendiente |
 | `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ❌ pendiente |
 | `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` | ❌ pendiente |
-| `badge-stack-overflow` | Stack Overflow | `badge-stack-overflow.png` | ❌ pendiente |
-| `badge-tetris-master` | Tetris Master | `badge-tetris-master.png` | ❌ pendiente |
 
 ### Eventos
 
