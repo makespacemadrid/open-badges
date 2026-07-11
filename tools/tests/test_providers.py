@@ -75,7 +75,9 @@ def test_gemini_generate_parses_inline_data():
     parts = seen["body"]["contents"][0]["parts"]
     assert parts[0]["text"] == "un badge"
     assert parts[1]["inline_data"]["data"] == base64.b64encode(b"ref-bytes").decode()
-    assert "gemini-2.5-flash-image:generateContent" in seen["url"]
+    from badgegen.providers.gemini import DEFAULT_MODEL
+
+    assert f"{DEFAULT_MODEL}:generateContent" in seen["url"]
 
 
 def test_gemini_no_image_in_response_raises():

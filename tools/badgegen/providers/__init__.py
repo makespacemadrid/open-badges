@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 
 from badgegen.providers.base import ProviderError
-from badgegen.providers.gemini import GeminiProvider
+from badgegen.providers.gemini import DEFAULT_MODEL, GeminiProvider
 from badgegen.providers.openai_compat import OpenAICompatProvider
 
 
@@ -18,7 +18,7 @@ def get_provider(name: str | None, model: str | None = None):
     name = name or "gemini"
     if name == "gemini":
         return GeminiProvider(_require("GEMINI_API_KEY"),
-                              model=model or "gemini-2.5-flash-image")
+                              model=model or os.environ.get("GEMINI_IMAGE_MODEL") or DEFAULT_MODEL)
     if name == "custom":
         return OpenAICompatProvider(
             _require("CUSTOM_BASE_URL"),

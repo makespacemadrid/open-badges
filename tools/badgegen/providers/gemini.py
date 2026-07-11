@@ -8,7 +8,7 @@ import httpx
 from badgegen.providers.base import ProviderError, post_with_retry
 
 API_BASE = "https://generativelanguage.googleapis.com/v1beta"
-DEFAULT_MODEL = "gemini-2.5-flash-image"
+DEFAULT_MODEL = "gemini-3.1-flash-image"
 
 
 class GeminiProvider:

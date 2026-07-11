@@ -81,6 +81,7 @@ def check_image(im: Image.Image, *, canvas: int = config.CANVAS_SIZE,
 
 import base64 as _base64
 import json as _json
+import os as _os
 
 import httpx as _httpx
 
@@ -100,10 +101,14 @@ class JudgeResult:
     issues: list[str] = field(default_factory=list)
 
 
-def judge_legibility(png: bytes, api_key: str, model: str = "gemini-2.5-flash",
+DEFAULT_JUDGE_MODEL = "gemini-3.5-flash"
+
+
+def judge_legibility(png: bytes, api_key: str, model: str | None = None,
                      client: _httpx.Client | None = None) -> JudgeResult:
     from badgegen.providers.base import ProviderError, post_with_retry
 
+    model = model or _os.environ.get("GEMINI_JUDGE_MODEL") or DEFAULT_JUDGE_MODEL
     client = client or _httpx.Client()
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     body = {
