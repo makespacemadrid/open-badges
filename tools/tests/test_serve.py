@@ -76,3 +76,61 @@ def test_promote_invalid_candidate_redirects_with_error(server):
                    data={"slug": "badge-a", "candidate": "../../etc/passwd"})
     assert r.status_code == 303
     assert "err=" in r.headers["location"]
+
+
+def test_page_groups_by_track_with_context(server, repo, make_badge):
+    # añade al track un badge existente como contexto
+    m = manifest.load(repo.manifest_path)
+    m.badges[0].track = "maquinas"
+    m.badges.append(manifest.Badge(slug="badge-viejo", name="Viejo", file="badge-viejo.png",
+                                   track="maquinas", status="ok"))
+    manifest.save(m, repo.manifest_path)
+    (repo.repo_root / "badge-viejo.png").write_bytes(png_bytes(make_badge()))
+    base, _ = server
+    page = httpx.get(f"{base}/").text
+    assert "Máquinas" in page                       # título del track
+    assert "/img?p=badge-viejo.png" in page          # tira de contexto
+    assert "ya en el track" in page
+    assert "＋3 sugerencias" in page                 # botón de más candidatos
+
+
+def test_generate_more_via_ui(server, repo, monkeypatch, make_badge):
+    base, settings = server
+    calls = {}
+
+    def fake_generate(s, slug):
+        calls["slug"] = slug
+        cand = s.candidates_dir / slug / "99-gemini.png"
+        cand.write_bytes(png_bytes(make_badge()))
+
+    monkeypatch.setattr(serve, "_generate_more", fake_generate)
+    r = httpx.post(f"{base}/generate", data={"slug": "badge-a"})
+    assert r.status_code == 303
+    import time
+
+    jobs = None
+    for _ in range(40):  # espera a que el hilo termine
+        page = httpx.get(f"{base}/").text
+        if "99-gemini" in page:
+            break
+        time.sleep(0.05)
+    assert calls["slug"] == "badge-a"
+    assert "99-gemini" in page
+
+
+def test_generate_error_shown(server, repo, monkeypatch):
+    base, _ = server
+
+    def boom(s, slug):
+        raise RuntimeError("proveedor caído")
+
+    monkeypatch.setattr(serve, "_generate_more", boom)
+    httpx.post(f"{base}/generate", data={"slug": "badge-a"})
+    import time
+
+    for _ in range(40):
+        page = httpx.get(f"{base}/").text
+        if "proveedor caído" in page:
+            break
+        time.sleep(0.05)
+    assert "ERROR" in page and "proveedor caído" in page

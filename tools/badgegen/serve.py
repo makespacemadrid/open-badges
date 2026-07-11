@@ -1,17 +1,21 @@
 """Servidor local de revisión: galería con botón Promocionar, sin copy-paste.
 
-Solo stdlib. Escucha en 127.0.0.1; cada POST /promote ejecuta el promote
-completo (post-proceso, manifiesto, purge, docs) y la página se refresca.
+Solo stdlib. Cada POST /promote ejecuta el promote completo (post-proceso,
+manifiesto, purge, docs); POST /generate lanza en un hilo la generación de
+más candidatos para un badge. La página agrupa por track y muestra los
+badges ya existentes de cada track como contexto visual.
 """
 from __future__ import annotations
 
 import html
+import threading
 import traceback
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
 from badgegen import gallery, manifest as manifest_mod, promote as promote_mod
 from badgegen.config import Settings
+from badgegen.docs_gen import TRACKS
 
 _SERVE_CSS = gallery._CSS + """
 .banner{background:#1c5c2e;padding:.5rem 1rem;border-radius:8px;margin-bottom:1rem}
@@ -19,48 +23,130 @@ _SERVE_CSS = gallery._CSS + """
 form{display:inline}
 button.promote{background:#f5c400;color:#111;font-weight:bold;border:0;
   border-radius:6px;padding:.4rem .8rem}
+button.more{background:#333;color:#eee;border:1px solid #555;border-radius:6px;
+  padding:.4rem .8rem}
+h2.track{border:0;background:#1a1a1a;padding:.6rem 1rem;border-radius:8px;margin-top:2rem}
+.context{margin:.3rem 0 1rem}
+.context img{width:64px;margin-right:.35rem;vertical-align:middle}
+.context .lbl{color:#888;font-size:.85em;margin-right:.6rem}
+h3{margin-bottom:.2rem}
+.jobs{color:#f5c400}
+.badge-name{color:#aaa;font-weight:normal}
 """
 
+_TRACK_NAMES = dict(TRACKS)
 
-def render_page(items: list[dict], banner: str = "", error: str = "") -> str:
+
+def render_page(settings: Settings, m, items: list[dict], jobs: dict[str, str],
+                banner: str = "", error: str = "") -> str:
     parts = []
+    refreshing = any(status == "running" for status in jobs.values())
     if banner:
         parts.append(f"<div class='banner'>{html.escape(banner)}</div>")
     if error:
         parts.append(f"<div class='banner err'>{html.escape(error)}</div>")
-    if not items:
+    if not items and not refreshing:
         parts.append("<p>No quedan candidatos pendientes. 🎉</p>")
+
+    by_track: dict[str, list[dict]] = {}
     for item in items:
-        parts.append(f"<h2><code>{html.escape(item['slug'])}</code></h2>")
-        if item.get("current"):
-            parts.append(
-                f"<div class='cand'><img src='/img?p={html.escape(item['current'])}' width='180'>"
-                f"<div>actual</div></div>"
-            )
-        for cand in item["candidates"]:
-            qc_class = "good" if cand["qc_ok"] else "bad"
-            qc_label = "QC ok" if cand["qc_ok"] else "QC ✗"
-            parts.append(
-                f"<div class='cand'><img src='/img?p={html.escape(cand['file'])}' width='180'>"
-                f"<div><span class='qc {qc_class}'>{qc_label}</span> {cand['roundness']:.3f} "
-                f"· {html.escape(cand['provider'])}</div>"
-                f"<form method='post' action='/promote'>"
-                f"<input type='hidden' name='slug' value='{html.escape(item['slug'])}'>"
-                f"<input type='hidden' name='candidate' value='{html.escape(cand['file'])}'>"
-                f"<button class='promote'>Promocionar ✓</button></form></div>"
-            )
-    body = "".join(parts)
-    return (
-        f"<!doctype html><html><head><meta charset='utf-8'>"
-        f"<title>badgegen · revisión</title><style>{_SERVE_CSS}</style></head>"
-        f"<body><h1>badgegen · revisión de candidatos</h1>{body}</body></html>"
+        badge = m.get(item["slug"])
+        track = badge.track if badge else ""
+        by_track.setdefault(track, []).append(item)
+
+    track_order = [slug for slug, _ in TRACKS] + sorted(
+        t for t in by_track if t not in _TRACK_NAMES
     )
+    for track in track_order:
+        if track not in by_track:
+            continue
+        title = _TRACK_NAMES.get(track, track or "Otros")
+        parts.append(f"<h2 class='track'>{html.escape(title)}</h2>")
+        existing = [b for b in m.badges if b.track == track and b.status == "ok"
+                    and (settings.repo_root / b.file).is_file()]
+        if existing:
+            thumbs = "".join(
+                f"<img src='/img?p={html.escape(b.file)}' title='{html.escape(b.name)}'>"
+                for b in existing
+            )
+            parts.append(f"<div class='context'><span class='lbl'>ya en el track "
+                         f"({len(existing)}):</span>{thumbs}</div>")
+        for item in by_track[track]:
+            parts.append(_render_badge(m, item, jobs))
+
+    # jobs de badges que ya no tienen candidatos listados (recién lanzados)
+    listed = {i["slug"] for i in items}
+    for slug, status in jobs.items():
+        if status == "running" and slug not in listed:
+            parts.append(f"<p class='jobs'>⏳ generando candidatos de "
+                         f"<code>{html.escape(slug)}</code>…</p>")
+
+    refresh = "<meta http-equiv='refresh' content='8'>" if refreshing else ""
+    return (
+        f"<!doctype html><html><head><meta charset='utf-8'>{refresh}"
+        f"<title>badgegen · revisión</title><style>{_SERVE_CSS}</style></head>"
+        f"<body><h1>badgegen · revisión de candidatos</h1>{''.join(parts)}</body></html>"
+    )
+
+
+def _render_badge(m, item: dict, jobs: dict[str, str]) -> str:
+    slug = item["slug"]
+    badge = m.get(slug)
+    name = badge.name if badge else slug
+    parts = [f"<h3><code>{html.escape(slug)}</code> "
+             f"<span class='badge-name'>— {html.escape(name)}</span></h3>"]
+    status = jobs.get(slug, "")
+    if status == "running":
+        parts.append("<p class='jobs'>⏳ generando más candidatos…</p>")
+    elif status.startswith("ERROR"):
+        parts.append(f"<div class='banner err'>{html.escape(status)}</div>")
+    if item.get("current"):
+        parts.append(
+            f"<div class='cand'><img src='/img?p={html.escape(item['current'])}' width='180'>"
+            f"<div>actual</div></div>"
+        )
+    for cand in item["candidates"]:
+        qc_class = "good" if cand["qc_ok"] else "bad"
+        qc_label = "QC ok" if cand["qc_ok"] else "QC ✗"
+        parts.append(
+            f"<div class='cand'><img src='/img?p={html.escape(cand['file'])}' width='180'>"
+            f"<div><span class='qc {qc_class}'>{qc_label}</span> {cand['roundness']:.3f} "
+            f"· {html.escape(cand['provider'])}</div>"
+            f"<form method='post' action='/promote'>"
+            f"<input type='hidden' name='slug' value='{html.escape(slug)}'>"
+            f"<input type='hidden' name='candidate' value='{html.escape(cand['file'])}'>"
+            f"<button class='promote'>Promocionar ✓</button></form></div>"
+        )
+    if status != "running":
+        parts.append(
+            f"<div class='cand'><form method='post' action='/generate'>"
+            f"<input type='hidden' name='slug' value='{html.escape(slug)}'>"
+            f"<button class='more'>＋3 sugerencias</button></form></div>"
+        )
+    return "".join(parts)
+
+
+def _generate_more(settings: Settings, slug: str) -> None:
+    """Genera 3 candidatos más para un badge (corre en un hilo)."""
+    from badgegen import generate as generate_mod
+    from badgegen.providers import get_provider
+
+    m = manifest_mod.load(settings.manifest_path)
+    badge = m.get(slug)
+    if badge is None:
+        raise KeyError(f"slug desconocido: {slug}")
+    provider = get_provider(badge.provider)
+    report = generate_mod.run_generate(settings, m, provider, slugs=[slug], n=3)
+    outcome = report.get(slug)
+    if isinstance(outcome, str):
+        raise RuntimeError(outcome)
 
 
 class ReviewHandler(BaseHTTPRequestHandler):
     # inyectados por make_server en la clase derivada:
     settings: Settings
     slugs: list[str] | None
+    jobs: dict[str, str]
 
     def log_message(self, fmt, *args):  # sin ruido en stdout
         pass
@@ -83,7 +169,7 @@ class ReviewHandler(BaseHTTPRequestHandler):
             query = parse_qs(url.query)
             m = manifest_mod.load(self.settings.manifest_path)
             items = gallery.collect_items(self.settings, m, self.slugs)
-            page = render_page(items,
+            page = render_page(self.settings, m, items, dict(self.jobs),
                                banner=query.get("ok", [""])[0] and
                                f"{query['ok'][0]} promocionado ✓",
                                error=query.get("err", [""])[0])
@@ -101,13 +187,18 @@ class ReviewHandler(BaseHTTPRequestHandler):
         self._send(404, b"not found", "text/plain")
 
     def do_POST(self):
-        if urlparse(self.path).path != "/promote":
-            self._send(404, b"not found", "text/plain")
-            return
+        path = urlparse(self.path).path
         length = int(self.headers.get("Content-Length", 0))
-        form = parse_qs(self.body_text(length))
+        form = parse_qs(self.rfile.read(length).decode("utf-8", errors="replace"))
         slug = form.get("slug", [""])[0]
-        candidate = form.get("candidate", [""])[0]
+        if path == "/promote":
+            self._promote(slug, form.get("candidate", [""])[0])
+        elif path == "/generate":
+            self._more(slug)
+        else:
+            self._send(404, b"not found", "text/plain")
+
+    def _promote(self, slug: str, candidate: str):
         target = (self.settings.repo_root / candidate).resolve()
         if self.settings.repo_root.resolve() not in target.parents or target.suffix != ".png":
             self._redirect("/?err=candidato+invalido")
@@ -120,14 +211,27 @@ class ReviewHandler(BaseHTTPRequestHandler):
             traceback.print_exc()
             self._redirect(f"/?err={html.escape(str(exc)[:120])}")
 
-    def body_text(self, length: int) -> str:
-        return self.rfile.read(length).decode("utf-8", errors="replace")
+    def _more(self, slug: str):
+        if self.jobs.get(slug) == "running":
+            self._redirect("/?err=ya+hay+una+generacion+en+curso")
+            return
+        self.jobs[slug] = "running"
+
+        def job():
+            try:
+                _generate_more(self.settings, slug)
+                self.jobs.pop(slug, None)
+            except Exception as exc:
+                self.jobs[slug] = f"ERROR: {str(exc)[:150]}"
+
+        threading.Thread(target=job, daemon=True).start()
+        self._redirect("/")
 
 
 def make_server(settings: Settings, slugs: list[str] | None = None,
                 port: int = 8765, host: str = "0.0.0.0") -> ThreadingHTTPServer:
     handler = type("BoundHandler", (ReviewHandler,),
-                   {"settings": settings, "slugs": slugs})
+                   {"settings": settings, "slugs": slugs, "jobs": {}})
     return ThreadingHTTPServer((host, port), handler)
 
 
@@ -147,7 +251,7 @@ def serve(settings: Settings, slugs: list[str] | None = None, port: int = 8765,
     server = make_server(settings, slugs, port, host)
     real_port = server.server_address[1]
     shown = _lan_ip() if host == "0.0.0.0" else host
-    print(f"revisión en http://{shown}:{real_port}/  (Ctrl-C para salir)")
+    print(f"revisión en http://{shown}:{real_port}/  (Ctrl-C para salir)", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
