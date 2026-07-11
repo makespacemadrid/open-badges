@@ -72,6 +72,32 @@ def test_run_generate_writes_candidates_and_sidecars(tmp_path, make_badge):
     assert (d / "03-fake.png").is_file()
 
 
+def test_run_generate_honors_badge_provider_override(tmp_path, monkeypatch, make_badge):
+    settings = Settings(repo_root=tmp_path)
+    good = png_bytes(make_badge())
+    provider = FakeProvider([good])
+
+    fake2 = FakeProvider([good])
+    fake2.name = "fake2"
+    fake2.model = "fake2-1"
+
+    def fake_get_provider(name, model=None):
+        assert name == "fake2"
+        return fake2
+
+    monkeypatch.setattr("badgegen.providers.get_provider", fake_get_provider)
+
+    m = _manifest()
+    m.get("badge-a").provider = "fake2"
+    report = generate.run_generate(settings, m, provider, statuses=["missing", "regen"], n=1)
+    assert len(report["badge-a"]) == 1 and len(report["badge-c"]) == 1
+    d = tmp_path / "candidates"
+    assert (d / "badge-a" / "01-fake2.png").is_file()
+    assert (d / "badge-c" / "01-fake.png").is_file()
+    assert len(fake2.calls) == 1  # solo badge-a usó el override
+    assert len(provider.calls) == 1  # badge-c siguió con el provider global
+
+
 def test_run_generate_batch_survives_provider_error(tmp_path):
     settings = Settings(repo_root=tmp_path)
 

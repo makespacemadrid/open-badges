@@ -129,3 +129,24 @@ def test_comments_with_apostrophes_do_not_break_scanner(tmp_path):
     entries = catalog.parse_catalog(_write(tmp_path, FIXTURE_TS_COMMENTS))
     slugs = {e.slug for e in entries}
     assert slugs == {"badge-uno", "badge-dos"}
+
+
+FIXTURE_TS_DOUBLE_QUOTED = """
+const BADGES: BadgeSpec[] = [
+  {
+    slug: 'badge-apostrofe',
+    name: "Apóstrofe",
+    description: "isn't this fun",
+    criteria: 'Criterio.',
+    categorySlug: 'maquinas',
+    achievementType: 'Achievement',
+  },
+];
+"""
+
+
+def test_double_quoted_string_with_apostrophe(tmp_path):
+    by_slug = {e.slug: e for e in catalog.parse_catalog(_write(tmp_path, FIXTURE_TS_DOUBLE_QUOTED))}
+    e = by_slug["badge-apostrofe"]
+    assert e.name == "Apóstrofe"
+    assert e.description == "isn't this fun"

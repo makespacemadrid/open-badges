@@ -50,6 +50,37 @@ def _repo_with_badge(tmp_path, monkeypatch, make_badge):
     return settings
 
 
+def test_review_missing_sidecar_is_not_qc_ok(tmp_path, monkeypatch, make_badge):
+    from badgegen import manifest
+    from badgegen.config import Settings
+    from tests.conftest import png_bytes
+
+    settings = Settings(repo_root=tmp_path)
+    monkeypatch.setattr(Settings, "locate", classmethod(lambda cls: settings))
+    manifest.save(manifest.Manifest(badges=[
+        manifest.Badge(slug="badge-a", name="A", file="badge-a.png", status="missing"),
+    ]), settings.manifest_path)
+    candidate_dir = settings.candidates_dir / "badge-a"
+    candidate_dir.mkdir(parents=True)
+    (candidate_dir / "01-fake.png").write_bytes(png_bytes(make_badge()))
+    # sin sidecar .json a propósito
+    assert cli.main(["review"]) == 0
+    report = (settings.review_dir / "review.html").read_text(encoding="utf-8")
+    assert 'class="qc bad"' in report
+    assert 'class="qc good"' not in report
+
+
+def test_main_domain_error_is_handled_cleanly(tmp_path, monkeypatch, capsys):
+    from badgegen import manifest
+    from badgegen.config import Settings
+
+    settings = Settings(repo_root=tmp_path)
+    monkeypatch.setattr(Settings, "locate", classmethod(lambda cls: settings))
+    manifest.save(manifest.Manifest(badges=[]), settings.manifest_path)
+    assert cli.main(["fix", "badge-inexistente"]) == 1
+    assert "ERROR" in capsys.readouterr().out
+
+
 def test_scan_judge_without_key_clear_error(tmp_path, monkeypatch, make_badge, capsys):
     _repo_with_badge(tmp_path, monkeypatch, make_badge)
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)

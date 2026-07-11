@@ -67,10 +67,18 @@ def run_generate(settings: Settings, m: Manifest, provider,
                  slugs: list[str] | None = None, statuses: list[str] | None = None,
                  n: int = 4) -> dict:
     references = _load_references(settings, m)
+    overrides: dict = {}
     report: dict = {}
     for badge in select_badges(m, slugs, statuses):
         try:
-            report[badge.slug] = _generate_one(settings, m, provider, badge, references, n)
+            badge_provider = provider
+            if badge.provider and badge.provider != provider.name:
+                if badge.provider not in overrides:
+                    from badgegen.providers import get_provider
+
+                    overrides[badge.provider] = get_provider(badge.provider)
+                badge_provider = overrides[badge.provider]
+            report[badge.slug] = _generate_one(settings, m, badge_provider, badge, references, n)
         except Exception as exc:  # el batch sigue; el error queda en el informe
             report[badge.slug] = f"ERROR: {exc}"
     return report

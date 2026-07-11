@@ -8,8 +8,10 @@ from pathlib import Path
 
 from PIL import Image
 
-from badgegen import catalog, docs_gen, gallery, generate as generate_mod, manifest as manifest_mod, promote as promote_mod, qc
+from badgegen import (catalog, docs_gen, gallery, generate as generate_mod,
+                      manifest as manifest_mod, postprocess, promote as promote_mod, qc)
 from badgegen.config import Settings
+from badgegen.providers.base import ProviderError
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -141,11 +143,12 @@ def _write_review(settings: Settings, m, slugs) -> None:
         candidates = []
         for png in sorted(directory.glob("*.png")):
             sidecar_path = png.with_suffix(".json")
-            sidecar = json.loads(sidecar_path.read_text(encoding="utf-8")) if sidecar_path.is_file() else {}
-            qc_data = sidecar.get("qc", {})
+            has_sidecar = sidecar_path.is_file()
+            sidecar = json.loads(sidecar_path.read_text(encoding="utf-8")) if has_sidecar else {}
+            qc_data = sidecar.get("qc", {}) if has_sidecar else {}
             candidates.append({
                 "file": str(png.relative_to(settings.repo_root)),
-                "qc_ok": not qc_data.get("issues"),
+                "qc_ok": has_sidecar and not qc_data.get("issues"),
                 "roundness": qc_data.get("roundness", 0.0),
                 "provider": sidecar.get("provider", "?"),
                 "model": sidecar.get("model", "?"),
@@ -195,4 +198,9 @@ COMMANDS = {
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     settings = Settings.locate()
-    return COMMANDS[args.command](settings, args)
+    try:
+        return COMMANDS[args.command](settings, args)
+    except (KeyError, FileNotFoundError, catalog.CatalogParseError,
+            docs_gen.MarkersMissing, postprocess.ShapeError, ProviderError) as exc:
+        print(f"ERROR: {exc}")
+        return 1

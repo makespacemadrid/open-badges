@@ -82,13 +82,15 @@ def _split_entries(text: str) -> list[str]:
 
 
 _STRING = r"'((?:[^'\\]|\\.)*)'"
+_STRING_DQ = r'"((?:[^"\\]|\\.)*)"'
 
 
 def _field(chunk: str, key: str) -> str | None:
-    m = re.search(rf"(?<![A-Za-z]){key}:\s*{_STRING}", chunk, re.DOTALL)
-    if not m:
-        return None
-    return m.group(1).replace("\\'", "'").replace("\\\\", "\\")
+    for pattern, quote in ((_STRING, "'"), (_STRING_DQ, '"')):
+        m = re.search(rf"(?<![A-Za-z]){key}:\s*{pattern}", chunk, re.DOTALL)
+        if m:
+            return m.group(1).replace("\\" + quote, quote).replace("\\\\", "\\")
+    return None
 
 
 def parse_catalog(path: Path) -> list[CatalogEntry]:
