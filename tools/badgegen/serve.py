@@ -125,16 +125,29 @@ class ReviewHandler(BaseHTTPRequestHandler):
 
 
 def make_server(settings: Settings, slugs: list[str] | None = None,
-                port: int = 8765) -> ThreadingHTTPServer:
+                port: int = 8765, host: str = "0.0.0.0") -> ThreadingHTTPServer:
     handler = type("BoundHandler", (ReviewHandler,),
                    {"settings": settings, "slugs": slugs})
-    return ThreadingHTTPServer(("127.0.0.1", port), handler)
+    return ThreadingHTTPServer((host, port), handler)
 
 
-def serve(settings: Settings, slugs: list[str] | None = None, port: int = 8765) -> int:
-    server = make_server(settings, slugs, port)
+def _lan_ip() -> str:
+    import socket
+
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as probe:
+            probe.connect(("8.8.8.8", 80))
+            return probe.getsockname()[0]
+    except OSError:
+        return "127.0.0.1"
+
+
+def serve(settings: Settings, slugs: list[str] | None = None, port: int = 8765,
+          host: str = "0.0.0.0") -> int:
+    server = make_server(settings, slugs, port, host)
     real_port = server.server_address[1]
-    print(f"revisión en http://127.0.0.1:{real_port}/  (Ctrl-C para salir)")
+    shown = _lan_ip() if host == "0.0.0.0" else host
+    print(f"revisión en http://{shown}:{real_port}/  (Ctrl-C para salir)")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

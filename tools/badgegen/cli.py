@@ -39,6 +39,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_rev.add_argument("--serve", action="store_true",
                        help="servidor local con botón Promocionar")
     p_rev.add_argument("--port", type=int, default=8765)
+    p_rev.add_argument("--host", default="0.0.0.0",
+                       help="interfaz de escucha (default: toda la red)")
 
     p_pro = sub.add_parser("promote", help="candidato → imagen final")
     p_pro.add_argument("slug")
@@ -132,7 +134,7 @@ def cmd_review(settings: Settings, args) -> int:
     if args.serve:
         from badgegen.serve import serve
 
-        return serve(settings, slugs=args.slugs or None, port=args.port)
+        return serve(settings, slugs=args.slugs or None, port=args.port, host=args.host)
     m = _load(settings)
     _write_review(settings, m, args.slugs or None)
     return 0
