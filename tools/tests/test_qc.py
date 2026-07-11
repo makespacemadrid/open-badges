@@ -33,6 +33,14 @@ def test_empty_image():
     assert "empty-image" in r.issues and not r.ok
 
 
+def test_flattened_opaque_near_background_fill_flagged(make_badge):
+    # interior casi negro sobre fondo negro: la máscara de color solo ve el anillo;
+    # sin relleno de huecos la redondez del anillo da falso negativo (0.986 vs 0.982 real)
+    r = qc.check_image(make_badge(rx=560, ry=550, transparent_bg=False))
+    assert "flattened-circle" in r.issues
+    assert abs(r.roundness - 550 / 560) < 0.005
+
+
 def test_mask_bbox_ignores_stray_pixels(make_badge):
     im = make_badge(rx=560, ry=560)
     arr = np.asarray(im).copy()

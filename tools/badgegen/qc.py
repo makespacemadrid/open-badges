@@ -28,7 +28,19 @@ def mask_bbox(mask: np.ndarray, min_count: int = 3) -> tuple[int, int, int, int]
     return int(cols[0]), int(rows[0]), int(cols[-1]), int(rows[-1])
 
 
+def _fill_spans(mask: np.ndarray) -> np.ndarray:
+    """Rellena huecos interiores: span por filas AND span por columnas."""
+
+    def _span(m: np.ndarray, axis: int) -> np.ndarray:
+        fwd = np.maximum.accumulate(m, axis=axis)
+        bwd = np.flip(np.maximum.accumulate(np.flip(m, axis=axis), axis=axis), axis=axis)
+        return fwd & bwd
+
+    return _span(mask, 0) & _span(mask, 1)
+
+
 def roundness(mask: np.ndarray) -> float:
+    mask = _fill_spans(mask)
     ys, xs = np.nonzero(mask)
     if len(xs) < 10:
         return 0.0
