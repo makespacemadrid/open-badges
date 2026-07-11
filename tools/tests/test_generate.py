@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from badgegen import generate, manifest
 from badgegen.config import Settings
 from tests.conftest import png_bytes
@@ -80,3 +82,22 @@ def test_run_generate_batch_survives_provider_error(tmp_path):
     m = _manifest()
     report = generate.run_generate(settings, m, Boom([]), statuses=["missing", "regen"], n=1)
     assert "api caída" in report["badge-a"] and "api caída" in report["badge-c"]
+
+
+def test_select_badges_unknown_slug_raises():
+    m = _manifest()
+    with pytest.raises(KeyError, match="badge-zz"):
+        generate.select_badges(m, ["badge-zz"], None)
+
+
+def test_run_generate_small_candidate_wrong_size_is_informative(tmp_path, make_badge):
+    settings = Settings(repo_root=tmp_path)
+    small = png_bytes(make_badge(w=1024, h=1024, rx=450, ry=450))
+    provider = FakeProvider([small])
+    m = _manifest()
+    report = generate.run_generate(settings, m, provider, slugs=["badge-a"], n=1)
+    assert len(report["badge-a"]) == 1  # se guardó a pesar del wrong-size
+    import json as _json
+    sidecar = _json.loads((tmp_path / "candidates" / "badge-a" / "01-fake.json").read_text())
+    assert "wrong-size" in sidecar["qc"]["issues"]
+    assert sidecar["qc"]["roundness"] > 0.99
