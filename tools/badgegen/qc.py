@@ -77,3 +77,49 @@ def check_image(im: Image.Image, *, canvas: int = config.CANVAS_SIZE,
     if result.roundness < threshold:
         result.issues.append("flattened-circle")
     return result
+
+
+import base64 as _base64
+import json as _json
+
+import httpx as _httpx
+
+JUDGE_PROMPT = """Eres un revisor de calidad de insignias (badges) circulares.
+Evalúa SOLO la legibilidad y limpieza de esta imagen de badge:
+- ¿El texto se lee sin esfuerzo? ¿Está bien escrito (sin letras deformadas o inventadas)?
+- ¿La tipografía está entera (sin trazos rotos ni glifos corruptos)?
+- ¿Hay ruido, artefactos o texturas sucias?
+- ¿El contraste figura/fondo es alto?
+Responde en JSON: {"score": <entero 1-5, 5 = perfecto>, "issues": ["problema en español", ...]}.
+Si score >= 4, issues debe ser [] o muy corto."""
+
+
+@dataclass
+class JudgeResult:
+    score: int
+    issues: list[str] = field(default_factory=list)
+
+
+def judge_legibility(png: bytes, api_key: str, model: str = "gemini-2.5-flash",
+                     client: _httpx.Client | None = None) -> JudgeResult:
+    from badgegen.providers.base import ProviderError, post_with_retry
+
+    client = client or _httpx.Client()
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    body = {
+        "contents": [{"parts": [
+            {"text": JUDGE_PROMPT},
+            {"inline_data": {"mime_type": "image/png",
+                             "data": _base64.b64encode(png).decode()}},
+        ]}],
+        "generationConfig": {"responseMimeType": "application/json"},
+    }
+    response = post_with_retry(client, url, json=body,
+                               headers={"x-goog-api-key": api_key})
+    try:
+        text = response.json()["candidates"][0]["content"]["parts"][0]["text"]
+        verdict = _json.loads(text)
+        return JudgeResult(score=int(verdict["score"]),
+                           issues=[str(i) for i in verdict.get("issues", [])])
+    except (KeyError, IndexError, ValueError, TypeError) as exc:
+        raise ProviderError(f"veredicto ilegible del juez: {exc}") from exc
