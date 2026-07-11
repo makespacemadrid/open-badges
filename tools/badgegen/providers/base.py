@@ -12,9 +12,9 @@ class ProviderError(Exception):
 
 def post_with_retry(client: httpx.Client, url: str, *, json: dict,
                     headers: dict | None = None, retries: int = 3,
-                    sleep=time.sleep) -> httpx.Response:
+                    timeout: float = 120, sleep=time.sleep) -> httpx.Response:
     for attempt in range(retries + 1):
-        response = client.post(url, json=json, headers=headers, timeout=120)
+        response = client.post(url, json=json, headers=headers, timeout=timeout)
         if response.status_code == 429 or response.status_code >= 500:
             if attempt == retries:
                 raise ProviderError(
