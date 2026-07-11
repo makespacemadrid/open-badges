@@ -27,11 +27,18 @@ button.more{background:#333;color:#eee;border:1px solid #555;border-radius:6px;
   padding:.4rem .8rem}
 h2.track{border:0;background:#1a1a1a;padding:.6rem 1rem;border-radius:8px;margin-top:2rem}
 .context{margin:.3rem 0 1rem}
-.context img{width:64px;margin-right:.35rem;vertical-align:middle}
+.context img{width:64px;height:64px;object-fit:contain;margin-right:.35rem;vertical-align:middle}
 .context .lbl{color:#888;font-size:.85em;margin-right:.6rem}
 h3{margin-bottom:.2rem}
 .jobs{color:#f5c400}
 .badge-name{color:#aaa;font-weight:normal}
+.cand img{width:180px;height:180px;object-fit:contain}
+.lvl{margin:.35rem 0;padding:.3rem .6rem;border-left:3px solid #333;border-radius:4px}
+.lvl.done{border-color:#1c5c2e}
+.lvl.pend{border-color:#f5c400;background:#181405}
+.lvl img{width:72px;height:72px;object-fit:contain;vertical-align:middle;margin-right:.6rem}
+.lvl .num{display:inline-block;min-width:3.2em;color:#f5c400;font-weight:bold}
+.hint{color:#888;font-size:.85em}
 """
 
 _CATEGORY_NAMES = dict(CATEGORIES)
@@ -48,56 +55,49 @@ TRACK_TITLES = {
 }
 
 
-def _group_key(badge) -> tuple[str, str]:
-    """(clave de agrupación, título): track real si lo hay, si no la categoría."""
-    if badge and badge.track:
-        return f"track:{badge.track}", TRACK_TITLES.get(badge.track, badge.track)
-    category = badge.category if badge else ""
-    return f"cat:{category}", _CATEGORY_NAMES.get(category, category or "Otros")
-
-
 def render_page(settings: Settings, m, items: list[dict], jobs: dict[str, str],
                 banner: str = "", error: str = "") -> str:
+    items_by_slug = {i["slug"]: i for i in items}
     parts = []
     refreshing = any(status == "running" for status in jobs.values())
     if banner:
         parts.append(f"<div class='banner'>{html.escape(banner)}</div>")
     if error:
         parts.append(f"<div class='banner err'>{html.escape(error)}</div>")
-    if not items and not refreshing:
-        parts.append("<p>No quedan candidatos pendientes. 🎉</p>")
+    missing_total = sum(1 for b in m.badges if b.status != "ok")
+    if not items and not missing_total and not refreshing:
+        parts.append("<p>Catálogo completo: nada pendiente. 🎉</p>")
 
-    groups: dict[str, dict] = {}
-    for item in items:
-        badge = m.get(item["slug"])
-        key, title = _group_key(badge)
-        groups.setdefault(key, {"title": title, "items": []})["items"].append(item)
-
-    for key in sorted(groups, key=lambda k: (not k.startswith("track:"), groups[k]["title"])):
-        group = groups[key]
-        parts.append(f"<h2 class='track'>{html.escape(group['title'])}</h2>")
-        parts.append(_render_context(settings, m, key))
-        for item in group["items"]:
-            parts.append(_render_badge(m, item, jobs))
-
-    listed = {i["slug"] for i in items}  # jobs recién lanzados sin candidatos aún
-    for slug, status in jobs.items():
-        if status == "running" and slug not in listed:
-            parts.append(f"<p class='jobs'>⏳ generando candidatos de "
-                         f"<code>{html.escape(slug)}</code>…</p>")
-
-    # Panorama: todos los tracks del catálogo, tengan o no candidatos pendientes.
+    # 1. Tracks: cada escalera completa, nivel a nivel, con acciones inline.
     all_tracks = sorted({b.track for b in m.badges if b.track},
                         key=lambda t: TRACK_TITLES.get(t, t))
-    if all_tracks:
-        parts.append("<h2 class='track'>Panorama de tracks</h2>")
-        for track in all_tracks:
-            title = TRACK_TITLES.get(track, track)
-            done = sum(1 for b in m.badges if b.track == track and b.status == "ok")
-            total = sum(1 for b in m.badges if b.track == track)
-            parts.append(f"<h3>{html.escape(title)} "
-                         f"<span class='badge-name'>— {done}/{total} con imagen</span></h3>")
-            parts.append(_render_context(settings, m, f"track:{track}"))
+    for track in all_tracks:
+        parts.append(_render_track(settings, m, track, items_by_slug, jobs))
+
+    # 2. Badges sin track, por categoría: solo categorías con trabajo pendiente.
+    trackless = [b for b in m.badges if not b.track]
+    by_cat: dict[str, list] = {}
+    for badge in trackless:
+        by_cat.setdefault(badge.category, []).append(badge)
+    for category in sorted(by_cat, key=lambda c: _CATEGORY_NAMES.get(c, c)):
+        badges = by_cat[category]
+        pending = [b for b in badges if b.status != "ok" or b.slug in items_by_slug]
+        if not pending:
+            continue
+        title = _CATEGORY_NAMES.get(category, category or "Otros")
+        parts.append(f"<h2 class='track'>{html.escape(title)}</h2>")
+        existing = [b for b in badges if b.status == "ok"
+                    and (settings.repo_root / b.file).is_file()]
+        if existing:
+            thumbs = "".join(
+                f"<img src='/img?p={html.escape(b.file)}' title='{html.escape(b.name)}'>"
+                for b in existing
+            )
+            parts.append(f"<div class='context'><span class='lbl'>ya en la categoría "
+                         f"({len(existing)}):</span>{thumbs}</div>")
+        for badge in pending:
+            parts.append(_render_row(settings, badge, items_by_slug.get(badge.slug),
+                                     jobs, level_label=""))
 
     refresh = "<meta http-equiv='refresh' content='8'>" if refreshing else ""
     return (
@@ -107,71 +107,76 @@ def render_page(settings: Settings, m, items: list[dict], jobs: dict[str, str],
     )
 
 
-def _render_context(settings: Settings, m, key: str) -> str:
-    """Tira de miniaturas del grupo: la escalera en orden de nivel, o la categoría."""
-    kind, value = key.split(":", 1)
-    if kind == "track":
-        members = sorted((b for b in m.badges if b.track == value),
-                         key=lambda b: (b.track_level or 0, b.slug))
-        thumbs = []
-        for b in members:
-            level = f"lvl {b.track_level}" if b.track_level is not None else ""
-            if b.status == "ok" and (settings.repo_root / b.file).is_file():
-                thumbs.append(
-                    f"<span title='{html.escape(b.name)} ({level})'>"
-                    f"<img src='/img?p={html.escape(b.file)}'></span>"
-                )
-            else:
-                thumbs.append(f"<span class='lbl'>[{html.escape(b.name)} {level}]</span>")
-        return (f"<div class='context'><span class='lbl'>escalera completa "
-                f"({len(members)} niveles):</span>{''.join(thumbs)}</div>")
-    existing = [b for b in m.badges if b.category == value and b.status == "ok"
-                and (settings.repo_root / b.file).is_file()]
-    if not existing:
-        return ""
-    thumbs = "".join(
-        f"<img src='/img?p={html.escape(b.file)}' title='{html.escape(b.name)}'>"
-        for b in existing
-    )
-    return (f"<div class='context'><span class='lbl'>ya en la categoría "
-            f"({len(existing)}):</span>{thumbs}</div>")
+def _render_track(settings: Settings, m, track: str, items_by_slug: dict,
+                  jobs: dict[str, str]) -> str:
+    members = sorted((b for b in m.badges if b.track == track),
+                     key=lambda b: (b.track_level or 0, b.slug))
+    done = sum(1 for b in members if b.status == "ok")
+    title = TRACK_TITLES.get(track, track)
+    parts = [f"<h2 class='track'>{html.escape(title)} "
+             f"<span class='badge-name'>— {done}/{len(members)} con imagen</span></h2>"]
+    for badge in members:
+        label = f"lvl {badge.track_level}" if badge.track_level is not None else "—"
+        parts.append(_render_row(settings, badge, items_by_slug.get(badge.slug),
+                                 jobs, level_label=label))
+    return "".join(parts)
 
 
-def _render_badge(m, item: dict, jobs: dict[str, str]) -> str:
-    slug = item["slug"]
-    badge = m.get(slug)
-    name = badge.name if badge else slug
-    level = (f" · nivel {badge.track_level}"
-             if badge and badge.track_level is not None else "")
-    parts = [f"<h3><code>{html.escape(slug)}</code> "
-             f"<span class='badge-name'>— {html.escape(name)}{level}</span></h3>"]
-    status = jobs.get(slug, "")
+def _render_row(settings: Settings, badge, item: dict | None,
+                jobs: dict[str, str], level_label: str) -> str:
+    """Una fila por badge: imagen si existe, candidatos si los hay, o generar."""
+    num = f"<span class='num'>{html.escape(level_label)}</span>" if level_label else ""
+    name = html.escape(badge.name)
+    slug = html.escape(badge.slug)
+    status = jobs.get(badge.slug, "")
+
+    if badge.status == "ok" and (settings.repo_root / badge.file).is_file() and not item:
+        return (f"<div class='lvl done'><img src='/img?p={html.escape(badge.file)}'>"
+                f"{num} {name} <span class='badge-name'>✓</span></div>")
+
+    parts = [f"<div class='lvl pend'>{num} <b>{name}</b> "
+             f"<span class='badge-name'><code>{slug}</code></span>"]
     if status == "running":
-        parts.append("<p class='jobs'>⏳ generando más candidatos…</p>")
-    elif status.startswith("ERROR"):
-        parts.append(f"<div class='banner err'>{html.escape(status)}</div>")
-    if item.get("current"):
-        parts.append(
-            f"<div class='cand'><img src='/img?p={html.escape(item['current'])}' width='180'>"
-            f"<div>actual</div></div>"
-        )
-    for cand in item["candidates"]:
-        qc_class = "good" if cand["qc_ok"] else "bad"
-        qc_label = "QC ok" if cand["qc_ok"] else "QC ✗"
-        parts.append(
-            f"<div class='cand'><img src='/img?p={html.escape(cand['file'])}' width='180'>"
-            f"<div><span class='qc {qc_class}'>{qc_label}</span> {cand['roundness']:.3f} "
-            f"· {html.escape(cand['provider'])}</div>"
-            f"<form method='post' action='/promote'>"
-            f"<input type='hidden' name='slug' value='{html.escape(slug)}'>"
-            f"<input type='hidden' name='candidate' value='{html.escape(cand['file'])}'>"
-            f"<button class='promote'>Promocionar ✓</button></form></div>"
-        )
-    if status != "running":
+        parts.append(" <span class='jobs'>⏳ generando…</span></div>")
+        return "".join(parts)
+    if status.startswith("ERROR"):
+        parts.append(f" <span class='issue'>{html.escape(status)}</span>")
+    parts.append("</div>")
+
+    if item:
+        if item.get("current"):
+            parts.append(
+                f"<div class='cand'><img src='/img?p={html.escape(item['current'])}'>"
+                f"<div>actual</div></div>"
+            )
+        for cand in item["candidates"]:
+            qc_class = "good" if cand["qc_ok"] else "bad"
+            qc_label = "QC ok" if cand["qc_ok"] else "QC ✗"
+            parts.append(
+                f"<div class='cand'><img src='/img?p={html.escape(cand['file'])}'>"
+                f"<div><span class='qc {qc_class}'>{qc_label}</span> {cand['roundness']:.3f} "
+                f"· {html.escape(cand['provider'])}</div>"
+                f"<form method='post' action='/promote'>"
+                f"<input type='hidden' name='slug' value='{slug}'>"
+                f"<input type='hidden' name='candidate' value='{html.escape(cand['file'])}'>"
+                f"<button class='promote'>Promocionar ✓</button></form></div>"
+            )
         parts.append(
             f"<div class='cand'><form method='post' action='/generate'>"
-            f"<input type='hidden' name='slug' value='{html.escape(slug)}'>"
+            f"<input type='hidden' name='slug' value='{slug}'>"
             f"<button class='more'>＋3 sugerencias</button></form></div>"
+        )
+    else:
+        hint = ""
+        if badge.references and not any(
+            (settings.repo_root / r).is_file() for r in badge.references
+        ):
+            hint = (" <span class='hint'>⚠ su nivel anterior aún no tiene imagen; "
+                    "usará las referencias globales</span>")
+        parts.append(
+            f"<div class='cand'><form method='post' action='/generate'>"
+            f"<input type='hidden' name='slug' value='{slug}'>"
+            f"<button class='more'>Generar 3 candidatos</button></form>{hint}</div>"
         )
     return "".join(parts)
 
