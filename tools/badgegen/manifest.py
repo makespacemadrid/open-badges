@@ -31,6 +31,7 @@ class Badge:
     issues: list[str] = field(default_factory=list)
     provider: str | None = None
     prompt_extra: str | None = None
+    references: list[str] | None = None  # override por badge de reference_images (series)
 
     def to_dict(self) -> dict:
         d = {
@@ -43,7 +44,7 @@ class Badge:
             "status": self.status,
             "issues": list(self.issues),
         }
-        for key in ("visual", "provider", "prompt_extra"):
+        for key in ("visual", "provider", "prompt_extra", "references"):
             value = getattr(self, key)
             if value is not None:
                 d[key] = value
@@ -63,6 +64,7 @@ class Badge:
             issues=list(d.get("issues") or []),
             provider=d.get("provider"),
             prompt_extra=d.get("prompt_extra"),
+            references=list(d["references"]) if d.get("references") is not None else None,
         )
 
 

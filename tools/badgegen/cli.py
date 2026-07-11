@@ -36,6 +36,9 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_rev = sub.add_parser("review", help="regenera la galería de candidatos")
     p_rev.add_argument("slugs", nargs="*")
+    p_rev.add_argument("--serve", action="store_true",
+                       help="servidor local con botón Promocionar")
+    p_rev.add_argument("--port", type=int, default=8765)
 
     p_pro = sub.add_parser("promote", help="candidato → imagen final")
     p_pro.add_argument("slug")
@@ -126,36 +129,20 @@ def cmd_generate(settings: Settings, args) -> int:
 
 
 def cmd_review(settings: Settings, args) -> int:
+    if args.serve:
+        from badgegen.serve import serve
+
+        return serve(settings, slugs=args.slugs or None, port=args.port)
     m = _load(settings)
     _write_review(settings, m, args.slugs or None)
     return 0
 
 
 def _write_review(settings: Settings, m, slugs) -> None:
-    items = []
-    if not settings.candidates_dir.is_dir():
+    items = gallery.collect_items(settings, m, slugs)
+    if not items:
         print("no hay candidatos")
         return
-    for directory in sorted(settings.candidates_dir.iterdir()):
-        if not directory.is_dir() or (slugs and directory.name not in slugs):
-            continue
-        badge = m.get(directory.name)
-        candidates = []
-        for png in sorted(directory.glob("*.png")):
-            sidecar_path = png.with_suffix(".json")
-            has_sidecar = sidecar_path.is_file()
-            sidecar = json.loads(sidecar_path.read_text(encoding="utf-8")) if has_sidecar else {}
-            qc_data = sidecar.get("qc", {}) if has_sidecar else {}
-            candidates.append({
-                "file": str(png.relative_to(settings.repo_root)),
-                "qc_ok": has_sidecar and not qc_data.get("issues"),
-                "roundness": qc_data.get("roundness", 0.0),
-                "provider": sidecar.get("provider", "?"),
-                "model": sidecar.get("model", "?"),
-            })
-        if candidates:
-            current = badge.file if badge and (settings.repo_root / badge.file).is_file() else None
-            items.append({"slug": directory.name, "current": current, "candidates": candidates})
     out = gallery.write_review(settings, items)
     print(f"galería: {out}")
 

@@ -54,19 +54,26 @@ def _next_index(directory: Path) -> int:
     return max(existing, default=0) + 1
 
 
-def _load_references(settings: Settings, m: Manifest) -> list[bytes]:
-    refs = []
-    for name in m.reference_images:
-        path = settings.repo_root / name
-        if path.is_file():
-            refs.append(path.read_bytes())
-    return refs
+def _load_files(settings: Settings, names: list[str]) -> list[bytes]:
+    return [
+        (settings.repo_root / name).read_bytes()
+        for name in names
+        if (settings.repo_root / name).is_file()
+    ]
+
+
+def badge_references(settings: Settings, m: Manifest, badge: Badge) -> list[bytes]:
+    """Referencias del badge: las suyas (series) y, si ninguna existe aún, las globales."""
+    if badge.references:
+        refs = _load_files(settings, badge.references)
+        if refs:
+            return refs
+    return _load_files(settings, m.reference_images)
 
 
 def run_generate(settings: Settings, m: Manifest, provider,
                  slugs: list[str] | None = None, statuses: list[str] | None = None,
                  n: int = 4) -> dict:
-    references = _load_references(settings, m)
     overrides: dict = {}
     report: dict = {}
     for badge in select_badges(m, slugs, statuses):
@@ -78,6 +85,7 @@ def run_generate(settings: Settings, m: Manifest, provider,
 
                     overrides[badge.provider] = get_provider(badge.provider)
                 badge_provider = overrides[badge.provider]
+            references = badge_references(settings, m, badge)
             report[badge.slug] = _generate_one(settings, m, badge_provider, badge, references, n)
         except Exception as exc:  # el batch sigue; el error queda en el informe
             report[badge.slug] = f"ERROR: {exc}"

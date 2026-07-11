@@ -42,7 +42,8 @@ badges:
   status: missing
   issues: []
   visual: a resin 3D printer's build platform lifting a freshly cured print, resin droplets dripping
-  prompt_extra: 'The title has parentheses that MUST both be rendered, opening and closing: "I Can Print (Resin)". Alternatively render it on two lines: "I Can Print" and below it "(Resin)".'
+  prompt_extra: 'The title has parentheses that MUST both be rendered, opening and closing: "I Can Print
+    (Resin)". Alternatively render it on two lines: "I Can Print" and below it "(Resin)".'
 - slug: badge-i-can-vinyl
   name: I Can Vinyl
   file: badge-i-can-vinyl.png
@@ -422,7 +423,10 @@ badges:
   criteria: Asistir a 35 sesiones de Hack the Space.
   status: missing
   issues: []
-  visual: a human silhouette merging seamlessly into the outline of the workshop building
+  visual: an infinity symbol forged from two crossed wrenches over a rising phoenix flame
+  prompt_extra: Top level of the hackspace attendance series (above Legend); the most ornate of the family.
+  references:
+  - badge-hackspace-legend.png
 - slug: badge-first-assembly
   name: First Assembly
   file: badge-first-assembly.png
@@ -471,7 +475,11 @@ badges:
   criteria: Asistir a 20 reuniones mensuales.
   status: missing
   issues: []
-  visual: an elder figure seated at the head of a round table holding a gavel
+  visual: a wise owl with round glasses perched on a wooden gavel
+  prompt_extra: Level 3 of 4 in the assembly attendance series; same family as the reference badge, more
+    ornate.
+  references:
+  - badge-assembly-regular.png
 - slug: badge-assembly-legend
   name: Assembly Legend
   file: badge-assembly-legend.png
@@ -480,7 +488,11 @@ badges:
   criteria: Asistir a 25 reuniones mensuales.
   status: missing
   issues: []
-  visual: an open agenda notebook glowing like a legendary scroll on a meeting table
+  visual: a laurel-crowned gavel radiating light rays
+  prompt_extra: Top level of the assembly attendance series; the most ornate of the family.
+  references:
+  - badge-assembly-elder.png
+  - badge-assembly-regular.png
 - slug: badge-marathon-member
   name: Marathon Member
   file: badge-marathon-member.png
@@ -498,7 +510,11 @@ badges:
   criteria: Asistir a 35 reuniones mensuales.
   status: missing
   issues: []
-  visual: a hooded elder seated on a throne built from stacked meeting chairs beside a broken projector
+  visual: a round council table seen from above with an ouroboros ring engraved around it
+  prompt_extra: Prestige level above Council Member; same family as the reference badge, more solemn and
+    ornate.
+  references:
+  - badge-council-member.png
 - slug: eventos-primer-paso
   name: Groupie
   file: badge-eventos-primer-paso.png
@@ -507,7 +523,9 @@ badges:
   criteria: Completa 1 quest del track de eventos.
   status: missing
   issues: []
-  visual: a single footprint stepping onto a concert stage
+  visual: a hand raising a concert ticket, small music notes around
+  prompt_extra: 'Level 1 of 4 in the events badge series (concert tour theme: Groupie, Roadie, Headliner,
+    Tour Manager). Same style family as the reference badge; ornamentation grows with the level.'
 - slug: eventos-embajador
   name: Roadie
   file: badge-eventos-embajador.png
@@ -516,7 +534,11 @@ badges:
   criteria: Completa 3 quests del track de eventos.
   status: missing
   issues: []
-  visual: a hand carrying a folded stage banner and a toolbox toward an empty stage
+  visual: a roadie flight case with coiled cables and a wrench on top
+  prompt_extra: 'Level 2 of 4 in the events badge series (concert tour theme: Groupie, Roadie, Headliner,
+    Tour Manager). Same style family as the reference badge; ornamentation grows with the level.'
+  references:
+  - badge-eventos-primer-paso.png
 - slug: eventos-evangelista
   name: Headliner
   file: badge-eventos-evangelista.png
@@ -525,7 +547,12 @@ badges:
   criteria: Completa 5 quests del track de eventos.
   status: missing
   issues: []
-  visual: a spotlight beam shining down onto an empty microphone stand center stage
+  visual: a vintage microphone on a stand under a bright spotlight beam
+  prompt_extra: 'Level 3 of 4 in the events badge series (concert tour theme: Groupie, Roadie, Headliner,
+    Tour Manager). Same style family as the reference badge; ornamentation grows with the level.'
+  references:
+  - badge-eventos-embajador.png
+  - badge-eventos-primer-paso.png
 - slug: eventos-networker
   name: Tour Manager
   file: badge-eventos-networker.png
@@ -534,7 +561,12 @@ badges:
   criteria: Completa 10 quests del track de eventos.
   status: missing
   issues: []
-  visual: a folded road map with several stops pinned along a dotted touring route
+  visual: a clipboard with a tour route map and a laminated all-access pass
+  prompt_extra: 'Level 4 of 4 in the events badge series (concert tour theme: Groupie, Roadie, Headliner,
+    Tour Manager). Same style family as the reference badge; ornamentation grows with the level.'
+  references:
+  - badge-eventos-evangelista.png
+  - badge-eventos-primer-paso.png
 - slug: badge-evento-nerdearla2025
   name: Nerdearla 2025
   file: badge-nerdearla-2025.png
@@ -575,7 +607,11 @@ badges:
   criteria: Ser socio activo durante al menos 1 año.
   status: missing
   issues: []
-  visual: a number 1 trophy over a small birthday candle
+  visual: the Makespace anniversary trophy with a large number 1 on its cup, standing over one lit birthday
+    candles, two small laurel sprigs at the sides
+  prompt_extra: Level 1 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly one candles and ornamentation slightly
+    richer than the previous level.
 - slug: badge-second-year
   name: Second Year
   file: badge-second-year.png
@@ -584,7 +620,13 @@ badges:
   criteria: Ser socio activo durante al menos 2 años.
   status: missing
   issues: []
-  visual: a steaming coffee mug beside a small number 2 medal
+  visual: the Makespace anniversary trophy with a large number 2 on its cup, standing over two lit birthday
+    candles, two small laurel sprigs at the sides
+  prompt_extra: Level 2 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly two candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-first-year.png
 - slug: badge-third-year
   name: Third Year
   file: badge-third-year.png
@@ -593,7 +635,14 @@ badges:
   criteria: Ser socio activo durante al menos 3 años.
   status: missing
   issues: []
-  visual: three interlocking gears turning together
+  visual: the Makespace anniversary trophy with a large number 3 on its cup, standing over three lit birthday
+    candles, two small laurel sprigs at the sides
+  prompt_extra: Level 3 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly three candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-second-year.png
+  - badge-first-year.png
 - slug: badge-fourth-year
   name: Fourth Year
   file: badge-fourth-year.png
@@ -602,7 +651,14 @@ badges:
   criteria: Ser socio activo durante al menos 4 años.
   status: missing
   issues: []
-  visual: a power drill held firmly in one hand, a small number 4 tag on its handle
+  visual: the Makespace anniversary trophy with a large number 4 on its cup, standing over four lit birthday
+    candles, growing laurel branches framing the lower half
+  prompt_extra: Level 4 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly four candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-third-year.png
+  - badge-first-year.png
 - slug: badge-fifth-year
   name: Fifth Year
   file: badge-fifth-year.png
@@ -611,7 +667,14 @@ badges:
   criteria: Ser socio activo durante al menos 5 años.
   status: missing
   issues: []
-  visual: a 3D printer with an open access panel and a wrench resting on top
+  visual: the Makespace anniversary trophy with a large number 5 on its cup, standing over five lit birthday
+    candles, growing laurel branches framing the lower half
+  prompt_extra: Level 5 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly five candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-fourth-year.png
+  - badge-first-year.png
 - slug: badge-sixth-year
   name: Sixth Year
   file: badge-sixth-year.png
@@ -620,7 +683,14 @@ badges:
   criteria: Ser socio activo durante al menos 6 años.
   status: missing
   issues: []
-  visual: six identical tools hanging neatly in a row on a pegboard wall
+  visual: the Makespace anniversary trophy with a large number 6 on its cup, standing over six lit birthday
+    candles, growing laurel branches framing the lower half
+  prompt_extra: Level 6 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly six candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-fifth-year.png
+  - badge-first-year.png
 - slug: badge-seventh-year
   name: Seventh Year
   file: badge-seventh-year.png
@@ -629,7 +699,14 @@ badges:
   criteria: Ser socio activo durante al menos 7 años.
   status: missing
   issues: []
-  visual: a number 7 patch stitched onto a well-worn workshop apron
+  visual: the Makespace anniversary trophy with a large number 7 on its cup, standing over seven lit birthday
+    candles, a rich laurel wreath reaching halfway up the sides
+  prompt_extra: Level 7 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly seven candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-sixth-year.png
+  - badge-first-year.png
 - slug: badge-eighth-year
   name: Eighth Year
   file: badge-eighth-year.png
@@ -638,7 +715,14 @@ badges:
   criteria: Ser socio activo durante al menos 8 años.
   status: missing
   issues: []
-  visual: a brass nameplate engraved with a number 8 mounted on a workbench corner
+  visual: the Makespace anniversary trophy with a large number 8 on its cup, standing over eight lit birthday
+    candles, a rich laurel wreath reaching halfway up the sides
+  prompt_extra: Level 8 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly eight candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-seventh-year.png
+  - badge-first-year.png
 - slug: badge-ninth-year
   name: Ninth Year
   file: badge-ninth-year.png
@@ -647,7 +731,14 @@ badges:
   criteria: Ser socio activo durante al menos 9 años.
   status: missing
   issues: []
-  visual: a number 9 trophy beside a single unlit birthday candle waiting
+  visual: the Makespace anniversary trophy with a large number 9 on its cup, standing over nine lit birthday
+    candles, a rich laurel wreath reaching halfway up the sides
+  prompt_extra: Level 9 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly nine candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-eighth-year.png
+  - badge-first-year.png
 - slug: badge-10-years
   name: A Decade at Makespace
   file: badge-10-years.png
@@ -656,7 +747,14 @@ badges:
   criteria: Ser socio activo durante al menos 10 años.
   status: missing
   issues: []
-  visual: a laurel wreath medal with a bold number 10 at its center
+  visual: the Makespace anniversary trophy with a large number 10 on its cup, standing over ten lit birthday
+    candles, a full ornate laurel wreath with small stars along the ring
+  prompt_extra: Level 10 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly ten candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-ninth-year.png
+  - badge-first-year.png
 - slug: badge-11-years
   name: Eleven Years
   file: badge-11-years.png
@@ -665,7 +763,14 @@ badges:
   criteria: Ser socio activo durante al menos 11 años.
   status: missing
   issues: []
-  visual: eleven small candles arranged in a circle around a birthday cake
+  visual: the Makespace anniversary trophy with a large number 11 on its cup, standing over eleven lit
+    birthday candles, a full ornate laurel wreath with small stars along the ring
+  prompt_extra: Level 11 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly eleven candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-10-years.png
+  - badge-first-year.png
 - slug: badge-12-years
   name: Twelve Years
   file: badge-12-years.png
@@ -674,7 +779,14 @@ badges:
   criteria: Ser socio activo durante al menos 12 años.
   status: missing
   issues: []
-  visual: a clock face with twelve gear teeth interlocking around its rim
+  visual: the Makespace anniversary trophy with a large number 12 on its cup, standing over twelve lit
+    birthday candles, a full ornate laurel wreath with small stars along the ring
+  prompt_extra: Level 12 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly twelve candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-11-years.png
+  - badge-first-year.png
 - slug: badge-13-years
   name: Thirteen Years
   file: badge-13-years.png
@@ -683,7 +795,14 @@ badges:
   criteria: Ser socio activo durante al menos 13 años.
   status: missing
   issues: []
-  visual: a horseshoe stamped with the number 13, hanging on a workshop wall
+  visual: the Makespace anniversary trophy with a large number 13 on its cup, standing over thirteen lit
+    birthday candles, a full ornate laurel wreath with small stars along the ring
+  prompt_extra: Level 13 of 13 in the membership-years badge series. Keep the SAME trophy-over-candles
+    motif and composition as the reference badge, with exactly thirteen candles and ornamentation slightly
+    richer than the previous level.
+  references:
+  - badge-12-years.png
+  - badge-first-year.png
 - slug: keys-of-kingdom
   name: Keys of Kingdom
   file: badge-keys-of-kingdom.png
@@ -701,4 +820,7 @@ badges:
     su apertura en abril de 2013.
   status: missing
   issues: []
-  visual: a cornerstone brick being laid with a trowel over stacked foundation stones
+  visual: a golden cornerstone engraved with the Makespace M being laid over rolled blueprints, radiating
+    rays
+  prompt_extra: 'Prestige badge outside the year ladder: more solemn and ornate than the membership-years
+    series.'

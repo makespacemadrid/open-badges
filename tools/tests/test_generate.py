@@ -127,3 +127,34 @@ def test_run_generate_small_candidate_wrong_size_is_informative(tmp_path, make_b
     sidecar = _json.loads((tmp_path / "candidates" / "badge-a" / "01-fake.json").read_text())
     assert "wrong-size" in sidecar["qc"]["issues"]
     assert sidecar["qc"]["roundness"] > 0.99
+
+
+def test_badge_references_override_and_fallback(tmp_path, make_badge):
+    settings = Settings(repo_root=tmp_path)
+    (tmp_path / "global-ref.png").write_bytes(b"GLOBAL")
+    (tmp_path / "serie-n1.png").write_bytes(b"SERIE")
+    m = manifest.Manifest(reference_images=["global-ref.png"], badges=[])
+
+    con_serie = manifest.Badge(slug="badge-s2", name="S2", file="s2.png",
+                               references=["serie-n1.png"])
+    sin_serie = manifest.Badge(slug="badge-x", name="X", file="x.png")
+    serie_inexistente = manifest.Badge(slug="badge-s3", name="S3", file="s3.png",
+                                       references=["serie-n2-aun-no-existe.png"])
+
+    assert generate.badge_references(settings, m, con_serie) == [b"SERIE"]
+    assert generate.badge_references(settings, m, sin_serie) == [b"GLOBAL"]
+    # la referencia de serie aún no está promocionada -> cae a las globales
+    assert generate.badge_references(settings, m, serie_inexistente) == [b"GLOBAL"]
+
+
+def test_manifest_roundtrip_references(tmp_path):
+    m = manifest.Manifest(badges=[
+        manifest.Badge(slug="badge-a", name="A", file="a.png", references=["ref.png"]),
+        manifest.Badge(slug="badge-b", name="B", file="b.png"),
+    ])
+    p = tmp_path / "badges.yaml"
+    manifest.save(m, p)
+    m2 = manifest.load(p)
+    assert m2.get("badge-a").references == ["ref.png"]
+    assert m2.get("badge-b").references is None
+    assert "references" not in p.read_text().split("badge-b")[1]

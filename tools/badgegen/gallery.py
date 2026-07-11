@@ -2,9 +2,38 @@
 from __future__ import annotations
 
 import html
+import json
 from pathlib import Path
 
 from badgegen.config import Settings
+
+
+def collect_items(settings: Settings, m, slugs: list[str] | None = None) -> list[dict]:
+    """Candidatos agrupados por badge, leyendo candidates/ y sus sidecars."""
+    items: list[dict] = []
+    if not settings.candidates_dir.is_dir():
+        return items
+    for directory in sorted(settings.candidates_dir.iterdir()):
+        if not directory.is_dir() or (slugs and directory.name not in slugs):
+            continue
+        badge = m.get(directory.name)
+        candidates = []
+        for png in sorted(directory.glob("*.png")):
+            sidecar_path = png.with_suffix(".json")
+            has_sidecar = sidecar_path.is_file()
+            sidecar = json.loads(sidecar_path.read_text(encoding="utf-8")) if has_sidecar else {}
+            qc_data = sidecar.get("qc", {}) if has_sidecar else {}
+            candidates.append({
+                "file": str(png.relative_to(settings.repo_root)),
+                "qc_ok": has_sidecar and not qc_data.get("issues"),
+                "roundness": qc_data.get("roundness", 0.0),
+                "provider": sidecar.get("provider", "?"),
+                "model": sidecar.get("model", "?"),
+            })
+        if candidates:
+            current = badge.file if badge and (settings.repo_root / badge.file).is_file() else None
+            items.append({"slug": directory.name, "current": current, "candidates": candidates})
+    return items
 
 _CSS = """
 body{background:#111;color:#eee;font-family:system-ui,sans-serif;margin:2rem}
