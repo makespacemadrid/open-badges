@@ -8,7 +8,7 @@ from pathlib import Path
 CANVAS_SIZE = 1254
 TARGET_DIAMETER = 1180
 ROUNDNESS_THRESHOLD = 0.985
-MIN_FIXABLE_RATIO = 0.95
+MIN_FIXABLE_RATIO = 0.93
 JSDELIVR_PURGE = "https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/{file}"
 
 

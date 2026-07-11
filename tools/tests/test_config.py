@@ -37,5 +37,5 @@ def test_constants():
     assert config.CANVAS_SIZE == 1254
     assert config.TARGET_DIAMETER == 1180
     assert config.ROUNDNESS_THRESHOLD == 0.985
-    assert config.MIN_FIXABLE_RATIO == 0.95
+    assert config.MIN_FIXABLE_RATIO == 0.93
     assert "{file}" in config.JSDELIVR_PURGE

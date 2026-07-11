@@ -167,8 +167,11 @@ badgegen docs                      # regenera README.md y missing-images.md
 
 1. Detecta el disco exterior sobre la máscara alpha (o sobre color si el
    fondo vino opaco) y ajusta elipse.
-2. Ratio ejes ∈ [0.95, 1.0) → **corrección anisotrópica de escala** para
-   circularizar. Ratio < 0.95 → error con mensaje "regenerar" y aborta.
+2. Ratio ejes ∈ [0.93, 1.0) → **corrección anisotrópica de escala** para
+   circularizar. Ratio < 0.93 → error con mensaje "regenerar" y aborta.
+   (Originalmente 0.95; se bajó a 0.93 tras medir el corpus real: el
+   achatamiento sistémico llega a 0.943 y el estirado ≤7% restaura las
+   proporciones originales sin artefactos visibles.)
 3. Centra el disco, escala al diámetro del template, lienzo 1254×1254 RGBA,
    máscara circular alpha (fuera del anillo → transparente).
 4. Guarda `badge-<slug>.png`, marca `status: ok` y limpia `issues` en el
