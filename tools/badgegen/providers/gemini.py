@@ -9,6 +9,11 @@ from badgegen.providers.base import ProviderError, post_with_retry
 
 API_BASE = "https://generativelanguage.googleapis.com/v1beta"
 DEFAULT_MODEL = "gemini-3.1-flash-image"
+STYLE_NOTE = (
+    "Use the attached badge images ONLY as style reference (palette, line weight, "
+    "ring style, typography). Create a completely NEW badge; do not copy their "
+    "content, motifs or text."
+)
 
 
 class GeminiProvider:
@@ -21,7 +26,8 @@ class GeminiProvider:
         self.client = client or httpx.Client()
 
     def generate(self, prompt: str, reference_images: list[bytes], n: int = 1) -> list[bytes]:
-        parts: list[dict] = [{"text": prompt}]
+        text = f"{prompt}\n{STYLE_NOTE}" if reference_images else prompt
+        parts: list[dict] = [{"text": text}]
         for ref in reference_images:
             parts.append({"inline_data": {
                 "mime_type": "image/png",

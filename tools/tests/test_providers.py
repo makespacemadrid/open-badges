@@ -73,7 +73,8 @@ def test_gemini_generate_parses_inline_data():
     assert out == [PNG, PNG]
     assert seen["key"] == "KEY"
     parts = seen["body"]["contents"][0]["parts"]
-    assert parts[0]["text"] == "un badge"
+    assert parts[0]["text"].startswith("un badge")
+    assert "style reference" in parts[0]["text"]  # nota de estilo al llevar referencias
     assert parts[1]["inline_data"]["data"] == base64.b64encode(b"ref-bytes").decode()
     from badgegen.providers.gemini import DEFAULT_MODEL
 
@@ -98,7 +99,7 @@ def test_openai_compat_generate():
         return httpx.Response(200, json={"data": [{"b64_json": PNG_B64}]})
 
     p = OpenAICompatProvider("http://flux.local/", "TOKEN", "flux-klein", client=_client(handler))
-    out = p.generate("un badge", [b"ignorada"], n=1)
+    out = p.generate("un badge", [], n=1)  # sin referencias → /generations
     assert out == [PNG]
     assert seen["url"] == "http://flux.local/v1/images/generations"
     assert seen["auth"] == "Bearer TOKEN"
@@ -106,6 +107,42 @@ def test_openai_compat_generate():
     assert seen["body"]["response_format"] == "b64_json"
     assert seen["body"]["prompt"] == "un badge"
     assert seen["body"]["size"] == "1024x1024"
+
+
+def test_openai_compat_edits_with_reference():
+    seen = {}
+
+    def handler(request):
+        seen["url"] = str(request.url)
+        seen["content_type"] = request.headers.get("content-type", "")
+        seen["content"] = request.content
+        return httpx.Response(200, json={"data": [{"b64_json": PNG_B64}]})
+
+    p = OpenAICompatProvider("http://flux.local", "TOKEN", "flux-klein", client=_client(handler))
+    out = p.generate("un badge nuevo", [b"ref-style-bytes"], n=1)
+    assert out == [PNG]
+    assert seen["url"] == "http://flux.local/v1/images/edits"
+    assert seen["content_type"].startswith("multipart/form-data")
+    assert b"ref-style-bytes" in seen["content"]        # la referencia viaja
+    assert b"un badge nuevo" in seen["content"]         # el prompt original
+    assert b"do NOT copy its content" in seen["content"]  # instrucción de estilo
+    assert b"flux-klein" in seen["content"]
+
+
+def test_openai_compat_edits_404_falls_back_to_generations():
+    urls = []
+
+    def handler(request):
+        urls.append(request.url.path)
+        if request.url.path.endswith("/edits"):
+            return httpx.Response(404, text="not found")
+        return httpx.Response(200, json={"data": [{"b64_json": PNG_B64}]})
+
+    p = OpenAICompatProvider("http://flux.local", "TOKEN", "flux-klein", client=_client(handler))
+    out = p.generate("un badge", [b"ref"], n=2)
+    assert out == [PNG, PNG]
+    # tras el primer 404 no reintenta /edits
+    assert urls == ["/v1/images/edits", "/v1/images/generations", "/v1/images/generations"]
 
 
 def test_get_provider_factory(monkeypatch):

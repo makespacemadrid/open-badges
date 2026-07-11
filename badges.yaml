@@ -2,9 +2,9 @@ style: Circular maker badge emblem, flat vector style, golden yellow (#F5C400) a
   outer yellow ring with small screw heads, bold sans-serif lettering, high contrast, clean centered composition,
   no gradients, no photo textures
 reference_images:
-- badge-template.png
-- badge-member.png
 - badge-hello-glados.png
+- badge-hammer-time.png
+- badge-still-alive.png
 target_diameter: 1180
 roundness_threshold: 0.985
 badges:
