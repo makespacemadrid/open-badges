@@ -113,3 +113,32 @@ def parse_catalog(path: Path) -> list[CatalogEntry]:
     if not entries:
         raise CatalogParseError("0 entradas válidas en BADGES")
     return entries
+
+
+def merge_catalog(m, entries, repo_root: Path) -> list[str]:
+    """Sincroniza el manifiesto con el catálogo del portal. Muta m; devuelve warnings."""
+    from badgegen.manifest import Badge  # import tardío para evitar ciclo
+
+    seen: set[str] = set()
+    for entry in entries:
+        if entry.retired:
+            continue
+        seen.add(entry.slug)
+        badge = m.get(entry.slug)
+        if badge is None:
+            badge = Badge(slug=entry.slug, name=entry.name,
+                          file=entry.image_file or default_file(entry.slug))
+            m.badges.append(badge)
+        badge.name = entry.name
+        badge.description = entry.description
+        badge.criteria = entry.criteria
+        badge.track = entry.track
+        if entry.image_file:
+            badge.file = entry.image_file
+        if badge.status != "regen":
+            badge.status = "ok" if (repo_root / badge.file).is_file() else "missing"
+    return [
+        f"'{b.slug}' está en badges.yaml pero no en el catálogo activo del portal"
+        for b in m.badges
+        if b.slug not in seen
+    ]
