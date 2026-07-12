@@ -156,9 +156,9 @@ badges:
   category: comunidad
   description: Enseña a los demás algo que te apasione.
   criteria: Impartir un taller o demostración en el Makespace.
-  status: missing
+  status: ok
   issues: []
-  visual: a raised hand presenting a small object to an attentive semicircle of onlookers
+  visual: Maker giving a presentation to an attentive semicircle of onlookers
 - slug: badge-platform-maker
   name: Platform Builder
   file: badge-platform-maker.png
@@ -612,7 +612,7 @@ badges:
   category: eventos
   description: 'Tu primer sarao con Makespace: ya eres parte de la gira.'
   criteria: Completa 1 quest del track de eventos.
-  status: missing
+  status: ok
   issues: []
   track: track-eventos
   track_level: 1
@@ -625,7 +625,7 @@ badges:
   category: eventos
   description: Ya curras montando el stand — la gira no funciona sin ti.
   criteria: Completa 3 quests del track de eventos.
-  status: missing
+  status: ok
   issues: []
   track: track-eventos
   track_level: 3

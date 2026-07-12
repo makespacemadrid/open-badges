@@ -21,7 +21,7 @@ URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadri
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 22 sin imagen)._
+_Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 19 sin imagen)._
 
 ### Onboarding
 
@@ -79,7 +79,7 @@ _Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 22 sin ima
 | `badge-platform-maker` | Platform Builder | `badge-platform-maker.png` | ✅ |
 | `badge-procurer` | Procurer | `badge-procurer.png` | ✅ |
 | `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ✅ |
-| `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ❌ pendiente |
+| `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ✅ |
 | `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` | ✅ |
 
 ### Eventos
@@ -109,10 +109,10 @@ _Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 22 sin ima
 | `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` | ❌ pendiente |
 | `badge-master-hacker` | Master Hacker | `badge-master-hacker.png` | ✅ |
 | `badge-space-regular` | Space Regular | `badge-space-regular.png` | ✅ |
-| `eventos-embajador` | Roadie | `badge-eventos-embajador.png` | ❌ pendiente |
+| `eventos-embajador` | Roadie | `badge-eventos-embajador.png` | ✅ |
 | `eventos-evangelista` | Headliner | `badge-eventos-evangelista.png` | ❌ pendiente |
 | `eventos-networker` | Tour Manager | `badge-eventos-networker.png` | ❌ pendiente |
-| `eventos-primer-paso` | Groupie | `badge-eventos-primer-paso.png` | ❌ pendiente |
+| `eventos-primer-paso` | Groupie | `badge-eventos-primer-paso.png` | ✅ |
 
 ### Membresía
 

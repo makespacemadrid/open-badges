@@ -1,15 +1,9 @@
 # Badges sin imagen — pendientes de generar
 
 <!-- badgegen:tables:start -->
-Badges sin imagen o marcados para regenerar (22). Convención: `badge-<slug>.png`.
+Badges sin imagen o marcados para regenerar (19). Convención: `badge-<slug>.png`.
 
 Tras subir una imagen, purga la caché de jsDelivr: `https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<filename>`.
-
-## Comunidad
-
-| Slug | Nombre | Archivo | Estado |
-|------|--------|---------|--------|
-| `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ❌ pendiente |
 
 ## Eventos
 
@@ -19,10 +13,8 @@ Tras subir una imagen, purga la caché de jsDelivr: `https://purge.jsdelivr.net/
 | `badge-eternal-council` | Eternal Council | `badge-eternal-council.png` | ❌ pendiente |
 | `badge-hackspace-immortal` | Hackspace Immortal | `badge-hackspace-immortal.png` | ❌ pendiente |
 | `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` | ❌ pendiente |
-| `eventos-embajador` | Roadie | `badge-eventos-embajador.png` | ❌ pendiente |
 | `eventos-evangelista` | Headliner | `badge-eventos-evangelista.png` | ❌ pendiente |
 | `eventos-networker` | Tour Manager | `badge-eventos-networker.png` | ❌ pendiente |
-| `eventos-primer-paso` | Groupie | `badge-eventos-primer-paso.png` | ❌ pendiente |
 
 ## Membresía
 
