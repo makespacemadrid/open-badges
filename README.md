@@ -2,6 +2,12 @@
 
 Repositorio de imágenes para los Open Badges de Makespace Madrid.
 
+> **El gestor de imágenes vive ahora en el portal de miembros** (`/admin/badges` →
+> pestaña *Imágenes*): generación con IA, revisión de candidatos y promoción. Este
+> repositorio queda como backup y catálogo público, sincronizado automáticamente
+> por el portal en cada promoción. La CLI Python de `tools/` está congelada — se
+> conserva solo para uso de emergencia offline.
+
 Las imágenes se sirven via **jsDelivr CDN**. Para invalidar la caché tras actualizar una imagen:
 
 ```

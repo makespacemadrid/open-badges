@@ -1,5 +1,12 @@
 # badgegen
 
+> **CONGELADA (2026-07-12)**: el gestor de imágenes de badges vive ahora en el portal
+> de miembros (`/admin/badges` → pestaña *Imágenes*) — generación con IA, revisión de
+> candidatos, promoción y ajustes del generador, todo sobre la DB del portal. Esta CLI
+> se conserva solo para uso de emergencia offline; `badgegen sync` ya no hace falta
+> (la DB del portal es la fuente de verdad) y el gestor web `review --serve` no se
+> mantiene.
+
 CLI para generar y gestionar las imágenes de los Open Badges.
 
 ## Setup
