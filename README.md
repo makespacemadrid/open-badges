@@ -10,8 +10,21 @@ GET https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<filename>
 
 URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadrid/open-badges@main/`
 
+## Qué hay aquí
+
+- **`badge-*.png`** — las imágenes finales: 1254×1254 px, PNG con transparencia, disco de 1180 px.
+- **[`missing-images.md`](missing-images.md)** — las que faltan, con la descripción de cada badge
+  y la receta completa para generarla.
+- **[`badges.yaml`](badges.yaml)** — el manifiesto: estilo global, itinerarios y una entrada por
+  badge con su estado.
+- **[`AGENTS.md`](AGENTS.md)** — empieza por aquí si eres un agente.
+
+El catálogo de abajo, `missing-images.md` y `badges.yaml` **los escribe el portal**. No los edites
+a mano: se sobreescriben en el siguiente push.
+
 ---
 
+<!-- badgegen:tables:start -->
 ## Catálogo de badges
 
 _Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el repo · ❌ = pendiente de generar._
@@ -131,3 +144,5 @@ _Generado desde el catálogo del portal (86 badges activos). ✅ = imagen en el 
 | `badge-sixth-year` | Sixth Year | `badge-sixth-year.png` | ❌ pendiente |
 | `badge-third-year` | Third Year | `badge-third-year.png` | ❌ pendiente |
 | `keys-of-kingdom` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
+<!-- badgegen:tables:end -->
+
