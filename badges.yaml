@@ -22,6 +22,7 @@ badges:
     description: Diez años como socio del Makespace Madrid. Una década.
     criteria: Ser socio activo durante al menos 10 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 10
@@ -40,6 +41,7 @@ badges:
     description: Once años en el Makespace. Pocos pueden decir lo mismo.
     criteria: Ser socio activo durante al menos 11 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 11
@@ -59,6 +61,7 @@ badges:
     description: Doce años. El espacio y tú ya sois indistinguibles.
     criteria: Ser socio activo durante al menos 12 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 12
@@ -77,6 +80,7 @@ badges:
     description: Trece años. Llevas aquí casi desde el principio.
     criteria: Ser socio activo durante al menos 13 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 13
@@ -95,6 +99,7 @@ badges:
     description: Quince recargas. La nevera nunca ha estado vacía por su culpa.
     criteria: Completar el reto «Recarga la nevera comunitaria» 15 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-nevera
     track_level: 15
@@ -106,6 +111,7 @@ badges:
     criteria: Permanecer en el Makespace de forma continuada desde antes de la medianoche hasta después
       del amanecer.
     status: missing
+    repo_state: pending
     issues: []
     track: nocturnidad
     track_level: 3
@@ -116,6 +122,7 @@ badges:
     description: 25 páginas documentando la vida y el saber del Makespace.
     criteria: Crear al menos 25 páginas en Docmost.
     status: ok
+    repo_state: backed_up
     issues: []
     track: docmost-pages
     track_level: 3
@@ -126,6 +133,7 @@ badges:
     description: 20 reuniones de participación democrática en la gobernanza del Makespace.
     criteria: Asistir a 20 reuniones mensuales.
     status: ok
+    repo_state: portal_only
     issues: []
     track: reunion-mensual
     track_level: 20
@@ -141,6 +149,7 @@ badges:
     description: 25 reuniones. El orden del día casi no hace falta escribirlo — te lo sabes de memoria.
     criteria: Asistir a 25 reuniones mensuales.
     status: ok
+    repo_state: portal_only
     issues: []
     track: reunion-mensual
     track_level: 25
@@ -156,6 +165,7 @@ badges:
     description: Tres reuniones mensuales — tu voz forma parte de la conversación.
     criteria: Asistir a 3 reuniones mensuales.
     status: ok
+    repo_state: backed_up
     issues: []
     track: reunion-mensual
     track_level: 3
@@ -166,6 +176,7 @@ badges:
     description: Ha participado en una actividad o evento del Makespace.
     criteria: Reconocimiento manual por asistir a una actividad del Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-burning-tokens
     name: Burning Tokens
@@ -174,6 +185,7 @@ badges:
     description: 1 millón de tokens. Las GPUs están calientes por tu culpa.
     criteria: Usar al menos 1.000.000 de tokens en Ocabra.
     status: ok
+    repo_state: backed_up
     issues: []
     track: ocabra-tokens
     track_level: 3
@@ -184,6 +196,7 @@ badges:
     description: 500 mensajes y todavía no hay tarta. GLaDOS está satisfecha.
     criteria: Enviar al menos 500 mensajes a GLaDOS.
     status: ok
+    repo_state: backed_up
     issues: []
     track: glados-messages
     track_level: 5
@@ -194,6 +207,7 @@ badges:
     description: Ha completado la formación de la CNC y sabe usarla con autonomía.
     criteria: Completar la formación de la CNC fresando el llavero de bautismo.
     status: ok
+    repo_state: portal_only
     issues: []
   - slug: badge-chief-scout
     name: Chief Scout
@@ -203,6 +217,7 @@ badges:
     criteria: Propón 50 insignias para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
     status: missing
+    repo_state: pending
     issues: []
     track: minter
     track_level: 5
@@ -213,6 +228,7 @@ badges:
     description: Ha recargado la nevera cinco veces. La bebida fría no aparece sola.
     criteria: Completar el reto «Recarga la nevera comunitaria» 5 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-nevera
     track_level: 5
@@ -223,6 +239,7 @@ badges:
     description: 15 reuniones. La comunidad lo nota cuando no estás.
     criteria: Asistir a 15 reuniones mensuales.
     status: ok
+    repo_state: backed_up
     issues: []
     track: reunion-mensual
     track_level: 15
@@ -233,6 +250,7 @@ badges:
     description: 10 reuniones. Un pilar de la asamblea mensual.
     criteria: Asistir a 10 reuniones mensuales.
     status: ok
+    repo_state: backed_up
     issues: []
     track: reunion-mensual
     track_level: 10
@@ -243,6 +261,7 @@ badges:
     description: Quince compras reconciliadas. Esto empieza a ser un problema (para la tesorería).
     criteria: Gestionar 15 compras reconciliadas.
     status: ok
+    repo_state: portal_only
     issues: []
     track: purchases
     track_level: 3
@@ -254,6 +273,7 @@ badges:
     description: Cinco reuniones. Estás comprometido con cómo se gestiona el espacio.
     criteria: Asistir a 5 reuniones mensuales.
     status: ok
+    repo_state: backed_up
     issues: []
     track: reunion-mensual
     track_level: 5
@@ -265,6 +285,7 @@ badges:
     criteria: Propón 5 insignias para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
     status: missing
+    repo_state: pending
     issues: []
     track: minter
     track_level: 2
@@ -275,6 +296,7 @@ badges:
     description: "Tres tareas de mantenimiento. Ya no es casualidad: es una rutina."
     criteria: Completar 3 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
     status: missing
+    repo_state: pending
     issues: []
     track: cuidado-espacio
     track_level: 3
@@ -285,6 +307,7 @@ badges:
     description: Ha encontrado todos los QR escondidos del CTF v1 del Makespace.
     criteria: Encontrar todos los QR escondidos del Capture the Flag v1 del Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-daemon-process
     name: Daemon Process
@@ -293,6 +316,7 @@ badges:
     description: Cinco tareas de mantenimiento, de las que se hacen sin que nadie las pida.
     criteria: Completar 5 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
     status: missing
+    repo_state: pending
     issues: []
     track: cuidado-espacio
     track_level: 5
@@ -303,6 +327,7 @@ badges:
     description: Ha limpiado los baños del Makespace. Gracias.
     criteria: Limpiar los baños del Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
     track: chore-banos
     track_level: 1
@@ -313,6 +338,7 @@ badges:
     description: Participó en las reformas del Makespace para la licencia de actividad.
     criteria: Participar en las obras de reforma del local para la licencia de actividad.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-dependency-injection
     name: Dependency Injection
@@ -321,6 +347,7 @@ badges:
     description: Ha traído material cinco veces. Resuelve las dependencias del espacio.
     criteria: Completar el reto «Trae material para el espacio» 5 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-materiales
     track_level: 5
@@ -332,6 +359,7 @@ badges:
       comer después de las 12."
     criteria: Quedarse en el Makespace trabajando más allá de la medianoche.
     status: ok
+    repo_state: backed_up
     issues: []
     track: nocturnidad
     track_level: 1
@@ -342,6 +370,7 @@ badges:
     description: Ha abierto el espacio antes de las 10 de la mañana. El mundo es de quien madruga.
     criteria: Abrir el Makespace antes de las 10:00 AM.
     status: ok
+    repo_state: backed_up
     issues: []
     visual: Ha abierto el makerspace antes de las 10, el mundo es de quien madruga
   - slug: badge-eighth-year
@@ -351,6 +380,7 @@ badges:
     description: Ocho años. A estas alturas los bancos de trabajo ya recuerdan tu nombre.
     criteria: Ser socio activo durante al menos 8 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 8
@@ -369,6 +399,7 @@ badges:
     description: Autoaloja su propio equipo en el datacenter escalable del Makespace.
     criteria: Instalar y mantener un equipo propio en el datacenter del altillo.
     status: ok
+    repo_state: broken_url
     issues: []
   - slug: badge-embajador-maker
     name: Space Ambassador
@@ -377,6 +408,7 @@ badges:
     description: Ha representado al Makespace dando tours y atendiendo el stand en eventos externos.
     criteria: Dar un tour del espacio a visitantes y asistir al stand del Makespace en un evento externo.
     status: ok
+    repo_state: portal_only
     issues: []
     track: chore-tour
     track_level: 1
@@ -387,6 +419,7 @@ badges:
     description: 35 reuniones. Has sobrevivido a tres presidentes y dos proyectores.
     criteria: Asistir a 35 reuniones mensuales.
     status: missing
+    repo_state: pending
     issues: []
     track: reunion-mensual
     track_level: 35
@@ -403,6 +436,7 @@ badges:
     description: Celebró el 6º y 7º aniversario del Makespace en la fiesta de verano de 2026.
     criteria: Asistir a la fiesta de aniversario (6+7 años) del Makespace, verano de 2026.
     status: ok
+    repo_state: portal_only
     issues: []
     track: track-eventos
   - slug: badge-evento-codemotion2026
@@ -412,6 +446,7 @@ badges:
     description: Participación en el stand del Makespace en Codemotion 2026.
     criteria: Asistir y atender el stand del Makespace en Codemotion 2026.
     status: ok
+    repo_state: portal_only
     issues: []
     track: track-eventos
   - slug: badge-evento-nerdearla2025
@@ -421,6 +456,7 @@ badges:
     description: Participación en el stand del Makespace en Nerdearla 2025.
     criteria: Asistir y atender el stand del Makespace en Nerdearla 2025.
     status: ok
+    repo_state: portal_only
     issues: []
     track: track-eventos
   - slug: badge-fifth-year
@@ -430,6 +466,7 @@ badges:
     description: Cinco años. Has visto entrar y salir socios y la impresora 3D romperse tres veces.
     criteria: Ser socio activo durante al menos 5 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 5
@@ -448,6 +485,7 @@ badges:
     description: Asististe a la reunión mensual de la comunidad por primera vez.
     criteria: Asistir a 1 reunión mensual.
     status: ok
+    repo_state: backed_up
     issues: []
     track: reunion-mensual
     track_level: 1
@@ -458,6 +496,7 @@ badges:
     description: Has publicado la primera página en la wiki del Makespace.
     criteria: Crear al menos 1 página en Docmost.
     status: ok
+    repo_state: backed_up
     issues: []
     track: docmost-pages
     track_level: 1
@@ -468,6 +507,7 @@ badges:
     description: Asististe a un Hack the Space por primera vez.
     criteria: Asistir a 1 Hack the Space.
     status: ok
+    repo_state: backed_up
     issues: []
     track: hack-the-space
     track_level: 1
@@ -478,6 +518,7 @@ badges:
     description: Primeros 10K tokens consumidos en Ocabra.
     criteria: Usar al menos 10.000 tokens en Ocabra.
     status: ok
+    repo_state: backed_up
     issues: []
     track: ocabra-tokens
     track_level: 1
@@ -488,6 +529,7 @@ badges:
     description: Un año completo como socio del Makespace Madrid.
     criteria: Ser socio activo durante al menos 1 año.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 1
@@ -508,6 +550,7 @@ badges:
     criteria: Haber participado como mecenas en el crowdfunding fundacional de Makespace Madrid antes de
       su apertura en abril de 2013, asistiendo a los míticos encuentros en el off-limits
     status: ok
+    repo_state: portal_only
     issues: []
     visual: a golden cornerstone engraved with the Makespace M being laid over rolled blueprints,
       radiating rays
@@ -520,6 +563,7 @@ badges:
     description: Cuatro años dentro. Las herramientas ya confían en ti.
     criteria: Ser socio activo durante al menos 4 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 4
@@ -538,6 +582,7 @@ badges:
     description: Ha sacado la basura del espacio (un servicio invisible pero esencial).
     criteria: Sacar la basura del espacio al contenedor más cercano.
     status: ok
+    repo_state: backed_up
     issues: []
     track: chore-basura
     track_level: 1
@@ -549,6 +594,7 @@ badges:
       Siempre al día.
     criteria: Conseguir cualquier insignia dentro de las 24 horas siguientes a su creación.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-gpu-melter
     name: GPU Melter
@@ -557,6 +603,7 @@ badges:
     description: 5 millones de tokens. A estas alturas, el hardware ya te tiene manía.
     criteria: Usar al menos 5.000.000 de tokens en Ocabra.
     status: ok
+    repo_state: backed_up
     issues: []
     track: ocabra-tokens
     track_level: 4
@@ -567,6 +614,7 @@ badges:
     description: 100 páginas. Eres la memoria viva del Makespace Madrid.
     criteria: Crear al menos 100 páginas en Docmost.
     status: ok
+    repo_state: portal_only
     issues: []
     track: docmost-pages
     track_level: 5
@@ -577,6 +625,7 @@ badges:
     description: 20 sesiones. Tu presencia da forma al espacio.
     criteria: Asistir a 20 sesiones de Hack the Space.
     status: ok
+    repo_state: backed_up
     issues: []
     track: hack-the-space
     track_level: 20
@@ -587,6 +636,7 @@ badges:
     description: 30 sesiones de contribución dedicada al espacio.
     criteria: Asistir a 30 sesiones de Hack the Space.
     status: ok
+    repo_state: backed_up
     issues: []
     track: hack-the-space
     track_level: 30
@@ -597,6 +647,7 @@ badges:
     description: 35 sesiones. Tú eres el Makespace. El Makespace eres tú.
     criteria: Asistir a 35 sesiones de Hack the Space.
     status: ok
+    repo_state: portal_only
     issues: []
     track: hack-the-space
     track_level: 35
@@ -613,6 +664,7 @@ badges:
     description: 25 sesiones. Se cuentan historias de makers como tú.
     criteria: Asistir a 25 sesiones de Hack the Space.
     status: ok
+    repo_state: backed_up
     issues: []
     track: hack-the-space
     track_level: 25
@@ -623,6 +675,7 @@ badges:
     description: 10 sesiones de Hack the Space. Un verdadero habitual del banco de trabajo.
     criteria: Asistir a 10 sesiones de Hack the Space.
     status: ok
+    repo_state: backed_up
     issues: []
     track: hack-the-space
     track_level: 10
@@ -633,6 +686,7 @@ badges:
     description: Tres sesiones de Hack the Space — sigues apareciendo.
     criteria: Asistir a 3 sesiones de Hack the Space.
     status: ok
+    repo_state: backed_up
     issues: []
     track: hack-the-space
     track_level: 3
@@ -643,6 +697,7 @@ badges:
     description: Primera interacción con GLaDOS, el bot de Telegram del Makespace.
     criteria: Enviar al menos un mensaje a GLaDOS.
     status: ok
+    repo_state: backed_up
     issues: []
     track: glados-messages
     track_level: 1
@@ -654,6 +709,7 @@ badges:
     criteria: Presentarse en la lista de correo, saludar en el Telegram de socios y asistir a la primera
       reunión mensual.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-hot-pot
     name: Too hot to handle
@@ -662,6 +718,7 @@ badges:
     description: He participado en uno de los hot pots que se han celebrado en el espacio.
     criteria: Haber participado en un hot pot, y haberse manchado la camiseta ;)
     status: ok
+    repo_state: portal_only
     issues: []
   - slug: badge-human-readme
     name: Human README
@@ -670,6 +727,7 @@ badges:
     description: Quince tours. Si no sabes cómo funciona algo del espacio, pregúntale.
     criteria: Completar el reto «Da un tour del espacio a visitantes» 15 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-tour
     track_level: 15
@@ -681,6 +739,7 @@ badges:
       problema que se le olvidó qué hora era… y cenar.
     criteria: Cerrar el Makespace pasadas las 3 de la madrugada.
     status: missing
+    repo_state: pending
     issues: []
     track: nocturnidad
     track_level: 2
@@ -692,6 +751,7 @@ badges:
     criteria: Tallar una pieza de madera con herramientas de tallado (gubias, cuchillas, formones…) en
       el Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
     references:
       - badge-i-can-laser.png
@@ -704,6 +764,7 @@ badges:
     description: Ha fabricado su primer molde de silicona y sacado una réplica en el Makespace.
     criteria: Fabricar un molde de silicona y reproducir al menos una pieza con él en el Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
     references:
       - badge-can-cnc.png
@@ -717,6 +778,7 @@ badges:
       curado y prensa. Ahora puede estampar también sobre algodón y sobre prendas oscuras."
     criteria: Completar la primera transferencia DTF con el equipo del Makespace.
     status: missing
+    repo_state: pending
     issues: []
   - slug: badge-i-can-laser
     name: I Can Laser
@@ -726,6 +788,7 @@ badges:
     criteria: Completar la formación de seguridad del láser (materiales permitidos, extracción de humos,
       prevención de incendios) y realizar el primer corte o grabado supervisado.
     status: ok
+    repo_state: portal_only
     issues: []
     visual: a laser cutter head firing a bright beam onto plywood, spark particles
   - slug: badge-i-can-pcb
@@ -735,6 +798,7 @@ badges:
     description: Ha completado la formación de la fresadora de PCBs.
     criteria: Completar el hito "Fresadora de circuitos" en el portal de miembros.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-i-can-print
     name: I Can Print (3D)
@@ -743,6 +807,7 @@ badges:
     description: Ha completado su primera impresión 3D en el Makespace.
     criteria: Completar la primera impresión 3D en el laboratorio del Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-i-can-print-resin
     name: I Can Print (Resin)
@@ -751,6 +816,7 @@ badges:
     description: Ha completado su primera impresión en resina en el Makespace.
     criteria: Completar la primera impresión en resina (SLA/MSLA) en el laboratorio del Makespace.
     status: ok
+    repo_state: portal_only
     issues: []
     visual: a resin 3D printer's build platform lifting a freshly cured print, resin droplets dripping
     prompt_extra: 'The title has parentheses that MUST both be rendered, opening and closing: "I Can
@@ -762,6 +828,7 @@ badges:
     description: ¡Puedo coser!
     criteria: Haber completado el tutorial de uso de la máquina de coser
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-i-can-solder
     name: I Can Solder
@@ -770,6 +837,7 @@ badges:
     description: Habilidad de soldadura básica acreditada en el banco de electrónica del Makespace.
     criteria: Usar el banco de soldadura y completar la introducción a la electrónica.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-i-can-sublimate
     name: I Can Sublimate
@@ -780,6 +848,7 @@ badges:
       - Leer la documentación de sublimación.
       - Sublimar un diseño personalizado
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-i-can-vinyl
     name: I Can Vinyl
@@ -788,6 +857,7 @@ badges:
     description: Ha cortado su primer vinilo con la cortadora del Makespace.
     criteria: Cortar el primer vinilo con la cortadora del Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-infinite-loop
     name: Infinite Loop
@@ -796,6 +866,7 @@ badges:
     description: 10 millones de tokens. No hay final a la vista y eso está bien.
     criteria: Usar al menos 10.000.000 de tokens en Ocabra.
     status: ok
+    repo_state: backed_up
     issues: []
     track: ocabra-tokens
     track_level: 5
@@ -807,6 +878,7 @@ badges:
     criteria: "Obtener las 8 certificaciones de máquinas: impresora 3D, impresión en resina, cortadora
       de vinilo, CNC, soldadura, PCB, máquina de coser y sublimación."
     status: ok
+    repo_state: portal_only
     issues: []
   - slug: badge-let-that-sink-in
     name: Let That Sink In
@@ -815,6 +887,7 @@ badges:
     description: Ha instalado, desinstalado o arreglado un fregadero del Makespace.
     criteria: Instalar, desinstalar o reparar un fregadero del espacio.
     status: ok
+    repo_state: broken_url
     issues: []
   - slug: badge-level-18
     name: Level 18 Unlocked
@@ -823,6 +896,7 @@ badges:
     description: Cumplió la mayoría de edad como socio del Makespace y pasó a socio adulto.
     criteria: Cumplir 18 años siendo socio del Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
     visual: el maker cumplio 18 años siendo socio de makespace, pasando al siguiente nivel
   - slug: badge-liquid-cooling
@@ -832,6 +906,7 @@ badges:
     description: Manten a los makers frescos
     criteria: Reabastecer la nevera comunitaria del Makespace con refrescos.
     status: ok
+    repo_state: backed_up
     issues: []
     track: chore-nevera
     track_level: 1
@@ -843,6 +918,7 @@ badges:
       medio internet.
     criteria: Completar 25 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
     status: missing
+    repo_state: pending
     issues: []
     track: cuidado-espacio
     track_level: 25
@@ -854,6 +930,7 @@ badges:
       comunidad.
     criteria: Reparar o poner a punto una máquina del taller del Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-maker-101
     name: Maker101
@@ -866,6 +943,7 @@ badges:
        - I can Print
        - I can Solder
     status: ok
+    repo_state: portal_only
     issues: []
   - slug: badge-man-makespace
     name: man makespace
@@ -874,6 +952,7 @@ badges:
     description: Ha enseñado el espacio a alguien que venía por primera vez.
     criteria: Completar el reto «Da un tour del espacio a visitantes» 1 vez.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-tour
     track_level: 1
@@ -884,6 +963,7 @@ badges:
     description: 30 reuniones mensuales. Paciencia, dedicación y un historial de asistencia impecable.
     criteria: Asistir a 30 reuniones mensuales.
     status: missing
+    repo_state: pending
     issues: []
     track: reunion-mensual
     track_level: 30
@@ -900,6 +980,7 @@ badges:
     description: Ha sacado la basura cinco veces. Recolección periódica y fiable.
     criteria: Completar el reto «Saca la basura del espacio» 5 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-basura
     track_level: 5
@@ -910,6 +991,7 @@ badges:
     description: 15 sesiones. El espacio conoce tu nombre — y tus herramientas.
     criteria: Asistir a 15 sesiones de Hack the Space.
     status: ok
+    repo_state: backed_up
     issues: []
     track: hack-the-space
     track_level: 15
@@ -921,6 +1003,7 @@ badges:
     criteria: Propón 15 insignias para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
     status: missing
+    repo_state: pending
     issues: []
     track: minter
     track_level: 3
@@ -931,6 +1014,7 @@ badges:
     description: Concedida a los socios activos del MakeSpace Madrid.
     criteria: Ser socio activo del Makespace Madrid.
     status: ok
+    repo_state: backed_up
     issues: []
     visual: "\"Member\" with a big Makespace's M, and makespace, Member written on the top, makespace
       logo in the bottom, correct aspect ratio for the M"
@@ -947,6 +1031,7 @@ badges:
     criteria: Propón 1 insignia para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
     status: missing
+    repo_state: pending
     issues: []
     track: minter
     track_level: 1
@@ -957,6 +1042,7 @@ badges:
     description: Nueve años. A un año de una insignia muy especial.
     criteria: Ser socio activo durante al menos 9 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 9
@@ -975,6 +1061,7 @@ badges:
     description: Cinco tours. Siempre en segundo plano, siempre atendiendo a quien llega.
     criteria: Completar el reto «Da un tour del espacio a visitantes» 5 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-tour
     track_level: 5
@@ -985,6 +1072,7 @@ badges:
     description: Quince viajes de material. Mantiene el inventario del espacio al día.
     criteria: Completar el reto «Trae material para el espacio» 15 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-materiales
     track_level: 15
@@ -995,6 +1083,7 @@ badges:
     description: Se unió al Makespace Madrid siendo menor de edad, con la firma de su tutor legal.
     criteria: Completar el onboarding de socio menor (14-17) con la firma del tutor legal.
     status: ok
+    repo_state: backed_up
     issues: []
     visual: Joven Padawan Maker
     references:
@@ -1008,6 +1097,7 @@ badges:
     description: Tu primera compra para el espacio, reconciliada. Por algo se empieza.
     criteria: Gestionar 1 compra reconciliada.
     status: ok
+    repo_state: portal_only
     issues: []
     track: purchases
     track_level: 1
@@ -1020,6 +1110,7 @@ badges:
     criteria: Programar o contribuir sustancialmente a una herramienta interna del Makespace (portal,
       bots, dashboards…).
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-procurer
     name: Procurer
@@ -1028,6 +1119,7 @@ badges:
     description: Treinta compras reconciliadas. Eres quien procura el material que le falta al espacio.
     criteria: Gestionar 30 compras reconciliadas.
     status: ok
+    repo_state: portal_only
     issues: []
     track: purchases
     track_level: 4
@@ -1039,6 +1131,7 @@ badges:
     description: Con 100 mensajes, básicamente ya perteneces a la instalación.
     criteria: Enviar al menos 100 mensajes a GLaDOS.
     status: ok
+    repo_state: backed_up
     issues: []
     track: glados-messages
     track_level: 4
@@ -1049,6 +1142,7 @@ badges:
     description: Ha limpiado los baños cinco veces. Un trabajo que nadie ve y todos agradecen.
     criteria: Completar el reto «Limpia los baños del Makespace» 5 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-banos
     track_level: 5
@@ -1060,6 +1154,7 @@ badges:
     criteria: Propón 30 insignias para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
     status: missing
+    repo_state: pending
     issues: []
     track: minter
     track_level: 4
@@ -1070,6 +1165,7 @@ badges:
     description: Dos años dentro. Ya sabes dónde está el café.
     criteria: Ser socio activo durante al menos 2 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 2
@@ -1087,6 +1183,7 @@ badges:
     description: Quince limpiezas. No queda rastro de lo que había.
     criteria: Completar el reto «Limpia los baños del Makespace» 15 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-banos
     track_level: 15
@@ -1097,6 +1194,7 @@ badges:
     description: Se ha construido su propia impresora 3D — una máquina que fabrica máquinas.
     criteria: Construir o ensamblar una impresora 3D propia (RepRap o diseño propio).
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-serial-spender
     name: Serial Spender
@@ -1105,6 +1203,7 @@ badges:
     description: Cinco compras reconciliadas. Comprar para el espacio se te da bien.
     criteria: Gestionar 5 compras reconciliadas.
     status: ok
+    repo_state: portal_only
     issues: []
     track: purchases
     track_level: 2
@@ -1116,6 +1215,7 @@ badges:
     description: Siete años. El espacio te ha moldeado tanto como tú lo has moldeado a él.
     criteria: Ser socio activo durante al menos 7 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 7
@@ -1134,6 +1234,7 @@ badges:
     description: Enseña a los demás algo que te apasione
     criteria: Impartir un taller o demostración en el Makespace.
     status: ok
+    repo_state: portal_only
     issues: []
     visual: Maker giving a presentation to an attentive semicircle of onlookers
   - slug: badge-sixth-year
@@ -1143,6 +1244,7 @@ badges:
     description: Seis años en el Makespace. Ya eres parte de la institución.
     criteria: Ser socio activo durante al menos 6 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 6
@@ -1161,6 +1263,7 @@ badges:
     description: 50 páginas. La wiki del Makespace sería un lugar peor sin ti.
     criteria: Crear al menos 50 páginas en Docmost.
     status: ok
+    repo_state: backed_up
     issues: []
     track: docmost-pages
     track_level: 4
@@ -1171,6 +1274,7 @@ badges:
     description: Cinco sesiones. Ya eres parte del mobiliario.
     criteria: Asistir a 5 sesiones de Hack the Space.
     status: ok
+    repo_state: backed_up
     issues: []
     track: hack-the-space
     track_level: 5
@@ -1181,6 +1285,7 @@ badges:
     description: Cincuenta compras reconciliadas. Devorador de presupuestos legendario.
     criteria: Gestionar 50 compras reconciliadas.
     status: ok
+    repo_state: portal_only
     issues: []
     track: purchases
     track_level: 5
@@ -1192,6 +1297,7 @@ badges:
     description: Quince tareas. Mantener esto en marcha es, oficialmente, lo suyo.
     criteria: Completar 15 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
     status: missing
+    repo_state: pending
     issues: []
     track: cuidado-espacio
     track_level: 15
@@ -1202,6 +1308,7 @@ badges:
     description: Participó en la construcción de las estanterías nuevas del Makespace.
     criteria: Participar en la construcción y montaje de las estanterías nuevas del Makespace.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-still-alive
     name: Still Alive
@@ -1210,6 +1317,7 @@ badges:
     description: 10 mensajes a GLaDOS y has sobrevivido para contarlo.
     criteria: Enviar al menos 10 mensajes a GLaDOS.
     status: ok
+    repo_state: backed_up
     issues: []
     track: glados-messages
     track_level: 2
@@ -1220,6 +1328,7 @@ badges:
     description: Quince veces. Cuando esta persona recoge, no queda una bolsa en pie.
     criteria: Completar el reto «Saca la basura del espacio» 15 veces.
     status: missing
+    repo_state: pending
     issues: []
     track: chore-basura
     track_level: 15
@@ -1232,6 +1341,7 @@ badges:
     criteria: "Sal a por material para el espacio y tráelo: herramienta, componentes o consumibles que
       acaben en el inventario común. Márcalo al volver con el botín."
     status: ok
+    repo_state: portal_only
     issues: []
     track: chore-materiales
     track_level: 1
@@ -1242,6 +1352,7 @@ badges:
     description: Una presencia habitual en la cámara de pruebas de GLaDOS — 50 mensajes dentro.
     criteria: Enviar al menos 50 mensajes a GLaDOS.
     status: ok
+    repo_state: backed_up
     issues: []
     track: glados-messages
     track_level: 3
@@ -1252,6 +1363,7 @@ badges:
     description: Participó en la reorganización del taller y el montaje de los paneles skådis.
     criteria: Participar en la reorganización del taller y la construcción/montaje de los paneles skådis.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-the-great-flood
     name: The Great Flood
@@ -1262,6 +1374,7 @@ badges:
     criteria: "Participa en una limpieza a fondo del espacio por el método de inundación: agua,
       escurridor y toda la cuadrilla achicando. Márcalo cuando hayas estado en una."
     status: ok
+    repo_state: portal_only
     issues: []
   - slug: badge-third-year
     name: Third Year
@@ -1270,6 +1383,7 @@ badges:
     description: Tres años haciendo, aprendiendo y compartiendo en el Makespace.
     criteria: Ser socio activo durante al menos 3 años.
     status: ok
+    repo_state: backed_up
     issues: []
     track: eldership
     track_level: 3
@@ -1288,6 +1402,7 @@ badges:
     description: 100K tokens. Has desarrollado buen gusto por la IA.
     criteria: Usar al menos 100.000 tokens en Ocabra.
     status: ok
+    repo_state: backed_up
     issues: []
     track: ocabra-tokens
     track_level: 2
@@ -1298,6 +1413,7 @@ badges:
     description: Diez tareas de mantenimiento. El espacio funciona porque hay gente así.
     criteria: Completar 10 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
     status: missing
+    repo_state: pending
     issues: []
     track: cuidado-espacio
     track_level: 10
@@ -1308,6 +1424,7 @@ badges:
     description: Has construido un cuerpo de conocimiento — 10 páginas en el wiki.
     criteria: Crear al menos 10 páginas en Docmost.
     status: ok
+    repo_state: backed_up
     issues: []
     track: docmost-pages
     track_level: 2
@@ -1318,6 +1435,7 @@ badges:
     description: Ya curras montando el stand — la gira no funciona sin ti.
     criteria: Completa 3 quests del track de eventos.
     status: ok
+    repo_state: portal_only
     issues: []
     track: track-eventos
     track_level: 3
@@ -1334,6 +1452,7 @@ badges:
     description: "Cabeza de cartel: cuando estás, Makespace se nota."
     criteria: Completa 5 quests del track de eventos.
     status: ok
+    repo_state: portal_only
     issues: []
     track: track-eventos
     track_level: 5
@@ -1351,6 +1470,7 @@ badges:
     description: Te pateas la gira entera de eventos — no hay stand sin ti.
     criteria: Completa 10 quests del track de eventos.
     status: missing
+    repo_state: pending
     issues: []
     track: track-eventos
     track_level: 10
@@ -1368,6 +1488,7 @@ badges:
     description: "Tu primer sarao con Makespace: ya eres parte de la gira."
     criteria: Completa 1 quest del track de eventos.
     status: ok
+    repo_state: portal_only
     issues: []
     track: track-eventos
     track_level: 1
@@ -1383,6 +1504,7 @@ badges:
       sé el símbolo de la esperanza de alguien y pasa la llama.
     criteria: Ayuda a alguien a usar una herramienta, programa o máquina del espacio.
     status: missing
+    repo_state: pending
     issues: []
   - slug: gcode-surgeon
     name: Gcode Surgeon
@@ -1393,6 +1515,7 @@ badges:
     criteria: Demostrar conocimiento profundo sobre las impresoras y el funcionamiento del código G-Code
       mediante la corrección manual del  archivo de impresión.
     status: missing
+    repo_state: pending
     issues: []
   - slug: keys-of-kingdom
     name: Keys of Kingdom
@@ -1401,6 +1524,7 @@ badges:
     description: Titular de llave del Makespace Madrid — con permiso para abrir y cerrar el espacio.
     criteria: Recibir acceso de llave por parte de la junta del Makespace y firmar el acuerdo de llave.
     status: ok
+    repo_state: backed_up
     issues: []
   - slug: maker-level-2-oficial
     name: Oficial
@@ -1409,6 +1533,7 @@ badges:
     description: Nivel 2 del camino del Maker. Tus primeras insignias en el zurrón.
     criteria: Reunir 2 insignias activas en el Makespace Madrid.
     status: missing
+    repo_state: pending
     issues: []
   - slug: maker-level-3-artesano
     name: Artesano
@@ -1417,6 +1542,7 @@ badges:
     description: Nivel 3 del camino del Maker. Ya tienes oficio propio.
     criteria: Reunir 6 insignias activas en el Makespace Madrid.
     status: missing
+    repo_state: pending
     issues: []
   - slug: maker-level-4-maestro
     name: Maestro
@@ -1425,6 +1551,7 @@ badges:
     description: Nivel 4 del camino del Maker. Dominas varias artes del taller.
     criteria: Reunir 14 insignias activas en el Makespace Madrid.
     status: missing
+    repo_state: pending
     issues: []
   - slug: maker-level-5-virtuoso
     name: Virtuoso
@@ -1433,6 +1560,7 @@ badges:
     description: Nivel 5 del camino del Maker. Tu obra habla por ti.
     criteria: Reunir 27 insignias activas en el Makespace Madrid.
     status: missing
+    repo_state: pending
     issues: []
   - slug: maker-level-6-gran-maestro
     name: Gran Maestro
@@ -1441,6 +1569,7 @@ badges:
     description: Nivel 6 del camino del Maker. Referente del taller.
     criteria: Reunir 44 insignias activas en el Makespace Madrid.
     status: missing
+    repo_state: pending
     issues: []
   - slug: maker-level-7-leyenda
     name: Leyenda
@@ -1449,4 +1578,5 @@ badges:
     description: Nivel 7 del camino del Maker. Tu nombre es historia del espacio.
     criteria: Reunir 65 insignias activas en el Makespace Madrid.
     status: missing
+    repo_state: pending
     issues: []
