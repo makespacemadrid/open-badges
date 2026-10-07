@@ -56,9 +56,11 @@ ahí `repo_state`.
    El portal busca el badge por ese nombre; un typo deja el badge en 404.
 2. Purga la caché del CDN:
    `curl https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<fichero>`
-3. Avisa a un owner del portal. Commitear aquí **no** le da la imagen al badge:
-   el portal sirve su propia copia y sólo usa la URL de este repo cuando el badge
-   no tiene ninguna imagen.
+3. Nada más. El portal sincroniza este repo cada hora: en la siguiente pasada
+   descarga el PNG, lo adopta como imagen del badge y actualiza
+   `missing-images.md`. Si el badge está marcado **⚠️ Urgente** (sirve un 404
+   ahora mismo), el purgado del paso 2 lo arregla en el momento sin esperar a la
+   sincronización.
 
 ## Nombres heredados
 
