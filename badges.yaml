@@ -98,8 +98,8 @@ badges:
     category: comunidad
     description: Quince recargas. La nevera nunca ha estado vacía por su culpa.
     criteria: Completar el reto «Recarga la nevera comunitaria» 15 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-nevera
     track_level: 15
@@ -110,8 +110,8 @@ badges:
     description: "Ha pasado la noche entera en el espacio y ha visto amanecer desde dentro. No durmió: iteró."
     criteria: Permanecer en el Makespace de forma continuada desde antes de la medianoche hasta después
       del amanecer.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: nocturnidad
     track_level: 3
@@ -216,8 +216,8 @@ badges:
     description: Jefe Scout supremo — 50 insignias acuñadas. La fábrica eres tú.
     criteria: Propón 50 insignias para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: minter
     track_level: 5
@@ -227,8 +227,8 @@ badges:
     category: comunidad
     description: Ha recargado la nevera cinco veces. La bebida fría no aparece sola.
     criteria: Completar el reto «Recarga la nevera comunitaria» 5 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-nevera
     track_level: 5
@@ -284,8 +284,8 @@ badges:
     description: Un consejero experimentado en la creación de insignias.
     criteria: Propón 5 insignias para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: minter
     track_level: 2
@@ -295,8 +295,8 @@ badges:
     category: comunidad
     description: "Tres tareas de mantenimiento. Ya no es casualidad: es una rutina."
     criteria: Completar 3 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: cuidado-espacio
     track_level: 3
@@ -315,8 +315,8 @@ badges:
     category: comunidad
     description: Cinco tareas de mantenimiento, de las que se hacen sin que nadie las pida.
     criteria: Completar 5 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: cuidado-espacio
     track_level: 5
@@ -346,8 +346,8 @@ badges:
     category: comunidad
     description: Ha traído material cinco veces. Resuelve las dependencias del espacio.
     criteria: Completar el reto «Trae material para el espacio» 5 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-materiales
     track_level: 5
@@ -399,7 +399,7 @@ badges:
     description: Autoaloja su propio equipo en el datacenter escalable del Makespace.
     criteria: Instalar y mantener un equipo propio en el datacenter del altillo.
     status: ok
-    repo_state: broken_url
+    repo_state: backed_up
     issues: []
   - slug: badge-embajador-maker
     name: Space Ambassador
@@ -418,8 +418,8 @@ badges:
     category: eventos
     description: 35 reuniones. Has sobrevivido a tres presidentes y dos proyectores.
     criteria: Asistir a 35 reuniones mensuales.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: reunion-mensual
     track_level: 35
@@ -726,8 +726,8 @@ badges:
     category: comunidad
     description: Quince tours. Si no sabes cómo funciona algo del espacio, pregúntale.
     criteria: Completar el reto «Da un tour del espacio a visitantes» 15 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-tour
     track_level: 15
@@ -738,8 +738,8 @@ badges:
     description: En un arrebato de creatividad (o de pura cabezonería) se quedó tan absorto en el
       problema que se le olvidó qué hora era… y cenar.
     criteria: Cerrar el Makespace pasadas las 3 de la madrugada.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: nocturnidad
     track_level: 2
@@ -777,8 +777,8 @@ badges:
     description: "Ha hecho su primera transferencia DTF en el Makespace: film, polvo de poliamida,
       curado y prensa. Ahora puede estampar también sobre algodón y sobre prendas oscuras."
     criteria: Completar la primera transferencia DTF con el equipo del Makespace.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-i-can-laser
     name: I Can Laser
@@ -887,7 +887,7 @@ badges:
     description: Ha instalado, desinstalado o arreglado un fregadero del Makespace.
     criteria: Instalar, desinstalar o reparar un fregadero del espacio.
     status: ok
-    repo_state: broken_url
+    repo_state: backed_up
     issues: []
   - slug: badge-level-18
     name: Level 18 Unlocked
@@ -917,8 +917,8 @@ badges:
     description: Veinticinco tareas de mantenimiento. Como esa dependencia del xkcd 2347 que sostiene
       medio internet.
     criteria: Completar 25 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: cuidado-espacio
     track_level: 25
@@ -951,8 +951,8 @@ badges:
     category: comunidad
     description: Ha enseñado el espacio a alguien que venía por primera vez.
     criteria: Completar el reto «Da un tour del espacio a visitantes» 1 vez.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-tour
     track_level: 1
@@ -962,8 +962,8 @@ badges:
     category: eventos
     description: 30 reuniones mensuales. Paciencia, dedicación y un historial de asistencia impecable.
     criteria: Asistir a 30 reuniones mensuales.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: reunion-mensual
     track_level: 30
@@ -979,8 +979,8 @@ badges:
     category: comunidad
     description: Ha sacado la basura cinco veces. Recolección periódica y fiable.
     criteria: Completar el reto «Saca la basura del espacio» 5 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-basura
     track_level: 5
@@ -1002,8 +1002,8 @@ badges:
     description: Maestro acuñador — 15 insignias y subiendo.
     criteria: Propón 15 insignias para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: minter
     track_level: 3
@@ -1030,8 +1030,8 @@ badges:
     description: Ha acuñado su primera insignia en la plataforma.
     criteria: Propón 1 insignia para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: minter
     track_level: 1
@@ -1060,8 +1060,8 @@ badges:
     category: comunidad
     description: Cinco tours. Siempre en segundo plano, siempre atendiendo a quien llega.
     criteria: Completar el reto «Da un tour del espacio a visitantes» 5 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-tour
     track_level: 5
@@ -1071,8 +1071,8 @@ badges:
     category: comunidad
     description: Quince viajes de material. Mantiene el inventario del espacio al día.
     criteria: Completar el reto «Trae material para el espacio» 15 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-materiales
     track_level: 15
@@ -1141,8 +1141,8 @@ badges:
     category: comunidad
     description: Ha limpiado los baños cinco veces. Un trabajo que nadie ve y todos agradecen.
     criteria: Completar el reto «Limpia los baños del Makespace» 5 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-banos
     track_level: 5
@@ -1153,8 +1153,8 @@ badges:
     description: "Líder de tropa: ha creado 30 insignias para la comunidad."
     criteria: Propón 30 insignias para la comunidad. Cuentan tanto las propuestas de socio (desde «Tu
       progreso» o el asistente de chat) como las insignias creadas desde el panel de administración.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: minter
     track_level: 4
@@ -1182,8 +1182,8 @@ badges:
     category: comunidad
     description: Quince limpiezas. No queda rastro de lo que había.
     criteria: Completar el reto «Limpia los baños del Makespace» 15 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-banos
     track_level: 15
@@ -1296,8 +1296,8 @@ badges:
     category: comunidad
     description: Quince tareas. Mantener esto en marcha es, oficialmente, lo suyo.
     criteria: Completar 15 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: cuidado-espacio
     track_level: 15
@@ -1327,8 +1327,8 @@ badges:
     category: comunidad
     description: Quince veces. Cuando esta persona recoge, no queda una bolsa en pie.
     criteria: Completar el reto «Saca la basura del espacio» 15 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: chore-basura
     track_level: 15
@@ -1412,8 +1412,8 @@ badges:
     category: comunidad
     description: Diez tareas de mantenimiento. El espacio funciona porque hay gente así.
     criteria: Completar 10 tareas de mantenimiento del espacio (basura, baños, nevera, materiales o tours).
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: cuidado-espacio
     track_level: 10
@@ -1469,8 +1469,8 @@ badges:
     category: eventos
     description: Te pateas la gira entera de eventos — no hay stand sin ti.
     criteria: Completa 10 quests del track de eventos.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: track-eventos
     track_level: 10
@@ -1503,8 +1503,8 @@ badges:
     description: En un mundo repleto de máquinas complejas, programas obtusos y herramientas extrañas,
       sé el símbolo de la esperanza de alguien y pasa la llama.
     criteria: Ayuda a alguien a usar una herramienta, programa o máquina del espacio.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: gcode-surgeon
     name: Gcode Surgeon
@@ -1514,8 +1514,8 @@ badges:
       cuando una maquina se queda atascada en una impresión de muchas horas
     criteria: Demostrar conocimiento profundo sobre las impresoras y el funcionamiento del código G-Code
       mediante la corrección manual del  archivo de impresión.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: keys-of-kingdom
     name: Keys of Kingdom
@@ -1532,8 +1532,8 @@ badges:
     category: membresia
     description: Nivel 2 del camino del Maker. Tus primeras insignias en el zurrón.
     criteria: Reunir 2 insignias activas en el Makespace Madrid.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: maker-level-3-artesano
     name: Artesano
@@ -1541,8 +1541,8 @@ badges:
     category: membresia
     description: Nivel 3 del camino del Maker. Ya tienes oficio propio.
     criteria: Reunir 6 insignias activas en el Makespace Madrid.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: maker-level-4-maestro
     name: Maestro
@@ -1550,8 +1550,8 @@ badges:
     category: membresia
     description: Nivel 4 del camino del Maker. Dominas varias artes del taller.
     criteria: Reunir 14 insignias activas en el Makespace Madrid.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: maker-level-5-virtuoso
     name: Virtuoso
@@ -1559,8 +1559,8 @@ badges:
     category: membresia
     description: Nivel 5 del camino del Maker. Tu obra habla por ti.
     criteria: Reunir 27 insignias activas en el Makespace Madrid.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: maker-level-6-gran-maestro
     name: Gran Maestro
@@ -1568,8 +1568,8 @@ badges:
     category: membresia
     description: Nivel 6 del camino del Maker. Referente del taller.
     criteria: Reunir 44 insignias activas en el Makespace Madrid.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: maker-level-7-leyenda
     name: Leyenda
@@ -1577,6 +1577,6 @@ badges:
     category: membresia
     description: Nivel 7 del camino del Maker. Tu nombre es historia del espacio.
     criteria: Reunir 65 insignias activas en el Makespace Madrid.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
