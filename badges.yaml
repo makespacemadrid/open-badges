@@ -743,6 +743,16 @@ badges:
     issues: []
     track: nocturnidad
     track_level: 2
+  - slug: badge-i-can-button
+    name: I Can Button
+    file: badge-i-can-button.png
+    category: maquinas
+    description: Ha aprendido a usar la máquina de chapas del Makespace y ha fabricado su primera chapa
+      personalizada.
+    criteria: Aprender a usar la máquina de chapas y fabricar una chapa personalizada en el Makespace.
+    status: ok
+    repo_state: backed_up
+    issues: []
   - slug: badge-i-can-carve
     name: I Can Carve
     file: badge-i-can-carve.png

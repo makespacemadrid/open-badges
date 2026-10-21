@@ -27,7 +27,7 @@ a mano: se sobreescriben en el siguiente push.
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por el portal desde su base de datos (130 badges activos: 104 con imagen en este repo, 26 con imagen sólo en el portal, 0 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
+_Generado por el portal desde su base de datos (131 badges activos: 105 con imagen en este repo, 26 con imagen sólo en el portal, 0 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
 
 _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la base de datos: un badge puede tener imagen en el portal y no estar respaldado aquí._
 
@@ -44,6 +44,7 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
 | `badge-can-cnc` | I Can CNC | `badge-can-cnc.png` | ⬆️ sin respaldar |
+| `badge-i-can-button` | I Can Button | `badge-i-can-button.png` | ✅ en el repo |
 | `badge-i-can-carve` | I Can Carve | `badge-i-can-carve.png` | ✅ en el repo |
 | `badge-i-can-cast` | I Can Cast | `badge-i-can-cast.png` | ✅ en el repo |
 | `badge-i-can-dtf` | I Can DTF | `badge-i-can-dtf.png` | ✅ en el repo |

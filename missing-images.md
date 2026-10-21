@@ -1,8 +1,8 @@
 # Imágenes de badges pendientes
 
-_Generado por el portal el 2026-10-07. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
+_Generado por el portal el 2026-10-21. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
 
-No falta ninguna imagen: los **130** badges activos tienen la suya.
+No falta ninguna imagen: los **131** badges activos tienen la suya.
 
 ## Cómo generar una imagen
 
