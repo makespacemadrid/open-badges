@@ -27,7 +27,7 @@ a mano: se sobreescriben en el siguiente push.
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por el portal desde su base de datos (131 badges activos: 105 con imagen en este repo, 26 con imagen sólo en el portal, 0 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
+_Generado por el portal desde su base de datos (159 badges activos: 105 con imagen en este repo, 26 con imagen sólo en el portal, 28 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
 
 _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la base de datos: un badge puede tener imagen en el portal y no estar respaldado aquí._
 
@@ -43,7 +43,20 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
+| `badge-beam-buddy` | Beam Buddy | `badge-beam-buddy.png` | ❌ pendiente |
+| `badge-beam-operator` | Beam Operator | `badge-beam-operator.png` | ❌ pendiente |
+| `badge-bed-leveler` | The Bed Leveler | `badge-bed-leveler.png` | ❌ pendiente |
 | `badge-can-cnc` | I Can CNC | `badge-can-cnc.png` | ⬆️ sin respaldar |
+| `badge-color-duo` | Color Duo | `badge-color-duo.png` | ❌ pendiente |
+| `badge-cut-specialist` | Cut Specialist | `badge-cut-specialist.png` | ❌ pendiente |
+| `badge-day-job` | Day Job | `badge-day-job.png` | ❌ pendiente |
+| `badge-epic-print` | Epic Print | `badge-epic-print.png` | ❌ pendiente |
+| `badge-extrusion-legend` | Extrusion Legend | `badge-extrusion-legend.png` | ❌ pendiente |
+| `badge-filament-whisperer` | Filament Whisperer | `badge-filament-whisperer.png` | ❌ pendiente |
+| `badge-first-burn` | First Burn | `badge-first-burn.png` | ❌ pendiente |
+| `badge-first-extrusion` | First Extrusion | `badge-first-extrusion.png` | ❌ pendiente |
+| `badge-full-spool` | Full Spool | `badge-full-spool.png` | ❌ pendiente |
+| `badge-hello-prusa` | Hello, Prusa! | `badge-hello-prusa.png` | ❌ pendiente |
 | `badge-i-can-button` | I Can Button | `badge-i-can-button.png` | ✅ en el repo |
 | `badge-i-can-carve` | I Can Carve | `badge-i-can-carve.png` | ✅ en el repo |
 | `badge-i-can-cast` | I Can Cast | `badge-i-can-cast.png` | ✅ en el repo |
@@ -57,8 +70,23 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 | `badge-i-can-sublimate` | I Can Sublimate | `badge-i-can-sublimate.png` | ✅ en el repo |
 | `badge-i-can-vinyl` | I Can Vinyl | `badge-i-can-vinyl.png` | ✅ en el repo |
 | `badge-jack-of-all-trades` | Jack of all trades | `badge-jack-of-all-trades.png` | ⬆️ sin respaldar |
+| `badge-laser-ace` | Laser Ace | `badge-laser-ace.png` | ❌ pendiente |
+| `badge-laser-pilot` | Laser Pilot | `badge-laser-pilot.png` | ❌ pendiente |
+| `badge-laser-shaman` | Laser Shaman | `badge-laser-shaman.png` | ❌ pendiente |
+| `badge-laser-wingman` | Laser Wingman | `badge-laser-wingman.png` | ❌ pendiente |
+| `badge-layer-by-layer` | Layer by Layer | `badge-layer-by-layer.png` | ❌ pendiente |
 | `badge-macgyver` | MacGyver | `badge-macgyver.png` | ✅ en el repo |
+| `badge-marathon-printer` | Marathon Printer | `badge-marathon-printer.png` | ❌ pendiente |
+| `badge-master-operator` | Master Operator | `badge-master-operator.png` | ❌ pendiente |
+| `badge-overnight-maker` | Overnight Maker | `badge-overnight-maker.png` | ❌ pendiente |
+| `badge-patience-101` | Patience 101 | `badge-patience-101.png` | ❌ pendiente |
+| `badge-photon-sensei` | Photon Sensei | `badge-photon-sensei.png` | ❌ pendiente |
+| `badge-plastic-hoarder` | Plastic Hoarder | `badge-plastic-hoarder.png` | ❌ pendiente |
+| `badge-print-addict` | Print Addict | `badge-print-addict.png` | ❌ pendiente |
+| `badge-rainbow-master` | Rainbow Master | `badge-rainbow-master.png` | ❌ pendiente |
 | `badge-self-replicator` | Self-Replicator | `badge-self-replicator.png` | ✅ en el repo |
+| `badge-spool-halfway` | Spool Halfway | `badge-spool-halfway.png` | ❌ pendiente |
+| `badge-triple-threat` | Triple Threat | `badge-triple-threat.png` | ❌ pendiente |
 | `gcode-surgeon` | Gcode Surgeon | `badge-gcode-surgeon.png` | ✅ en el repo |
 
 ### Plataformas

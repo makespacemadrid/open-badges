@@ -169,6 +169,39 @@ badges:
     issues: []
     track: reunion-mensual
     track_level: 3
+  - slug: badge-beam-buddy
+    name: Beam Buddy
+    file: badge-beam-buddy.png
+    category: maquinas
+    description: 1 hora compartiendo el poder del rayo.
+    criteria: Acumular 1 hora ayudando a otros con el láser.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-assistance-time
+    track_level: 2
+  - slug: badge-beam-operator
+    name: Beam Operator
+    file: badge-beam-operator.png
+    category: maquinas
+    description: 5 horas de dominio del rayo.
+    criteria: Acumular 5 horas operando el láser.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-flight-hours
+    track_level: 3
+  - slug: badge-bed-leveler
+    name: The Bed Leveler
+    file: badge-bed-leveler.png
+    category: maquinas
+    description: 100 horas dominando la impresión.
+    criteria: Acumular 100 horas de impresión 3D.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: printing-hours
+    track_level: 4
   - slug: badge-been-there
     name: Been there, done that
     file: badge-been-there.png
@@ -232,6 +265,17 @@ badges:
     issues: []
     track: chore-nevera
     track_level: 5
+  - slug: badge-color-duo
+    name: Color Duo
+    file: badge-color-duo.png
+    category: maquinas
+    description: Tu primera impresión con 2 materiales/colores.
+    criteria: Completar una impresión usando 2 materiales o colores diferentes.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: multimat-printing
+    track_level: 1
   - slug: badge-community-pillar
     name: Community Pillar
     file: badge-community-pillar.png
@@ -309,6 +353,17 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+  - slug: badge-cut-specialist
+    name: Cut Specialist
+    file: badge-cut-specialist.png
+    category: maquinas
+    description: 3 horas de especialista en corte comunitario.
+    criteria: Acumular 3 horas ayudando a otros con el láser.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-assistance-time
+    track_level: 3
   - slug: badge-daemon-process
     name: Daemon Process
     file: badge-daemon-process.png
@@ -331,6 +386,17 @@ badges:
     issues: []
     track: chore-banos
     track_level: 1
+  - slug: badge-day-job
+    name: Day Job
+    file: badge-day-job.png
+    category: maquinas
+    description: Una pieza de 24 horas completas.
+    criteria: Completar una impresión de 24 horas o más.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: longest-print
+    track_level: 4
   - slug: badge-demolition-man
     name: Demolition Man
     file: badge-demolition-man.png
@@ -412,6 +478,17 @@ badges:
     issues: []
     track: chore-tour
     track_level: 1
+  - slug: badge-epic-print
+    name: Epic Print
+    file: badge-epic-print.png
+    category: maquinas
+    description: "El santo grial: 48h de impresión continua."
+    criteria: Completar una impresión de 48 horas o más.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: longest-print
+    track_level: 5
   - slug: badge-eternal-council
     name: Eternal Council
     file: badge-eternal-council.png
@@ -459,6 +536,17 @@ badges:
     repo_state: portal_only
     issues: []
     track: track-eventos
+  - slug: badge-extrusion-legend
+    name: Extrusion Legend
+    file: badge-extrusion-legend.png
+    category: maquinas
+    description: 10 kilos de maestría en manufactura aditiva.
+    criteria: Fundir 10 kilos de filamento.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: filament-weight
+    track_level: 5
   - slug: badge-fifth-year
     name: Fifth Year
     file: badge-fifth-year.png
@@ -478,6 +566,17 @@ badges:
     references:
       - badge-fourth-year.png
       - badge-first-year.png
+  - slug: badge-filament-whisperer
+    name: Filament Whisperer
+    file: badge-filament-whisperer.png
+    category: maquinas
+    description: 500 horas de maestría absoluta.
+    criteria: Acumular 500 horas de impresión 3D.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: printing-hours
+    track_level: 5
   - slug: badge-first-assembly
     name: First Assembly
     file: badge-first-assembly.png
@@ -489,6 +588,17 @@ badges:
     issues: []
     track: reunion-mensual
     track_level: 1
+  - slug: badge-first-burn
+    name: First Burn
+    file: badge-first-burn.png
+    category: maquinas
+    description: Tus primeros 15 minutos pilotando el láser.
+    criteria: Operar el láser durante 15 minutos.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-flight-hours
+    track_level: 1
   - slug: badge-first-draft
     name: First Draft
     file: badge-first-draft.png
@@ -499,6 +609,17 @@ badges:
     repo_state: backed_up
     issues: []
     track: docmost-pages
+    track_level: 1
+  - slug: badge-first-extrusion
+    name: First Extrusion
+    file: badge-first-extrusion.png
+    category: maquinas
+    description: Tus primeros 100g de plástico fundido.
+    criteria: Fundir 100g de filamento.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: filament-weight
     track_level: 1
   - slug: badge-first-hack
     name: First Hack
@@ -575,6 +696,17 @@ badges:
     references:
       - badge-third-year.png
       - badge-first-year.png
+  - slug: badge-full-spool
+    name: Full Spool
+    file: badge-full-spool.png
+    category: maquinas
+    description: Un kilo completo de filamento consumido.
+    criteria: Fundir 1 kilo de filamento.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: filament-weight
+    track_level: 3
   - slug: badge-garbage-collector
     name: Garbage Collector
     file: badge-garbage-collector.png
@@ -700,6 +832,17 @@ badges:
     repo_state: backed_up
     issues: []
     track: glados-messages
+    track_level: 1
+  - slug: badge-hello-prusa
+    name: Hello, Prusa!
+    file: badge-hello-prusa.png
+    category: maquinas
+    description: Tu primera hora de impresión 3D.
+    criteria: Acumular 1 hora de impresión 3D.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: printing-hours
     track_level: 1
   - slug: badge-hello-world
     name: Hello world!
@@ -890,6 +1033,61 @@ badges:
     status: ok
     repo_state: portal_only
     issues: []
+  - slug: badge-laser-ace
+    name: Laser Ace
+    file: badge-laser-ace.png
+    category: maquinas
+    description: 50 horas de as del láser.
+    criteria: Acumular 50 horas operando el láser.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-flight-hours
+    track_level: 5
+  - slug: badge-laser-pilot
+    name: Laser Pilot
+    file: badge-laser-pilot.png
+    category: maquinas
+    description: 1 hora de experiencia en los controles.
+    criteria: Acumular 1 hora operando el láser.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-flight-hours
+    track_level: 2
+  - slug: badge-laser-shaman
+    name: Laser Shaman
+    file: badge-laser-shaman.png
+    category: maquinas
+    description: 30 horas de chamán del láser al servicio del espacio.
+    criteria: Acumular 30 horas ayudando a otros con el láser.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-assistance-time
+    track_level: 5
+  - slug: badge-laser-wingman
+    name: Laser Wingman
+    file: badge-laser-wingman.png
+    category: maquinas
+    description: Tus primeros 15 minutos como copiloto del láser.
+    criteria: Ayudar a otro maker con el láser durante 15 minutos.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-assistance-time
+    track_level: 1
+  - slug: badge-layer-by-layer
+    name: Layer by Layer
+    file: badge-layer-by-layer.png
+    category: maquinas
+    description: 50 horas de paciencia y capas.
+    criteria: Acumular 50 horas de impresión 3D.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: printing-hours
+    track_level: 3
   - slug: badge-let-that-sink-in
     name: Let That Sink In
     file: badge-let-that-sink-in.png
@@ -983,6 +1181,17 @@ badges:
     references:
       - badge-assembly-legend.png
       - badge-assembly-elder.png
+  - slug: badge-marathon-printer
+    name: Marathon Printer
+    file: badge-marathon-printer.png
+    category: maquinas
+    description: 12 horas de una sola pieza.
+    criteria: Completar una impresión de 12 horas o más.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: longest-print
+    track_level: 3
   - slug: badge-mark-and-sweep
     name: Mark and Sweep
     file: badge-mark-and-sweep.png
@@ -1017,6 +1226,17 @@ badges:
     issues: []
     track: minter
     track_level: 3
+  - slug: badge-master-operator
+    name: Master Operator
+    file: badge-master-operator.png
+    category: maquinas
+    description: 15 horas de maestría operacional.
+    criteria: Acumular 15 horas operando el láser.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-flight-hours
+    track_level: 4
   - slug: badge-miembro-makespace
     name: Makespace Member
     file: badge-miembro-makespace.png
@@ -1075,6 +1295,17 @@ badges:
     issues: []
     track: chore-tour
     track_level: 5
+  - slug: badge-overnight-maker
+    name: Overnight Maker
+    file: badge-overnight-maker.png
+    category: maquinas
+    description: Dejaste una impresión corriendo toda la noche.
+    criteria: Completar una impresión de 6 horas o más.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: longest-print
+    track_level: 2
   - slug: badge-package-manager
     name: Package Manager
     file: badge-package-manager.png
@@ -1100,6 +1331,17 @@ badges:
       - assets/b1adf955-82d7-46dc-a096-9d4e0af5be61-m.png
       - badge-i-can-solder.png
       - badge-property-of-aperture.png
+  - slug: badge-patience-101
+    name: Patience 101
+    file: badge-patience-101.png
+    category: maquinas
+    description: Tu primera impresión larga (1h+).
+    criteria: Completar una impresión de 1 hora o más.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: longest-print
+    track_level: 1
   - slug: badge-petty-cash-rookie
     name: Petty Cash Rookie
     file: badge-petty-cash-rookie.png
@@ -1112,6 +1354,28 @@ badges:
     track: purchases
     track_level: 1
     visual: a single coin dropping into a small cash jar
+  - slug: badge-photon-sensei
+    name: Photon Sensei
+    file: badge-photon-sensei.png
+    category: maquinas
+    description: 10 horas enseñando el camino del fotón.
+    criteria: Acumular 10 horas ayudando a otros con el láser.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: laser-assistance-time
+    track_level: 4
+  - slug: badge-plastic-hoarder
+    name: Plastic Hoarder
+    file: badge-plastic-hoarder.png
+    category: maquinas
+    description: 5 kilos de proyectos impresos.
+    criteria: Fundir 5 kilos de filamento.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: filament-weight
+    track_level: 4
   - slug: badge-platform-maker
     name: Platform Maker
     file: badge-platform-maker.png
@@ -1122,6 +1386,17 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+  - slug: badge-print-addict
+    name: Print Addict
+    file: badge-print-addict.png
+    category: maquinas
+    description: 10 horas acumuladas imprimiendo.
+    criteria: Acumular 10 horas de impresión 3D.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: printing-hours
+    track_level: 2
   - slug: badge-procurer
     name: Procurer
     file: badge-procurer.png
@@ -1145,6 +1420,17 @@ badges:
     issues: []
     track: glados-messages
     track_level: 4
+  - slug: badge-rainbow-master
+    name: Rainbow Master
+    file: badge-rainbow-master.png
+    category: maquinas
+    description: Impresión con 4+ materiales/colores simultáneos.
+    criteria: Completar una impresión usando 4 o más materiales o colores diferentes.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: multimat-printing
+    track_level: 3
   - slug: badge-sanitize-input
     name: Sanitize Input
     file: badge-sanitize-input.png
@@ -1300,6 +1586,17 @@ badges:
     track: purchases
     track_level: 5
     visual: a giant monster claw crushing a pile of coins and receipts
+  - slug: badge-spool-halfway
+    name: Spool Halfway
+    file: badge-spool-halfway.png
+    category: maquinas
+    description: Medio kilo de creatividad materializada.
+    criteria: Fundir 500g de filamento.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: filament-weight
+    track_level: 2
   - slug: badge-sre
     name: Site Reliability Engineer
     file: badge-sre.png
@@ -1415,6 +1712,17 @@ badges:
     repo_state: backed_up
     issues: []
     track: ocabra-tokens
+    track_level: 2
+  - slug: badge-triple-threat
+    name: Triple Threat
+    file: badge-triple-threat.png
+    category: maquinas
+    description: Impresión con 3 materiales/colores.
+    criteria: Completar una impresión usando 3 materiales o colores diferentes.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: multimat-printing
     track_level: 2
   - slug: badge-uptime-99
     name: Uptime 99.9%
