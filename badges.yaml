@@ -175,8 +175,8 @@ badges:
     category: maquinas
     description: 1 hora compartiendo el poder del rayo.
     criteria: Acumular 1 hora ayudando a otros con el láser.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-assistance-time
     track_level: 2
@@ -186,8 +186,8 @@ badges:
     category: maquinas
     description: 5 horas de dominio del rayo.
     criteria: Acumular 5 horas operando el láser.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-flight-hours
     track_level: 3
@@ -197,8 +197,8 @@ badges:
     category: maquinas
     description: 100 horas dominando la impresión.
     criteria: Acumular 100 horas de impresión 3D.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: printing-hours
     track_level: 4
@@ -271,8 +271,8 @@ badges:
     category: maquinas
     description: Tu primera impresión con 2 materiales/colores.
     criteria: Completar una impresión usando 2 materiales o colores diferentes.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: multimat-printing
     track_level: 1
@@ -359,8 +359,8 @@ badges:
     category: maquinas
     description: 3 horas de especialista en corte comunitario.
     criteria: Acumular 3 horas ayudando a otros con el láser.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-assistance-time
     track_level: 3
@@ -392,8 +392,8 @@ badges:
     category: maquinas
     description: Una pieza de 24 horas completas.
     criteria: Completar una impresión de 24 horas o más.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: longest-print
     track_level: 4
@@ -484,8 +484,8 @@ badges:
     category: maquinas
     description: "El santo grial: 48h de impresión continua."
     criteria: Completar una impresión de 48 horas o más.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: longest-print
     track_level: 5
@@ -542,8 +542,8 @@ badges:
     category: maquinas
     description: 10 kilos de maestría en manufactura aditiva.
     criteria: Fundir 10 kilos de filamento.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: filament-weight
     track_level: 5
@@ -572,8 +572,8 @@ badges:
     category: maquinas
     description: 500 horas de maestría absoluta.
     criteria: Acumular 500 horas de impresión 3D.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: printing-hours
     track_level: 5
@@ -594,8 +594,8 @@ badges:
     category: maquinas
     description: Tus primeros 15 minutos pilotando el láser.
     criteria: Operar el láser durante 15 minutos.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-flight-hours
     track_level: 1
@@ -616,8 +616,8 @@ badges:
     category: maquinas
     description: Tus primeros 100g de plástico fundido.
     criteria: Fundir 100g de filamento.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: filament-weight
     track_level: 1
@@ -702,8 +702,8 @@ badges:
     category: maquinas
     description: Un kilo completo de filamento consumido.
     criteria: Fundir 1 kilo de filamento.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: filament-weight
     track_level: 3
@@ -839,8 +839,8 @@ badges:
     category: maquinas
     description: Tu primera hora de impresión 3D.
     criteria: Acumular 1 hora de impresión 3D.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: printing-hours
     track_level: 1
@@ -1039,8 +1039,8 @@ badges:
     category: maquinas
     description: 50 horas de as del láser.
     criteria: Acumular 50 horas operando el láser.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-flight-hours
     track_level: 5
@@ -1050,8 +1050,8 @@ badges:
     category: maquinas
     description: 1 hora de experiencia en los controles.
     criteria: Acumular 1 hora operando el láser.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-flight-hours
     track_level: 2
@@ -1061,8 +1061,8 @@ badges:
     category: maquinas
     description: 30 horas de chamán del láser al servicio del espacio.
     criteria: Acumular 30 horas ayudando a otros con el láser.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-assistance-time
     track_level: 5
@@ -1072,8 +1072,8 @@ badges:
     category: maquinas
     description: Tus primeros 15 minutos como copiloto del láser.
     criteria: Ayudar a otro maker con el láser durante 15 minutos.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-assistance-time
     track_level: 1
@@ -1083,8 +1083,8 @@ badges:
     category: maquinas
     description: 50 horas de paciencia y capas.
     criteria: Acumular 50 horas de impresión 3D.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: printing-hours
     track_level: 3
@@ -1187,8 +1187,8 @@ badges:
     category: maquinas
     description: 12 horas de una sola pieza.
     criteria: Completar una impresión de 12 horas o más.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: longest-print
     track_level: 3
@@ -1232,8 +1232,8 @@ badges:
     category: maquinas
     description: 15 horas de maestría operacional.
     criteria: Acumular 15 horas operando el láser.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-flight-hours
     track_level: 4
@@ -1301,8 +1301,8 @@ badges:
     category: maquinas
     description: Dejaste una impresión corriendo toda la noche.
     criteria: Completar una impresión de 6 horas o más.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: longest-print
     track_level: 2
@@ -1337,8 +1337,8 @@ badges:
     category: maquinas
     description: Tu primera impresión larga (1h+).
     criteria: Completar una impresión de 1 hora o más.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: longest-print
     track_level: 1
@@ -1360,8 +1360,8 @@ badges:
     category: maquinas
     description: 10 horas enseñando el camino del fotón.
     criteria: Acumular 10 horas ayudando a otros con el láser.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: laser-assistance-time
     track_level: 4
@@ -1371,8 +1371,8 @@ badges:
     category: maquinas
     description: 5 kilos de proyectos impresos.
     criteria: Fundir 5 kilos de filamento.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: filament-weight
     track_level: 4
@@ -1392,8 +1392,8 @@ badges:
     category: maquinas
     description: 10 horas acumuladas imprimiendo.
     criteria: Acumular 10 horas de impresión 3D.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: printing-hours
     track_level: 2
@@ -1426,8 +1426,8 @@ badges:
     category: maquinas
     description: Impresión con 4+ materiales/colores simultáneos.
     criteria: Completar una impresión usando 4 o más materiales o colores diferentes.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: multimat-printing
     track_level: 3
@@ -1592,8 +1592,8 @@ badges:
     category: maquinas
     description: Medio kilo de creatividad materializada.
     criteria: Fundir 500g de filamento.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: filament-weight
     track_level: 2
@@ -1719,8 +1719,8 @@ badges:
     category: maquinas
     description: Impresión con 3 materiales/colores.
     criteria: Completar una impresión usando 3 materiales o colores diferentes.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: multimat-printing
     track_level: 2
