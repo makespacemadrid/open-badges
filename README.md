@@ -27,7 +27,7 @@ a mano: se sobreescriben en el siguiente push.
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por el portal desde su base de datos (159 badges activos: 133 con imagen en este repo, 26 con imagen sólo en el portal, 0 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
+_Generado por el portal desde su base de datos (159 badges activos: 128 con imagen en este repo, 26 con imagen sólo en el portal, 5 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
 
 _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la base de datos: un badge puede tener imagen en el portal y no estar respaldado aquí._
 
@@ -166,20 +166,20 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 | `badge-assembly-legend` | Assembly Legend | `badge-assembly-legend.png` | ⬆️ sin respaldar |
 | `badge-assembly-regular` | Assembly Regular | `badge-assembly-regular.png` | ✅ en el repo |
 | `badge-been-there` | Been there, done that | `badge-been-there.png` | ✅ en el repo |
-| `badge-community-pillar` | Community Pillar | `badge-community-pillar.png` | ✅ en el repo |
-| `badge-community-veteran` | Community Veteran | `badge-community-veteran.png` | ✅ en el repo |
+| `badge-community-pillar` | Community Pillar | `badge-community-pillar.png` | 🔄 regenerar |
+| `badge-community-veteran` | Community Veteran | `badge-community-veteran.png` | 🔄 regenerar |
 | `badge-council-member` | Council Member | `badge-council-member.png` | ✅ en el repo |
 | `badge-ctf-v1` | Capture the Flag v1 | `badge-ctf-v1.png` | ✅ en el repo |
 | `badge-eternal-council` | Eternal Council | `badge-eternal-council.png` | ✅ en el repo |
 | `badge-evento-aniversario2026` | Aniversario 2026 (6+7 años) | `badge-evento-aniversario2026.png` | ⬆️ sin respaldar |
 | `badge-evento-codemotion2026` | Codemotion 2026 | `badge-evento-codemotion2026.png` | ⬆️ sin respaldar |
 | `badge-evento-nerdearla2025` | Nerdearla 2025 | `badge-evento-nerdearla2025.png` | ⬆️ sin respaldar |
-| `badge-first-assembly` | First Assembly | `badge-first-assembly.png` | ✅ en el repo |
+| `badge-first-assembly` | First Assembly | `badge-first-assembly.png` | 🔄 regenerar |
 | `badge-first-hack` | First Hack | `badge-first-hack.png` | ✅ en el repo |
 | `badge-hackspace-elder` | Hackspace Elder | `badge-hackspace-elder.png` | ✅ en el repo |
-| `badge-hackspace-hero` | Hackspace Hero | `badge-hackspace-hero.png` | ✅ en el repo |
+| `badge-hackspace-hero` | Hackspace Hero | `badge-hackspace-hero.png` | 🔄 regenerar |
 | `badge-hackspace-immortal` | Hackspace Immortal | `badge-hackspace-immortal.png` | ⬆️ sin respaldar |
-| `badge-hackspace-legend` | Hackspace Legend | `badge-hackspace-legend.png` | ✅ en el repo |
+| `badge-hackspace-legend` | Hackspace Legend | `badge-hackspace-legend.png` | 🔄 regenerar |
 | `badge-hackspace-veteran` | Hackspace Veteran | `badge-hackspace-veteran.png` | ✅ en el repo |
 | `badge-hammer-time` | Hammer Time | `badge-hammer-time.png` | ✅ en el repo |
 | `badge-hot-pot` | Too hot to handle | `badge-hot-pot.png` | ⬆️ sin respaldar |

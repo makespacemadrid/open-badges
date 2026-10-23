@@ -282,8 +282,8 @@ badges:
     category: eventos
     description: 15 reuniones. La comunidad lo nota cuando no estás.
     criteria: Asistir a 15 reuniones mensuales.
-    status: ok
-    repo_state: backed_up
+    status: regen
+    repo_state: regen
     issues: []
     track: reunion-mensual
     track_level: 15
@@ -293,8 +293,8 @@ badges:
     category: eventos
     description: 10 reuniones. Un pilar de la asamblea mensual.
     criteria: Asistir a 10 reuniones mensuales.
-    status: ok
-    repo_state: backed_up
+    status: regen
+    repo_state: regen
     issues: []
     track: reunion-mensual
     track_level: 10
@@ -583,8 +583,8 @@ badges:
     category: eventos
     description: Asististe a la reunión mensual de la comunidad por primera vez.
     criteria: Asistir a 1 reunión mensual.
-    status: ok
-    repo_state: backed_up
+    status: regen
+    repo_state: regen
     issues: []
     track: reunion-mensual
     track_level: 1
@@ -767,8 +767,8 @@ badges:
     category: eventos
     description: 30 sesiones de contribución dedicada al espacio.
     criteria: Asistir a 30 sesiones de Hack the Space.
-    status: ok
-    repo_state: backed_up
+    status: regen
+    repo_state: regen
     issues: []
     track: hack-the-space
     track_level: 30
@@ -795,8 +795,8 @@ badges:
     category: eventos
     description: 25 sesiones. Se cuentan historias de makers como tú.
     criteria: Asistir a 25 sesiones de Hack the Space.
-    status: ok
-    repo_state: backed_up
+    status: regen
+    repo_state: regen
     issues: []
     track: hack-the-space
     track_level: 25

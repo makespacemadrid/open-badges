@@ -2,7 +2,7 @@
 
 _Generado por el portal el 2026-10-23. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
 
-No falta ninguna imagen: los **159** badges activos tienen la suya.
+Faltan **5** imágenes de **159** badges activos (5 marcadas para regenerar).
 
 ## Cómo generar una imagen
 
@@ -46,7 +46,105 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 
 ## Pendientes
 
-Ninguno. Todos los badges activos tienen su imagen.
+| Slug | Fichero | Estado |
+|------|---------|--------|
+| [`badge-community-pillar`](#badge-community-pillar--community-pillar) | `badge-community-pillar.png` | 🔄 regenerar |
+| [`badge-community-veteran`](#badge-community-veteran--community-veteran) | `badge-community-veteran.png` | 🔄 regenerar |
+| [`badge-first-assembly`](#badge-first-assembly--first-assembly) | `badge-first-assembly.png` | 🔄 regenerar |
+| [`badge-hackspace-hero`](#badge-hackspace-hero--hackspace-hero) | `badge-hackspace-hero.png` | 🔄 regenerar |
+| [`badge-hackspace-legend`](#badge-hackspace-legend--hackspace-legend) | `badge-hackspace-legend.png` | 🔄 regenerar |
+
+## Eventos
+
+### `badge-community-pillar` — Community Pillar
+
+- **Fichero a crear**: `badge-community-pillar.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `Community Pillar`
+- **Categoría**: eventos
+- **Itinerario**: `reunion-mensual` (nivel 15) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> 15 reuniones. La comunidad lo nota cuando no estás.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 15 reuniones mensuales.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-community-veteran` — Community Veteran
+
+- **Fichero a crear**: `badge-community-veteran.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `Community Veteran`
+- **Categoría**: eventos
+- **Itinerario**: `reunion-mensual` (nivel 10) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> 10 reuniones. Un pilar de la asamblea mensual.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 10 reuniones mensuales.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-first-assembly` — First Assembly
+
+- **Fichero a crear**: `badge-first-assembly.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `First Assembly`
+- **Categoría**: eventos
+- **Itinerario**: `reunion-mensual` (nivel 1) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Asististe a la reunión mensual de la comunidad por primera vez.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 1 reunión mensual.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-hackspace-hero` — Hackspace Hero
+
+- **Fichero a crear**: `badge-hackspace-hero.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `Hackspace Hero`
+- **Categoría**: eventos
+- **Itinerario**: `hack-the-space` (nivel 30) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> 30 sesiones de contribución dedicada al espacio.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 30 sesiones de Hack the Space.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-hackspace-legend` — Hackspace Legend
+
+- **Fichero a crear**: `badge-hackspace-legend.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `Hackspace Legend`
+- **Categoría**: eventos
+- **Itinerario**: `hack-the-space` (nivel 25) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> 25 sesiones. Se cuentan historias de makers como tú.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 25 sesiones de Hack the Space.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
 
 ## Con imagen en el portal pero sin respaldar aquí
 
