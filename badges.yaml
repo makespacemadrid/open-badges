@@ -217,8 +217,8 @@ badges:
     category: comunidad
     description: Ciento cincuenta sesiones de vigilancia. El ojo que todo lo ve del Makespace.
     criteria: Ver las cámaras 150 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: stalker
     track_level: 4
@@ -370,8 +370,8 @@ badges:
     category: comunidad
     description: Primera vez mirando las cámaras. ¿Qué estarán haciendo ahí dentro?
     criteria: Ver las cámaras 1 vez.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: stalker
     track_level: 1
@@ -1400,8 +1400,8 @@ badges:
     category: comunidad
     description: Diez sesiones de vigilancia. Ya conoces bien las rutinas del espacio.
     criteria: Ver las cámaras 10 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: stalker
     track_level: 2
@@ -1534,8 +1534,8 @@ badges:
     category: comunidad
     description: Cincuenta sesiones pegado a la pantalla. No nos mires, ¡únete!
     criteria: Ver las cámaras 50 veces.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: stalker
     track_level: 3

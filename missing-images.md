@@ -2,7 +2,7 @@
 
 _Generado por el portal el 2026-10-27. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
 
-Faltan **9** imágenes de **171** badges activos (5 marcadas para regenerar, 4 sin imagen).
+Faltan **5** imágenes de **171** badges activos (5 marcadas para regenerar).
 
 ## Cómo generar una imagen
 
@@ -48,89 +48,11 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 
 | Slug | Fichero | Estado |
 |------|---------|--------|
-| [`badge-big-brother`](#badge-big-brother--big-brother) | `badge-big-brother.png` | ❌ pendiente |
 | [`badge-community-pillar`](#badge-community-pillar--community-pillar) | `badge-community-pillar.png` | 🔄 regenerar |
 | [`badge-community-veteran`](#badge-community-veteran--community-veteran) | `badge-community-veteran.png` | 🔄 regenerar |
-| [`badge-curious-eye`](#badge-curious-eye--curious-eye) | `badge-curious-eye.png` | ❌ pendiente |
 | [`badge-first-assembly`](#badge-first-assembly--first-assembly) | `badge-first-assembly.png` | 🔄 regenerar |
 | [`badge-hackspace-hero`](#badge-hackspace-hero--hackspace-hero) | `badge-hackspace-hero.png` | 🔄 regenerar |
 | [`badge-hackspace-legend`](#badge-hackspace-legend--hackspace-legend) | `badge-hackspace-legend.png` | 🔄 regenerar |
-| [`badge-peeping-tom`](#badge-peeping-tom--peeping-tom) | `badge-peeping-tom.png` | ❌ pendiente |
-| [`badge-screen-addict`](#badge-screen-addict--screen-addict) | `badge-screen-addict.png` | ❌ pendiente |
-
-## Comunidad
-
-### `badge-big-brother` — Big Brother
-
-- **Fichero a crear**: `badge-big-brother.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `Big Brother`
-- **Categoría**: comunidad
-- **Itinerario**: `stalker` (nivel 4) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Ciento cincuenta sesiones de vigilancia. El ojo que todo lo ve del Makespace.
-
-**Criterios para conseguirlo**:
-
-> Ver las cámaras 150 veces.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-curious-eye` — Curious Eye
-
-- **Fichero a crear**: `badge-curious-eye.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `Curious Eye`
-- **Categoría**: comunidad
-- **Itinerario**: `stalker` (nivel 1) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Primera vez mirando las cámaras. ¿Qué estarán haciendo ahí dentro?
-
-**Criterios para conseguirlo**:
-
-> Ver las cámaras 1 vez.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-peeping-tom` — Peeping Tom
-
-- **Fichero a crear**: `badge-peeping-tom.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `Peeping Tom`
-- **Categoría**: comunidad
-- **Itinerario**: `stalker` (nivel 2) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Diez sesiones de vigilancia. Ya conoces bien las rutinas del espacio.
-
-**Criterios para conseguirlo**:
-
-> Ver las cámaras 10 veces.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-screen-addict` — Screen Addict
-
-- **Fichero a crear**: `badge-screen-addict.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `Screen Addict`
-- **Categoría**: comunidad
-- **Itinerario**: `stalker` (nivel 3) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Cincuenta sesiones pegado a la pantalla. No nos mires, ¡únete!
-
-**Criterios para conseguirlo**:
-
-> Ver las cámaras 50 veces.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
 
 ## Eventos
 
