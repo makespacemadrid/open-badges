@@ -2,7 +2,7 @@
 
 _Generado por el portal el 2026-10-27. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
 
-Faltan **13** imágenes de **167** badges activos (13 marcadas para regenerar).
+Faltan **9** imágenes de **171** badges activos (5 marcadas para regenerar, 4 sin imagen).
 
 ## Cómo generar una imagen
 
@@ -48,19 +48,89 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 
 | Slug | Fichero | Estado |
 |------|---------|--------|
+| [`badge-big-brother`](#badge-big-brother--big-brother) | `badge-big-brother.png` | ❌ pendiente |
 | [`badge-community-pillar`](#badge-community-pillar--community-pillar) | `badge-community-pillar.png` | 🔄 regenerar |
 | [`badge-community-veteran`](#badge-community-veteran--community-veteran) | `badge-community-veteran.png` | 🔄 regenerar |
+| [`badge-curious-eye`](#badge-curious-eye--curious-eye) | `badge-curious-eye.png` | ❌ pendiente |
 | [`badge-first-assembly`](#badge-first-assembly--first-assembly) | `badge-first-assembly.png` | 🔄 regenerar |
 | [`badge-hackspace-hero`](#badge-hackspace-hero--hackspace-hero) | `badge-hackspace-hero.png` | 🔄 regenerar |
 | [`badge-hackspace-legend`](#badge-hackspace-legend--hackspace-legend) | `badge-hackspace-legend.png` | 🔄 regenerar |
-| [`badge-keymaster`](#badge-keymaster--keymaster) | `badge-keymaster.png` | 🔄 regenerar |
-| [`badge-make-noise`](#badge-make-noise--make-noise) | `badge-make-noise.png` | 🔄 regenerar |
-| [`badge-palego`](#badge-palego--palego) | `badge-palego.png` | 🔄 regenerar |
-| [`badge-relic-printer`](#badge-relic-printer--relic-printer) | `badge-relic-printer.png` | 🔄 regenerar |
-| [`badge-textile-maker`](#badge-textile-maker--no-es-una-bufanda-es-un-prototipo) | `badge-textile-maker.png` | 🔄 regenerar |
-| [`badge-token-donor`](#badge-token-donor--token-donor) | `badge-token-donor.png` | 🔄 regenerar |
-| [`badge-vehicle-builder`](#badge-vehicle-builder--muévelo) | `badge-vehicle-builder.png` | 🔄 regenerar |
-| [`badge-viajero-del-tiempo`](#badge-viajero-del-tiempo--viajero-del-tiempo) | `badge-viajero-del-tiempo.png` | 🔄 regenerar |
+| [`badge-peeping-tom`](#badge-peeping-tom--peeping-tom) | `badge-peeping-tom.png` | ❌ pendiente |
+| [`badge-screen-addict`](#badge-screen-addict--screen-addict) | `badge-screen-addict.png` | ❌ pendiente |
+
+## Comunidad
+
+### `badge-big-brother` — Big Brother
+
+- **Fichero a crear**: `badge-big-brother.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `Big Brother`
+- **Categoría**: comunidad
+- **Itinerario**: `stalker` (nivel 4) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Ciento cincuenta sesiones de vigilancia. El ojo que todo lo ve del Makespace.
+
+**Criterios para conseguirlo**:
+
+> Ver las cámaras 150 veces.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-curious-eye` — Curious Eye
+
+- **Fichero a crear**: `badge-curious-eye.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `Curious Eye`
+- **Categoría**: comunidad
+- **Itinerario**: `stalker` (nivel 1) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Primera vez mirando las cámaras. ¿Qué estarán haciendo ahí dentro?
+
+**Criterios para conseguirlo**:
+
+> Ver las cámaras 1 vez.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-peeping-tom` — Peeping Tom
+
+- **Fichero a crear**: `badge-peeping-tom.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `Peeping Tom`
+- **Categoría**: comunidad
+- **Itinerario**: `stalker` (nivel 2) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Diez sesiones de vigilancia. Ya conoces bien las rutinas del espacio.
+
+**Criterios para conseguirlo**:
+
+> Ver las cámaras 10 veces.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-screen-addict` — Screen Addict
+
+- **Fichero a crear**: `badge-screen-addict.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `Screen Addict`
+- **Categoría**: comunidad
+- **Itinerario**: `stalker` (nivel 3) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Cincuenta sesiones pegado a la pantalla. No nos mires, ¡únete!
+
+**Criterios para conseguirlo**:
+
+> Ver las cámaras 50 veces.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
 
 ## Eventos
 
@@ -151,136 +221,6 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 **Criterios para conseguirlo**:
 
 > Asistir a 25 sesiones de Hack the Space.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-## Otros
-
-### `badge-keymaster` — Keymaster
-
-- **Fichero a crear**: `badge-keymaster.png`
-- **Estado**: 🔄 regenerar
-- **Título que debe aparecer en la imagen**: `Keymaster`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Con un gran acceso viene una gran responsabilidad. Esta insignia reconoce a quien usa su llave para facilitar la vida a los demás makers.
-
-**Criterios para conseguirlo**:
-
-> Quedarse o volver al espacio para que otro maker pueda terminar su sesión sin prisas, o contestar en el chat cuando alguien pregunte si el espacio estará abierto.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-make-noise` — Make Noise!
-
-- **Fichero a crear**: `badge-make-noise.png`
-- **Estado**: 🔄 regenerar
-- **Título que debe aparecer en la imagen**: `Make Noise!`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Haz un instrumento o un engendro musical. Desde simple caña con agujeros a un engendro electromecánico que toque la pandereta, todo vale.
-
-**Criterios para conseguirlo**:
-
-> Fabricar su propio instrumento musical.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-palego` — PaLego
-
-- **Fichero a crear**: `badge-palego.png`
-- **Estado**: 🔄 regenerar
-- **Título que debe aparecer en la imagen**: `PaLego`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Habilidad de reconvertir pallets en muebles u otras cosas útiles para el espacio.
-
-**Criterios para conseguirlo**:
-
-> Construir algo interesante a base de pallets y tornillos o clavos.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-relic-printer` — Relic Printer
-
-- **Fichero a crear**: `badge-relic-printer.png`
-- **Estado**: 🔄 regenerar
-- **Título que debe aparecer en la imagen**: `Relic Printer`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Has conseguido imprimir algo con hardware legacy del Makespace (Taz, Monster o Madre).
-
-**Criterios para conseguirlo**:
-
-> Completar una impresión 3D usando una de las máquinas históricas del espacio (anteriores a 2020).
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-textile-maker` — No es una bufanda, es un prototipo
-
-- **Fichero a crear**: `badge-textile-maker.png`
-- **Estado**: 🔄 regenerar
-- **Título que debe aparecer en la imagen**: `No es una bufanda, es un prototipo`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Demuestra tu destreza con el ganchillo, las dos agujas o cualquier técnica de tejido.
-
-**Criterios para conseguirlo**:
-
-> Realizar un objeto con alguna técnica de tejido (ganchillo, dos agujas, telar, etc.).
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-token-donor` — Token Donor
-
-- **Fichero a crear**: `badge-token-donor.png`
-- **Estado**: 🔄 regenerar
-- **Título que debe aparecer en la imagen**: `Token Donor`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Has puesto a tus cuentas de OpenAI, Claude u Ollama a trabajar en tareas pendientes de los repos de Makespace.
-
-**Criterios para conseguirlo**:
-
-> Contribuir código al proyecto del portal del Makespace: al menos 1 pull request aceptado.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-vehicle-builder` — Muévelo
-
-- **Fichero a crear**: `badge-vehicle-builder.png`
-- **Estado**: 🔄 regenerar
-- **Título que debe aparecer en la imagen**: `Muévelo`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Construye tu propio vehículo, desde una bicicleta a un longboard del Decathlon tuneado.
-
-**Criterios para conseguirlo**:
-
-> Construir, o ayudar a construir, un vehículo funcional.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-viajero-del-tiempo` — Viajero del tiempo
-
-- **Fichero a crear**: `badge-viajero-del-tiempo.png`
-- **Estado**: 🔄 regenerar
-- **Título que debe aparecer en la imagen**: `Viajero del tiempo`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Todos viajamos al futuro, un segundo cada segundo, pero algunos hemos fabricado relojes o herramientas para mostrar o medir el paso del tiempo.
-
-**Criterios para conseguirlo**:
-
-> Fabricar o reparar un reloj, o explicar en un evento cómo funciona un reloj.
 
 **Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
 

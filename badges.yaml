@@ -211,6 +211,17 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+  - slug: badge-big-brother
+    name: Big Brother
+    file: badge-big-brother.png
+    category: comunidad
+    description: Ciento cincuenta sesiones de vigilancia. El ojo que todo lo ve del Makespace.
+    criteria: Ver las cámaras 150 veces.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: stalker
+    track_level: 4
   - slug: badge-burning-tokens
     name: Burning Tokens
     file: badge-burning-tokens.png
@@ -353,6 +364,17 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+  - slug: badge-curious-eye
+    name: Curious Eye
+    file: badge-curious-eye.png
+    category: comunidad
+    description: Primera vez mirando las cámaras. ¿Qué estarán haciendo ahí dentro?
+    criteria: Ver las cámaras 1 vez.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: stalker
+    track_level: 1
   - slug: badge-cut-specialist
     name: Cut Specialist
     file: badge-cut-specialist.png
@@ -1041,8 +1063,8 @@ badges:
       su llave para facilitar la vida a los demás makers.
     criteria: Quedarse o volver al espacio para que otro maker pueda terminar su sesión sin prisas, o
       contestar en el chat cuando alguien pregunte si el espacio estará abierto.
-    status: regen
-    repo_state: regen
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-laser-ace
     name: Laser Ace
@@ -1158,8 +1180,8 @@ badges:
     description: Haz un instrumento o un engendro musical. Desde simple caña con agujeros a un engendro
       electromecánico que toque la pandereta, todo vale.
     criteria: Fabricar su propio instrumento musical.
-    status: regen
-    repo_state: regen
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-maker-101
     name: Maker101
@@ -1358,8 +1380,8 @@ badges:
     category: ""
     description: Habilidad de reconvertir pallets en muebles u otras cosas útiles para el espacio.
     criteria: Construir algo interesante a base de pallets y tornillos o clavos.
-    status: regen
-    repo_state: regen
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-patience-101
     name: Patience 101
@@ -1372,6 +1394,17 @@ badges:
     issues: []
     track: longest-print
     track_level: 1
+  - slug: badge-peeping-tom
+    name: Peeping Tom
+    file: badge-peeping-tom.png
+    category: comunidad
+    description: Diez sesiones de vigilancia. Ya conoces bien las rutinas del espacio.
+    criteria: Ver las cámaras 10 veces.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: stalker
+    track_level: 2
   - slug: badge-petty-cash-rookie
     name: Petty Cash Rookie
     file: badge-petty-cash-rookie.png
@@ -1465,11 +1498,12 @@ badges:
     name: Relic Printer
     file: badge-relic-printer.png
     category: ""
-    description: Has conseguido imprimir algo con hardware legacy del Makespace (Taz, Monster o Madre).
+    description: "Desempolvando impresora del abuelo: has conseguido imprimir algo con hardware legacy
+      del Makespace (Taz, Monster o Madre)."
     criteria: Completar una impresión 3D usando una de las máquinas históricas del espacio (anteriores a
       2020).
-    status: regen
-    repo_state: regen
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-sanitize-input
     name: Sanitize Input
@@ -1494,6 +1528,17 @@ badges:
     issues: []
     track: minter
     track_level: 4
+  - slug: badge-screen-addict
+    name: Screen Addict
+    file: badge-screen-addict.png
+    category: comunidad
+    description: Cincuenta sesiones pegado a la pantalla. No nos mires, ¡únete!
+    criteria: Ver las cámaras 50 veces.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: stalker
+    track_level: 3
   - slug: badge-second-year
     name: Second Year
     file: badge-second-year.png
@@ -1718,8 +1763,8 @@ badges:
     category: ""
     description: Demuestra tu destreza con el ganchillo, las dos agujas o cualquier técnica de tejido.
     criteria: Realizar un objeto con alguna técnica de tejido (ganchillo, dos agujas, telar, etc.).
-    status: regen
-    repo_state: regen
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-the-great-flood
     name: The Great Flood
@@ -1769,8 +1814,8 @@ badges:
     description: Has puesto a tus cuentas de OpenAI, Claude u Ollama a trabajar en tareas pendientes de
       los repos de Makespace.
     criteria: "Contribuir código al proyecto del portal del Makespace: al menos 1 pull request aceptado."
-    status: regen
-    repo_state: regen
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-triple-threat
     name: Triple Threat
@@ -1800,8 +1845,8 @@ badges:
     category: ""
     description: Construye tu propio vehículo, desde una bicicleta a un longboard del Decathlon tuneado.
     criteria: Construir, o ayudar a construir, un vehículo funcional.
-    status: regen
-    repo_state: regen
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-viajero-del-tiempo
     name: Viajero del tiempo
@@ -1810,8 +1855,8 @@ badges:
     description: Todos viajamos al futuro, un segundo cada segundo, pero algunos hemos fabricado relojes
       o herramientas para mostrar o medir el paso del tiempo.
     criteria: Fabricar o reparar un reloj, o explicar en un evento cómo funciona un reloj.
-    status: regen
-    repo_state: regen
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-wiki-contributor
     name: Wiki Contributor
@@ -1931,6 +1976,8 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+    track: maker-badges-earned
+    track_level: 2
   - slug: maker-level-3-artesano
     name: Artesano
     file: badge-maker-level-3-artesano.png
@@ -1940,6 +1987,8 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+    track: maker-badges-earned
+    track_level: 6
   - slug: maker-level-4-maestro
     name: Maestro
     file: badge-maker-level-4-maestro.png
@@ -1949,6 +1998,8 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+    track: maker-badges-earned
+    track_level: 14
   - slug: maker-level-5-virtuoso
     name: Virtuoso
     file: badge-maker-level-5-virtuoso.png
@@ -1958,6 +2009,8 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+    track: maker-badges-earned
+    track_level: 27
   - slug: maker-level-6-gran-maestro
     name: Gran Maestro
     file: badge-maker-level-6-gran-maestro.png
@@ -1967,6 +2020,8 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+    track: maker-badges-earned
+    track_level: 44
   - slug: maker-level-7-leyenda
     name: Leyenda
     file: badge-maker-level-7-leyenda.png
@@ -1976,3 +2031,5 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+    track: maker-badges-earned
+    track_level: 65

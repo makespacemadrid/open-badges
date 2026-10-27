@@ -27,7 +27,7 @@ a mano: se sobreescriben en el siguiente push.
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por el portal desde su base de datos (167 badges activos: 128 con imagen en este repo, 26 con imagen sólo en el portal, 13 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
+_Generado por el portal desde su base de datos (171 badges activos: 136 con imagen en este repo, 26 con imagen sólo en el portal, 9 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
 
 _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la base de datos: un badge puede tener imagen en el portal y no estar respaldado aquí._
 
@@ -116,11 +116,13 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 |------|--------|--------|--------|
 | `badge-absolute-zero` | Absolute Zero | `badge-absolute-zero.png` | ✅ en el repo |
 | `badge-all-nighter` | All-Nighter | `badge-all-nighter.png` | ✅ en el repo |
+| `badge-big-brother` | Big Brother | `badge-big-brother.png` | ❌ pendiente |
 | `badge-chief-scout` | Chief Scout | `badge-chief-scout.png` | ✅ en el repo |
 | `badge-cold-storage` | Cold Storage | `badge-cold-storage.png` | ✅ en el repo |
 | `badge-compulsive-shopper` | Compulsive Shopper | `badge-compulsive-shopper.png` | ⬆️ sin respaldar |
 | `badge-counselor` | Badge Counselor | `badge-counselor.png` | ✅ en el repo |
 | `badge-cron-job` | Cron Job | `badge-cron-job.png` | ✅ en el repo |
+| `badge-curious-eye` | Curious Eye | `badge-curious-eye.png` | ❌ pendiente |
 | `badge-daemon-process` | Daemon Process | `badge-daemon-process.png` | ✅ en el repo |
 | `badge-data-scrubber` | Data Scrubber | `badge-data-scrubber.png` | ✅ en el repo |
 | `badge-demolition-man` | Demolition Man | `badge-demolition-man.png` | ✅ en el repo |
@@ -141,11 +143,13 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 | `badge-minter` | Minter | `badge-minter.png` | ✅ en el repo |
 | `badge-onboarding-daemon` | Onboarding Daemon | `badge-onboarding-daemon.png` | ✅ en el repo |
 | `badge-package-manager` | Package Manager | `badge-package-manager.png` | ✅ en el repo |
+| `badge-peeping-tom` | Peeping Tom | `badge-peeping-tom.png` | ❌ pendiente |
 | `badge-petty-cash-rookie` | Petty Cash Rookie | `badge-petty-cash-rookie.png` | ⬆️ sin respaldar |
 | `badge-platform-maker` | Platform Maker | `badge-platform-maker.png` | ✅ en el repo |
 | `badge-procurer` | Procurer | `badge-procurer.png` | ⬆️ sin respaldar |
 | `badge-sanitize-input` | Sanitize Input | `badge-sanitize-input.png` | ✅ en el repo |
 | `badge-scoutmaster` | Scoutmaster | `badge-scoutmaster.png` | ✅ en el repo |
+| `badge-screen-addict` | Screen Addict | `badge-screen-addict.png` | ❌ pendiente |
 | `badge-secure-erase` | Secure Erase | `badge-secure-erase.png` | ✅ en el repo |
 | `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ⬆️ sin respaldar |
 | `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ⬆️ sin respaldar |
@@ -223,14 +227,14 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-keymaster` | Keymaster | `badge-keymaster.png` | 🔄 regenerar |
-| `badge-make-noise` | Make Noise! | `badge-make-noise.png` | 🔄 regenerar |
-| `badge-palego` | PaLego | `badge-palego.png` | 🔄 regenerar |
-| `badge-relic-printer` | Relic Printer | `badge-relic-printer.png` | 🔄 regenerar |
-| `badge-textile-maker` | No es una bufanda, es un prototipo | `badge-textile-maker.png` | 🔄 regenerar |
-| `badge-token-donor` | Token Donor | `badge-token-donor.png` | 🔄 regenerar |
-| `badge-vehicle-builder` | Muévelo | `badge-vehicle-builder.png` | 🔄 regenerar |
-| `badge-viajero-del-tiempo` | Viajero del tiempo | `badge-viajero-del-tiempo.png` | 🔄 regenerar |
+| `badge-keymaster` | Keymaster | `badge-keymaster.png` | ✅ en el repo |
+| `badge-make-noise` | Make Noise! | `badge-make-noise.png` | ✅ en el repo |
+| `badge-palego` | PaLego | `badge-palego.png` | ✅ en el repo |
+| `badge-relic-printer` | Relic Printer | `badge-relic-printer.png` | ✅ en el repo |
+| `badge-textile-maker` | No es una bufanda, es un prototipo | `badge-textile-maker.png` | ✅ en el repo |
+| `badge-token-donor` | Token Donor | `badge-token-donor.png` | ✅ en el repo |
+| `badge-vehicle-builder` | Muévelo | `badge-vehicle-builder.png` | ✅ en el repo |
+| `badge-viajero-del-tiempo` | Viajero del tiempo | `badge-viajero-del-tiempo.png` | ✅ en el repo |
 | `for-i-am-here` | For I am here | `badge-for-i-am-here.png` | ✅ en el repo |
 <!-- badgegen:tables:end -->
 
