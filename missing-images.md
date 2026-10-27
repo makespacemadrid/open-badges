@@ -2,7 +2,7 @@
 
 _Generado por el portal el 2026-10-27. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
 
-Faltan **13** imágenes de **167** badges activos (5 marcadas para regenerar, 8 sin imagen).
+Faltan **13** imágenes de **167** badges activos (13 marcadas para regenerar).
 
 ## Cómo generar una imagen
 
@@ -53,14 +53,14 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 | [`badge-first-assembly`](#badge-first-assembly--first-assembly) | `badge-first-assembly.png` | 🔄 regenerar |
 | [`badge-hackspace-hero`](#badge-hackspace-hero--hackspace-hero) | `badge-hackspace-hero.png` | 🔄 regenerar |
 | [`badge-hackspace-legend`](#badge-hackspace-legend--hackspace-legend) | `badge-hackspace-legend.png` | 🔄 regenerar |
-| [`badge-keymaster`](#badge-keymaster--keymaster) | `badge-keymaster.png` | ❌ pendiente |
-| [`badge-make-noise`](#badge-make-noise--make-noise) | `badge-make-noise.png` | ❌ pendiente |
-| [`badge-palego`](#badge-palego--palego) | `badge-palego.png` | ❌ pendiente |
-| [`badge-relic-printer`](#badge-relic-printer--relic-printer) | `badge-relic-printer.png` | ❌ pendiente |
-| [`badge-textile-maker`](#badge-textile-maker--no-es-una-bufanda-es-un-prototipo) | `badge-textile-maker.png` | ❌ pendiente |
-| [`badge-token-donor`](#badge-token-donor--token-donor) | `badge-token-donor.png` | ❌ pendiente |
-| [`badge-vehicle-builder`](#badge-vehicle-builder--muévelo) | `badge-vehicle-builder.png` | ❌ pendiente |
-| [`badge-viajero-del-tiempo`](#badge-viajero-del-tiempo--viajero-del-tiempo) | `badge-viajero-del-tiempo.png` | ❌ pendiente |
+| [`badge-keymaster`](#badge-keymaster--keymaster) | `badge-keymaster.png` | 🔄 regenerar |
+| [`badge-make-noise`](#badge-make-noise--make-noise) | `badge-make-noise.png` | 🔄 regenerar |
+| [`badge-palego`](#badge-palego--palego) | `badge-palego.png` | 🔄 regenerar |
+| [`badge-relic-printer`](#badge-relic-printer--relic-printer) | `badge-relic-printer.png` | 🔄 regenerar |
+| [`badge-textile-maker`](#badge-textile-maker--no-es-una-bufanda-es-un-prototipo) | `badge-textile-maker.png` | 🔄 regenerar |
+| [`badge-token-donor`](#badge-token-donor--token-donor) | `badge-token-donor.png` | 🔄 regenerar |
+| [`badge-vehicle-builder`](#badge-vehicle-builder--muévelo) | `badge-vehicle-builder.png` | 🔄 regenerar |
+| [`badge-viajero-del-tiempo`](#badge-viajero-del-tiempo--viajero-del-tiempo) | `badge-viajero-del-tiempo.png` | 🔄 regenerar |
 
 ## Eventos
 
@@ -159,7 +159,7 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 ### `badge-keymaster` — Keymaster
 
 - **Fichero a crear**: `badge-keymaster.png`
-- **Estado**: ❌ pendiente
+- **Estado**: 🔄 regenerar
 - **Título que debe aparecer en la imagen**: `Keymaster`
 
 **Motivo del badge** (lo que se le cuenta al socio):
@@ -175,7 +175,7 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 ### `badge-make-noise` — Make Noise!
 
 - **Fichero a crear**: `badge-make-noise.png`
-- **Estado**: ❌ pendiente
+- **Estado**: 🔄 regenerar
 - **Título que debe aparecer en la imagen**: `Make Noise!`
 
 **Motivo del badge** (lo que se le cuenta al socio):
@@ -191,7 +191,7 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 ### `badge-palego` — PaLego
 
 - **Fichero a crear**: `badge-palego.png`
-- **Estado**: ❌ pendiente
+- **Estado**: 🔄 regenerar
 - **Título que debe aparecer en la imagen**: `PaLego`
 
 **Motivo del badge** (lo que se le cuenta al socio):
@@ -207,7 +207,7 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 ### `badge-relic-printer` — Relic Printer
 
 - **Fichero a crear**: `badge-relic-printer.png`
-- **Estado**: ❌ pendiente
+- **Estado**: 🔄 regenerar
 - **Título que debe aparecer en la imagen**: `Relic Printer`
 
 **Motivo del badge** (lo que se le cuenta al socio):
@@ -223,7 +223,7 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 ### `badge-textile-maker` — No es una bufanda, es un prototipo
 
 - **Fichero a crear**: `badge-textile-maker.png`
-- **Estado**: ❌ pendiente
+- **Estado**: 🔄 regenerar
 - **Título que debe aparecer en la imagen**: `No es una bufanda, es un prototipo`
 
 **Motivo del badge** (lo que se le cuenta al socio):
@@ -239,7 +239,7 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 ### `badge-token-donor` — Token Donor
 
 - **Fichero a crear**: `badge-token-donor.png`
-- **Estado**: ❌ pendiente
+- **Estado**: 🔄 regenerar
 - **Título que debe aparecer en la imagen**: `Token Donor`
 
 **Motivo del badge** (lo que se le cuenta al socio):
@@ -255,7 +255,7 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 ### `badge-vehicle-builder` — Muévelo
 
 - **Fichero a crear**: `badge-vehicle-builder.png`
-- **Estado**: ❌ pendiente
+- **Estado**: 🔄 regenerar
 - **Título que debe aparecer en la imagen**: `Muévelo`
 
 **Motivo del badge** (lo que se le cuenta al socio):
@@ -271,7 +271,7 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 ### `badge-viajero-del-tiempo` — Viajero del tiempo
 
 - **Fichero a crear**: `badge-viajero-del-tiempo.png`
-- **Estado**: ❌ pendiente
+- **Estado**: 🔄 regenerar
 - **Título que debe aparecer en la imagen**: `Viajero del tiempo`
 
 **Motivo del badge** (lo que se le cuenta al socio):

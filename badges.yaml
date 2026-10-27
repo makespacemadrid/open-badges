@@ -1042,7 +1042,7 @@ badges:
     criteria: Quedarse o volver al espacio para que otro maker pueda terminar su sesión sin prisas, o
       contestar en el chat cuando alguien pregunte si el espacio estará abierto.
     status: regen
-    repo_state: pending
+    repo_state: regen
     issues: []
   - slug: badge-laser-ace
     name: Laser Ace
@@ -1159,7 +1159,7 @@ badges:
       electromecánico que toque la pandereta, todo vale.
     criteria: Fabricar su propio instrumento musical.
     status: regen
-    repo_state: pending
+    repo_state: regen
     issues: []
   - slug: badge-maker-101
     name: Maker101
@@ -1359,7 +1359,7 @@ badges:
     description: Habilidad de reconvertir pallets en muebles u otras cosas útiles para el espacio.
     criteria: Construir algo interesante a base de pallets y tornillos o clavos.
     status: regen
-    repo_state: pending
+    repo_state: regen
     issues: []
   - slug: badge-patience-101
     name: Patience 101
@@ -1469,7 +1469,7 @@ badges:
     criteria: Completar una impresión 3D usando una de las máquinas históricas del espacio (anteriores a
       2020).
     status: regen
-    repo_state: pending
+    repo_state: regen
     issues: []
   - slug: badge-sanitize-input
     name: Sanitize Input
@@ -1719,7 +1719,7 @@ badges:
     description: Demuestra tu destreza con el ganchillo, las dos agujas o cualquier técnica de tejido.
     criteria: Realizar un objeto con alguna técnica de tejido (ganchillo, dos agujas, telar, etc.).
     status: regen
-    repo_state: pending
+    repo_state: regen
     issues: []
   - slug: badge-the-great-flood
     name: The Great Flood
@@ -1770,7 +1770,7 @@ badges:
       los repos de Makespace.
     criteria: "Contribuir código al proyecto del portal del Makespace: al menos 1 pull request aceptado."
     status: regen
-    repo_state: pending
+    repo_state: regen
     issues: []
   - slug: badge-triple-threat
     name: Triple Threat
@@ -1801,7 +1801,7 @@ badges:
     description: Construye tu propio vehículo, desde una bicicleta a un longboard del Decathlon tuneado.
     criteria: Construir, o ayudar a construir, un vehículo funcional.
     status: regen
-    repo_state: pending
+    repo_state: regen
     issues: []
   - slug: badge-viajero-del-tiempo
     name: Viajero del tiempo
@@ -1811,7 +1811,7 @@ badges:
       o herramientas para mostrar o medir el paso del tiempo.
     criteria: Fabricar o reparar un reloj, o explicar en un evento cómo funciona un reloj.
     status: regen
-    repo_state: pending
+    repo_state: regen
     issues: []
   - slug: badge-wiki-contributor
     name: Wiki Contributor

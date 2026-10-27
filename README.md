@@ -223,14 +223,14 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-keymaster` | Keymaster | `badge-keymaster.png` | ❌ pendiente |
-| `badge-make-noise` | Make Noise! | `badge-make-noise.png` | ❌ pendiente |
-| `badge-palego` | PaLego | `badge-palego.png` | ❌ pendiente |
-| `badge-relic-printer` | Relic Printer | `badge-relic-printer.png` | ❌ pendiente |
-| `badge-textile-maker` | No es una bufanda, es un prototipo | `badge-textile-maker.png` | ❌ pendiente |
-| `badge-token-donor` | Token Donor | `badge-token-donor.png` | ❌ pendiente |
-| `badge-vehicle-builder` | Muévelo | `badge-vehicle-builder.png` | ❌ pendiente |
-| `badge-viajero-del-tiempo` | Viajero del tiempo | `badge-viajero-del-tiempo.png` | ❌ pendiente |
+| `badge-keymaster` | Keymaster | `badge-keymaster.png` | 🔄 regenerar |
+| `badge-make-noise` | Make Noise! | `badge-make-noise.png` | 🔄 regenerar |
+| `badge-palego` | PaLego | `badge-palego.png` | 🔄 regenerar |
+| `badge-relic-printer` | Relic Printer | `badge-relic-printer.png` | 🔄 regenerar |
+| `badge-textile-maker` | No es una bufanda, es un prototipo | `badge-textile-maker.png` | 🔄 regenerar |
+| `badge-token-donor` | Token Donor | `badge-token-donor.png` | 🔄 regenerar |
+| `badge-vehicle-builder` | Muévelo | `badge-vehicle-builder.png` | 🔄 regenerar |
+| `badge-viajero-del-tiempo` | Viajero del tiempo | `badge-viajero-del-tiempo.png` | 🔄 regenerar |
 | `for-i-am-here` | For I am here | `badge-for-i-am-here.png` | ✅ en el repo |
 <!-- badgegen:tables:end -->
 
