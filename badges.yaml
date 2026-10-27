@@ -1033,6 +1033,17 @@ badges:
     status: ok
     repo_state: portal_only
     issues: []
+  - slug: badge-keymaster
+    name: Keymaster
+    file: badge-keymaster.png
+    category: ""
+    description: Con un gran acceso viene una gran responsabilidad. Esta insignia reconoce a quien usa
+      su llave para facilitar la vida a los demás makers.
+    criteria: Quedarse o volver al espacio para que otro maker pueda terminar su sesión sin prisas, o
+      contestar en el chat cuando alguien pregunte si el espacio estará abierto.
+    status: regen
+    repo_state: pending
+    issues: []
   - slug: badge-laser-ace
     name: Laser Ace
     file: badge-laser-ace.png
@@ -1139,6 +1150,16 @@ badges:
     criteria: Reparar o poner a punto una máquina del taller del Makespace.
     status: ok
     repo_state: backed_up
+    issues: []
+  - slug: badge-make-noise
+    name: Make Noise!
+    file: badge-make-noise.png
+    category: ""
+    description: Haz un instrumento o un engendro musical. Desde simple caña con agujeros a un engendro
+      electromecánico que toque la pandereta, todo vale.
+    criteria: Fabricar su propio instrumento musical.
+    status: regen
+    repo_state: pending
     issues: []
   - slug: badge-maker-101
     name: Maker101
@@ -1331,6 +1352,15 @@ badges:
       - assets/b1adf955-82d7-46dc-a096-9d4e0af5be61-m.png
       - badge-i-can-solder.png
       - badge-property-of-aperture.png
+  - slug: badge-palego
+    name: PaLego
+    file: badge-palego.png
+    category: ""
+    description: Habilidad de reconvertir pallets en muebles u otras cosas útiles para el espacio.
+    criteria: Construir algo interesante a base de pallets y tornillos o clavos.
+    status: regen
+    repo_state: pending
+    issues: []
   - slug: badge-patience-101
     name: Patience 101
     file: badge-patience-101.png
@@ -1431,6 +1461,16 @@ badges:
     issues: []
     track: multimat-printing
     track_level: 3
+  - slug: badge-relic-printer
+    name: Relic Printer
+    file: badge-relic-printer.png
+    category: ""
+    description: Has conseguido imprimir algo con hardware legacy del Makespace (Taz, Monster o Madre).
+    criteria: Completar una impresión 3D usando una de las máquinas históricas del espacio (anteriores a
+      2020).
+    status: regen
+    repo_state: pending
+    issues: []
   - slug: badge-sanitize-input
     name: Sanitize Input
     file: badge-sanitize-input.png
@@ -1672,6 +1712,15 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+  - slug: badge-textile-maker
+    name: No es una bufanda, es un prototipo
+    file: badge-textile-maker.png
+    category: ""
+    description: Demuestra tu destreza con el ganchillo, las dos agujas o cualquier técnica de tejido.
+    criteria: Realizar un objeto con alguna técnica de tejido (ganchillo, dos agujas, telar, etc.).
+    status: regen
+    repo_state: pending
+    issues: []
   - slug: badge-the-great-flood
     name: The Great Flood
     file: badge-the-great-flood.png
@@ -1713,6 +1762,16 @@ badges:
     issues: []
     track: ocabra-tokens
     track_level: 2
+  - slug: badge-token-donor
+    name: Token Donor
+    file: badge-token-donor.png
+    category: ""
+    description: Has puesto a tus cuentas de OpenAI, Claude u Ollama a trabajar en tareas pendientes de
+      los repos de Makespace.
+    criteria: "Contribuir código al proyecto del portal del Makespace: al menos 1 pull request aceptado."
+    status: regen
+    repo_state: pending
+    issues: []
   - slug: badge-triple-threat
     name: Triple Threat
     file: badge-triple-threat.png
@@ -1735,6 +1794,25 @@ badges:
     issues: []
     track: cuidado-espacio
     track_level: 10
+  - slug: badge-vehicle-builder
+    name: Muévelo
+    file: badge-vehicle-builder.png
+    category: ""
+    description: Construye tu propio vehículo, desde una bicicleta a un longboard del Decathlon tuneado.
+    criteria: Construir, o ayudar a construir, un vehículo funcional.
+    status: regen
+    repo_state: pending
+    issues: []
+  - slug: badge-viajero-del-tiempo
+    name: Viajero del tiempo
+    file: badge-viajero-del-tiempo.png
+    category: ""
+    description: Todos viajamos al futuro, un segundo cada segundo, pero algunos hemos fabricado relojes
+      o herramientas para mostrar o medir el paso del tiempo.
+    criteria: Fabricar o reparar un reloj, o explicar en un evento cómo funciona un reloj.
+    status: regen
+    repo_state: pending
+    issues: []
   - slug: badge-wiki-contributor
     name: Wiki Contributor
     file: badge-wiki-contributor.png

@@ -27,7 +27,7 @@ a mano: se sobreescriben en el siguiente push.
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por el portal desde su base de datos (159 badges activos: 128 con imagen en este repo, 26 con imagen sólo en el portal, 5 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
+_Generado por el portal desde su base de datos (167 badges activos: 128 con imagen en este repo, 26 con imagen sólo en el portal, 13 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
 
 _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la base de datos: un badge puede tener imagen en el portal y no estar respaldado aquí._
 
@@ -223,6 +223,14 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
+| `badge-keymaster` | Keymaster | `badge-keymaster.png` | ❌ pendiente |
+| `badge-make-noise` | Make Noise! | `badge-make-noise.png` | ❌ pendiente |
+| `badge-palego` | PaLego | `badge-palego.png` | ❌ pendiente |
+| `badge-relic-printer` | Relic Printer | `badge-relic-printer.png` | ❌ pendiente |
+| `badge-textile-maker` | No es una bufanda, es un prototipo | `badge-textile-maker.png` | ❌ pendiente |
+| `badge-token-donor` | Token Donor | `badge-token-donor.png` | ❌ pendiente |
+| `badge-vehicle-builder` | Muévelo | `badge-vehicle-builder.png` | ❌ pendiente |
+| `badge-viajero-del-tiempo` | Viajero del tiempo | `badge-viajero-del-tiempo.png` | ❌ pendiente |
 | `for-i-am-here` | For I am here | `badge-for-i-am-here.png` | ✅ en el repo |
 <!-- badgegen:tables:end -->
 
