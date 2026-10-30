@@ -1005,6 +1005,18 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+  - slug: badge-i-can-smd
+    name: I Can SMD
+    file: badge-i-can-smd.png
+    category: maquinas
+    description: "Dominas la soldadura de componentes de montaje superficial (SMD): has demostrado tus
+      habilidades con al menos un tamaño de componente."
+    criteria: Completar al menos uno de los retos del track de soldadura SMD (1206, 0805, 0603, 0402 o 0201).
+    status: missing
+    repo_state: pending
+    issues: []
+    track: smd-sizes
+    track_level: 5
   - slug: badge-i-can-solder
     name: I Can Solder
     file: badge-i-can-solder.png
@@ -1195,6 +1207,17 @@ badges:
        - I can Solder
     status: ok
     repo_state: portal_only
+    issues: []
+  - slug: badge-maker-of-the-month
+    name: Maker of the Month
+    file: badge-maker-of-the-month.png
+    category: comunidad
+    description: Reconocimiento al maker que más insignias ganó durante el mes, destacando su dedicación
+      y logros en la comunidad.
+    criteria: Obtener el mayor número de insignias durante un mes natural. Se otorga automáticamente al
+      finalizar cada mes.
+    status: missing
+    repo_state: pending
     issues: []
   - slug: badge-man-makespace
     name: man makespace
@@ -1637,6 +1660,62 @@ badges:
     references:
       - badge-fifth-year.png
       - badge-first-year.png
+  - slug: badge-smd-0201
+    name: SMD Wizard
+    file: badge-smd-0201.png
+    category: maquinas
+    description: "El pináculo de la soldadura fina: has soldado un componente SMD 0201 (0.6×0.3mm).
+      Pulso de cirujano."
+    criteria: Soldar correctamente un componente SMD de tamaño 0201 y documentarlo con foto bajo microscopio.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: smd-sizes
+    track_level: 5
+  - slug: badge-smd-0402
+    name: SMD Microscopist
+    file: badge-smd-0402.png
+    category: maquinas
+    description: "El microscopio es tu aliado: has soldado un componente SMD 0402 (1.0×0.5mm)."
+    criteria: Soldar correctamente un componente SMD de tamaño 0402 y documentarlo con foto bajo microscopio.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: smd-sizes
+    track_level: 4
+  - slug: badge-smd-0603
+    name: SMD Precision
+    file: badge-smd-0603.png
+    category: maquinas
+    description: "Entrando en terreno fino: has soldado un componente SMD 0603 (1.6×0.8mm) con técnica precisa."
+    criteria: Soldar correctamente un componente SMD de tamaño 0603 y documentarlo con foto bajo microscopio.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: smd-sizes
+    track_level: 3
+  - slug: badge-smd-0805
+    name: SMD Standard
+    file: badge-smd-0805.png
+    category: maquinas
+    description: Has soldado un componente SMD 0805 (2.0×1.25mm), el tamaño estándar de muchos proyectos.
+    criteria: Soldar correctamente un componente SMD de tamaño 0805 y documentarlo con foto.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: smd-sizes
+    track_level: 2
+  - slug: badge-smd-1206
+    name: SMD Starter
+    file: badge-smd-1206.png
+    category: maquinas
+    description: "Primer paso en soldadura de superficie: has soldado un componente SMD 1206 (3.2×1.6mm)."
+    criteria: Soldar correctamente un componente SMD de tamaño 1206 y documentarlo con foto.
+    status: missing
+    repo_state: pending
+    issues: []
+    track: smd-sizes
+    track_level: 1
   - slug: badge-space-chronicler
     name: Space Chronicler
     file: badge-space-chronicler.png
@@ -1957,6 +2036,17 @@ badges:
       mediante la corrección manual del  archivo de impresión.
     status: ok
     repo_state: backed_up
+    issues: []
+  - slug: i-break-it-i-fix-it
+    name: I break it, I fix it
+    file: badge-i-break-it-i-fix-it.png
+    category: maquinas
+    description: Cuando fuerzas la maquinaria hasta el límite y más allá, ocurren errores, fallos y
+      espectaculares desemsamblajes no planificados, pero eres capaz de hacerte cargo de ellos y
+      reparar la máquina que acabas de romper.
+    criteria: Rompe una herramienta del espacio y repárala en el mismo día.
+    status: regen
+    repo_state: regen
     issues: []
   - slug: keys-of-kingdom
     name: Keys of Kingdom

@@ -27,7 +27,7 @@ a mano: se sobreescriben en el siguiente push.
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por el portal desde su base de datos (171 badges activos: 140 con imagen en este repo, 26 con imagen sólo en el portal, 5 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
+_Generado por el portal desde su base de datos (179 badges activos: 140 con imagen en este repo, 26 con imagen sólo en el portal, 13 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
 
 _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la base de datos: un badge puede tener imagen en el portal y no estar respaldado aquí._
 
@@ -66,6 +66,7 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 | `badge-i-can-print` | I Can Print (3D) | `badge-i-can-print.png` | ✅ en el repo |
 | `badge-i-can-print-resin` | I Can Print (Resin) | `badge-i-can-print-resin.png` | ⬆️ sin respaldar |
 | `badge-i-can-sew` | I Can Sew | `badge-i-can-sew.png` | ✅ en el repo |
+| `badge-i-can-smd` | I Can SMD | `badge-i-can-smd.png` | ❌ pendiente |
 | `badge-i-can-solder` | I Can Solder | `badge-i-can-solder.png` | ✅ en el repo |
 | `badge-i-can-sublimate` | I Can Sublimate | `badge-i-can-sublimate.png` | ✅ en el repo |
 | `badge-i-can-vinyl` | I Can Vinyl | `badge-i-can-vinyl.png` | ✅ en el repo |
@@ -85,9 +86,15 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 | `badge-print-addict` | Print Addict | `badge-print-addict.png` | ✅ en el repo |
 | `badge-rainbow-master` | Rainbow Master | `badge-rainbow-master.png` | ✅ en el repo |
 | `badge-self-replicator` | Self-Replicator | `badge-self-replicator.png` | ✅ en el repo |
+| `badge-smd-0201` | SMD Wizard | `badge-smd-0201.png` | ❌ pendiente |
+| `badge-smd-0402` | SMD Microscopist | `badge-smd-0402.png` | ❌ pendiente |
+| `badge-smd-0603` | SMD Precision | `badge-smd-0603.png` | ❌ pendiente |
+| `badge-smd-0805` | SMD Standard | `badge-smd-0805.png` | ❌ pendiente |
+| `badge-smd-1206` | SMD Starter | `badge-smd-1206.png` | ❌ pendiente |
 | `badge-spool-halfway` | Spool Halfway | `badge-spool-halfway.png` | ✅ en el repo |
 | `badge-triple-threat` | Triple Threat | `badge-triple-threat.png` | ✅ en el repo |
 | `gcode-surgeon` | Gcode Surgeon | `badge-gcode-surgeon.png` | ✅ en el repo |
+| `i-break-it-i-fix-it` | I break it, I fix it | `badge-i-break-it-i-fix-it.png` | 🔄 regenerar |
 
 ### Plataformas
 
@@ -137,6 +144,7 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 | `badge-let-that-sink-in` | Let That Sink In | `badge-let-that-sink-in.png` | ✅ en el repo |
 | `badge-liquid-cooling` | Liquid Cooling Specialist | `badge-liquid-cooling.png` | ✅ en el repo |
 | `badge-load-bearing-member` | Load-Bearing Member | `badge-load-bearing-member.png` | ✅ en el repo |
+| `badge-maker-of-the-month` | Maker of the Month | `badge-maker-of-the-month.png` | ❌ pendiente |
 | `badge-man-makespace` | man makespace | `badge-man-makespace.png` | ✅ en el repo |
 | `badge-mark-and-sweep` | Mark and Sweep | `badge-mark-and-sweep.png` | ✅ en el repo |
 | `badge-master-minter` | Master Minter | `badge-master-minter.png` | ✅ en el repo |
