@@ -1,8 +1,8 @@
 # Imágenes de badges pendientes
 
-_Generado por el portal el 2026-11-04. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
+_Generado por el portal el 2026-11-25. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
 
-Faltan **13** imágenes de **179** badges activos (6 marcadas para regenerar, 7 sin imagen).
+Faltan **8** imágenes de **181** badges activos (6 marcadas para regenerar, 2 sin imagen).
 
 ## Cómo generar una imagen
 
@@ -53,124 +53,11 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 | [`badge-first-assembly`](#badge-first-assembly--first-assembly) | `badge-first-assembly.png` | 🔄 regenerar |
 | [`badge-hackspace-hero`](#badge-hackspace-hero--hackspace-hero) | `badge-hackspace-hero.png` | 🔄 regenerar |
 | [`badge-hackspace-legend`](#badge-hackspace-legend--hackspace-legend) | `badge-hackspace-legend.png` | 🔄 regenerar |
-| [`badge-i-can-smd`](#badge-i-can-smd--i-can-smd) | `badge-i-can-smd.png` | ❌ pendiente |
-| [`badge-maker-of-the-month`](#badge-maker-of-the-month--maker-of-the-month) | `badge-maker-of-the-month.png` | ❌ pendiente |
-| [`badge-smd-0201`](#badge-smd-0201--smd-wizard) | `badge-smd-0201.png` | ❌ pendiente |
-| [`badge-smd-0402`](#badge-smd-0402--smd-microscopist) | `badge-smd-0402.png` | ❌ pendiente |
-| [`badge-smd-0603`](#badge-smd-0603--smd-precision) | `badge-smd-0603.png` | ❌ pendiente |
-| [`badge-smd-0805`](#badge-smd-0805--smd-standard) | `badge-smd-0805.png` | ❌ pendiente |
-| [`badge-smd-1206`](#badge-smd-1206--smd-starter) | `badge-smd-1206.png` | ❌ pendiente |
+| [`badge-hotfix`](#badge-hotfix--hotfix) | `badge-hotfix.png` | ❌ pendiente |
+| [`badge-retroactive-hero`](#badge-retroactive-hero--retroactive-hero) | `badge-retroactive-hero.png` | ❌ pendiente |
 | [`i-break-it-i-fix-it`](#i-break-it-i-fix-it--i-break-it-i-fix-it) | `badge-i-break-it-i-fix-it.png` | 🔄 regenerar |
 
 ## Máquinas
-
-### `badge-i-can-smd` — I Can SMD
-
-- **Fichero a crear**: `badge-i-can-smd.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `I Can SMD`
-- **Categoría**: maquinas
-- **Itinerario**: `smd-sizes` (nivel 5) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Dominas la soldadura de componentes de montaje superficial (SMD): has demostrado tus habilidades con al menos un tamaño de componente.
-
-**Criterios para conseguirlo**:
-
-> Completar al menos uno de los retos del track de soldadura SMD (1206, 0805, 0603, 0402 o 0201).
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-smd-0201` — SMD Wizard
-
-- **Fichero a crear**: `badge-smd-0201.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `SMD Wizard`
-- **Categoría**: maquinas
-- **Itinerario**: `smd-sizes` (nivel 5) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> El pináculo de la soldadura fina: has soldado un componente SMD 0201 (0.6×0.3mm). Pulso de cirujano.
-
-**Criterios para conseguirlo**:
-
-> Soldar correctamente un componente SMD de tamaño 0201 y documentarlo con foto bajo microscopio.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-smd-0402` — SMD Microscopist
-
-- **Fichero a crear**: `badge-smd-0402.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `SMD Microscopist`
-- **Categoría**: maquinas
-- **Itinerario**: `smd-sizes` (nivel 4) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> El microscopio es tu aliado: has soldado un componente SMD 0402 (1.0×0.5mm).
-
-**Criterios para conseguirlo**:
-
-> Soldar correctamente un componente SMD de tamaño 0402 y documentarlo con foto bajo microscopio.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-smd-0603` — SMD Precision
-
-- **Fichero a crear**: `badge-smd-0603.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `SMD Precision`
-- **Categoría**: maquinas
-- **Itinerario**: `smd-sizes` (nivel 3) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Entrando en terreno fino: has soldado un componente SMD 0603 (1.6×0.8mm) con técnica precisa.
-
-**Criterios para conseguirlo**:
-
-> Soldar correctamente un componente SMD de tamaño 0603 y documentarlo con foto bajo microscopio.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-smd-0805` — SMD Standard
-
-- **Fichero a crear**: `badge-smd-0805.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `SMD Standard`
-- **Categoría**: maquinas
-- **Itinerario**: `smd-sizes` (nivel 2) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Has soldado un componente SMD 0805 (2.0×1.25mm), el tamaño estándar de muchos proyectos.
-
-**Criterios para conseguirlo**:
-
-> Soldar correctamente un componente SMD de tamaño 0805 y documentarlo con foto.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-### `badge-smd-1206` — SMD Starter
-
-- **Fichero a crear**: `badge-smd-1206.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `SMD Starter`
-- **Categoría**: maquinas
-- **Itinerario**: `smd-sizes` (nivel 1) — ver `tracks` en `badges.yaml`
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Primer paso en soldadura de superficie: has soldado un componente SMD 1206 (3.2×1.6mm).
-
-**Criterios para conseguirlo**:
-
-> Soldar correctamente un componente SMD de tamaño 1206 y documentarlo con foto.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
 
 ### `i-break-it-i-fix-it` — I break it, I fix it
 
@@ -186,25 +73,6 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 **Criterios para conseguirlo**:
 
 > Rompe una herramienta del espacio y repárala en el mismo día.
-
-**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
-
-## Comunidad
-
-### `badge-maker-of-the-month` — Maker of the Month
-
-- **Fichero a crear**: `badge-maker-of-the-month.png`
-- **Estado**: ❌ pendiente
-- **Título que debe aparecer en la imagen**: `Maker of the Month`
-- **Categoría**: comunidad
-
-**Motivo del badge** (lo que se le cuenta al socio):
-
-> Reconocimiento al maker que más insignias ganó durante el mes, destacando su dedicación y logros en la comunidad.
-
-**Criterios para conseguirlo**:
-
-> Obtener el mayor número de insignias durante un mes natural. Se otorga automáticamente al finalizar cada mes.
 
 **Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
 
@@ -297,6 +165,42 @@ Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y
 **Criterios para conseguirlo**:
 
 > Asistir a 25 sesiones de Hack the Space.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+## Membresía
+
+### `badge-hotfix` — Hotfix
+
+- **Fichero a crear**: `badge-hotfix.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `Hotfix`
+- **Categoría**: membresia
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Detectaste el bug en tus cuotas y lo parcheaste en producción. Todo vuelve a estar en verde.
+
+**Criterios para conseguirlo**:
+
+> Regularizar uno o dos meses de cuota atrasados.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-retroactive-hero` — Retroactive Hero
+
+- **Fichero a crear**: `badge-retroactive-hero.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `Retroactive Hero`
+- **Categoría**: membresia
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Viajaste al pasado y arreglaste tus cuentas. El timeline está en orden.
+
+**Criterios para conseguirlo**:
+
+> Regularizar de una vez al menos 3 meses de cuota atrasados.
 
 **Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
 

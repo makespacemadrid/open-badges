@@ -885,6 +885,15 @@ badges:
     status: ok
     repo_state: portal_only
     issues: []
+  - slug: badge-hotfix
+    name: Hotfix
+    file: badge-hotfix.png
+    category: membresia
+    description: Detectaste el bug en tus cuotas y lo parcheaste en producción. Todo vuelve a estar en verde.
+    criteria: Regularizar uno o dos meses de cuota atrasados.
+    status: missing
+    repo_state: pending
+    issues: []
   - slug: badge-human-readme
     name: Human README
     file: badge-human-readme.png
@@ -1012,8 +1021,8 @@ badges:
     description: "Dominas la soldadura de componentes de montaje superficial (SMD): has demostrado tus
       habilidades con al menos un tamaño de componente."
     criteria: Completar al menos uno de los retos del track de soldadura SMD (1206, 0805, 0603, 0402 o 0201).
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: smd-sizes
     track_level: 5
@@ -1216,8 +1225,8 @@ badges:
       y logros en la comunidad.
     criteria: Obtener el mayor número de insignias durante un mes natural. Se otorga automáticamente al
       finalizar cada mes.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
   - slug: badge-man-makespace
     name: man makespace
@@ -1528,6 +1537,15 @@ badges:
     status: ok
     repo_state: backed_up
     issues: []
+  - slug: badge-retroactive-hero
+    name: Retroactive Hero
+    file: badge-retroactive-hero.png
+    category: membresia
+    description: Viajaste al pasado y arreglaste tus cuentas. El timeline está en orden.
+    criteria: Regularizar de una vez al menos 3 meses de cuota atrasados.
+    status: missing
+    repo_state: pending
+    issues: []
   - slug: badge-sanitize-input
     name: Sanitize Input
     file: badge-sanitize-input.png
@@ -1667,8 +1685,8 @@ badges:
     description: "El pináculo de la soldadura fina: has soldado un componente SMD 0201 (0.6×0.3mm).
       Pulso de cirujano."
     criteria: Soldar correctamente un componente SMD de tamaño 0201 y documentarlo con foto bajo microscopio.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: smd-sizes
     track_level: 5
@@ -1678,8 +1696,8 @@ badges:
     category: maquinas
     description: "El microscopio es tu aliado: has soldado un componente SMD 0402 (1.0×0.5mm)."
     criteria: Soldar correctamente un componente SMD de tamaño 0402 y documentarlo con foto bajo microscopio.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: smd-sizes
     track_level: 4
@@ -1689,8 +1707,8 @@ badges:
     category: maquinas
     description: "Entrando en terreno fino: has soldado un componente SMD 0603 (1.6×0.8mm) con técnica precisa."
     criteria: Soldar correctamente un componente SMD de tamaño 0603 y documentarlo con foto bajo microscopio.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: smd-sizes
     track_level: 3
@@ -1700,8 +1718,8 @@ badges:
     category: maquinas
     description: Has soldado un componente SMD 0805 (2.0×1.25mm), el tamaño estándar de muchos proyectos.
     criteria: Soldar correctamente un componente SMD de tamaño 0805 y documentarlo con foto.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: smd-sizes
     track_level: 2
@@ -1711,8 +1729,8 @@ badges:
     category: maquinas
     description: "Primer paso en soldadura de superficie: has soldado un componente SMD 1206 (3.2×1.6mm)."
     criteria: Soldar correctamente un componente SMD de tamaño 1206 y documentarlo con foto.
-    status: missing
-    repo_state: pending
+    status: ok
+    repo_state: backed_up
     issues: []
     track: smd-sizes
     track_level: 1
