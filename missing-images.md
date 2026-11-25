@@ -1,36 +1,334 @@
-# Badges sin imagen — pendientes de generar
+# Imágenes de badges pendientes
 
-<!-- badgegen:tables:start -->
-Badges sin imagen o marcados para regenerar (19). Convención: `badge-<slug>.png`.
+_Generado por el portal el 2026-11-04. **No editar a mano**: se reescribe completo en cada sincronización. Los datos de cada badge vienen de la base de datos del portal y están también, en formato máquina, en [`badges.yaml`](badges.yaml)._
 
-Tras subir una imagen, purga la caché de jsDelivr: `https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<filename>`.
+Faltan **13** imágenes de **179** badges activos (6 marcadas para regenerar, 7 sin imagen).
+
+## Cómo generar una imagen
+
+### 1. Prompt
+
+El portal compone el prompt juntando estas líneas con saltos de línea, en este orden:
+
+```
+<estilo>
+Badge title text (must appear exactly): "<nombre del badge>"
+Main motif: <pista visual, o la descripción si no hay pista>
+<instrucción extra del itinerario, si la hay>
+<instrucción extra del badge, si la hay>
+<reglas duras>
+```
+
+El **estilo** en vigor (`style` en `badges.yaml`):
+
+> Circular maker badge emblem, flat vector style, golden yellow (#F5C400) artwork on a black disc, outer yellow ring with small screw heads, bold sans-serif lettering, high contrast, clean centered composition, no gradients, no photo textures
+
+Las **reglas duras**, literales y no negociables:
+
+> Hard requirements: the badge is a PERFECT CIRCLE (never an ellipse or squashed disc), fully visible and centered with margin around it, on a plain solid black background with nothing else in the frame. Any text must be spelled EXACTLY as given, fully legible, with clean unbroken letterforms. The title appears exactly ONCE, at the top of the badge.
+
+Imágenes de referencia globales (ficheros de este repo, pásalas al modelo si puede: `badge:badge-space-regular`, `badge:badge-miembro-makespace`, `badge:badge-hello-glados`).
+
+### 2. El fichero final
+
+- PNG de **1254×1254** px con **canal alfa**.
+- El disco del badge, centrado, de **1180** px de diámetro; todo lo de fuera del círculo, transparente.
+- Circularidad mínima **0.985** (área del disco sobre el área del círculo que lo circunscribe). El portal rechaza por debajo de **0.93** incluso tras reencuadrar.
+- El título debe aparecer **una sola vez**, arriba, escrito exactamente igual que en "Título que debe aparecer en la imagen".
+
+Si generas sobre fondo negro (lo que piden las reglas duras), recorta el disco y pégalo centrado en un lienzo transparente antes de guardar — es lo que hace el portal. Los defectos que detecta su control de calidad son: `wrong-size` (no es 1254×1254), `no-transparency` (sin alfa), `empty-image` (lienzo vacío) y `flattened-circle` (elipse).
+
+### 3. Entrega
+
+1. Commitea el PNG en la raíz de este repo con **exactamente** el nombre de "Fichero a crear". El nombre no es decorativo: el portal busca el badge por ese nombre y un typo deja el badge sirviendo un 404.
+2. Purga la caché de jsDelivr: `curl https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<fichero>`.
+3. Nada más. El portal sincroniza este repo cada hora: en la siguiente pasada descarga el PNG, lo adopta como imagen del badge y actualiza esta lista. Si el badge está marcado **⚠️ Urgente** (sirve un 404 ahora mismo), el purgado del paso 2 lo arregla en el momento sin esperar a la sincronización.
+
+## Pendientes
+
+| Slug | Fichero | Estado |
+|------|---------|--------|
+| [`badge-community-pillar`](#badge-community-pillar--community-pillar) | `badge-community-pillar.png` | 🔄 regenerar |
+| [`badge-community-veteran`](#badge-community-veteran--community-veteran) | `badge-community-veteran.png` | 🔄 regenerar |
+| [`badge-first-assembly`](#badge-first-assembly--first-assembly) | `badge-first-assembly.png` | 🔄 regenerar |
+| [`badge-hackspace-hero`](#badge-hackspace-hero--hackspace-hero) | `badge-hackspace-hero.png` | 🔄 regenerar |
+| [`badge-hackspace-legend`](#badge-hackspace-legend--hackspace-legend) | `badge-hackspace-legend.png` | 🔄 regenerar |
+| [`badge-i-can-smd`](#badge-i-can-smd--i-can-smd) | `badge-i-can-smd.png` | ❌ pendiente |
+| [`badge-maker-of-the-month`](#badge-maker-of-the-month--maker-of-the-month) | `badge-maker-of-the-month.png` | ❌ pendiente |
+| [`badge-smd-0201`](#badge-smd-0201--smd-wizard) | `badge-smd-0201.png` | ❌ pendiente |
+| [`badge-smd-0402`](#badge-smd-0402--smd-microscopist) | `badge-smd-0402.png` | ❌ pendiente |
+| [`badge-smd-0603`](#badge-smd-0603--smd-precision) | `badge-smd-0603.png` | ❌ pendiente |
+| [`badge-smd-0805`](#badge-smd-0805--smd-standard) | `badge-smd-0805.png` | ❌ pendiente |
+| [`badge-smd-1206`](#badge-smd-1206--smd-starter) | `badge-smd-1206.png` | ❌ pendiente |
+| [`i-break-it-i-fix-it`](#i-break-it-i-fix-it--i-break-it-i-fix-it) | `badge-i-break-it-i-fix-it.png` | 🔄 regenerar |
+
+## Máquinas
+
+### `badge-i-can-smd` — I Can SMD
+
+- **Fichero a crear**: `badge-i-can-smd.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `I Can SMD`
+- **Categoría**: maquinas
+- **Itinerario**: `smd-sizes` (nivel 5) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Dominas la soldadura de componentes de montaje superficial (SMD): has demostrado tus habilidades con al menos un tamaño de componente.
+
+**Criterios para conseguirlo**:
+
+> Completar al menos uno de los retos del track de soldadura SMD (1206, 0805, 0603, 0402 o 0201).
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-smd-0201` — SMD Wizard
+
+- **Fichero a crear**: `badge-smd-0201.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `SMD Wizard`
+- **Categoría**: maquinas
+- **Itinerario**: `smd-sizes` (nivel 5) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> El pináculo de la soldadura fina: has soldado un componente SMD 0201 (0.6×0.3mm). Pulso de cirujano.
+
+**Criterios para conseguirlo**:
+
+> Soldar correctamente un componente SMD de tamaño 0201 y documentarlo con foto bajo microscopio.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-smd-0402` — SMD Microscopist
+
+- **Fichero a crear**: `badge-smd-0402.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `SMD Microscopist`
+- **Categoría**: maquinas
+- **Itinerario**: `smd-sizes` (nivel 4) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> El microscopio es tu aliado: has soldado un componente SMD 0402 (1.0×0.5mm).
+
+**Criterios para conseguirlo**:
+
+> Soldar correctamente un componente SMD de tamaño 0402 y documentarlo con foto bajo microscopio.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-smd-0603` — SMD Precision
+
+- **Fichero a crear**: `badge-smd-0603.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `SMD Precision`
+- **Categoría**: maquinas
+- **Itinerario**: `smd-sizes` (nivel 3) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Entrando en terreno fino: has soldado un componente SMD 0603 (1.6×0.8mm) con técnica precisa.
+
+**Criterios para conseguirlo**:
+
+> Soldar correctamente un componente SMD de tamaño 0603 y documentarlo con foto bajo microscopio.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-smd-0805` — SMD Standard
+
+- **Fichero a crear**: `badge-smd-0805.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `SMD Standard`
+- **Categoría**: maquinas
+- **Itinerario**: `smd-sizes` (nivel 2) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Has soldado un componente SMD 0805 (2.0×1.25mm), el tamaño estándar de muchos proyectos.
+
+**Criterios para conseguirlo**:
+
+> Soldar correctamente un componente SMD de tamaño 0805 y documentarlo con foto.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-smd-1206` — SMD Starter
+
+- **Fichero a crear**: `badge-smd-1206.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `SMD Starter`
+- **Categoría**: maquinas
+- **Itinerario**: `smd-sizes` (nivel 1) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Primer paso en soldadura de superficie: has soldado un componente SMD 1206 (3.2×1.6mm).
+
+**Criterios para conseguirlo**:
+
+> Soldar correctamente un componente SMD de tamaño 1206 y documentarlo con foto.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `i-break-it-i-fix-it` — I break it, I fix it
+
+- **Fichero a crear**: `badge-i-break-it-i-fix-it.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `I break it, I fix it`
+- **Categoría**: maquinas
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Cuando fuerzas la maquinaria hasta el límite y más allá, ocurren errores, fallos y espectaculares desemsamblajes no planificados, pero eres capaz de hacerte cargo de ellos y reparar la máquina que acabas de romper.
+
+**Criterios para conseguirlo**:
+
+> Rompe una herramienta del espacio y repárala en el mismo día.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+## Comunidad
+
+### `badge-maker-of-the-month` — Maker of the Month
+
+- **Fichero a crear**: `badge-maker-of-the-month.png`
+- **Estado**: ❌ pendiente
+- **Título que debe aparecer en la imagen**: `Maker of the Month`
+- **Categoría**: comunidad
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Reconocimiento al maker que más insignias ganó durante el mes, destacando su dedicación y logros en la comunidad.
+
+**Criterios para conseguirlo**:
+
+> Obtener el mayor número de insignias durante un mes natural. Se otorga automáticamente al finalizar cada mes.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
 
 ## Eventos
 
-| Slug | Nombre | Archivo | Estado |
-|------|--------|---------|--------|
-| `badge-assembly-legend` | Assembly Legend | `badge-assembly-legend.png` | ❌ pendiente |
-| `badge-eternal-council` | Eternal Council | `badge-eternal-council.png` | ❌ pendiente |
-| `badge-hackspace-immortal` | Hackspace Immortal | `badge-hackspace-immortal.png` | ❌ pendiente |
-| `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` | ❌ pendiente |
-| `eventos-evangelista` | Headliner | `badge-eventos-evangelista.png` | ❌ pendiente |
-| `eventos-networker` | Tour Manager | `badge-eventos-networker.png` | ❌ pendiente |
+### `badge-community-pillar` — Community Pillar
 
-## Membresía
+- **Fichero a crear**: `badge-community-pillar.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `Community Pillar`
+- **Categoría**: eventos
+- **Itinerario**: `reunion-mensual` (nivel 15) — ver `tracks` en `badges.yaml`
 
-| Slug | Nombre | Archivo | Estado |
-|------|--------|---------|--------|
-| `badge-10-years` | A Decade at Makespace | `badge-10-years.png` | ❌ pendiente |
-| `badge-11-years` | Eleven Years | `badge-11-years.png` | ❌ pendiente |
-| `badge-12-years` | Twelve Years | `badge-12-years.png` | ❌ pendiente |
-| `badge-13-years` | Thirteen Years | `badge-13-years.png` | ❌ pendiente |
-| `badge-eighth-year` | Eighth Year | `badge-eighth-year.png` | ❌ pendiente |
-| `badge-fifth-year` | Fifth Year | `badge-fifth-year.png` | ❌ pendiente |
-| `badge-first-year` | First Year | `badge-first-year.png` | ❌ pendiente |
-| `badge-fourth-year` | Fourth Year | `badge-fourth-year.png` | ❌ pendiente |
-| `badge-ninth-year` | Ninth Year | `badge-ninth-year.png` | ❌ pendiente |
-| `badge-second-year` | Second Year | `badge-second-year.png` | ❌ pendiente |
-| `badge-seventh-year` | Seventh Year | `badge-seventh-year.png` | ❌ pendiente |
-| `badge-sixth-year` | Sixth Year | `badge-sixth-year.png` | ❌ pendiente |
-| `badge-third-year` | Third Year | `badge-third-year.png` | ❌ pendiente |
-<!-- badgegen:tables:end -->
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> 15 reuniones. La comunidad lo nota cuando no estás.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 15 reuniones mensuales.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-community-veteran` — Community Veteran
+
+- **Fichero a crear**: `badge-community-veteran.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `Community Veteran`
+- **Categoría**: eventos
+- **Itinerario**: `reunion-mensual` (nivel 10) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> 10 reuniones. Un pilar de la asamblea mensual.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 10 reuniones mensuales.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-first-assembly` — First Assembly
+
+- **Fichero a crear**: `badge-first-assembly.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `First Assembly`
+- **Categoría**: eventos
+- **Itinerario**: `reunion-mensual` (nivel 1) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> Asististe a la reunión mensual de la comunidad por primera vez.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 1 reunión mensual.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-hackspace-hero` — Hackspace Hero
+
+- **Fichero a crear**: `badge-hackspace-hero.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `Hackspace Hero`
+- **Categoría**: eventos
+- **Itinerario**: `hack-the-space` (nivel 30) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> 30 sesiones de contribución dedicada al espacio.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 30 sesiones de Hack the Space.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+### `badge-hackspace-legend` — Hackspace Legend
+
+- **Fichero a crear**: `badge-hackspace-legend.png`
+- **Estado**: 🔄 regenerar
+- **Título que debe aparecer en la imagen**: `Hackspace Legend`
+- **Categoría**: eventos
+- **Itinerario**: `hack-the-space` (nivel 25) — ver `tracks` en `badges.yaml`
+
+**Motivo del badge** (lo que se le cuenta al socio):
+
+> 25 sesiones. Se cuentan historias de makers como tú.
+
+**Criterios para conseguirlo**:
+
+> Asistir a 25 sesiones de Hack the Space.
+
+**Sin pista visual**: no hay `visual` definido para este badge. Deriva el motivo principal de la descripción y los criterios de arriba — un objeto o acción reconocible, no una escena.
+
+## Con imagen en el portal pero sin respaldar aquí
+
+26 badges tienen su imagen en el portal y no en este repo (se subieron a mano o se importaron sin pasar por la sincronización). No hay nada que generar: los recupera el portal en su próxima pasada de backup.
+
+| Slug | Fichero esperado |
+|------|------------------|
+| `badge-assembly-elder` | `badge-assembly-elder.png` |
+| `badge-assembly-legend` | `badge-assembly-legend.png` |
+| `badge-can-cnc` | `badge-can-cnc.png` |
+| `badge-compulsive-shopper` | `badge-compulsive-shopper.png` |
+| `badge-embajador-maker` | `badge-embajador-maker.png` |
+| `badge-evento-aniversario2026` | `badge-evento-aniversario2026.png` |
+| `badge-evento-codemotion2026` | `badge-evento-codemotion2026.png` |
+| `badge-evento-nerdearla2025` | `badge-evento-nerdearla2025.png` |
+| `badge-founding-member` | `badge-founding-member.png` |
+| `badge-guardian-of-knowledge` | `badge-guardian-of-knowledge.png` |
+| `badge-hackspace-immortal` | `badge-hackspace-immortal.png` |
+| `badge-hot-pot` | `badge-hot-pot.png` |
+| `badge-i-can-laser` | `badge-i-can-laser.png` |
+| `badge-i-can-print-resin` | `badge-i-can-print-resin.png` |
+| `badge-jack-of-all-trades` | `badge-jack-of-all-trades.png` |
+| `badge-maker-101` | `badge-maker-101.png` |
+| `badge-petty-cash-rookie` | `badge-petty-cash-rookie.png` |
+| `badge-procurer` | `badge-procurer.png` |
+| `badge-serial-spender` | `badge-serial-spender.png` |
+| `badge-show-and-tell` | `badge-show-and-tell.png` |
+| `badge-spendzilla` | `badge-spendzilla.png` |
+| `badge-supply-chain-exploit` | `badge-supply-chain-exploit.png` |
+| `badge-the-great-flood` | `badge-the-great-flood.png` |
+| `eventos-embajador` | `badge-eventos-embajador.png` |
+| `eventos-evangelista` | `badge-eventos-evangelista.png` |
+| `eventos-primer-paso` | `badge-eventos-primer-paso.png` |

@@ -2,12 +2,6 @@
 
 Repositorio de imágenes para los Open Badges de Makespace Madrid.
 
-> **El gestor de imágenes vive ahora en el portal de miembros** (`/admin/badges` →
-> pestaña *Imágenes*): generación con IA, revisión de candidatos y promoción. Este
-> repositorio queda como backup y catálogo público, sincronizado automáticamente
-> por el portal en cada promoción. La CLI Python de `tools/` está congelada — se
-> conserva solo para uso de emergencia offline.
-
 Las imágenes se sirven via **jsDelivr CDN**. Para invalidar la caché tras actualizar una imagen:
 
 ```
@@ -16,122 +10,239 @@ GET https://purge.jsdelivr.net/gh/makespacemadrid/open-badges@main/<filename>
 
 URL base del catálogo en el portal: `https://cdn.jsdelivr.net/gh/makespacemadrid/open-badges@main/`
 
+## Qué hay aquí
+
+- **`badge-*.png`** — las imágenes finales: 1254×1254 px, PNG con transparencia, disco de 1180 px.
+- **[`missing-images.md`](missing-images.md)** — las que faltan, con la descripción de cada badge
+  y la receta completa para generarla.
+- **[`badges.yaml`](badges.yaml)** — el manifiesto: estilo global, itinerarios y una entrada por
+  badge con su estado.
+- **[`AGENTS.md`](AGENTS.md)** — empieza por aquí si eres un agente.
+
+El catálogo de abajo, `missing-images.md` y `badges.yaml` **los escribe el portal**. No los edites
+a mano: se sobreescriben en el siguiente push.
+
 ---
 
 <!-- badgegen:tables:start -->
 ## Catálogo de badges
 
-_Generado por `badgegen docs` desde `badges.yaml` (82 badges activos, 19 sin imagen)._
+_Generado por el portal desde su base de datos (179 badges activos: 140 con imagen en este repo, 26 con imagen sólo en el portal, 13 por generar). Los pendientes, con su descripción y la receta de generación, están en [`missing-images.md`](missing-images.md)._
+
+_El estado "en el repo" se comprueba contra el árbol de `main`, no contra la base de datos: un badge puede tener imagen en el portal y no estar respaldado aquí._
 
 ### Onboarding
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-hello-world` | Hello, World! | `badge-hello-world.png` | ✅ |
-| `badge-maker-101` | Maker Padawan | `badge-maker101.png` | ✅ |
+| `badge-hello-world` | Hello world! | `badge-hello-world.png` | ✅ en el repo |
+| `badge-maker-101` | Maker101 | `badge-maker-101.png` | ⬆️ sin respaldar |
+| `badge-padawan` | Padawan | `badge-padawan.png` | ✅ en el repo |
 
 ### Máquinas
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-can-cnc` | I Can CNC | `badge-i-can-cnc.png` | ✅ |
-| `badge-i-can-laser` | I Can Laser | `badge-i-can-laser.png` | ✅ |
-| `badge-i-can-pcb` | I Can PCB | `badge-i-can-pcb.png` | ✅ |
-| `badge-i-can-print` | I Can Print (3D) | `badge-i-can-print.png` | ✅ |
-| `badge-i-can-print-resin` | I Can Print (Resin) | `badge-i-can-print-resin.png` | ✅ |
-| `badge-i-can-sew` | I Can Sew | `badge-i-can-sew.png` | ✅ |
-| `badge-i-can-solder` | I Can Solder | `badge-i-can-solder.png` | ✅ |
-| `badge-i-can-sublimate` | I Can Sublimate | `badge-i-can-sublimate.png` | ✅ |
-| `badge-i-can-vinyl` | I Can Vinyl | `badge-i-can-vinyl.png` | ✅ |
-| `badge-jack-of-all-trades` | Jack of all trades | `badge-jack-all-trades.png` | ✅ |
+| `badge-beam-buddy` | Beam Buddy | `badge-beam-buddy.png` | ✅ en el repo |
+| `badge-beam-operator` | Beam Operator | `badge-beam-operator.png` | ✅ en el repo |
+| `badge-bed-leveler` | The Bed Leveler | `badge-bed-leveler.png` | ✅ en el repo |
+| `badge-can-cnc` | I Can CNC | `badge-can-cnc.png` | ⬆️ sin respaldar |
+| `badge-color-duo` | Color Duo | `badge-color-duo.png` | ✅ en el repo |
+| `badge-cut-specialist` | Cut Specialist | `badge-cut-specialist.png` | ✅ en el repo |
+| `badge-day-job` | Day Job | `badge-day-job.png` | ✅ en el repo |
+| `badge-epic-print` | Epic Print | `badge-epic-print.png` | ✅ en el repo |
+| `badge-extrusion-legend` | Extrusion Legend | `badge-extrusion-legend.png` | ✅ en el repo |
+| `badge-filament-whisperer` | Filament Whisperer | `badge-filament-whisperer.png` | ✅ en el repo |
+| `badge-first-burn` | First Burn | `badge-first-burn.png` | ✅ en el repo |
+| `badge-first-extrusion` | First Extrusion | `badge-first-extrusion.png` | ✅ en el repo |
+| `badge-full-spool` | Full Spool | `badge-full-spool.png` | ✅ en el repo |
+| `badge-hello-prusa` | Hello, Prusa! | `badge-hello-prusa.png` | ✅ en el repo |
+| `badge-i-can-button` | I Can Button | `badge-i-can-button.png` | ✅ en el repo |
+| `badge-i-can-carve` | I Can Carve | `badge-i-can-carve.png` | ✅ en el repo |
+| `badge-i-can-cast` | I Can Cast | `badge-i-can-cast.png` | ✅ en el repo |
+| `badge-i-can-dtf` | I Can DTF | `badge-i-can-dtf.png` | ✅ en el repo |
+| `badge-i-can-laser` | I Can Laser | `badge-i-can-laser.png` | ⬆️ sin respaldar |
+| `badge-i-can-pcb` | I Can PCB | `badge-i-can-pcb.png` | ✅ en el repo |
+| `badge-i-can-print` | I Can Print (3D) | `badge-i-can-print.png` | ✅ en el repo |
+| `badge-i-can-print-resin` | I Can Print (Resin) | `badge-i-can-print-resin.png` | ⬆️ sin respaldar |
+| `badge-i-can-sew` | I Can Sew | `badge-i-can-sew.png` | ✅ en el repo |
+| `badge-i-can-smd` | I Can SMD | `badge-i-can-smd.png` | ❌ pendiente |
+| `badge-i-can-solder` | I Can Solder | `badge-i-can-solder.png` | ✅ en el repo |
+| `badge-i-can-sublimate` | I Can Sublimate | `badge-i-can-sublimate.png` | ✅ en el repo |
+| `badge-i-can-vinyl` | I Can Vinyl | `badge-i-can-vinyl.png` | ✅ en el repo |
+| `badge-jack-of-all-trades` | Jack of all trades | `badge-jack-of-all-trades.png` | ⬆️ sin respaldar |
+| `badge-laser-ace` | Laser Ace | `badge-laser-ace.png` | ✅ en el repo |
+| `badge-laser-pilot` | Laser Pilot | `badge-laser-pilot.png` | ✅ en el repo |
+| `badge-laser-shaman` | Laser Shaman | `badge-laser-shaman.png` | ✅ en el repo |
+| `badge-laser-wingman` | Laser Wingman | `badge-laser-wingman.png` | ✅ en el repo |
+| `badge-layer-by-layer` | Layer by Layer | `badge-layer-by-layer.png` | ✅ en el repo |
+| `badge-macgyver` | MacGyver | `badge-macgyver.png` | ✅ en el repo |
+| `badge-marathon-printer` | Marathon Printer | `badge-marathon-printer.png` | ✅ en el repo |
+| `badge-master-operator` | Master Operator | `badge-master-operator.png` | ✅ en el repo |
+| `badge-overnight-maker` | Overnight Maker | `badge-overnight-maker.png` | ✅ en el repo |
+| `badge-patience-101` | Patience 101 | `badge-patience-101.png` | ✅ en el repo |
+| `badge-photon-sensei` | Photon Sensei | `badge-photon-sensei.png` | ✅ en el repo |
+| `badge-plastic-hoarder` | Plastic Hoarder | `badge-plastic-hoarder.png` | ✅ en el repo |
+| `badge-print-addict` | Print Addict | `badge-print-addict.png` | ✅ en el repo |
+| `badge-rainbow-master` | Rainbow Master | `badge-rainbow-master.png` | ✅ en el repo |
+| `badge-self-replicator` | Self-Replicator | `badge-self-replicator.png` | ✅ en el repo |
+| `badge-smd-0201` | SMD Wizard | `badge-smd-0201.png` | ❌ pendiente |
+| `badge-smd-0402` | SMD Microscopist | `badge-smd-0402.png` | ❌ pendiente |
+| `badge-smd-0603` | SMD Precision | `badge-smd-0603.png` | ❌ pendiente |
+| `badge-smd-0805` | SMD Standard | `badge-smd-0805.png` | ❌ pendiente |
+| `badge-smd-1206` | SMD Starter | `badge-smd-1206.png` | ❌ pendiente |
+| `badge-spool-halfway` | Spool Halfway | `badge-spool-halfway.png` | ✅ en el repo |
+| `badge-triple-threat` | Triple Threat | `badge-triple-threat.png` | ✅ en el repo |
+| `gcode-surgeon` | Gcode Surgeon | `badge-gcode-surgeon.png` | ✅ en el repo |
+| `i-break-it-i-fix-it` | I break it, I fix it | `badge-i-break-it-i-fix-it.png` | 🔄 regenerar |
 
 ### Plataformas
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-archivist` | Archivist | `badge-archivist.png` | ✅ |
-| `badge-burning-tokens` | Burning Tokens | `badge-burning-tokens.png` | ✅ |
-| `badge-cake-is-a-lie` | The Cake Is a Lie | `badge-cake-is-a-lie.png` | ✅ |
-| `badge-first-draft` | First Draft | `badge-first-draft.png` | ✅ |
-| `badge-first-queries` | First Queries | `badge-first-queries.png` | ✅ |
-| `badge-gpu-melter` | GPU Melter | `badge-gpu-melter.png` | ✅ |
-| `badge-guardian-of-knowledge` | Guardian of Knowledge | `badge-knowledge-keeper.png` | ✅ |
-| `badge-hello-glados` | Hello, GLaDOS! | `badge-hello-glados.png` | ✅ |
-| `badge-infinite-loop` | Infinite Loop | `badge-infinite-loop.png` | ✅ |
-| `badge-property-of-aperture` | Property of Aperture | `badge-property-of-aperture.png` | ✅ |
-| `badge-space-chronicler` | Space Chronicler | `badge-space-chronicler.png` | ✅ |
-| `badge-still-alive` | Still Alive | `badge-still-alive.png` | ✅ |
-| `badge-test-subject` | Test Subject | `badge-test-subject.png` | ✅ |
-| `badge-token-collector` | Token Collector | `badge-token-collector.png` | ✅ |
-| `badge-wiki-contributor` | Wiki Contributor | `badge-wiki-contributor.png` | ✅ |
+| `badge-archivist` | Archivist | `badge-archivist.png` | ✅ en el repo |
+| `badge-burning-tokens` | Burning Tokens | `badge-burning-tokens.png` | ✅ en el repo |
+| `badge-cake-is-a-lie` | The Cake Is a Lie | `badge-cake-is-a-lie.png` | ✅ en el repo |
+| `badge-elevated-privileges` | Elevated Privileges | `badge-elevated-privileges.png` | ✅ en el repo |
+| `badge-first-draft` | First Draft | `badge-first-draft.png` | ✅ en el repo |
+| `badge-first-queries` | First Queries | `badge-first-queries.png` | ✅ en el repo |
+| `badge-gpu-melter` | GPU Melter | `badge-gpu-melter.png` | ✅ en el repo |
+| `badge-guardian-of-knowledge` | Guardian of Knowledge | `badge-guardian-of-knowledge.png` | ⬆️ sin respaldar |
+| `badge-hello-glados` | Hello GLaDOS | `badge-hello-glados.png` | ✅ en el repo |
+| `badge-infinite-loop` | Infinite Loop | `badge-infinite-loop.png` | ✅ en el repo |
+| `badge-property-of-aperture` | Property of Aperture | `badge-property-of-aperture.png` | ✅ en el repo |
+| `badge-space-chronicler` | Space Chronicler | `badge-space-chronicler.png` | ✅ en el repo |
+| `badge-still-alive` | Still Alive | `badge-still-alive.png` | ✅ en el repo |
+| `badge-test-subject` | Test Subject | `badge-test-subject.png` | ✅ en el repo |
+| `badge-token-collector` | Token Collector | `badge-token-collector.png` | ✅ en el repo |
+| `badge-wiki-contributor` | Wiki Contributor | `badge-wiki-contributor.png` | ✅ en el repo |
 
 ### Comunidad
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-compulsive-shopper` | Compulsive Shopper | `badge-compulsive-shopper.png` | ✅ |
-| `badge-data-scrubber` | Data Scrubber | `badge-data-scrubber.png` | ✅ |
-| `badge-embajador-maker` | Space Ambassador | `badge-maker-ambassador.png` | ✅ |
-| `badge-garbage-collector` | Garbage Collector | `badge-garbage-collector.png` | ✅ |
-| `badge-hacked-the-space` | Hacked the Space | `badge-hack-the-space.png` | ✅ |
-| `badge-liquid-cooling` | Liquid Cooling Specialist | `badge-liquid-cooling.png` | ✅ |
-| `badge-petty-cash-rookie` | Petty Cash Rookie | `badge-petty-cash-rookie.png` | ✅ |
-| `badge-platform-maker` | Platform Builder | `badge-platform-maker.png` | ✅ |
-| `badge-procurer` | Procurer | `badge-procurer.png` | ✅ |
-| `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ✅ |
-| `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ✅ |
-| `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` | ✅ |
+| `badge-absolute-zero` | Absolute Zero | `badge-absolute-zero.png` | ✅ en el repo |
+| `badge-all-nighter` | All-Nighter | `badge-all-nighter.png` | ✅ en el repo |
+| `badge-big-brother` | Big Brother | `badge-big-brother.png` | ✅ en el repo |
+| `badge-chief-scout` | Chief Scout | `badge-chief-scout.png` | ✅ en el repo |
+| `badge-cold-storage` | Cold Storage | `badge-cold-storage.png` | ✅ en el repo |
+| `badge-compulsive-shopper` | Compulsive Shopper | `badge-compulsive-shopper.png` | ⬆️ sin respaldar |
+| `badge-counselor` | Badge Counselor | `badge-counselor.png` | ✅ en el repo |
+| `badge-cron-job` | Cron Job | `badge-cron-job.png` | ✅ en el repo |
+| `badge-curious-eye` | Curious Eye | `badge-curious-eye.png` | ✅ en el repo |
+| `badge-daemon-process` | Daemon Process | `badge-daemon-process.png` | ✅ en el repo |
+| `badge-data-scrubber` | Data Scrubber | `badge-data-scrubber.png` | ✅ en el repo |
+| `badge-demolition-man` | Demolition Man | `badge-demolition-man.png` | ✅ en el repo |
+| `badge-dependency-injection` | Dependency Injection | `badge-dependency-injection.png` | ✅ en el repo |
+| `badge-dont-feed-gremlins` | Don't Feed Them After Midnight | `badge-dont-feed-gremlins.png` | ✅ en el repo |
+| `badge-early-bird` | Early Bird | `badge-early-bird.png` | ✅ en el repo |
+| `badge-embajador-maker` | Space Ambassador | `badge-embajador-maker.png` | ⬆️ sin respaldar |
+| `badge-garbage-collector` | Garbage Collector | `badge-garbage-collector.png` | ✅ en el repo |
+| `badge-gotta-catch-em-all` | Gotta Catch 'Em All | `badge-gotta-catch-em-all.png` | ✅ en el repo |
+| `badge-human-readme` | Human README | `badge-human-readme.png` | ✅ en el repo |
+| `badge-hyperfocus` | Hyperfocus | `badge-hyperfocus.png` | ✅ en el repo |
+| `badge-let-that-sink-in` | Let That Sink In | `badge-let-that-sink-in.png` | ✅ en el repo |
+| `badge-liquid-cooling` | Liquid Cooling Specialist | `badge-liquid-cooling.png` | ✅ en el repo |
+| `badge-load-bearing-member` | Load-Bearing Member | `badge-load-bearing-member.png` | ✅ en el repo |
+| `badge-maker-of-the-month` | Maker of the Month | `badge-maker-of-the-month.png` | ❌ pendiente |
+| `badge-man-makespace` | man makespace | `badge-man-makespace.png` | ✅ en el repo |
+| `badge-mark-and-sweep` | Mark and Sweep | `badge-mark-and-sweep.png` | ✅ en el repo |
+| `badge-master-minter` | Master Minter | `badge-master-minter.png` | ✅ en el repo |
+| `badge-minter` | Minter | `badge-minter.png` | ✅ en el repo |
+| `badge-onboarding-daemon` | Onboarding Daemon | `badge-onboarding-daemon.png` | ✅ en el repo |
+| `badge-package-manager` | Package Manager | `badge-package-manager.png` | ✅ en el repo |
+| `badge-peeping-tom` | Peeping Tom | `badge-peeping-tom.png` | ✅ en el repo |
+| `badge-petty-cash-rookie` | Petty Cash Rookie | `badge-petty-cash-rookie.png` | ⬆️ sin respaldar |
+| `badge-platform-maker` | Platform Maker | `badge-platform-maker.png` | ✅ en el repo |
+| `badge-procurer` | Procurer | `badge-procurer.png` | ⬆️ sin respaldar |
+| `badge-sanitize-input` | Sanitize Input | `badge-sanitize-input.png` | ✅ en el repo |
+| `badge-scoutmaster` | Scoutmaster | `badge-scoutmaster.png` | ✅ en el repo |
+| `badge-screen-addict` | Screen Addict | `badge-screen-addict.png` | ✅ en el repo |
+| `badge-secure-erase` | Secure Erase | `badge-secure-erase.png` | ✅ en el repo |
+| `badge-serial-spender` | Serial Spender | `badge-serial-spender.png` | ⬆️ sin respaldar |
+| `badge-show-and-tell` | Show & Tell | `badge-show-and-tell.png` | ⬆️ sin respaldar |
+| `badge-spendzilla` | Spendzilla | `badge-spendzilla.png` | ⬆️ sin respaldar |
+| `badge-sre` | Site Reliability Engineer | `badge-sre.png` | ✅ en el repo |
+| `badge-stack-overflow` | Stack Overflow | `badge-stack-overflow.png` | ✅ en el repo |
+| `badge-stop-the-world` | Stop the World | `badge-stop-the-world.png` | ✅ en el repo |
+| `badge-supply-chain-exploit` | Supply Chain Exploit | `badge-supply-chain-exploit.png` | ⬆️ sin respaldar |
+| `badge-tetris-master` | Tetris Master | `badge-tetris-master.png` | ✅ en el repo |
+| `badge-the-great-flood` | The Great Flood | `badge-the-great-flood.png` | ⬆️ sin respaldar |
+| `badge-uptime-99` | Uptime 99.9% | `badge-uptime-99.png` | ✅ en el repo |
 
 ### Eventos
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-assembly-elder` | Assembly Elder | `badge-assembly-elder.png` | ✅ |
-| `badge-assembly-legend` | Assembly Legend | `badge-assembly-legend.png` | ❌ pendiente |
-| `badge-assembly-regular` | Assembly Regular | `badge-assembly-regular.png` | ✅ |
-| `badge-been-there` | Been there, done that | `badge-been-there.png` | ✅ |
-| `badge-community-pillar` | Community Pillar | `badge-community-pillar.png` | ✅ |
-| `badge-community-veteran` | Community Veteran | `badge-community-veteran.png` | ✅ |
-| `badge-council-member` | Council Member | `badge-council-member.png` | ✅ |
-| `badge-ctf-v1` | Capture the Flag v1 | `badge-ctf-v1.png` | ✅ |
-| `badge-eternal-council` | Eternal Council | `badge-eternal-council.png` | ❌ pendiente |
-| `badge-evento-aniversario2026` | Aniversario 2026 (6+7 años) | `badge-aniversario-2026.png` | ✅ |
-| `badge-evento-codemotion2026` | Codemotion 2026 | `badge-codemotion-2026.png` | ✅ |
-| `badge-evento-nerdearla2025` | Nerdearla 2025 | `badge-nerdearla-2025.png` | ✅ |
-| `badge-first-assembly` | First Assembly | `badge-first-assembly.png` | ✅ |
-| `badge-first-hack` | First Hack | `badge-first-hack.png` | ✅ |
-| `badge-hackspace-elder` | Hackspace Elder | `badge-hackspace-elder.png` | ✅ |
-| `badge-hackspace-hero` | Hackspace Hero | `badge-hackspace-hero.png` | ✅ |
-| `badge-hackspace-immortal` | Hackspace Immortal | `badge-hackspace-immortal.png` | ❌ pendiente |
-| `badge-hackspace-legend` | Hackspace Legend | `badge-hackspace-legend.png` | ✅ |
-| `badge-hackspace-veteran` | Hackspace Veteran | `badge-hackspace-veteran.png` | ✅ |
-| `badge-hammer-time` | Hammer Time | `badge-hammer-time.png` | ✅ |
-| `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` | ❌ pendiente |
-| `badge-master-hacker` | Master Hacker | `badge-master-hacker.png` | ✅ |
-| `badge-space-regular` | Space Regular | `badge-space-regular.png` | ✅ |
-| `eventos-embajador` | Roadie | `badge-eventos-embajador.png` | ✅ |
-| `eventos-evangelista` | Headliner | `badge-eventos-evangelista.png` | ❌ pendiente |
-| `eventos-networker` | Tour Manager | `badge-eventos-networker.png` | ❌ pendiente |
-| `eventos-primer-paso` | Groupie | `badge-eventos-primer-paso.png` | ✅ |
+| `badge-assembly-elder` | Assembly Elder | `badge-assembly-elder.png` | ⬆️ sin respaldar |
+| `badge-assembly-legend` | Assembly Legend | `badge-assembly-legend.png` | ⬆️ sin respaldar |
+| `badge-assembly-regular` | Assembly Regular | `badge-assembly-regular.png` | ✅ en el repo |
+| `badge-been-there` | Been there, done that | `badge-been-there.png` | ✅ en el repo |
+| `badge-community-pillar` | Community Pillar | `badge-community-pillar.png` | 🔄 regenerar |
+| `badge-community-veteran` | Community Veteran | `badge-community-veteran.png` | 🔄 regenerar |
+| `badge-council-member` | Council Member | `badge-council-member.png` | ✅ en el repo |
+| `badge-ctf-v1` | Capture the Flag v1 | `badge-ctf-v1.png` | ✅ en el repo |
+| `badge-eternal-council` | Eternal Council | `badge-eternal-council.png` | ✅ en el repo |
+| `badge-evento-aniversario2026` | Aniversario 2026 (6+7 años) | `badge-evento-aniversario2026.png` | ⬆️ sin respaldar |
+| `badge-evento-codemotion2026` | Codemotion 2026 | `badge-evento-codemotion2026.png` | ⬆️ sin respaldar |
+| `badge-evento-nerdearla2025` | Nerdearla 2025 | `badge-evento-nerdearla2025.png` | ⬆️ sin respaldar |
+| `badge-first-assembly` | First Assembly | `badge-first-assembly.png` | 🔄 regenerar |
+| `badge-first-hack` | First Hack | `badge-first-hack.png` | ✅ en el repo |
+| `badge-hackspace-elder` | Hackspace Elder | `badge-hackspace-elder.png` | ✅ en el repo |
+| `badge-hackspace-hero` | Hackspace Hero | `badge-hackspace-hero.png` | 🔄 regenerar |
+| `badge-hackspace-immortal` | Hackspace Immortal | `badge-hackspace-immortal.png` | ⬆️ sin respaldar |
+| `badge-hackspace-legend` | Hackspace Legend | `badge-hackspace-legend.png` | 🔄 regenerar |
+| `badge-hackspace-veteran` | Hackspace Veteran | `badge-hackspace-veteran.png` | ✅ en el repo |
+| `badge-hammer-time` | Hammer Time | `badge-hammer-time.png` | ✅ en el repo |
+| `badge-hot-pot` | Too hot to handle | `badge-hot-pot.png` | ⬆️ sin respaldar |
+| `badge-marathon-member` | Marathon Member | `badge-marathon-member.png` | ✅ en el repo |
+| `badge-master-hacker` | Master Hacker | `badge-master-hacker.png` | ✅ en el repo |
+| `badge-space-regular` | Space Regular | `badge-space-regular.png` | ✅ en el repo |
+| `eventos-embajador` | Roadie | `badge-eventos-embajador.png` | ⬆️ sin respaldar |
+| `eventos-evangelista` | Headliner | `badge-eventos-evangelista.png` | ⬆️ sin respaldar |
+| `eventos-networker` | Tour Manager | `badge-eventos-networker.png` | ✅ en el repo |
+| `eventos-primer-paso` | Groupie | `badge-eventos-primer-paso.png` | ⬆️ sin respaldar |
 
 ### Membresía
 
 | Slug | Nombre | Imagen | Estado |
 |------|--------|--------|--------|
-| `badge-10-years` | A Decade at Makespace | `badge-10-years.png` | ❌ pendiente |
-| `badge-11-years` | Eleven Years | `badge-11-years.png` | ❌ pendiente |
-| `badge-12-years` | Twelve Years | `badge-12-years.png` | ❌ pendiente |
-| `badge-13-years` | Thirteen Years | `badge-13-years.png` | ❌ pendiente |
-| `badge-eighth-year` | Eighth Year | `badge-eighth-year.png` | ❌ pendiente |
-| `badge-fifth-year` | Fifth Year | `badge-fifth-year.png` | ❌ pendiente |
-| `badge-first-year` | First Year | `badge-first-year.png` | ❌ pendiente |
-| `badge-founding-member` | Founding Member | `badge-founding-member.png` | ✅ |
-| `badge-fourth-year` | Fourth Year | `badge-fourth-year.png` | ❌ pendiente |
-| `badge-miembro-makespace` | Makespace Member | `badge-member.png` | ✅ |
-| `badge-ninth-year` | Ninth Year | `badge-ninth-year.png` | ❌ pendiente |
-| `badge-second-year` | Second Year | `badge-second-year.png` | ❌ pendiente |
-| `badge-seventh-year` | Seventh Year | `badge-seventh-year.png` | ❌ pendiente |
-| `badge-sixth-year` | Sixth Year | `badge-sixth-year.png` | ❌ pendiente |
-| `badge-third-year` | Third Year | `badge-third-year.png` | ❌ pendiente |
-| `keys-of-kingdom` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ |
+| `badge-10-years` | A Decade at Makespace | `badge-10-years.png` | ✅ en el repo |
+| `badge-11-years` | Eleven Years | `badge-11-years.png` | ✅ en el repo |
+| `badge-12-years` | Twelve Years | `badge-12-years.png` | ✅ en el repo |
+| `badge-13-years` | Thirteen Years | `badge-13-years.png` | ✅ en el repo |
+| `badge-eighth-year` | Eighth Year | `badge-eighth-year.png` | ✅ en el repo |
+| `badge-fifth-year` | Fifth Year | `badge-fifth-year.png` | ✅ en el repo |
+| `badge-first-year` | First Year | `badge-first-year.png` | ✅ en el repo |
+| `badge-founding-member` | Founding Member | `badge-founding-member.png` | ⬆️ sin respaldar |
+| `badge-fourth-year` | Fourth Year | `badge-fourth-year.png` | ✅ en el repo |
+| `badge-level-18` | Level 18 Unlocked | `badge-level-18.png` | ✅ en el repo |
+| `badge-miembro-makespace` | Makespace Member | `badge-miembro-makespace.png` | ✅ en el repo |
+| `badge-ninth-year` | Ninth Year | `badge-ninth-year.png` | ✅ en el repo |
+| `badge-second-year` | Second Year | `badge-second-year.png` | ✅ en el repo |
+| `badge-seventh-year` | Seventh Year | `badge-seventh-year.png` | ✅ en el repo |
+| `badge-sixth-year` | Sixth Year | `badge-sixth-year.png` | ✅ en el repo |
+| `badge-third-year` | Third Year | `badge-third-year.png` | ✅ en el repo |
+| `keys-of-kingdom` | Keys of Kingdom | `badge-keys-of-kingdom.png` | ✅ en el repo |
+| `maker-level-2-oficial` | Oficial | `badge-maker-level-2-oficial.png` | ✅ en el repo |
+| `maker-level-3-artesano` | Artesano | `badge-maker-level-3-artesano.png` | ✅ en el repo |
+| `maker-level-4-maestro` | Maestro | `badge-maker-level-4-maestro.png` | ✅ en el repo |
+| `maker-level-5-virtuoso` | Virtuoso | `badge-maker-level-5-virtuoso.png` | ✅ en el repo |
+| `maker-level-6-gran-maestro` | Gran Maestro | `badge-maker-level-6-gran-maestro.png` | ✅ en el repo |
+| `maker-level-7-leyenda` | Leyenda | `badge-maker-level-7-leyenda.png` | ✅ en el repo |
+
+### Otros
+
+| Slug | Nombre | Imagen | Estado |
+|------|--------|--------|--------|
+| `badge-keymaster` | Keymaster | `badge-keymaster.png` | ✅ en el repo |
+| `badge-make-noise` | Make Noise! | `badge-make-noise.png` | ✅ en el repo |
+| `badge-palego` | PaLego | `badge-palego.png` | ✅ en el repo |
+| `badge-relic-printer` | Relic Printer | `badge-relic-printer.png` | ✅ en el repo |
+| `badge-textile-maker` | No es una bufanda, es un prototipo | `badge-textile-maker.png` | ✅ en el repo |
+| `badge-token-donor` | Token Donor | `badge-token-donor.png` | ✅ en el repo |
+| `badge-vehicle-builder` | Muévelo | `badge-vehicle-builder.png` | ✅ en el repo |
+| `badge-viajero-del-tiempo` | Viajero del tiempo | `badge-viajero-del-tiempo.png` | ✅ en el repo |
+| `for-i-am-here` | For I am here | `badge-for-i-am-here.png` | ✅ en el repo |
 <!-- badgegen:tables:end -->
+
