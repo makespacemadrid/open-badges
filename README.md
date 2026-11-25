@@ -246,3 +246,14 @@ _El estado "en el repo" se comprueba contra el árbol de `main`, no contra la ba
 | `for-i-am-here` | For I am here | `badge-for-i-am-here.png` | ✅ en el repo |
 <!-- badgegen:tables:end -->
 
+
+## Licencia
+
+Las imágenes de los badges, los assets y la documentación de este repositorio se publican bajo
+[Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.es)
+— texto completo en [`LICENSE`](LICENSE). Atribución: **Makespace Madrid**.
+
+El código de [`tools/`](tools/) (badgegen) se distribuye bajo GPL v3: ver [`tools/LICENSE`](tools/LICENSE).
+
+La licencia no concede derechos sobre el nombre ni el logotipo de Makespace Madrid, que son signos
+distintivos de la asociación.
